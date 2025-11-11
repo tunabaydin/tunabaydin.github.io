@@ -51,35 +51,39 @@
 }
 
 /* Top nav row */
+/* Fix nav positioning */
 .top-nav{
   position:fixed;
-  top:18px;
-  left:0;
-  right:0;
-  z-index:40;
+  top:24px;
+  width:100%;
+  z-index:100;
   display:flex;
   justify-content:center;
-  pointer-events:auto;
 }
+
 .top-nav .nav-inner{
   display:flex;
-  gap:22px;
-  background:rgba(255,255,255,0.6);
-  padding:8px 18px;
+  gap:32px;
+  padding:10px 22px;
+  border:2px solid rgba(255,255,255,0.5);
   border-radius:12px;
-  box-shadow:0 6px 20px rgba(10,10,20,.08);
-  backdrop-filter: blur(6px);
+  background:rgba(255,255,255,0.35);
+  backdrop-filter: blur(10px);
 }
-.top-nav .nav-item{
+
+.nav-item{
   font-weight:600;
-  color:#0f172a;
+  font-size:1rem;
+  color:#000;
   text-decoration:none;
-  padding:.45rem .7rem;
 }
-.top-nav .nav-item:hover{
-  background:rgba(15,118,110,0.08);
-  border-radius:8px;
+
+.nav-item:hover{
+  background:rgba(255,255,255,0.4);
+  padding:6px 12px;
+  border-radius:6px;
 }
+
 
   </style>
 </head>
