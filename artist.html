@@ -23,27 +23,34 @@ body {
     color:#111;
     font-family:inherit;
   }
-  .top-nav{
-    position:fixed;
-    top:24px;
-    width:100%;
-    z-index:100;
-    display:flex;
-    justify-content:center;
-  }
-  .nav-inner{
-    display:flex;
-    gap:32px;
-    padding:10px 22px;
-    border-radius:12px;
-    background:rgba(255,255,255,0.9);
-    box-shadow:0 6px 20px rgba(0,0,0,0.08);
-  }
-  .nav-item{
-    font-weight:600;
-    color:#000;
-    text-decoration:none;
-  }
+  /* Frosted glass nav (same style as index.html) */
+.top-nav {
+  position: fixed;
+  top: 24px;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+}
+
+.top-nav .nav-inner {
+  display: flex;
+  gap: 32px;
+  padding: 10px 22px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.35);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.nav-item {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #000;
+  text-decoration: none;
+}
+
   .wrap{
     max-width:700px;
     margin:40px auto;
