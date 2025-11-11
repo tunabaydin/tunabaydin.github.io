@@ -5,25 +5,26 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Artist — Tuna Baydin</title>
 <style>
- /* Page background image */
-body {
-  background: url("backgroundphoto_1920x1080.jpg") no-repeat center center fixed;
-  background-size: cover;
+:root{
+  --muted:#444;
+  --text:#111;
+  font-family: system-ui, -apple-system, Roboto, "Helvetica Neue", Arial;
 }
 
-  
-  :root{
-    --muted:#444;
-    font-family:system-ui,-apple-system,Roboto,"Helvetica Neue",Arial;
-  }
-  body{
-    margin:0;
-    padding-top:90px;
-    background:#f7f7f7;
-    color:#111;
-    font-family:inherit;
-  }
-  /* Frosted glass nav (same style as index.html) */
+/* Single merged body block (keeps background image) */
+body{
+  margin: 0;
+  padding-top: 90px;             /* space for fixed nav */
+  color: var(--text);
+  font-family: inherit;
+  /* Use the image at repo root (you uploaded it there). If yours is in assets/images, change the url accordingly. */
+  background: url("backgroundphoto_1920x1080.jpg") no-repeat center center fixed;
+  background-size: cover;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Frosted / translucent nav (matches homepage style) */
 .top-nav {
   position: fixed;
   top: 24px;
@@ -37,11 +38,13 @@ body {
   display: flex;
   gap: 32px;
   padding: 10px 22px;
-  border: 2px solid rgba(255,255,255,0.3);
   border-radius: 14px;
-  background: rgba(255,255,255,0.35);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  /* translucent white with subtle border + blur */
+  background: rgba(255,255,255,0.32);
+  border: 1.5px solid rgba(255,255,255,0.45);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .nav-item {
@@ -51,25 +54,36 @@ body {
   text-decoration: none;
 }
 
-  .wrap{
-    max-width:700px;
-    margin:40px auto;
-    padding:32px;
-    background:#fff;
-    border-radius:14px;
-    box-shadow:0 8px 32px rgba(0,0,0,0.06);
-  }
-  h1{
-    margin-top:0;
-    font-size:2rem;
-    letter-spacing:0.5px;
-  }
-  p{
-    color:var(--muted);
-    line-height:1.7;
-    font-size:1.1rem;
-  }
+/* main content card */
+.wrap{
+  max-width:700px;
+  margin:40px auto;
+  padding:32px;
+  background: rgba(255,255,255,0.92);
+  border-radius:14px;
+  box-shadow:0 8px 32px rgba(0,0,0,0.06);
+}
+
+h1{
+  margin-top:0;
+  font-size:2rem;
+  letter-spacing:0.5px;
+}
+
+p{
+  color:var(--muted);
+  line-height:1.7;
+  font-size:1.1rem;
+}
+
+/* responsive tweaks */
+@media (max-width:720px){
+  .nav-inner{ gap:12px; padding:8px 12px; }
+  .wrap{ margin: 20px; padding:20px; }
+  h1{ font-size:1.5rem; }
+}
 </style>
+
 </head>
 <body>
 
