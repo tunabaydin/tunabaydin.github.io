@@ -76,6 +76,25 @@ p{
   font-size:1.1rem;
 }
 
+/* Portrait image inside the card */
+.portrait {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.portrait img {
+  width: 200px;          /* tweak size if you want it bigger/smaller */
+  max-width: 40%;        /* keeps it responsive on very large screens */
+  height: auto;
+  border-radius: 12px;
+  display: inline-block;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  object-fit: cover;
+}
+@media (max-width: 600px) {
+  .portrait img { width: 140px; max-width: 60%; }
+}
+  
+  
 /* responsive tweaks */
 @media (max-width:720px){
   .nav-inner{ gap:12px; padding:8px 12px; }
@@ -98,10 +117,16 @@ p{
 </div>
 
 <main class="wrap">
+  <!-- PORTRAIT (centered, inside the white card) -->
+  <div class="portrait">
+    <img src="assets/images/tunartist.jpg" alt="Tuna Baydin portrait">
+  </div>
+
   <h1>Artist</h1>
   <p>I am a Trondheim based artist, originally from Turkey, Ankara.</p>
   <p>My art is inspired by energy, nature, spiritual, mystical and mind-altering experiences.</p>
 </main>
+
 
 </body>
 </html>
