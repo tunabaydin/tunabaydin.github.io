@@ -11,8 +11,43 @@
     h1{margin:0 0 .4rem;font-size:28px}
     p{margin:.2rem 0;color:#555}
     a{color:#0b7; text-decoration:none}
-  </style>
+ /* ------ GALLERY STYLE ------ */
+.gallery {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.grid img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+ </style>
 </head>
+  <!-- ART GALLERY SECTION -->
+<section class="gallery">
+  <h2>Art Gallery</h2>
+  <div class="grid">
+    <img src="https://placekitten.com/400/400" alt="Artwork 1">
+    <img src="https://placekitten.com/401/401" alt="Artwork 2">
+    <img src="https://placekitten.com/402/402" alt="Artwork 3">
+  </div>
+</section>
+
 <body>
   <div class="card">
     <h1>Tuna Baydin — Art Portfolio</h1>
