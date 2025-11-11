@@ -6,21 +6,20 @@
 <title>Contact — Tuna Baydin</title>
 
 <style>
-  /* Page background image */
+:root{
+  font-family: system-ui, apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  --muted: #444;
+}
+
+/* Single merged body block (keeps background image visible) */
 body {
+  margin: 0;
+  padding-top: 90px; /* space for fixed nav */
   background: url("backgroundphoto_1920x1080.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
-
-  body {
-    font-family: system-ui, apple-system, Segoe UI, Roboto, Helvetica, Arial;
-    background: #fafafa;
-    margin: 0;
-  }
-
-  /* TOP NAV */
- /* Frosted glass nav (same style as index.html) */
+/* Frosted / translucent nav */
 .top-nav {
   position: fixed;
   top: 24px;
@@ -34,11 +33,12 @@ body {
   display: flex;
   gap: 32px;
   padding: 10px 22px;
-  border: 2px solid rgba(255,255,255,0.3);
   border-radius: 14px;
-  background: rgba(255,255,255,0.35);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(255,255,255,0.32);
+  border: 1.5px solid rgba(255,255,255,0.45);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .nav-item {
@@ -48,20 +48,25 @@ body {
   text-decoration: none;
 }
 
-  /* CARD */
-  .card {
-    max-width: 800px;
-    margin: 6rem auto;
-    padding: 48px;
-    border-radius: 24px;
-    background: #fff;
-    box-shadow: 0 6px 30px rgba(10, 10, 20, 0.06);
-  }
+/* Contact card */
+.card {
+  max-width: 800px;
+  margin: 6rem auto;
+  padding: 48px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 6px 30px rgba(10, 10, 20, 0.06);
+}
 
-  h1 { font-size: 36px; margin-bottom: 1rem; }
-  p { font-size: 20px; line-height: 1.6; }
-  a { color: #0077cc; text-decoration: none; }
+h1 { font-size: 36px; margin-bottom: 1rem; }
+p { font-size: 20px; line-height: 1.6; }
+a { color: #0077cc; text-decoration: none; }
+
+@media (max-width: 720px) {
+  .card { margin: 4rem 1.2rem; padding: 32px; }
+}
 </style>
+
 </head>
 
 <body>
@@ -82,10 +87,19 @@ body {
 
   <p>If you’d like to inquire about artwork, exhibitions, or collaborations, feel free to reach out.</p>
 
+  <p><strong>Instagram:</strong>
+    <a href="https://www.instagram.com/ttunartt/" target="_blank">@ttunartt</a>
+  </p>
+
+    <p><strong>TikTok:</strong>
+    <a href="https://www.tiktok.com/@ttunartt" target="_blank">@ttunartt</a>
+  </p>
+  
   <p><strong>Email:</strong>
-     <a href="mailto:tuna.baydin@gmail.com">tuna.baydin@gmail.com</a>
+    <a href="mailto:tuna.baydin@gmail.com">tuna.baydin@gmail.com</a>
   </p>
 </div>
+
 
 </body>
 </html>
