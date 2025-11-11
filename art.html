@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Art — Tuna Baydin</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f7f7f7;
+  padding-top: 100px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.3rem;
+}
+
+.gallery {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.gallery img {
+  width: 220px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.15);
+}
+
+/* keep nav styling */
+.top-nav{
+  position:fixed;
+  top:24px;
+  width:100%;
+  z-index:100;
+  display:flex;
+  justify-content:center;
+}
+.top-nav .nav-inner{
+  display:flex;
+  gap:32px;
+  padding:10px 22px;
+  border:2px solid rgba(0,0,0,0.1);
+  border-radius:12px;
+  background:white;
+}
+.nav-item{
+  font-weight:600;
+  font-size:1rem;
+  color:#000;
+  text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navigation copied from index.html -->
+<div class="top-nav">
+  <div class="nav-inner">
+    <a class="nav-item" href="index.html">About</a>
+    <a class="nav-item" href="art.html">Art</a>
+    <a class="nav-item" href="contact.html">Contact</a>
+  </div>
+</div>
+
+<h1>Art Gallery</h1>
+
+<div class="gallery">
+  <img src="art1.jpg" alt="Artwork 1">
+  <img src="art2.jpg" alt="Artwork 2">
+  <img src="art3.jpg" alt="Artwork 3">
+</div>
+
+</body>
+</html>
