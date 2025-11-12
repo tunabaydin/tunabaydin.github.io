@@ -80,20 +80,27 @@
     }
 
     /* FOOTER: fixed at bottom, left aligned, larger text */
-    .site-footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      padding: 14px 28px;
-      font-size: 18px;             /* bigger text */
-      color: #ffffff;              /* white text for contrast */
-      text-align: left;            /* left aligned */
-      z-index: 9999;
-      background: rgba(0, 0, 0, 0.30); /* semi-transparent background for readability */
-      backdrop-filter: blur(4px);
-      box-sizing: border-box;
-    }
+   /* Footer copyright (matches artist page) */
+.footer {
+  text-align: center;
+  padding: 18px 0;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.9);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.38);
+  box-sizing: border-box;
+}
+
+/* Tag style */
+.footer .tag {
+  font-weight: 600;
+  margin-left: 6px;
+}
+
 
     /* make footer slightly smaller on small screens */
     @media (max-width:520px){
@@ -127,8 +134,9 @@
     <p>Email: <a href="mailto:tuna.baydin@gmail.com">tuna.baydin@gmail.com</a></p>
   </div>
 
-  <footer class="site-footer">
-    © Tuna Baydin 2025 — All rights reserved.
-  </footer>
+<footer class="footer">
+  © 2025 Tuna Baydin — All rights reserved. <span class="tag">@ttunartt</span>
+</footer>
+
 </body>
 </html>
