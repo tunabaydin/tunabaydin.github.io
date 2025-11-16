@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Snowflake — Art by Tuna Baydin</title>
+
+<style>
+/* Same background + base styles as art.html */
+body {
+  background: url("backgroundphoto_1920x1080.jpg") no-repeat center center fixed;
+  background-size: cover;
+
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  padding-top: 100px;
+  text-align: center;
+  color: #111;
+}
+
+/* Frosted glass nav (copied from art.html) */
+.top-nav {
+  position: fixed;
+  top: 24px;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+}
+
+.top-nav .nav-inner {
+  display: flex;
+  gap: 32px;
+  padding: 10px 22px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.35);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.nav-item {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #000;
+  text-decoration: none;
+}
+
+/* Layout for the artwork detail */
+.main-wrapper {
+  max-width: 900px;
+  margin: 0 auto 100px;
+  padding: 0 20px;
+  text-align: left;
+}
+
+h1 {
+  text-align: left;
+  margin-top: 0;
+  font-size: 2.1rem;
+}
+
+.art-meta {
+  margin-top: 4px;
+  margin-bottom: 18px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.art-figure {
+  margin: 0 0 18px;
+}
+
+.art-figure img {
+  max-width: 100%;
+  border-radius: 14px;
+  box-shadow: 0px 8px 26px rgba(0,0,0,0.25);
+}
+
+/* Description text */
+.art-description {
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+/* Back link */
+.back-link {
+  font-size: 0.9rem;
+  margin-bottom: 18px;
+}
+
+.back-link a {
+  color: #000;
+  text-decoration: none;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}
+
+/* Footer copyright (same style as other pages) */
+.footer {
+  text-align: center;
+  padding: 18px 0;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.9);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.38);
+  box-sizing: border-box;
+}
+
+.footer .tag {
+  font-weight: 600;
+  margin-left: 6px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="top-nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a class="nav-item" href="index.html">Home</a>
+    <a class="nav-item" href="art.html">Art</a>
+    <a class="nav-item" href="artist.html">Artist</a>
+    <a class="nav-item" href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<main class="main-wrapper">
+  <p class="back-link"><a href="art.html">← Back to gallery</a></p>
+
+  <h1>Snowflake</h1>
+  <p class="art-meta">Chocolate wrapping paper · 2024 · 415 x 765 mm</p> <!-- adjust this line if you want -->
+
+  <figure class="art-figure">
+    <img src="assets/art/snowflake.jpg" alt="Snowflake artwork by Tuna Baydin">
+  </figure>
+
+  <section class="art-description">
+    <p>
+      The main inspiration for the art was repurposing the chocolate packaging. There are 2 components to the packaging, a hard colorful paper and a thinner shiny paper, both containing patterns. I also used a black marker and glue to put the pieces together.
+    </p>
+    <p>
+      There are 5 different patterns which corresponds to 5 different flavors of chocolate. They all form an individual "family" within. Being opposite to each other, symbolizing 2 parents we inherit genetic (and sometimes cultural) material from. They all originate from the same source and form a unique mandala style pattern. Just like a unique snowflake. 
+    </p>
+  </section>
+</main>
+
+<footer class="footer">
+  © 2025 Tuna Baydin — All rights reserved. <span class="tag">@ttunartt</span>
+</footer>
+
+</body>
+</html>
