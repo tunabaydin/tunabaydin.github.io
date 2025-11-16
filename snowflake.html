@@ -85,17 +85,26 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-/* Layout: image + video side by side on larger screens */
+/* Layout: media column (image + video) + text column */
 .art-layout {
   display: flex;
-  gap: 24px;
+  gap: 28px;
   align-items: flex-start;
-  flex-wrap: wrap;              /* stacks on smaller widths */
+  flex-wrap: wrap;              /* stacks on smaller screens */
   margin-bottom: 1.5rem;
 }
 
+/* Left column: image + video stacked */
+.art-media-column {
+  flex: 1 1 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Keep this for general flexibility if needed */
 .art-media {
-  flex: 1 1 320px;
+  width: 100%;
 }
 
 /* Image styling */
@@ -114,8 +123,9 @@ h1 {
   display: block;
 }
 
-/* Description text */
+/* Right column: description text */
 .art-description {
+  flex: 1 1 280px;
   font-size: 0.98rem;
   line-height: 1.6;
   color: #222;
