@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Baby — Art by Tuna Baydin</title>
+
+<style>
+:root{
+  font-family: system-ui, apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  --muted: #444;
+}
+
+/* Background image */
+body {
+  margin: 0;
+  padding-top: 90px; /* space for fixed nav */
+  background: url("backgroundphoto_1920x1080.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Frosted / translucent nav (same as other pages) */
+.top-nav {
+  position: fixed;
+  top: 24px;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+}
+
+.top-nav .nav-inner {
+  display: flex;
+  gap: 32px;
+  padding: 10px 22px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.32);
+  border: 1.5px solid rgba(255,255,255,0.45);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.nav-item {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #000;
+  text-decoration: none;
+}
+
+/* Artwork card */
+.art-card {
+  max-width: 1100px;
+  margin: 6rem auto;
+  padding: 40px 48px 48px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 6px 30px rgba(10, 10, 20, 0.06);
+}
+
+/* Back link */
+.back-link {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.back-link a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}
+
+/* Title & meta */
+h1 {
+  font-size: 32px;
+  margin: 0 0 0.35rem;
+}
+
+.art-meta {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+/* Layout: image on left, text on right (can adjust later) */
+.art-layout {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+/* Left column: image (and later video if you want) */
+.art-media-column {
+  flex: 1 1 340px;
+}
+
+/* Image */
+.art-image img {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.18);
+}
+
+/* Right column: text */
+.art-description {
+  flex: 1 1 280px;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .art-card {
+    margin: 4rem 1.2rem 5rem;
+    padding: 28px 24px 32px;
+  }
+
+  .art-layout {
+    flex-direction: column;
+  }
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 18px 0;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.9);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.38);
+  box-sizing: border-box;
+}
+
+.footer .tag {
+  font-weight: 600;
+  margin-left: 6px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a class="nav-item" href="/index.html">Home</a>
+    <a class="nav-item" href="/art.html">Art</a>
+    <a class="nav-item" href="/artist.html">Artist</a>
+    <a class="nav-item" href="/contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- BABY CARD -->
+<div class="art-card">
+
+  <p class="back-link"><a href="art.html">← Back to gallery</a></p>
+
+  <h1>Baby</h1>
+  <p class="art-meta">Watercolor and marker · 2023 · 29.7 x 42 cm</p> <!-- update this line -->
+
+  <div class="art-layout">
+
+    <!-- LEFT: image -->
+    <div class="art-media-column">
+      <div class="art-image">
+        <img src="assets/art/baby.jpg" alt="Baby artwork by Tuna Baydin">
+      </div>
+    </div>
+
+    <!-- RIGHT: description -->
+    <div class="art-description">
+      <p>
+        Write a short description of Baby here – what it represents, the feeling, or the story.
+      </p>
+      <p>
+        You can add another paragraph about process, materials, symbolism, or anything you’d like visitors
+        to know when they look at this piece.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+<footer class="footer">
+  © 2025 Tuna Baydin — All rights reserved. <span class="tag">@ttunartt</span>
+</footer>
+
+</body>
+</html>
