@@ -54,6 +54,51 @@ body{
   text-decoration: none;
 }
 
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* The label "Projects ▾" */
+.dropdown > .nav-item {
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Hidden dropdown menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 38px;
+  left: 0;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  padding: 10px 0;
+  min-width: 150px;
+  z-index: 200;
+}
+
+/* Show menu on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Dropdown individual links */
+.dropdown-link {
+  padding: 8px 14px;
+  display: block;
+  white-space: nowrap;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.dropdown-link:hover {
+  background: rgba(0,0,
+
+
 /* main content card */
 .wrap{
   max-width:700px;
@@ -131,7 +176,14 @@ p{
 <div class="top-nav">
   <div class="nav-inner">
     <a class="nav-item" href="index.html">Home</a>
-    <a class="nav-item" href="art.html">Art</a>
+    <div class="dropdown">
+  <span class="nav-item">Projects ▾</span>
+  <div class="dropdown-menu">
+    <a class="dropdown-link" href="art.html">Art</a>
+    <a class="dropdown-link" href="otherprojects.html">Other Projects</a>
+  </div>
+</div>
+
     <a class="nav-item" href="artist.html">Artist</a>
     <a class="nav-item" href="contact.html">Contact</a>
   </div>
