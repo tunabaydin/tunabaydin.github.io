@@ -67,17 +67,21 @@
       background:rgba(255,255,255,0.35);
       backdrop-filter: blur(10px);
     }
-    .nav-item{
-      font-weight:600;
-      font-size:1rem;
-      color:#000;
-      text-decoration:none;
-    }
-    .nav-item:hover{
-      background:rgba(255,255,255,0.4);
-      padding:6px 12px;
-      border-radius:6px;
-    }
+
+    
+  .nav-item{
+  font-weight:600;
+  font-size:1rem;
+  color:#000;
+  text-decoration:none;
+  padding:6px 12px;      /* same padding all the time */
+  border-radius:6px;     /* same radius all the time */
+}
+
+.nav-item:hover{
+  background:rgba(255,255,255,0.4);  /* only color changes */
+}
+
 
   /* Dropdown container */
 .dropdown {
