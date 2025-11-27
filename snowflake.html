@@ -14,7 +14,7 @@
 /* Background image */
 body {
   margin: 0;
-  padding-top: 90px; /* space for fixed nav */
+  padding-top: 70px; /* space for fixed nav */
   background: url("backgroundphoto_1920x1080.jpg") no-repeat center center fixed;
   background-size: cover;
 }
@@ -22,26 +22,28 @@ body {
 /* Frosted / translucent nav (same as contact page) */
 .top-nav {
   position: fixed;
-  top: 0;        /* make it touch the top */
+  top: 0;
+  left: 0;
   width: 100%;
-  z-index: 100;
-  display: flex;
-  justify-content: center;
-  padding-top: 10px;  /* optional: keeps your rounded styling */
+  z-index: 200;
 }
 
 
 .top-nav .nav-inner {
   display: flex;
+  justify-content: center; /* keep items centered */
   gap: 32px;
-  padding: 10px 22px;
-  border-radius: 14px;
+
+  width: 100%;            /* <── FULL WIDTH */
+  padding: 14px 0;        /* vertical padding only */
+
+  border-radius: 0;       /* <── no bubble shape */
   background: rgba(255,255,255,0.32);
-  border: 1.5px solid rgba(255,255,255,0.45);
+  border-bottom: 1.5px solid rgba(255,255,255,0.45); /* bottom border only */
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
 }
+
 
 .nav-item {
   font-weight: 600;
