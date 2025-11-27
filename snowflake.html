@@ -22,12 +22,14 @@ body {
 /* Frosted / translucent nav (same as contact page) */
 .top-nav {
   position: fixed;
-  top: 24px;
+  top: 0;        /* make it touch the top */
   width: 100%;
   z-index: 100;
   display: flex;
   justify-content: center;
+  padding-top: 10px;  /* optional: keeps your rounded styling */
 }
+
 
 .top-nav .nav-inner {
   display: flex;
