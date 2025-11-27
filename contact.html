@@ -14,28 +14,32 @@
 /* Single merged body block (keeps background image visible) */
 body {
   margin: 0;
-  padding-top: 90px; /* space for fixed nav */
+  padding-top: 70px; /* space for fixed nav */
   background: url("backgroundphoto_1920x1080.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
-/* Frosted / translucent nav */
+/* Frosted / translucent nav (global) */
 .top-nav {
   position: fixed;
-  top: 24px;
+  top: 0;
+  left: 0;
   width: 100%;
-  z-index: 100;
-  display: flex;
-  justify-content: center;
+  z-index: 200;
 }
 
+/* Full-width bar with blurred background */
 .top-nav .nav-inner {
   display: flex;
+  justify-content: center; /* keep items centered */
   gap: 32px;
-  padding: 10px 22px;
-  border-radius: 14px;
+
+  width: 100%;
+  padding: 14px 0;        /* vertical padding only */
+
+  border-radius: 0;
   background: rgba(255,255,255,0.32);
-  border: 1.5px solid rgba(255,255,255,0.45);
+  border-bottom: 1.5px solid rgba(255,255,255,0.45);
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -46,12 +50,25 @@ body {
   font-size: 1rem;
   color: #000;
   text-decoration: none;
-  padding: 6px 12px;      /* keep size constant */
-  border-radius: 6px;     /* same radius always */
+  padding: 6px 12px;
+  border-radius: 6px;
 }
 
 .nav-item:hover {
-  background: rgba(255,255,255,0.4);  /* only color changes */
+  background: rgba(255,255,255,0.4);
+}
+
+/* Make nav fit nicely on small screens */
+@media (max-width: 600px) {
+  .top-nav .nav-inner {
+    gap: 12px;          /* less space between items */
+    padding: 10px 4px;  /* narrower padding left/right */
+  }
+
+  .nav-item {
+    font-size: 0.9rem;  /* slightly smaller text */
+    padding: 6px 6px;   /* narrower buttons */
+  }
 }
 
 /* Contact card */
