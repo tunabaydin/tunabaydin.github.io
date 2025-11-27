@@ -24,24 +24,27 @@ body{
   -moz-osx-font-smoothing:grayscale;
 }
 
-/* Frosted / translucent nav (matches homepage style) */
+/* Frosted / translucent nav (global) */
 .top-nav {
   position: fixed;
-  top: 24px;
+  top: 0;
+  left: 0;
   width: 100%;
-  z-index: 100;
-  display: flex;
-  justify-content: center;
+  z-index: 200;
 }
 
+/* Full-width bar with blurred background */
 .top-nav .nav-inner {
   display: flex;
+  justify-content: center; /* keep items centered */
   gap: 32px;
-  padding: 10px 22px;
-  border-radius: 14px;
-  /* translucent white with subtle border + blur */
+
+  width: 100%;
+  padding: 14px 0;        /* vertical padding only */
+
+  border-radius: 0;
   background: rgba(255,255,255,0.32);
-  border: 1.5px solid rgba(255,255,255,0.45);
+  border-bottom: 1.5px solid rgba(255,255,255,0.45);
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -52,59 +55,27 @@ body{
   font-size: 1rem;
   color: #000;
   text-decoration: none;
-  padding: 6px 12px;      /* keep size constant */
-  border-radius: 6px;     /* same radius always */
+  padding: 6px 12px;
+  border-radius: 6px;
 }
 
 .nav-item:hover {
-  background: rgba(255,255,255,0.4);  /* only color changes */
+  background: rgba(255,255,255,0.4);
 }
 
+/* Make nav fit nicely on small screens */
+@media (max-width: 600px) {
+  .top-nav .nav-inner {
+    gap: 12px;          /* less space between items */
+    padding: 10px 4px;  /* narrower padding left/right */
+  }
 
-/* Dropdown container */
-.dropdown {
-  position: relative;
+  .nav-item {
+    font-size: 0.9rem;  /* slightly smaller text */
+    padding: 6px 6px;   /* narrower buttons */
+  }
 }
 
-/* The label "Projects ▾" */
-.dropdown > .nav-item {
-  cursor: pointer;
-  display: inline-block;
-}
-
-/* Hidden dropdown menu */
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 38px;
-  left: 0;
-  background: rgba(255,255,255,0.9);
-  backdrop-filter: blur(8px);
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-  padding: 10px 0;
-  min-width: 150px;
-  z-index: 200;
-}
-
-/* Show menu on hover */
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-/* Dropdown individual links */
-.dropdown-link {
-  padding: 8px 14px;
-  display: block;
-  white-space: nowrap;
-  color: #000;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.dropdown-link:hover {
-  background: rgba(0,0,0,0.08);
-}
 
 /* main content card */
 .wrap{
