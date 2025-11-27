@@ -58,7 +58,20 @@ body {
   background: rgba(255,255,255,0.4);  /* hover color only */
 }
 
+/* Make nav fit nicely on small screens */
+@media (max-width: 600px) {
+  .top-nav .nav-inner {
+    gap: 12px;          /* less space between items */
+    padding: 10px 4px;  /* narrower padding left/right */
+  }
 
+  .nav-item {
+    font-size: 0.9rem;  /* slightly smaller text */
+    padding: 6px 6px;   /* narrower buttons */
+  }
+}
+
+  
 /* Artwork card (similar to contact .card) */
 .art-card {
   max-width: 1100px;
