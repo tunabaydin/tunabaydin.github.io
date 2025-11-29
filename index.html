@@ -212,5 +212,22 @@
   © 2025 Tuna Baydin — All rights reserved. <span class="tag">@ttunartt</span>
 </footer>
 
+<script>
+  // Block right-click on images and videos
+  document.addEventListener('contextmenu', function (event) {
+    if (event.target.closest('img, video')) {
+      event.preventDefault();
+    }
+  });
+
+  // Optional: also block dragging images/videos off the page
+  document.addEventListener('dragstart', function (event) {
+    if (event.target.closest('img, video')) {
+      event.preventDefault();
+    }
+  });
+</script>
+
+
 </body>
 </html>
