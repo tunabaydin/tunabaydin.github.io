@@ -170,7 +170,9 @@ p{
   </div>
 
   <h1>Artist</h1>
-  <p>I am a Trondheim based artist, originally from Ankara, Turkey.</p>
+  <p>I am a Trondheim based artist, originally from Ankara, Turkey. I come from a science background, specializing in biotechnology. 
+    I hold a masters and PhD degree from the Norwegian University of Science and Technology (NTNU) in Trondheim, Norway.</p>
+  
   <p>My art is inspired by energy, nature, spiritual, mystical and mind-altering experiences.</p>
 </main>
 
@@ -178,6 +180,22 @@ p{
   © 2025 Tuna Baydin — All rights reserved.  
   <span class="tag">@ttunartt</span>
 </footer>
+
+<script>
+  // Block right-click on images and videos
+  document.addEventListener('contextmenu', function (event) {
+    if (event.target.closest('img, video')) {
+      event.preventDefault();
+    }
+  });
+
+  // Optional: also block dragging images/videos off the page
+  document.addEventListener('dragstart', function (event) {
+    if (event.target.closest('img, video')) {
+      event.preventDefault();
+    }
+  });
+</script>
 
 
 </body>
