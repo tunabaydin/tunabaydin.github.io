@@ -103,7 +103,12 @@ body {
   overflow: hidden;
   text-align: center;
   padding-bottom: 16px;
+
+  display: block;          /* make the <a> behave like a block card */
+  text-decoration: none;   /* remove underline from link */
+  color: inherit;          /* text uses normal color */
 }
+
 
 .card img {
   width: 100%;
@@ -159,15 +164,15 @@ body {
 <!-- GRID GALLERY -->
 <div class="grid">
 
-  <div class="card">
-    <img src="placeholder1.jpg" alt="Project 1">
-    <div class="card-title">Project One</div>
-  </div>
+   <a class="card" href="photography.html">
+    <img src="placeholder1.jpg" alt="Photography">
+    <div class="card-title">Photography</div>
+  </a>
 
-  <div class="card">
-    <img src="placeholder2.jpg" alt="Project 2">
-    <div class="card-title">Project Two</div>
-  </div>
+    <a class="card" href="crochet.html">
+    <img src="placeholder2.jpg" alt="Crochet">
+    <div class="card-title">Crochet</div>
+  </a>
 
   <div class="card">
     <img src="placeholder3.jpg" alt="Project 3">
