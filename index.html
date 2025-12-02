@@ -193,6 +193,58 @@
   background: rgba(0,0,0,0.08);
 }
 
+/* OTHER PROJECTS section on Home (styles scoped so they don't affect other pages) */
+#home-projects .page-header {
+  max-width: 900px;
+  margin: 6rem auto 2rem;
+  padding: 20px;
+  text-align: center;
+  color: #111;
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+
+#home-projects .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  max-width: 1000px;
+  margin: 0 auto 6rem;
+  padding: 0 20px;
+}
+
+#home-projects .card {
+  border-radius: 12px;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 16px;
+
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#home-projects .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 10px 28px rgba(0,0,0,0.28);
+}
+
+#home-projects .card img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+}
+
+#home-projects .card-title {
+  margin-top: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
 
     /* FOOTER: fixed at bottom, left aligned, larger text */
    /* Footer copyright (matches artist page) */
@@ -257,6 +309,9 @@
     <!-- empty for now; JS will inject Art Gallery title + .gallery here -->
   </section>
 
+  <!-- HOME OTHER PROJECTS SECTION (filled from otherprojects.html) -->
+  <section id="home-projects"></section>
+
   <footer class="footer">
     © 2025 Tuna Baydin — All rights reserved. <span class="tag">@ttunartt</span>
   </footer>
@@ -280,7 +335,7 @@
   });
 </script>
 
-  <script>
+   <script>
     async function loadArtSection() {
       try {
         const res = await fetch('art.html');
@@ -293,23 +348,19 @@
         const parser = new DOMParser();
         const doc = parser.parseFromString(text, 'text/html');
 
-        // Find the Art page heading and gallery
         const artHeading = doc.querySelector('h1');
         const artGallery = doc.querySelector('.gallery');
 
-        // Find the placeholder section in index.html
         const container = document.getElementById('home-art');
         if (!container) {
           console.error('#home-art container not found in index.html');
           return;
         }
 
-        // Optionally wrap this in a nice white panel, like the intro card
         const wrapper = document.createElement('div');
         wrapper.style.maxWidth = '1100px';
         wrapper.style.margin = '0 auto 80px';
         wrapper.style.padding = '0 20px';
-        wrapper.style.color = '#111';
 
         if (artHeading) {
           wrapper.appendChild(artHeading.cloneNode(true));
@@ -324,8 +375,51 @@
       }
     }
 
-    document.addEventListener('DOMContentLoaded', loadArtSection);
+    async function loadProjectsSection() {
+      try {
+        const res = await fetch('otherprojects.html');
+        if (!res.ok) {
+          console.error('Failed to load otherprojects.html', res.status);
+          return;
+        }
+
+        const text = await res.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(text, 'text/html');
+
+        const header = doc.querySelector('.page-header');
+        const grid = doc.querySelector('.grid');
+
+        const container = document.getElementById('home-projects');
+        if (!container) {
+          console.error('#home-projects container not found in index.html');
+          return;
+        }
+
+        const wrapper = document.createElement('div');
+        wrapper.style.maxWidth = '1100px';
+        wrapper.style.margin = '0 auto 80px';
+        wrapper.style.padding = '0 20px';
+
+        if (header) {
+          wrapper.appendChild(header.cloneNode(true));
+        }
+        if (grid) {
+          wrapper.appendChild(grid.cloneNode(true));
+        }
+
+        container.appendChild(wrapper);
+      } catch (err) {
+        console.error('Error loading projects section', err);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      loadArtSection();
+      loadProjectsSection();
+    });
   </script>
+
 
   
 </body>
