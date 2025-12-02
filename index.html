@@ -246,6 +246,45 @@
   color: #333;
 }
 
+/* Artist section (same look as artist.html) */
+#home-artist {
+  /* no special layout, card will center itself with .wrap */
+}
+
+/* main artist card */
+.wrap {
+  max-width: 700px;
+  margin: 40px auto 80px;
+  padding: 32px;
+  background: rgba(255,255,255,0.92);
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+}
+
+/* Portrait image inside the card */
+.portrait {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.portrait img {
+  width: 340px;
+  max-width: 65%;
+  height: auto;
+  border-radius: 12px;
+  display: inline-block;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .portrait img {
+    width: 220px;
+    max-width: 80%;
+  }
+}
+
+    
     /* FOOTER: fixed at bottom, left aligned, larger text */
    /* Footer copyright (matches artist page) */
 .footer {
@@ -312,6 +351,9 @@
   <!-- HOME OTHER PROJECTS SECTION (filled from otherprojects.html) -->
   <section id="home-projects"></section>
 
+ <!-- HOME ARTIST SECTION (filled from artist.html) -->
+  <section id="home-artist"></section>
+  
   <footer class="footer">
     © 2025 Tuna Baydin — All rights reserved. <span class="tag">@ttunartt</span>
   </footer>
@@ -421,11 +463,44 @@
   }
 }
 
+       async function loadArtistSection() {
+    try {
+      const res = await fetch('artist.html');
+      if (!res.ok) {
+        console.error('Failed to load artist.html', res.status);
+        return;
+      }
 
-    document.addEventListener('DOMContentLoaded', () => {
-      loadArtSection();
-      loadProjectsSection();
-    });
+      const text = await res.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(text, 'text/html');
+
+      // In artist.html the main card is <main class="wrap">...</main>
+      const mainWrap = doc.querySelector('main.wrap, .wrap');
+
+      const container = document.getElementById('home-artist');
+      if (!container) {
+        console.error('#home-artist container not found in index.html');
+        return;
+      }
+
+      if (mainWrap) {
+        // clone the whole card and add it into the home page
+        const clone = mainWrap.cloneNode(true);
+        container.appendChild(clone);
+      }
+    } catch (err) {
+      console.error('Error loading artist section', err);
+    }
+  }
+
+
+     document.addEventListener('DOMContentLoaded', () => {
+    loadArtSection();
+    loadProjectsSection();
+    loadArtistSection();
+  });
+
   </script>
 
 
