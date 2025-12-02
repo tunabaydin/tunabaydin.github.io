@@ -375,44 +375,52 @@
       }
     }
 
-    async function loadProjectsSection() {
-      try {
-        const res = await fetch('otherprojects.html');
-        if (!res.ok) {
-          console.error('Failed to load otherprojects.html', res.status);
-          return;
-        }
-
-        const text = await res.text();
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(text, 'text/html');
-
-        const header = doc.querySelector('.page-header');
-        const grid = doc.querySelector('.grid');
-
-        const container = document.getElementById('home-projects');
-        if (!container) {
-          console.error('#home-projects container not found in index.html');
-          return;
-        }
-
-        const wrapper = document.createElement('div');
-        wrapper.style.maxWidth = '1100px';
-        wrapper.style.margin = '0 auto 80px';
-        wrapper.style.padding = '0 20px';
-
-        if (header) {
-          wrapper.appendChild(header.cloneNode(true));
-        }
-        if (grid) {
-          wrapper.appendChild(grid.cloneNode(true));
-        }
-
-        container.appendChild(wrapper);
-      } catch (err) {
-        console.error('Error loading projects section', err);
-      }
+   async function loadProjectsSection() {
+  try {
+    const res = await fetch('otherprojects.html');
+    if (!res.ok) {
+      console.error('Failed to load otherprojects.html', res.status);
+      return;
     }
+
+    const text = await res.text();
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(text, 'text/html');
+
+    // Get the header and gallery from otherprojects.html
+    const header = doc.querySelector('.page-header');
+    const gallery = doc.querySelector('.gallery');
+
+    const container = document.getElementById('home-projects');
+    if (!container) {
+      console.error('#home-projects container not found in index.html');
+      return;
+    }
+
+    // wrapper to keep width / spacing similar to Art section
+    const wrapper = document.createElement('div');
+    wrapper.style.maxWidth = '1100px';
+    wrapper.style.margin = '0 auto 80px';
+    wrapper.style.padding = '0 20px';
+
+    if (header) {
+      // use the same text, but as an <h1> on the home page
+      const h1 = document.createElement('h1');
+      h1.textContent = header.textContent.trim();
+      h1.style.textAlign = 'center';
+      wrapper.appendChild(h1);
+    }
+
+    if (gallery) {
+      wrapper.appendChild(gallery.cloneNode(true));
+    }
+
+    container.appendChild(wrapper);
+  } catch (err) {
+    console.error('Error loading projects section', err);
+  }
+}
+
 
     document.addEventListener('DOMContentLoaded', () => {
       loadArtSection();
