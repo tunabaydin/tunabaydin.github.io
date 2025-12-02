@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Tuna Baydin — @ttunartt</title>
+ 
   <style>
     
  body{
@@ -284,6 +285,71 @@
   }
 }
 
+/* Contact form styles (used in Home contact section) */
+.contact-form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid  #ddd;
+  font-size: 0.95rem;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Submit button */
+.contact-form button {
+  align-self: flex-start;
+  margin-top: 4px;
+  padding: 10px 24px;
+  border-radius: 999px;
+  border: none;
+  background: #111;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #333;
+}
+
+/* Status / thank-you text */
+.form-status {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #1b7a2f;      /* green success text */
+}
+
+.form-status.error {
+  color: #b00020;      /* red for error */
+}
+
     
     /* FOOTER: fixed at bottom, left aligned, larger text */
    /* Footer copyright (matches artist page) */
@@ -343,16 +409,17 @@
     <p>Reach me through the contact page and share your experience with the art.</p>
   </div>
 
-  <!-- NEW: Home Art section (will be filled from art.html by JS) -->
-  <section id="home-art">
-    <!-- empty for now; JS will inject Art Gallery title + .gallery here -->
-  </section>
+  <!-- HOME ART SECTION (filled from art.html) -->
+  <section id="home-art"></section>
 
   <!-- HOME OTHER PROJECTS SECTION (filled from otherprojects.html) -->
   <section id="home-projects"></section>
 
- <!-- HOME ARTIST SECTION (filled from artist.html) -->
+  <!-- HOME ARTIST SECTION (filled from artist.html) -->
   <section id="home-artist"></section>
+
+  <!-- HOME CONTACT SECTION (filled from contact.html) -->
+  <section id="home-contact"></section>
   
   <footer class="footer">
     © 2025 Tuna Baydin — All rights reserved. <span class="tag">@ttunartt</span>
@@ -377,93 +444,90 @@
   });
 </script>
 
-   <script>
-    async function loadArtSection() {
-      try {
-        const res = await fetch('art.html');
-        if (!res.ok) {
-          console.error('Failed to load art.html', res.status);
-          return;
-        }
-
-        const text = await res.text();
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(text, 'text/html');
-
-        const artHeading = doc.querySelector('h1');
-        const artGallery = doc.querySelector('.gallery');
-
-        const container = document.getElementById('home-art');
-        if (!container) {
-          console.error('#home-art container not found in index.html');
-          return;
-        }
-
-        const wrapper = document.createElement('div');
-        wrapper.style.maxWidth = '1100px';
-        wrapper.style.margin = '0 auto 80px';
-        wrapper.style.padding = '0 20px';
-
-        if (artHeading) {
-          wrapper.appendChild(artHeading.cloneNode(true));
-        }
-        if (artGallery) {
-          wrapper.appendChild(artGallery.cloneNode(true));
-        }
-
-        container.appendChild(wrapper);
-      } catch (err) {
-        console.error('Error loading art section', err);
+  <script>
+  async function loadArtSection() {
+    try {
+      const res = await fetch('art.html');
+      if (!res.ok) {
+        console.error('Failed to load art.html', res.status);
+        return;
       }
+
+      const text = await res.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(text, 'text/html');
+
+      const artHeading = doc.querySelector('h1');
+      const artGallery = doc.querySelector('.gallery');
+
+      const container = document.getElementById('home-art');
+      if (!container) {
+        console.error('#home-art container not found in index.html');
+        return;
+      }
+
+      const wrapper = document.createElement('div');
+      wrapper.style.maxWidth = '1100px';
+      wrapper.style.margin = '0 auto 80px';
+      wrapper.style.padding = '0 20px';
+
+      if (artHeading) {
+        wrapper.appendChild(artHeading.cloneNode(true));
+      }
+      if (artGallery) {
+        wrapper.appendChild(artGallery.cloneNode(true));
+      }
+
+      container.appendChild(wrapper);
+    } catch (err) {
+      console.error('Error loading art section', err);
     }
-
-   async function loadProjectsSection() {
-  try {
-    const res = await fetch('otherprojects.html');
-    if (!res.ok) {
-      console.error('Failed to load otherprojects.html', res.status);
-      return;
-    }
-
-    const text = await res.text();
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(text, 'text/html');
-
-    // Get the header and gallery from otherprojects.html
-    const header = doc.querySelector('.page-header');
-    const gallery = doc.querySelector('.gallery');
-
-    const container = document.getElementById('home-projects');
-    if (!container) {
-      console.error('#home-projects container not found in index.html');
-      return;
-    }
-
-    // wrapper to keep width / spacing similar to Art section
-    const wrapper = document.createElement('div');
-    wrapper.style.maxWidth = '1100px';
-    wrapper.style.margin = '0 auto 80px';
-    wrapper.style.padding = '0 20px';
-
-    if (header) {
-      // use the same text, but as an <h1> on the home page
-      const h1 = document.createElement('h1');
-      h1.textContent = header.textContent.trim();
-      h1.style.textAlign = 'center';
-      wrapper.appendChild(h1);
-    }
-
-    if (gallery) {
-      wrapper.appendChild(gallery.cloneNode(true));
-    }
-
-    container.appendChild(wrapper);
-  } catch (err) {
-    console.error('Error loading projects section', err);
   }
-}
 
-       async function loadArtistSection() {
+  async function loadProjectsSection() {
+    try {
+      const res = await fetch('otherprojects.html');
+      if (!res.ok) {
+        console.error('Failed to load otherprojects.html', res.status);
+        return;
+      }
+
+      const text = await res.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(text, 'text/html');
+
+      const header = doc.querySelector('.page-header');
+      const gallery = doc.querySelector('.gallery');
+
+      const container = document.getElementById('home-projects');
+      if (!container) {
+        console.error('#home-projects container not found in index.html');
+        return;
+      }
+
+      const wrapper = document.createElement('div');
+      wrapper.style.maxWidth = '1100px';
+      wrapper.style.margin = '0 auto 80px';
+      wrapper.style.padding = '0 20px';
+
+      if (header) {
+        const h1 = document.createElement('h1');
+        h1.textContent = header.textContent.trim();
+        h1.style.textAlign = 'center';
+        wrapper.appendChild(h1);
+      }
+
+      if (gallery) {
+        wrapper.appendChild(gallery.cloneNode(true));
+      }
+
+      container.appendChild(wrapper);
+    } catch (err) {
+      console.error('Error loading projects section', err);
+    }
+  }
+
+  async function loadArtistSection() {
     try {
       const res = await fetch('artist.html');
       if (!res.ok) {
@@ -475,7 +539,6 @@
       const parser = new DOMParser();
       const doc = parser.parseFromString(text, 'text/html');
 
-      // In artist.html the main card is <main class="wrap">...</main>
       const mainWrap = doc.querySelector('main.wrap, .wrap');
 
       const container = document.getElementById('home-artist');
@@ -485,7 +548,6 @@
       }
 
       if (mainWrap) {
-        // clone the whole card and add it into the home page
         const clone = mainWrap.cloneNode(true);
         container.appendChild(clone);
       }
@@ -494,14 +556,78 @@
     }
   }
 
+  async function loadContactSection() {
+    try {
+      const res = await fetch('contact.html');
+      if (!res.ok) {
+        console.error('Failed to load contact.html', res.status);
+        return;
+      }
 
-     document.addEventListener('DOMContentLoaded', () => {
+      const text = await res.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(text, 'text/html');
+
+      // In contact.html, the main content is inside <div class="card">
+      const card = doc.querySelector('div.card');
+
+      const container = document.getElementById('home-contact');
+      if (!container) {
+        console.error('#home-contact container not found in index.html');
+        return;
+      }
+
+      if (card) {
+        const clone = card.cloneNode(true);
+        container.appendChild(clone);
+
+        // Wire up the contact form JS for the cloned form
+        const form = container.querySelector('.contact-form');
+        const statusEl = container.querySelector('#form-status');
+
+        if (form && statusEl) {
+          form.addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            statusEl.textContent = 'Sending...';
+            statusEl.classList.remove('error');
+
+            const data = new FormData(form);
+
+            try {
+              const response = await fetch(form.action, {
+                method: form.method,
+                body: data,
+                headers: { 'Accept': 'application/json' }
+              });
+
+              if (response.ok) {
+                statusEl.textContent = 'Thank you! Your message has been sent.';
+                form.reset();
+              } else {
+                statusEl.textContent = 'Oops! There was a problem sending your message.';
+                statusEl.classList.add('error');
+              }
+            } catch (error) {
+              statusEl.textContent = 'Oops! There was a network error. Please try again.';
+              statusEl.classList.add('error');
+            }
+          });
+        }
+      }
+    } catch (err) {
+      console.error('Error loading contact section', err);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
     loadArtSection();
     loadProjectsSection();
     loadArtistSection();
+    loadContactSection();
   });
+</script>
 
-  </script>
 
 
   
