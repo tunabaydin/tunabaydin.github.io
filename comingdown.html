@@ -1,1 +1,263 @@
-coming soon
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Coming Down — Art by Tuna Baydin</title>
+
+<style>
+:root{
+  font-family: system-ui, apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  --muted: #444;
+}
+
+/* Background image */
+body {
+  margin: 0;
+  padding-top: 70px; /* space for fixed nav */
+  background: url("backgroundphoto_1920x1080.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Frosted / translucent nav (global) */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+}
+
+/* Full-width bar with blurred background */
+.top-nav .nav-inner {
+  display: flex;
+  justify-content: center; /* keep items centered */
+  gap: 32px;
+
+  width: 100%;
+  padding: 14px 0;        /* vertical padding only */
+
+  border-radius: 0;
+  background: rgba(255,255,255,0.32);
+  border-bottom: 1.5px solid rgba(255,255,255,0.45);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.nav-item {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #000;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.nav-item:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+/* Make nav fit nicely on small screens */
+@media (max-width: 600px) {
+  .top-nav .nav-inner {
+    gap: 12px;          /* less space between items */
+    padding: 10px 4px;  /* narrower padding left/right */
+  }
+
+  .nav-item {
+    font-size: 0.9rem;  /* slightly smaller text */
+    padding: 6px 6px;   /* narrower buttons */
+  }
+}
+
+/* Artwork card */
+.art-card {
+  max-width: 1100px;
+  margin: 6rem auto;
+  padding: 40px 48px 48px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 6px 30px rgba(10, 10, 20, 0.06);
+}
+
+/* Back link */
+.back-link {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.back-link a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}
+
+/* Title & meta */
+h1 {
+  font-size: 32px;
+  margin: 0 0 0.35rem;
+}
+
+/* Stacked meta info */
+.art-meta {
+  margin-bottom: 1.8rem;
+  color: #333;
+  font-size: 0.98rem;
+}
+
+.art-meta p {
+  margin: 0.2rem 0;
+}
+
+.art-meta strong {
+  font-weight: 600;
+}
+
+
+/* Layout: image on left, text on right (can adjust later) */
+.art-layout {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+/* Left column: image (and later video if you want) */
+.art-media-column {
+  flex: 1 1 340px;
+}
+
+/* Image */
+.art-image img {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.18);
+}
+
+/* Right column: text */
+.art-description {
+  flex: 1 1 280px;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .art-card {
+    margin: 4rem 1.2rem 5rem;
+    padding: 28px 24px 32px;
+  }
+
+  .art-layout {
+    flex-direction: column;
+  }
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 18px 0;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.9);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.38);
+  box-sizing: border-box;
+}
+
+.footer .tag {
+  font-weight: 600;
+  margin-left: 6px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a class="nav-item" href="index.html">Home</a>
+    <a class="nav-item" href="art.html">Art</a>
+    <a class="nav-item" href="otherprojects.html">Other Projects</a>
+    <a class="nav-item" href="artist.html">Artist</a>
+    <a class="nav-item" href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- COMING DOWN CARD -->
+<div class="art-card">
+
+  <p class="back-link"><a href="art.html">← Back to gallery</a></p>
+
+  <h1>Coming Down</h1>
+ <p class="art-meta">
+  <strong>Materials:</strong> Marker<br>
+  <strong>Year:</strong> 2023<br>
+  <strong>Dimensions:</strong> 21 × 30 cm
+</p>
+
+
+  <div class="art-layout">
+
+    <!-- LEFT: image -->
+    <div class="art-media-column">
+      <div class="art-image">
+        <img src="assets/art/comingdown.jpg" alt="Coming Down artwork by Tuna Baydin">
+      </div>
+    </div>
+
+    <!-- RIGHT: description -->
+    <div class="art-description">
+      <p>
+        *
+      </p>
+      <p>
+        *
+      </p>
+
+  <!-- New image under text -->
+  <div class="art-image">
+    <img src="assets/art/comingdowndecoration.jpg" alt="Coming down decoration detail">
+  </div>
+      
+    </div>
+
+  </div>
+
+</div>
+
+<footer class="footer">
+  © 2025 Tuna Baydin — All rights reserved. <span class="tag">@ttunartt</span>
+</footer>
+
+<script>
+  // Block right-click on images and videos
+  document.addEventListener('contextmenu', function (event) {
+    if (event.target.closest('img, video')) {
+      event.preventDefault();
+    }
+  });
+
+  // Optional: also block dragging images/videos off the page
+  document.addEventListener('dragstart', function (event) {
+    if (event.target.closest('img, video')) {
+      event.preventDefault();
+    }
+  });
+</script>
+
+
+</body>
+</html>
