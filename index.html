@@ -77,11 +77,40 @@
       background-repeat: no-repeat;
     }
 
-    .gallery-title {
-      padding: 10px 12px 12px;
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
+   /* Title area with centered title + dot on the right */
+.gallery-title {
+  padding: 10px 12px 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+/* The title text itself – stays centered */
+.title-text {
+  flex: 1;
+  text-align: center;
+}
+
+/* Status dot (same look as art.html) */
+.status-dot {
+  width: 10px;   /* change this value to resize the dot */
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Green = available */
+.status-dot.available {
+  background: #18b46b;
+}
+
+/* Red = not available */
+.status-dot.unavailable {
+  background: #d64545;
+}
+
 
 
     /* Background video - full screen, behind content */
