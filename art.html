@@ -67,13 +67,19 @@ h1 {
   font-weight: 600;
   font-size: 0.95rem;
 
-  /* NEW: make title + dot sit on one line */
+  /* title + dot on one line */
   display: flex;
   justify-content: space-between;
   align-items: flex-end;   /* dot sits toward the bottom edge */
 }
 
-  /* Small status dot on the right side of the title bar */
+/* Centered title text inside flex row */
+.title-text {
+  flex: 1;
+  text-align: center;
+}
+
+/* Small status dot on the right side of the title bar */
 .status-dot {
   width: 10px;      /* <<< EDIT THIS to change dot size */
   height: 10px;     /* <<< EDIT THIS to change dot size */
@@ -90,6 +96,7 @@ h1 {
 .status-dot.unavailable {
   background: #d64545;
 }
+
 
 
 
@@ -195,110 +202,108 @@ h1 {
   <a class="gallery-item" href="jupiter.html">
     <div class="gallery-cover" style="background-image: url('assets/art/jupiter.jpg');"></div>
     <div class="gallery-title">
-      Jupiter
-  <span class="status-dot available"></span>
-</div>
+      <span class="title-text">Jupiter</span>
+      <span class="status-dot available"></span>
+    </div>
   </a>
   
   <!-- Snowflake card -->
   <a class="gallery-item" href="snowflake.html">
     <div class="gallery-cover" style="background-image: url('assets/art/snowflake.jpg');"></div>
-   <div class="gallery-title">
-  Snowflake
-  <span class="status-dot unavailable"></span>
-</div>
+    <div class="gallery-title">
+      <span class="title-text">Snowflake</span>
+      <span class="status-dot unavailable"></span>
+    </div>
   </a>
 
   <!-- Baby card -->
   <a class="gallery-item" href="baby.html">
     <div class="gallery-cover" style="background-image: url('assets/art/baby.jpg');"></div>
-   <div class="gallery-title">
-  Baby
-  <span class="status-dot unavailable"></span>
-</div>
-</div>
-
+    <div class="gallery-title">
+      <span class="title-text">Baby</span>
+      <span class="status-dot unavailable"></span>
+    </div>
   </a>
 
-    <!-- Emulsion card -->
+  <!-- Emulsion card -->
   <a class="gallery-item" href="emulsion.html">
     <div class="gallery-cover" style="background-image: url('assets/art/emulsion.jpg');"></div>
-   <div class="gallery-title">
-  Emulsion
-  <span class="status-dot unavailable"></span>
-</div>
+    <div class="gallery-title">
+      <span class="title-text">Emulsion</span>
+      <span class="status-dot unavailable"></span>
+    </div>
   </a>
 
   <!-- Plant card -->
   <a class="gallery-item" href="plant.html">
     <div class="gallery-cover" style="background-image: url('assets/art/plant.jpg');"></div>
-   <div class="gallery-title">
-  Plant
-  <span class="status-dot unavailable"></span>
-</div>
+    <div class="gallery-title">
+      <span class="title-text">Plant</span>
+      <span class="status-dot unavailable"></span>
+    </div>
   </a>
 
   <!-- Abduction card -->
   <a class="gallery-item" href="abduction.html">
     <div class="gallery-cover" style="background-image: url('assets/art/abduction.jpg');"></div>
     <div class="gallery-title">
-  Abduction
-  <span class="status-dot available"></span>
-</div>
+      <span class="title-text">Abduction</span>
+      <span class="status-dot available"></span>
+    </div>
   </a>
 
   <!-- Walk card -->
   <a class="gallery-item" href="walk.html">
     <div class="gallery-cover" style="background-image: url('assets/art/walk.jpg');"></div>
-   <div class="gallery-title">
-  Walk
-  <span class="status-dot unavailable"></span>
-</div>
+    <div class="gallery-title">
+      <span class="title-text">Walk</span>
+      <span class="status-dot unavailable"></span>
+    </div>
   </a>
 
-   <!-- Olivepit card -->
+  <!-- Olive pit card -->
   <a class="gallery-item" href="olivepit.html">
     <div class="gallery-cover" style="background-image: url('assets/art/olivepit.jpg');"></div>
-   <div class="gallery-title">
-  Olive pit
-  <span class="status-dot unavailable"></span>
-</div>
+    <div class="gallery-title">
+      <span class="title-text">Olive pit</span>
+      <span class="status-dot unavailable"></span>
+    </div>
   </a>
 
-   <!-- Warm card -->
+  <!-- Warm card -->
   <a class="gallery-item" href="warm.html">
     <div class="gallery-cover" style="background-image: url('assets/art/warm.jpg');"></div>
-     <div class="gallery-title">
-  Warm
-  <span class="status-dot available"></span>
-</div>
+    <div class="gallery-title">
+      <span class="title-text">Warm</span>
+      <span class="status-dot available"></span>
+    </div>
   </a>
 
-   <!-- Cookie card -->
+  <!-- Cookie card -->
   <a class="gallery-item" href="cookie.html">
     <div class="gallery-cover" style="background-image: url('assets/art/cookie.jpg');"></div>
     <div class="gallery-title">
-  Cookie
-  <span class="status-dot unavailable"></span>
-</div>
+      <span class="title-text">Cookie</span>
+      <span class="status-dot unavailable"></span>
+    </div>
   </a>
 
-     <!-- Coming down card -->
+  <!-- Coming Down card -->
   <a class="gallery-item" href="comingdown.html">
     <div class="gallery-cover" style="background-image: url('assets/art/comingdown.jpg');"></div>
-   <div class="gallery-title">
-  Coming down
-  <span class="status-dot available"></span>
-</div>
+    <div class="gallery-title">
+      <span class="title-text">Coming Down</span>
+      <span class="status-dot available"></span>
+    </div>
   </a>
 
-       <!-- Lips card -->
+  <!-- Lips card -->
   <a class="gallery-item" href="lips.html">
     <div class="gallery-cover" style="background-image: url('assets/art/lips.jpg');"></div>
-   <div class="gallery-title">
-  Lips
-  <span class="status-dot unavailable"></span>
-</div>
+    <div class="gallery-title">
+      <span class="title-text">Lips</span>
+      <span class="status-dot unavailable"></span>
+    </div>
   </a>
 
 
