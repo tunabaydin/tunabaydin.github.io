@@ -66,7 +66,31 @@ h1 {
   padding: 10px 12px 12px;
   font-weight: 600;
   font-size: 0.95rem;
+
+  /* NEW: make title + dot sit on one line */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;   /* dot sits toward the bottom edge */
 }
+
+  /* Small status dot on the right side of the title bar */
+.status-dot {
+  width: 10px;      /* <<< EDIT THIS to change dot size */
+  height: 10px;     /* <<< EDIT THIS to change dot size */
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Green = available */
+.status-dot.available {
+  background: #18b46b;
+}
+
+/* Red = not available */
+.status-dot.unavailable {
+  background: #d64545;
+}
+
 
 
 /* Frosted / translucent nav (global) */
@@ -182,7 +206,11 @@ h1 {
   <!-- Baby card -->
   <a class="gallery-item" href="baby.html">
     <div class="gallery-cover" style="background-image: url('assets/art/baby.jpg');"></div>
-    <div class="gallery-title">Baby</div>
+    <div class="gallery-title">
+  Baby
+  <span class="status-dot available"></span>
+</div>
+
   </a>
 
     <!-- Emulsion card -->
