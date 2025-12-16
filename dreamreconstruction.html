@@ -58,5 +58,169 @@ h1 {
 }
 
 /* Main container */
-.dream-section
+.dream-section {
+  max-width: 1100px;
+  margin: 40px auto 100px;
+  padding: 24px;
+  background: rgba(255,255,255,0.92);
+  border-radius: 20px;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.12);
+}
+
+/* Grid layout */
+.dream-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 28px;
+}
+
+/* Left column images */
+.dream-left {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.dream-left img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+}
+
+/* Right column */
+.dream-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Text box */
+.dream-text {
+  background: rgba(255,255,255,0.95);
+  padding: 20px 22px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.dream-text h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+.dream-text p {
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Stacked images on right */
+.dream-stack {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.dream-stack img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 18px 0;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.9);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.38);
+}
+
+.footer .tag {
+  font-weight: 600;
+  margin-left: 6px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .dream-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="top-nav">
+  <div class="nav-inner">
+    <a class="nav-item" href="index.html">Home</a>
+    <a class="nav-item" href="art.html">Art</a>
+    <a class="nav-item" href="otherprojects.html">Other Projects</a>
+    <a class="nav-item" href="artist.html">Artist</a>
+    <a class="nav-item" href="contact.html">Contact</a>
+  </div>
+</div>
+
+<h1>Dream Reconstruction</h1>
+
+<div class="dream-section">
+
+  <div class="dream-grid">
+
+    <!-- LEFT COLUMN: dream1–dream4 -->
+    <div class="dream-left">
+      <img src="assets/otherprojects/dream1.png" alt="Dream reconstruction 1">
+      <img src="assets/otherprojects/dream2.png" alt="Dream reconstruction 2">
+      <img src="assets/otherprojects/dream3.png" alt="Dream reconstruction 3">
+      <img src="assets/otherprojects/dream4.png" alt="Dream reconstruction 4">
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="dream-right">
+
+      <!-- TEXT BOX -->
+      <div class="dream-text">
+        <h2>About the project</h2>
+        <p>
+          <!-- Write your project explanation here -->
+        </p>
+      </div>
+
+      <!-- dream5–dream8 -->
+      <div class="dream-stack">
+        <img src="assets/otherprojects/dream5.png" alt="Dream reconstruction 5">
+        <img src="assets/otherprojects/dream6.png" alt="Dream reconstruction 6">
+        <img src="assets/otherprojects/dream7.png" alt="Dream reconstruction 7">
+        <img src="assets/otherprojects/dream8.png" alt="Dream reconstruction 8">
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer">
+  © 2025 Tuna Baydin — All rights reserved. <span class="tag">@ttunartt</span>
+</footer>
+
+<script>
+document.addEventListener('contextmenu', function (event) {
+  if (event.target.closest('img')) {
+    event.preventDefault();
+  }
+});
+
+document.addEventListener('dragstart', function (event) {
+  if (event.target.closest('img')) {
+    event.preventDefault();
+  }
+});
+</script>
+
+</body>
+</html>
 
