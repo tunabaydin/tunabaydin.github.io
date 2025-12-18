@@ -144,6 +144,13 @@ h1 {
   box-shadow: 0 8px 26px rgba(0,0,0,0.18);
 }
 
+  .art-image-stack{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;  /* match the right column */
+}
+
+
 /* Video styling */
 .art-video {
   width: 100%;
@@ -248,11 +255,10 @@ h1 {
     <div class="art-media-column">
 
       <!-- Image -->
-      <div class="art-media art-image">
-        <img src="assets/art/olivepit2.jpg" alt="Olive pit artwork by Tuna Baydin">
-         <img src="assets/art/olivepitdecoration.jpg" alt="Olive pit decoration">
-      </div>
-
+    <div class="art-media art-image art-image-stack">
+  <img src="assets/art/olivepit2.jpg" alt="Olive pit artwork by Tuna Baydin">
+  <img src="assets/art/olivepitdecoration.jpg" alt="Olive pit decoration">
+</div>
 
 
     </div>
