@@ -518,6 +518,7 @@
       }
 
       container.appendChild(wrapper);
+      wireHomeArtLinks();
     } catch (err) {
       console.error('Error loading art section', err);
     }
@@ -659,12 +660,51 @@
     }
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
-    loadArtSection();
-    loadProjectsSection();
-    loadArtistSection();
-    loadContactSection();
-  });
+<script>
+  function wireHomeArtLinks() {
+    const container = document.getElementById("home-art");
+    if (!container) return;
+
+    const links = container.querySelectorAll("a.gallery-item");
+
+    // Add ?from=home to links
+    links.forEach(a => {
+      const href = a.getAttribute("href");
+      if (!href) return;
+
+      if (href.includes("from=")) return;
+
+      const joiner = href.includes("?") ? "&" : "?";
+      a.setAttribute("href", href + joiner + "from=home");
+    });
+
+    // Save scroll position when user enters an artwork from Home
+    links.forEach(a => {
+      a.addEventListener("click", () => {
+        sessionStorage.setItem("home_scrollY", String(window.scrollY));
+      });
+    });
+  }
+</script>
+
+
+    
+ document.addEventListener('DOMContentLoaded', async () => {
+  await Promise.all([
+    loadArtSection(),
+    loadProjectsSection(),
+    loadArtistSection(),
+    loadContactSection()
+  ]);
+
+  // If returning from an artwork opened from Home, restore scroll
+  const y = sessionStorage.getItem("return_home_scrollY");
+  if (y !== null) {
+    window.scrollTo(0, parseInt(y, 10) || 0);
+    sessionStorage.removeItem("return_home_scrollY");
+  }
+});
+
 </script>
 
 
