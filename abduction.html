@@ -195,7 +195,8 @@ h1 {
 <!-- ABDUCTION CARD -->
 <div class="art-card">
 
-  <p class="back-link"><a href="art.html">← Back to gallery</a></p>
+  <p class="back-link"><a id="smart-back" href="art.html">← Back</a></p>
+
 
   <h1>Abduction</h1>
 <div class="art-meta">
@@ -245,6 +246,39 @@ h1 {
   document.addEventListener('dragstart', function (event) {
     if (event.target.closest('img, video')) {
       event.preventDefault();
+    }
+  });
+</script>
+
+  <script>
+  // --- OPTION 2: smart back link (HOME vs GALLERY) ---
+  document.addEventListener("DOMContentLoaded", () => {
+    const back = document.getElementById("smart-back");
+    if (!back) return;
+
+    const from = new URLSearchParams(window.location.search).get("from");
+
+    if (from === "home") {
+      // Button text + destination
+      back.textContent = "← Back to Home";
+      back.setAttribute("href", "index.html");
+
+      // On click, tell Home to restore its scroll
+      back.addEventListener("click", () => {
+        const y = sessionStorage.getItem("home_scrollY") || "0";
+        sessionStorage.setItem("return_home_scrollY", y);
+      });
+
+    } else {
+      // Default: treat as coming from gallery
+      back.textContent = "← Back to gallery";
+      back.setAttribute("href", "art.html");
+
+      // On click, tell art.html to restore its scroll
+      back.addEventListener("click", () => {
+        const y = sessionStorage.getItem("gallery_scrollY") || "0";
+        sessionStorage.setItem("return_gallery_scrollY", y);
+      });
     }
   });
 </script>
