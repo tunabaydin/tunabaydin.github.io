@@ -483,7 +483,33 @@
   });
 </script>
 
-  <script>
+ 
+<script>
+  function wireHomeArtLinks() {
+    const container = document.getElementById("home-art");
+    if (!container) return;
+
+    const links = container.querySelectorAll("a.gallery-item");
+
+    // Add ?from=home to links
+    links.forEach(a => {
+      const href = a.getAttribute("href");
+      if (!href) return;
+
+      if (href.includes("from=")) return;
+
+      const joiner = href.includes("?") ? "&" : "?";
+      a.setAttribute("href", href + joiner + "from=home");
+    });
+
+    // Save scroll position when user enters an artwork from Home
+    links.forEach(a => {
+      a.addEventListener("click", () => {
+        sessionStorage.setItem("home_scrollY", String(window.scrollY));
+      });
+    });
+  }
+
   async function loadArtSection() {
     try {
       const res = await fetch('art.html');
@@ -510,14 +536,12 @@
       wrapper.style.margin = '0 auto 80px';
       wrapper.style.padding = '0 20px';
 
-      if (artHeading) {
-        wrapper.appendChild(artHeading.cloneNode(true));
-      }
-      if (artGallery) {
-        wrapper.appendChild(artGallery.cloneNode(true));
-      }
+      if (artHeading) wrapper.appendChild(artHeading.cloneNode(true));
+      if (artGallery) wrapper.appendChild(artGallery.cloneNode(true));
 
       container.appendChild(wrapper);
+
+      // IMPORTANT: wire the cloned links after inserting into DOM
       wireHomeArtLinks();
     } catch (err) {
       console.error('Error loading art section', err);
@@ -557,9 +581,7 @@
         wrapper.appendChild(h1);
       }
 
-      if (gallery) {
-        wrapper.appendChild(gallery.cloneNode(true));
-      }
+      if (gallery) wrapper.appendChild(gallery.cloneNode(true));
 
       container.appendChild(wrapper);
     } catch (err) {
@@ -587,10 +609,7 @@
         return;
       }
 
-      if (mainWrap) {
-        const clone = mainWrap.cloneNode(true);
-        container.appendChild(clone);
-      }
+      if (mainWrap) container.appendChild(mainWrap.cloneNode(true));
     } catch (err) {
       console.error('Error loading artist section', err);
     }
@@ -608,7 +627,6 @@
       const parser = new DOMParser();
       const doc = parser.parseFromString(text, 'text/html');
 
-      // In contact.html, the main content is inside <div class="card">
       const card = doc.querySelector('div.card');
 
       const container = document.getElementById('home-contact');
@@ -618,8 +636,7 @@
       }
 
       if (card) {
-        const clone = card.cloneNode(true);
-        container.appendChild(clone);
+        container.appendChild(card.cloneNode(true));
 
         // Wire up the contact form JS for the cloned form
         const form = container.querySelector('.contact-form');
@@ -660,51 +677,21 @@
     }
   }
 
-<script>
-  function wireHomeArtLinks() {
-    const container = document.getElementById("home-art");
-    if (!container) return;
+  document.addEventListener('DOMContentLoaded', async () => {
+    await Promise.all([
+      loadArtSection(),
+      loadProjectsSection(),
+      loadArtistSection(),
+      loadContactSection()
+    ]);
 
-    const links = container.querySelectorAll("a.gallery-item");
-
-    // Add ?from=home to links
-    links.forEach(a => {
-      const href = a.getAttribute("href");
-      if (!href) return;
-
-      if (href.includes("from=")) return;
-
-      const joiner = href.includes("?") ? "&" : "?";
-      a.setAttribute("href", href + joiner + "from=home");
-    });
-
-    // Save scroll position when user enters an artwork from Home
-    links.forEach(a => {
-      a.addEventListener("click", () => {
-        sessionStorage.setItem("home_scrollY", String(window.scrollY));
-      });
-    });
-  }
-</script>
-
-
-    
- document.addEventListener('DOMContentLoaded', async () => {
-  await Promise.all([
-    loadArtSection(),
-    loadProjectsSection(),
-    loadArtistSection(),
-    loadContactSection()
-  ]);
-
-  // If returning from an artwork opened from Home, restore scroll
-  const y = sessionStorage.getItem("return_home_scrollY");
-  if (y !== null) {
-    window.scrollTo(0, parseInt(y, 10) || 0);
-    sessionStorage.removeItem("return_home_scrollY");
-  }
-});
-
+    // If returning from an artwork opened from Home, restore scroll
+    const y = sessionStorage.getItem("return_home_scrollY");
+    if (y !== null) {
+      window.scrollTo(0, parseInt(y, 10) || 0);
+      sessionStorage.removeItem("return_home_scrollY");
+    }
+  });
 </script>
 
 
