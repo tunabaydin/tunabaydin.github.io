@@ -331,6 +331,32 @@ h1 {
   });
 </script>
 
+<script>
+  // --- OPTION 2: remember where user came from (GALLERY) ---
+  document.addEventListener("DOMContentLoaded", () => {
+    const galleryLinks = document.querySelectorAll(".gallery a.gallery-item");
+
+    // Add ?from=gallery to all art links (robust even if opened in new tab)
+    galleryLinks.forEach(a => {
+      const href = a.getAttribute("href");
+      if (!href) return;
+
+      // Skip if it already has from=
+      if (href.includes("from=")) return;
+
+      const joiner = href.includes("?") ? "&" : "?";
+      a.setAttribute("href", href + joiner + "from=gallery");
+    });
+
+    // Save scroll position when user enters an artwork from art.html
+    galleryLinks.forEach(a => {
+      a.addEventListener("click", () => {
+        sessionStorage.setItem("gallery_scrollY", String(window.scrollY));
+      });
+    });
+  });
+</script>
+
   
 </body>
 </html>
