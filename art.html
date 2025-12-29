@@ -368,6 +368,30 @@ h1 {
   });
 </script>
 
+  <script>
+  // Save scroll continuously (most reliable on mobile)
+  window.addEventListener("scroll", () => {
+    sessionStorage.setItem("gallery_scrollY", String(window.scrollY));
+  }, { passive: true });
+
+  // Also save immediately when clicking a card
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest("a.gallery-item");
+    if (!a) return;
+    sessionStorage.setItem("gallery_scrollY", String(window.scrollY));
+  });
+
+  // Restore scroll when coming back
+  window.addEventListener("load", () => {
+    const params = new URLSearchParams(location.search);
+    if (params.get("back") === "gallery") {
+      const y = sessionStorage.getItem("gallery_scrollY");
+      if (y) window.scrollTo(0, parseInt(y, 10) || 0);
+    }
+  });
+</script>
+
+
   
 </body>
 </html>
