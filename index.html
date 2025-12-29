@@ -625,29 +625,6 @@
         return;
       }
 
-        // Save home scroll continuously (reliable on mobile)
-  window.addEventListener("scroll", () => {
-    sessionStorage.setItem("home_scrollY", String(window.scrollY));
-  }, { passive: true });
-
-  // Restore home scroll when coming back (?back=home)
-  window.addEventListener("load", () => {
-    const params = new URLSearchParams(location.search);
-    if (params.get("back") === "home") {
-      const y = sessionStorage.getItem("home_scrollY");
-      if (y) window.scrollTo(0, parseInt(y, 10) || 0);
-    }
-  });
-
-  // Load sections
-  document.addEventListener("DOMContentLoaded", async () => {
-    await Promise.all([
-      loadArtSection(),
-      loadProjectsSection(),
-      loadArtistSection(),
-      loadContactSection()
-    ]);
-  });
 
 
       const text = await res.text();
@@ -704,6 +681,29 @@
     }
   }
 
+// Save home scroll continuously (reliable on mobile)
+window.addEventListener("scroll", () => {
+  sessionStorage.setItem("home_scrollY", String(window.scrollY));
+}, { passive: true });
+
+// Restore home scroll when coming back (?back=home)
+window.addEventListener("load", () => {
+  const params = new URLSearchParams(location.search);
+  if (params.get("back") === "home") {
+    const y = sessionStorage.getItem("home_scrollY");
+    if (y) window.scrollTo(0, parseInt(y, 10) || 0);
+  }
+});
+
+// Load sections once
+document.addEventListener("DOMContentLoaded", async () => {
+  await Promise.all([
+    loadArtSection(),
+    loadProjectsSection(),
+    loadArtistSection(),
+    loadContactSection()
+  ]);
+});
 
 </script>
 
