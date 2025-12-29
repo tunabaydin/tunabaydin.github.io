@@ -493,16 +493,16 @@
 
     const links = container.querySelectorAll("a.gallery-item");
 
-    // Add ?from=home to links
+        // Force from=home on links (overwrite from=gallery if present)
     links.forEach(a => {
       const href = a.getAttribute("href");
       if (!href) return;
 
-      if (href.includes("from=")) return;
-
-      const joiner = href.includes("?") ? "&" : "?";
-      a.setAttribute("href", href + joiner + "from=home");
+      const url = new URL(href, window.location.href);
+      url.searchParams.set("from", "home");
+      a.setAttribute("href", url.pathname + "?" + url.searchParams.toString());
     });
+
 
     // Save scroll position when user enters an artwork from Home
     links.forEach(a => {
@@ -625,6 +625,31 @@
         return;
       }
 
+        // Save home scroll continuously (reliable on mobile)
+  window.addEventListener("scroll", () => {
+    sessionStorage.setItem("home_scrollY", String(window.scrollY));
+  }, { passive: true });
+
+  // Restore home scroll when coming back (?back=home)
+  window.addEventListener("load", () => {
+    const params = new URLSearchParams(location.search);
+    if (params.get("back") === "home") {
+      const y = sessionStorage.getItem("home_scrollY");
+      if (y) window.scrollTo(0, parseInt(y, 10) || 0);
+    }
+  });
+
+  // Load sections
+  document.addEventListener("DOMContentLoaded", async () => {
+    await Promise.all([
+      loadArtSection(),
+      loadProjectsSection(),
+      loadArtistSection(),
+      loadContactSection()
+    ]);
+  });
+
+
       const text = await res.text();
       const parser = new DOMParser();
       const doc = parser.parseFromString(text, 'text/html');
@@ -679,38 +704,7 @@
     }
   }
 
-<script>
-  // Save home scroll continuously (reliable on mobile)
-  window.addEventListener("scroll", () => {
-    sessionStorage.setItem("home_scrollY", String(window.scrollY));
-  }, { passive: true });
 
-  // Restore home scroll when coming back
-  window.addEventListener("load", () => {
-    const params = new URLSearchParams(location.search);
-    if (params.get("back") === "home") {
-      const y = sessionStorage.getItem("home_scrollY");
-      if (y) window.scrollTo(0, parseInt(y, 10) || 0);
-    }
-  });
-</script>
-
-  
-  document.addEventListener('DOMContentLoaded', async () => {
-    await Promise.all([
-      loadArtSection(),
-      loadProjectsSection(),
-      loadArtistSection(),
-      loadContactSection()
-    ]);
-
-    // If returning from an artwork opened from Home, restore scroll
-    const y = sessionStorage.getItem("return_home_scrollY");
-    if (y !== null) {
-      window.scrollTo(0, parseInt(y, 10) || 0);
-      sessionStorage.removeItem("return_home_scrollY");
-    }
-  });
 </script>
 
 
