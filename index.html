@@ -34,6 +34,10 @@
   margin:0.6rem 0;
 }
 
+/* Hide page only while restoring scroll (prevents 1-frame flash at top) */
+html.is-restoring-home body { visibility: hidden; }
+
+    
     /* Make Art Gallery text behave like in art.html */
 #home-art {
   text-align: center;
@@ -416,9 +420,19 @@
     margin: 120px auto 120px; /* increase bottom spacing */
   }
 }
-
     
   </style>
+
+  <script>
+  // If we are returning to Home with ?back=home, hide page before first paint
+  (function () {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("back") === "home") {
+      document.documentElement.classList.add("is-restoring-home");
+    }
+  })();
+</script>
+  
 </head>
 
 <body>
@@ -688,11 +702,22 @@ window.addEventListener("scroll", () => {
 // Restore home scroll when coming back (?back=home)
 window.addEventListener("load", () => {
   const params = new URLSearchParams(location.search);
+
   if (params.get("back") === "home") {
     const y = sessionStorage.getItem("home_scrollY");
     if (y) window.scrollTo(0, parseInt(y, 10) || 0);
+
+    // Reveal page immediately after restoring scroll
+    document.documentElement.classList.remove("is-restoring-home");
   }
+
+  // Fallback: never stay hidden if something unexpected happens
+setTimeout(() => {
+  document.documentElement.classList.remove("is-restoring-home");
+}, 1500);
+
 });
+
 
 // Load sections once
 document.addEventListener("DOMContentLoaded", async () => {
