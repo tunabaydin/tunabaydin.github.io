@@ -213,7 +213,8 @@ h1 {
 <!-- JUPITER CARD -->
 <div class="art-card">
 
-  <p class="back-link"><a href="art.html">← Back to gallery</a></p>
+<p class="back-link"><a id="smart-back" href="art.html?back=gallery">← Back</a></p>
+
 
   <h1>Jupiter</h1>
 
@@ -282,6 +283,23 @@ h1 {
   });
 </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const back = document.getElementById("smart-back");
+    if (!back) return;
+
+    const from = new URLSearchParams(window.location.search).get("from");
+
+    if (from === "home") {
+      back.textContent = "← Back to Home";
+      back.href = "index.html?back=home";
+    } else {
+      back.textContent = "← Back to gallery";
+      back.href = "art.html?back=gallery";
+    }
+  });
+</script>
+  
 
 </body>
 </html>
