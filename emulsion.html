@@ -135,6 +135,15 @@ h1 {
   box-shadow: 0 8px 26px rgba(0,0,0,0.18);
 }
 
+/* Legend text under images */
+.image-legend{
+  font-size: 0.85rem;
+  color: #555;
+  margin: 6px 2px 0;
+  line-height: 1.4;
+}
+  
+  
 /* Right column: text */
 .art-description {
   flex: 1 1 280px;
@@ -209,20 +218,28 @@ h1 {
 
   <div class="art-layout">
 
-    <!-- LEFT: image -->
-   <div class="art-media-column">
+<!-- LEFT: image -->
+<div class="art-media-column">
 
-  <!-- First image -->
+  <!-- Emulsion artwork -->
   <div class="art-image">
     <img src="assets/art/emulsion.jpg" alt="Emulsion artwork by Tuna Baydin">
   </div>
 
-  <!-- Second image (new) -->
+  <!-- Decoration image (new, goes under emulsion.jpg) -->
+  <div class="art-image" style="margin-top:16px;">
+    <img src="assets/art/emulsiondecoration.jpg" alt="Emulsion decoration detail">
+  </div>
+
+  <!-- Microscope image (goes under decoration) + legend -->
   <div class="art-image" style="margin-top:16px;">
     <img src="assets/art/realemulsion.jpg" alt="Microscope emulsion image by Tuna Baydin">
+    <p class="image-legend">Corn oil emulsion, stabilized by 2% (w/w) polysorbate 80. The photograph was taken with Nikon
+Eclipse TS100 at 40X magnification. </p>
   </div>
 
 </div>
+
 
 
     <!-- RIGHT: description -->
