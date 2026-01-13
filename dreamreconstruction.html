@@ -36,13 +36,21 @@ h1 {
   display: flex;
   justify-content: center;
   gap: 32px;
+
   width: 100%;
   padding: 14px 0;
+
   background: rgba(255,255,255,0.32);
   border-bottom: 1.5px solid rgba(255,255,255,0.45);
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  flex-wrap: wrap;      /* ✅ allows wrapping cleanly on mobile */
+  row-gap: 6px;         /* ✅ keeps 2-line nav neat if it wraps */
 }
+
 
 .nav-item {
   font-weight: 600;
@@ -51,6 +59,18 @@ h1 {
   text-decoration: none;
   padding: 6px 12px;
   border-radius: 6px;
+}
+
+  @media (max-width: 600px) {
+  .top-nav .nav-inner {
+    gap: 12px;
+    padding: 10px 4px;
+  }
+
+  .nav-item {
+    font-size: 0.9rem;
+    padding: 6px 6px;
+  }
 }
 
 .nav-item:hover {
