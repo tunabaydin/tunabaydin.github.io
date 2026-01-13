@@ -6,21 +6,33 @@
 <title>Dream Reconstruction — Tuna Baydin</title>
 
 <style>
+
+  :root{
+  --muted:#444;
+  --text:#111;
+  font-family: system-ui, -apple-system, Roboto, "Helvetica Neue", Arial;
+}
+
+  
 /* Page background */
 body {
   background: url("backgroundphoto_1920x1080.jpg") no-repeat center center fixed;
   background-size: cover;
   margin: 0;
-  font-family: system-ui, sans-serif;
+  font-family: inherit;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
   padding-top: 70px;
-  color: #111;
+  color: var(--text);
 }
 
 /* Headings */
-h1 {
+h1{
+  margin-top: 0;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
   text-align: center;
-  font-size: 2.3rem;
-  margin-top: 40px;
+  padding-top: 40px;
 }
 
 /* Frosted / translucent nav */
@@ -36,19 +48,13 @@ h1 {
   display: flex;
   justify-content: center;
   gap: 32px;
-
   width: 100%;
   padding: 14px 0;
-
   background: rgba(255,255,255,0.32);
   border-bottom: 1.5px solid rgba(255,255,255,0.45);
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-
-  flex-wrap: wrap;      /* ✅ allows wrapping cleanly on mobile */
-  row-gap: 6px;         /* ✅ keeps 2-line nav neat if it wraps */
 }
 
 
@@ -70,6 +76,7 @@ h1 {
   .nav-item {
     font-size: 0.9rem;
     padding: 6px 6px;
+    white-space: nowrap;
   }
 }
 
