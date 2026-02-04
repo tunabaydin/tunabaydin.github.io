@@ -224,62 +224,22 @@ html.is-restoring-home body { visibility: hidden; }
   font-weight: 500;
 }
 
+/* HOME: Other Projects titles centered (override the Art flex title style) */
+#home-projects .gallery-title {
+  display: block;      /* kills the flex layout from Art */
+  text-align: center;  /* centers text on desktop + mobile */
+  padding: 10px 12px 12px;
+}
+
+/* If you have any leftover dot/span in otherprojects cards, hide it safely */
+#home-projects .status-dot {
+  display: none;
+}    
+    
 .dropdown-link:hover {
   background: rgba(0,0,0,0.08);
 }
 
-/* OTHER PROJECTS section on Home (styles scoped so they don't affect other pages) */
-#home-projects .page-header {
-  max-width: 900px;
-  margin: 6rem auto 2rem;
-  padding: 20px;
-  text-align: center;
-  color: #111;
-  font-size: 2.3rem;
-  font-weight: 700;
-}
-
-#home-projects .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 22px;
-  max-width: 1000px;
-  margin: 0 auto 6rem;
-  padding: 0 20px;
-}
-
-#home-projects . {
-  border-radius: 12px;
-  background: rgba(255,255,255,0.9);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
-  overflow: hidden;
-  text-align: center;
-  padding-bottom: 16px;
-
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-#home-projects .card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0px 10px 28px rgba(0,0,0,0.28);
-}
-
-#home-projects .card img {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  display: block;
-}
-
-#home-projects .card-title {
-  margin-top: 12px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #333;
-}
 
 /* Artist section (same look as artist.html) */
 #home-artist {
