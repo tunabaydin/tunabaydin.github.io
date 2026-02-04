@@ -59,6 +59,9 @@
   margin: 0 0 1rem;
 }
 
+#home-contact p { color: #111; }
+#home-contact a { color: #0077cc; text-decoration: none; }
+
 #home-contact p,
 #home-artist p{
   font-size: 20px;
@@ -241,18 +244,16 @@ html.is-restoring-home body { visibility: hidden; }
   }
 }
 
-  /* Dropdown container */
+/* ===== FUTURE NAV DROPDOWN (currently unused) =====
 .dropdown {
   position: relative;
 }
 
-/* Dropdown label */
 .dropdown > .nav-item {
   cursor: pointer;
   display: inline-block;
 }
 
-/* Hidden menu */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -267,12 +268,10 @@ html.is-restoring-home body { visibility: hidden; }
   z-index: 200;
 }
 
-/* Show menu on hover */
 .dropdown:hover .dropdown-menu {
   display: block;
 }
 
-/* Dropdown links */
 .dropdown-link {
   padding: 8px 14px;
   display: block;
@@ -282,6 +281,11 @@ html.is-restoring-home body { visibility: hidden; }
   font-weight: 500;
 }
 
+.dropdown-link:hover {
+  background: rgba(0,0,0,0.08);
+}    
+===== END FUTURE DROPDOWN ===== */
+    
 /* HOME: Other Projects titles centered (override the Art flex title style) */
 #home-projects .gallery-title {
   display: block;      /* kills the flex layout from Art */
@@ -294,38 +298,12 @@ html.is-restoring-home body { visibility: hidden; }
   display: none;
 }    
 
-/* HOME: Contact section should match contact.html (left aligned) */
-#home-contact .card {
-  text-align: left;
-}
-
-/* Ensure heading + text align left */
-#home-contact h1,
-#home-contact h2,
-#home-contact p {
-  text-align: left;
-}
-
-    
-.dropdown-link:hover {
-  background: rgba(0,0,0,0.08);
-}
-
 
 /* Artist section (same look as artist.html) */
 #home-artist {
   /* no special layout, card will center itself with .wrap */
 }
 
-/* main artist card */
-.wrap {
-  max-width: 700px;
-  margin: 40px auto 80px;
-  padding: 32px;
-  background: rgba(255,255,255,0.92);
-  border-radius: 14px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
-}
 
 /* Portrait image inside the card */
 .portrait {
