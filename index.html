@@ -25,6 +25,60 @@
   text-align: center;
 }
 
+  /* ===== UNIFORM HOME BOX STYLES (match contact.html) ===== */
+
+/* Home CONTACT box should look exactly like contact.html */
+#home-contact .card{
+  max-width: 800px;
+  margin: 6rem auto;
+  padding: 48px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 6px 30px rgba(10, 10, 20, 0.06);
+  text-align: left; /* keep */
+}
+
+/* Home ARTIST box (cloned from artist.html) should match contact.html box style */
+#home-artist .wrap{
+  max-width: 800px;
+  margin: 6rem auto;
+  padding: 48px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 6px 30px rgba(10, 10, 20, 0.06);
+}
+
+/* Uniform typography inside those two boxes (title + text sizes follow the template) */
+#home-contact h1,
+#home-artist h1{
+  font-size: 36px;
+  margin: 0 0 1rem;
+}
+
+#home-contact p,
+#home-artist p{
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+  text-align: left;
+}
+
+/* Keep portrait centered in Artist (same behavior as now) */
+#home-artist .portrait{ text-align: center; }
+
+/* Mobile: match contact.html spacing */
+@media (max-width: 720px){
+  #home-contact .card,
+  #home-artist .wrap{
+    margin: 4rem 1.2rem;
+    padding: 32px;
+  }
+
+  #home-contact h1,
+  #home-artist h1{
+    font-size: 32px;
+  }
+}  
 
     h1{margin:0 0 .4rem;font-size:28px}
     p{
@@ -248,11 +302,6 @@ html.is-restoring-home body { visibility: hidden; }
   text-align: left;
 }
 
-#home-contact h1 {
-  font-size: 2.1rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
     
 .dropdown-link:hover {
   background: rgba(0,0,0,0.08);
