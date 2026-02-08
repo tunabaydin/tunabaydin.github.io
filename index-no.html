@@ -1,1 +1,732 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tuna Baydin — @ttunartt</title>
+ 
+  <style>
+    
+ body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+  padding-top: 70px;
+  margin:0;
+  background:#fafafa;
+  color:#111;
+}
 
+    .card{
+  max-width:700px;
+  margin:120px auto 60px;
+  padding:32px;
+  background: rgba(255,255,255,0.92);
+  border-radius:14px;
+  box-shadow:0 8px 32px rgba(0,0,0,0.06);
+  text-align: center;
+}
+
+  /* ===== UNIFORM HOME BOX STYLES (match contact.html) ===== */
+
+/* Home CONTACT box should look exactly like contact.html */
+#home-contact .card{
+  max-width: 800px;
+  margin: 6rem auto;
+  padding: 48px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 6px 30px rgba(10, 10, 20, 0.06);
+  text-align: left; /* keep */
+}
+
+/* Home ARTIST box (cloned from artist.html) should match contact.html box style */
+#home-artist .wrap{
+  max-width: 800px;
+  margin: 6rem auto;
+  padding: 48px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 6px 30px rgba(10, 10, 20, 0.06);
+}
+
+/* HOME: Make Artist text color match contact.html */
+#home-artist p { color: #111; }
+#home-artist a { color: #0077cc; text-decoration: none; }
+
+/* Uniform typography inside those two boxes (title + text sizes follow the template) */
+#home-contact h1,
+#home-artist h1{
+  font-size: 36px;
+  margin: 0 0 1rem;
+}
+
+#home-contact p { color: #111; }
+#home-contact a { color: #0077cc; text-decoration: none; }
+
+#home-contact p,
+#home-artist p{
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+  text-align: left;
+}
+
+/* Keep portrait centered in Artist (same behavior as now) */
+#home-artist .portrait{ text-align: center; }
+
+/* Mobile: match contact.html spacing */
+@media (max-width: 720px){
+  #home-contact .card,
+  #home-artist .wrap{
+    margin: 4rem 1.2rem;
+    padding: 32px;
+  }
+
+  #home-contact h1,
+  #home-artist h1{
+    font-size: 32px;
+  }
+}  
+
+    h1{margin:0 0 .4rem;font-size:28px}
+    p{
+  color:#444;
+  line-height:1.7;
+  font-size:1.1rem;
+  margin:0.6rem 0;
+}
+
+/* Hide page only while restoring scroll (prevents 1-frame flash at top) */
+html.is-restoring-home body { visibility: hidden; }
+
+    
+    /* Make Art Gallery text behave like in art.html */
+#home-art {
+  text-align: center;
+}
+
+    a{color:#0b7; text-decoration:none}
+
+        /* Gallery grid (same structure as art.html) */
+    .gallery {
+      max-width: 1100px;
+      margin: 40px auto 80px;
+      padding: 0 20px;
+
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+    }
+
+    .gallery-item {
+      display: block;              /* whole  is clickable */
+      text-decoration: none;
+      color: #111;
+
+      background: rgba(255,255,255,0.9);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0px 6px 20px rgba(0,0,0,0.18);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .gallery-item:hover,
+    .gallery-item:focus-visible {
+      transform: translateY(-3px);
+      box-shadow: 0px 10px 28px rgba(0,0,0,0.28);
+    }
+
+    .gallery-cover {
+      aspect-ratio: 4 / 5;               /* Instagram-like portrait */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+   /* Title area with centered title + dot on the right */
+.gallery-title {
+  padding: 10px 12px 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+/* The title text itself – stays centered */
+.title-text {
+  flex: 1;
+  text-align: center;
+}
+
+/* Status dot (same look as art.html) */
+.status-dot {
+  width: 10px;   /* change this value to resize the dot */
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Green = available */
+.status-dot.available {
+  background: #18b46b;
+}
+
+/* Red = not available */
+.status-dot.unavailable {
+  background: #d64545;
+}
+
+
+
+    /* Background video - full screen, behind content */
+    #bg-video{
+      position:fixed;
+      right:0;
+      bottom:0;
+      min-width:100%;
+      min-height:100%;
+      width:auto;
+      height:auto;
+      z-index:-2;
+      object-fit:cover;
+      filter:brightness(0.65) saturate(.95);
+    }
+
+    /* Frosted / translucent nav (global) */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+}
+
+/* Full-width bar with blurred background */
+.top-nav .nav-inner {
+  display: flex;
+  justify-content: center; /* keep items centered */
+  gap: 32px;
+
+  width: 100%;
+  padding: 14px 0;        /* vertical padding only */
+
+  border-radius: 0;
+  background: rgba(255,255,255,0.32);
+  border-bottom: 1.5px solid rgba(255,255,255,0.45);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.nav-item {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #000;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.nav-item:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+/* Make nav fit nicely on small screens */
+@media (max-width: 600px) {
+  .top-nav .nav-inner {
+    gap: 12px;          /* less space between items */
+    padding: 10px 4px;  /* narrower padding left/right */
+  }
+
+  .nav-item {
+    font-size: 0.9rem;  /* slightly smaller text */
+    padding: 6px 6px;   /* narrower buttons */
+  }
+}
+
+/* ===== FUTURE NAV DROPDOWN (currently unused) =====
+.dropdown { position: relative; }
+.dropdown > .nav-item { cursor: pointer; display: inline-block; }
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 38px;
+  left: 0;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  padding: 10px 0;
+  min-width: 120px;
+  z-index: 200;
+}
+.dropdown:hover .dropdown-menu { display: block; }
+.dropdown-link {
+  padding: 8px 14px;
+  display: block;
+  white-space: nowrap;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+}
+.dropdown-link:hover { background: rgba(0,0,0,0.08); }
+*/
+    
+/* HOME: Other Projects titles centered (override the Art flex title style) */
+#home-projects .gallery-title {
+  display: block;      /* kills the flex layout from Art */
+  text-align: center;  /* centers text on desktop + mobile */
+  padding: 10px 12px 12px;
+}
+
+/* If you have any leftover dot/span in otherprojects cards, hide it safely */
+#home-projects .status-dot {
+  display: none;
+}    
+
+
+/* Artist section (same look as artist.html) */
+#home-artist {
+  /* no special layout, card will center itself with .wrap */
+}
+
+
+/* Portrait image inside the card */
+.portrait {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.portrait img {
+  width: 340px;
+  max-width: 65%;
+  height: auto;
+  border-radius: 12px;
+  display: inline-block;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .portrait img {
+    width: 220px;
+    max-width: 80%;
+  }
+}
+
+/* Contact form styles (used in Home contact section) */
+.contact-form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid  #ddd;
+  font-size: 0.95rem;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Submit button */
+.contact-form button {
+  align-self: flex-start;
+  margin-top: 4px;
+  padding: 10px 24px;
+  border-radius: 999px;
+  border: none;
+  background: #111;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #333;
+}
+
+/* Status / thank-you text */
+.form-status {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #1b7a2f;      /* green success text */
+}
+
+.form-status.error {
+  color: #b00020;      /* red for error */
+}
+
+    
+    /* FOOTER: fixed at bottom, left aligned, larger text */
+   /* Footer copyright (matches artist page) */
+.footer {
+  text-align: center;
+  padding: 18px 0;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.9);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.38);
+  box-sizing: border-box;
+}
+
+/* Tag style */
+.footer .tag {
+  font-weight: 600;
+  margin-left: 6px;
+}
+
+
+    /* make footer slightly smaller on small screens */
+    @media (max-width:520px){
+      .site-footer { font-size: 15px; padding:10px 16px; }
+      .card { margin: 0 16px; }
+    }
+
+    /* Increase spacing under the welcome card on mobile */
+@media (max-width: 600px) {
+  .card {
+    margin: 120px auto 120px; /* increase bottom spacing */
+  }
+}
+    
+  </style>
+
+  <script>
+  // If we are returning to Home with ?back=home, hide page before first paint
+  (function () {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("back") === "home") {
+      document.documentElement.classList.add("is-restoring-home");
+    }
+  })();
+</script>
+  
+</head>
+
+<body>
+  <!-- BACKGROUND VIDEO (demo) -->
+  <video autoplay loop muted playsinline id="bg-video">
+    <source src="background.mp4" type="video/mp4">
+  </video>
+
+  <!-- TOP NAV ROW -->
+<nav class="top-nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a class="nav-item" href="index.html">Home</a>
+    <a class="nav-item" href="art.html">Art</a>
+    <a class="nav-item" href="otherprojects.html">Other Projects</a>
+    <a class="nav-item" href="artist.html">Artist</a>
+    <a class="nav-item" href="contact.html">Contact</a>
+    <a class="nav-item" href="index-tr.html">TR</a>
+  </div>
+</nav>
+
+
+    <div class="card">
+    <h1>Tuna Baydin — Creative Portfolio</h1>
+    <p> Velkommen!</p>
+    <p> Jeg samler kunstverkene mine og andre prosjekter her.
+Klikk på hvert bilde for å utforske videre.</p>
+        
+  </div>
+
+  <!-- HOME ART SECTION (filled from art.html) -->
+  <section id="home-art"></section>
+
+  <!-- HOME OTHER PROJECTS SECTION (filled from otherprojects.html) -->
+  <section id="home-projects"></section>
+
+  <!-- HOME ARTIST SECTION (filled from artist.html) -->
+  <section id="home-artist"></section>
+
+  <!-- HOME CONTACT SECTION (filled from contact.html) -->
+  <section id="home-contact"></section>
+  
+  <footer class="footer">
+    © 2025 Tuna Baydin — All rights reserved. <span class="tag">@ttunartt</span>
+  </footer>
+
+
+
+
+<script>
+  // Block right-click on images and videos
+  document.addEventListener('contextmenu', function (event) {
+    if (event.target.closest('img, video')) {
+      event.preventDefault();
+    }
+  });
+
+  // Optional: also block dragging images/videos off the page
+  document.addEventListener('dragstart', function (event) {
+    if (event.target.closest('img, video')) {
+      event.preventDefault();
+    }
+  });
+</script>
+
+ 
+<script>
+  function wireHomeArtLinks() {
+    const container = document.getElementById("home-art");
+    if (!container) return;
+
+    const links = container.querySelectorAll("a.gallery-item");
+
+        // Force from=home on links (overwrite from=gallery if present)
+    links.forEach(a => {
+      const href = a.getAttribute("href");
+      if (!href) return;
+
+      const url = new URL(href, window.location.href);
+      url.searchParams.set("from", "home");
+      a.setAttribute("href", url.pathname + "?" + url.searchParams.toString());
+    });
+
+
+    // Save scroll position when user enters an artwork from Home
+    links.forEach(a => {
+      a.addEventListener("click", () => {
+        sessionStorage.setItem("home_scrollY", String(window.scrollY));
+      });
+    });
+  }
+
+  async function loadArtSection() {
+    try {
+      const res = await fetch('art.html');
+      if (!res.ok) {
+        console.error('Failed to load art.html', res.status);
+        return;
+      }
+
+      const text = await res.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(text, 'text/html');
+
+      const artHeading = doc.querySelector('h1');
+      const artGallery = doc.querySelector('.gallery');
+
+      const container = document.getElementById('home-art');
+      if (!container) {
+        console.error('#home-art container not found in index.html');
+        return;
+      }
+
+      const wrapper = document.createElement('div');
+      wrapper.style.maxWidth = '1100px';
+      wrapper.style.margin = '0 auto 80px';
+      wrapper.style.padding = '0 20px';
+
+      if (artHeading) wrapper.appendChild(artHeading.cloneNode(true));
+      if (artGallery) wrapper.appendChild(artGallery.cloneNode(true));
+
+      container.appendChild(wrapper);
+
+      // IMPORTANT: wire the cloned links after inserting into DOM
+      wireHomeArtLinks();
+    } catch (err) {
+      console.error('Error loading art section', err);
+    }
+  }
+
+  async function loadProjectsSection() {
+    try {
+      const res = await fetch('otherprojects.html');
+      if (!res.ok) {
+        console.error('Failed to load otherprojects.html', res.status);
+        return;
+      }
+
+      const text = await res.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(text, 'text/html');
+
+      const header = doc.querySelector('.page-header');
+      const gallery = doc.querySelector('.gallery');
+
+      const container = document.getElementById('home-projects');
+      if (!container) {
+        console.error('#home-projects container not found in index.html');
+        return;
+      }
+
+      const wrapper = document.createElement('div');
+      wrapper.style.maxWidth = '1100px';
+      wrapper.style.margin = '0 auto 80px';
+      wrapper.style.padding = '0 20px';
+
+      if (header) {
+        const h1 = document.createElement('h1');
+        h1.textContent = header.textContent.trim();
+        h1.style.textAlign = 'center';
+        wrapper.appendChild(h1);
+      }
+
+      if (gallery) wrapper.appendChild(gallery.cloneNode(true));
+
+      container.appendChild(wrapper);
+    } catch (err) {
+      console.error('Error loading projects section', err);
+    }
+  }
+
+  async function loadArtistSection() {
+    try {
+      const res = await fetch('artist.html');
+      if (!res.ok) {
+        console.error('Failed to load artist.html', res.status);
+        return;
+      }
+
+      const text = await res.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(text, 'text/html');
+
+      const mainWrap = doc.querySelector('main.wrap, .wrap');
+
+      const container = document.getElementById('home-artist');
+      if (!container) {
+        console.error('#home-artist container not found in index.html');
+        return;
+      }
+
+      if (mainWrap) container.appendChild(mainWrap.cloneNode(true));
+    } catch (err) {
+      console.error('Error loading artist section', err);
+    }
+  }
+
+  async function loadContactSection() {
+    try {
+      const res = await fetch('contact.html');
+      if (!res.ok) {
+        console.error('Failed to load contact.html', res.status);
+        return;
+      }
+
+
+
+      const text = await res.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(text, 'text/html');
+
+      const card = doc.querySelector('div.card');
+
+      const container = document.getElementById('home-contact');
+      if (!container) {
+        console.error('#home-contact container not found in index.html');
+        return;
+      }
+
+      if (card) {
+        container.appendChild(card.cloneNode(true));
+
+        // Wire up the contact form JS for the cloned form
+        const form = container.querySelector('.contact-form');
+        const statusEl = container.querySelector('#form-status');
+
+        if (form && statusEl) {
+          form.addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            statusEl.textContent = 'Sending...';
+            statusEl.classList.remove('error');
+
+            const data = new FormData(form);
+
+            try {
+              const response = await fetch(form.action, {
+                method: form.method,
+                body: data,
+                headers: { 'Accept': 'application/json' }
+              });
+
+              if (response.ok) {
+                statusEl.textContent = 'Thank you! Your message has been sent.';
+                form.reset();
+              } else {
+                statusEl.textContent = 'Oops! There was a problem sending your message.';
+                statusEl.classList.add('error');
+              }
+            } catch (error) {
+              statusEl.textContent = 'Oops! There was a network error. Please try again.';
+              statusEl.classList.add('error');
+            }
+          });
+        }
+      }
+    } catch (err) {
+      console.error('Error loading contact section', err);
+    }
+  }
+
+// Save home scroll continuously (reliable on mobile)
+window.addEventListener("scroll", () => {
+  sessionStorage.setItem("home_scrollY", String(window.scrollY));
+}, { passive: true });
+
+// Restore home scroll when coming back (?back=home)
+window.addEventListener("load", () => {
+  const params = new URLSearchParams(location.search);
+
+  if (params.get("back") === "home") {
+    const y = sessionStorage.getItem("home_scrollY");
+    if (y) window.scrollTo(0, parseInt(y, 10) || 0);
+
+    // Reveal page immediately after restoring scroll
+    document.documentElement.classList.remove("is-restoring-home");
+  }
+
+  // Fallback: never stay hidden if something unexpected happens
+setTimeout(() => {
+  document.documentElement.classList.remove("is-restoring-home");
+}, 1500);
+
+});
+
+
+// Load sections once
+document.addEventListener("DOMContentLoaded", async () => {
+  await Promise.all([
+    loadArtSection(),
+    loadProjectsSection(),
+    loadArtistSection(),
+    loadContactSection()
+  ]);
+});
+
+</script>
+
+
+
+  
+</body>
+</html>
