@@ -440,8 +440,8 @@ html.is-restoring-home body { visibility: hidden; }
 <nav class="top-nav" aria-label="Primary">
   <div class="nav-inner">
     <a class="nav-item" href="index-no.html">Hjem</a>
-    <a class="nav-item" href="art.html">Kunst</a>
-    <a class="nav-item" href="otherprojects.html">Andre Prosjekter</a>
+    <a class="nav-item" href="art-no.html">Kunst</a>
+    <a class="nav-item" href="otherprojects-no.html">Andre Prosjekter</a>
     <a class="nav-item" href="artist-no.html">Kunstner</a>
     <a class="nav-item" href="contact-no.html">Kontakt</a>
     
@@ -524,9 +524,9 @@ html.is-restoring-home body { visibility: hidden; }
 
   async function loadArtSection() {
     try {
-      const res = await fetch('art.html');
+      const res = await fetch('art-no.html');
       if (!res.ok) {
-        console.error('Failed to load art.html', res.status);
+        console.error('Failed to load art-no.html', res.status);
         return;
       }
 
@@ -562,9 +562,9 @@ html.is-restoring-home body { visibility: hidden; }
 
   async function loadProjectsSection() {
     try {
-      const res = await fetch('otherprojects.html');
+      const res = await fetch('otherprojects-no.html');
       if (!res.ok) {
-        console.error('Failed to load otherprojects.html', res.status);
+        console.error('Failed to load otherprojects-no.html', res.status);
         return;
       }
 
