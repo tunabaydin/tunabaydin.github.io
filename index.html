@@ -202,13 +202,13 @@ html.is-restoring-home body { visibility: hidden; }
 }
 
 /* Full-width bar with blurred background */
+/* Full-width bar with blurred background */
 .top-nav .nav-inner {
   display: flex;
-  justify-content: center; /* keep items centered */
-  gap: 32px;
+  align-items: center;
 
   width: 100%;
-  padding: 14px 0;        /* vertical padding only */
+  padding: 14px 24px;  /* side padding added */
 
   border-radius: 0;
   background: rgba(255,255,255,0.32);
@@ -218,6 +218,20 @@ html.is-restoring-home body { visibility: hidden; }
   -webkit-backdrop-filter: blur(10px);
 }
 
+    /* Main navigation (center group) */
+.nav-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+/* Language navigation (right side) */
+.nav-lang {
+  display: flex;
+  gap: 12px;
+}
+    
 .nav-item {
   font-weight: 600;
   font-size: 1rem;
@@ -439,14 +453,19 @@ html.is-restoring-home body { visibility: hidden; }
   <!-- TOP NAV ROW -->
 <nav class="top-nav" aria-label="Primary">
   <div class="nav-inner">
-    <a class="nav-item" href="index.html">Home</a>
-    <a class="nav-item" href="art.html">Art</a>
-    <a class="nav-item" href="otherprojects.html">Other Projects</a>
-    <a class="nav-item" href="artist.html">Artist</a>
-    <a class="nav-item" href="contact.html">Contact</a>
-    <a class="nav-item" href="index.html">EN</a>
-    <a class="nav-item" href="index-tr.html">TR</a>
-    <a class="nav-item" href="index-no.html">NO</a>
+    <div class="nav-main">
+      <a class="nav-item" href="index.html">Home</a>
+      <a class="nav-item" href="art.html">Art</a>
+      <a class="nav-item" href="otherprojects.html">Other Projects</a>
+      <a class="nav-item" href="artist.html">Artist</a>
+      <a class="nav-item" href="contact.html">Contact</a>
+    </div>
+
+    <div class="nav-lang" aria-label="Language">
+      <a class="nav-item lang-item" href="index.html">EN</a>
+      <a class="nav-item lang-item" href="index-tr.html">TR</a>
+      <a class="nav-item lang-item" href="index-no.html">NO</a>
+    </div>
   </div>
 </nav>
 
