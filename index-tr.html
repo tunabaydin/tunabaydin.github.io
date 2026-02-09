@@ -48,7 +48,7 @@
   box-shadow: 0 6px 30px rgba(10, 10, 20, 0.06);
 }
 
-/* HOME: Make Artist text color match contact.html */
+/* HOME: Make Artist text color match .html */
 #home-artist p { color: #111; }
 #home-artist a { color: #0077cc; text-decoration: none; }
 
@@ -443,7 +443,7 @@ html.is-restoring-home body { visibility: hidden; }
     <a class="nav-item" href="art.html">Sanat</a>
     <a class="nav-item" href="otherprojects.html">Diğer Projeler</a>
     <a class="nav-item" href="artist-tr.html">Sanatçı</a>
-    <a class="nav-item" href="contact.html">İletişim</a>
+    <a class="nav-item" href="contact-tr.html">İletişim</a>
     
     <a class="nav-item" href="index.html">EN</a>
     <a class="nav-item" href="index-tr.html">TR</a>
@@ -468,7 +468,7 @@ html.is-restoring-home body { visibility: hidden; }
   <!-- HOME ARTIST SECTION (filled from artist-tr.html) -->
   <section id="home-artist"></section>
 
-  <!-- HOME CONTACT SECTION (filled from contact.html) -->
+  <!-- HOME CONTACT SECTION (filled from contact-tr.html) -->
   <section id="home-contact"></section>
   
   <footer class="footer">
@@ -628,9 +628,9 @@ html.is-restoring-home body { visibility: hidden; }
 
   async function loadContactSection() {
     try {
-      const res = await fetch('contact.html');
+      const res = await fetch('contact-tr.html');
       if (!res.ok) {
-        console.error('Failed to load contact.html', res.status);
+        console.error('Failed to load contact-tr.html', res.status);
         return;
       }
 
