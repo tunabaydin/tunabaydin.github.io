@@ -1,1 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Artist — Tuna Baydin</title>
 
+  <style>
+:root{
+  --muted:#444;
+  --text:#111;
+  font-family: system-ui, -apple-system, Roboto, "Helvetica Neue", Arial;
+}
+
+/* Single merged body block (keeps background image) */
+body{
+  margin: 0;
+  padding-top: 70px;             /* space for fixed nav */
+  color: var(--text);
+  font-family: inherit;
+  /* Use the image at repo root (you uploaded it there). If yours is in assets/images, change the url accordingly. */
+  background: url("backgroundphoto_1920x1080.jpg") no-repeat center center fixed;
+  background-size: cover;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+@media (max-width: 720px) {
+  body {
+    background-attachment: scroll;
+    background-position: center top;
+  }
+}
+
+/* Frosted / translucent nav (global) */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+}
+
+/* Full-width bar with blurred background */
+.top-nav .nav-inner {
+  display: flex;
+  justify-content: center; /* keep items centered */
+  gap: 32px;
+
+  width: 100%;
+  padding: 14px 0;        /* vertical padding only */
+
+  border-radius: 0;
+  background: rgba(255,255,255,0.32);
+  border-bottom: 1.5px solid rgba(255,255,255,0.45);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.nav-item {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #000;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.nav-item:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+/* Make nav fit nicely on small screens */
+@media (max-width: 600px) {
+  .top-nav .nav-inner {
+    gap: 12px;          /* less space between items */
+    padding: 10px 4px;  /* narrower padding left/right */
+  }
+
+  .nav-item {
+    font-size: 0.9rem;  /* slightly smaller text */
+    padding: 6px 6px;   /* narrower buttons */
+  }
+}
+
+
+/* main content card */
+.wrap{
+  max-width: 800px;
+  margin: 6rem auto;
+  padding: 48px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 6px 30px rgba(10, 10, 20, 0.06);
+}
+
+
+h1{
+  margin: 0 0 1rem;
+  font-size: 36px;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+
+p{
+  color: #111;
+  font-size: 20px;
+  line-height: 1.6;
+  text-align: left;
+  margin: 0 0 1rem;
+  p { color:#111; font-size:20px; line-height:1.6; text-align:left; margin:0 0 1rem; }
+  a { color:#0077cc; text-decoration:none; }
+}
+
+/* Portrait image inside the card */
+.portrait {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.portrait img {
+  width: 340px;          /* tweak size if you want it bigger/smaller */
+  max-width: 65%;        /* keeps it responsive on very large screens */
+  height: auto;
+  border-radius: 12px;
+  display: inline-block;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  object-fit: cover;
+}
+@media (max-width: 600px) {
+  .portrait img { width: 220px; max-width: 80%; }
+}
+  
+  
+/* responsive tweaks */
+@media (max-width: 720px) {
+  .wrap { margin: 4rem 1.2rem; padding: 32px; }
+  h1 { font-size: 32px; }
+}
+
+/* Footer copyright */
+.footer {
+  text-align: center;
+  padding: 18px 0;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.9);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.38);
+}
+
+/* Tag style */
+.footer .tag {
+  font-weight: 600;
+  margin-left: 6px;
+}
+  
+</style>
+
+</head>
+<body>
+
+<!-- Navigation -->
+<div class="top-nav">
+  <div class="nav-inner">
+    <a class="nav-item" href="index.html">Home</a>
+    <a class="nav-item" href="art.html">Art</a>
+    <a class="nav-item" href="otherprojects.html">Other Projects</a>
+    <a class="nav-item" href="artist.html">Artist</a>
+    <a class="nav-item" href="contact.html">Contact</a>
+  </div>
+</div>
+
+
+<main class="wrap">
+  <!-- PORTRAIT (centered, inside the white card) -->
+  <div class="portrait">
+    <img src="tunartist.jpg" alt="Tuna Baydin portrait">
+  </div>
+
+  <h1>Artist</h1>
+  <p>I am a Trondheim based artist, originally from Ankara, Turkey. I come from a science background, specializing in biotechnology. 
+    I hold a bachelor's degree in molecular biology and genetics, a master's and a PhD degree in biotechnology.</p>
+  
+  <p>My art is inspired by science, nature, energy, spiritual, mystical and mind-altering experiences.</p>
+  <p>The mission of my work is to remind the beholder to remember that we are souls having a human experience.</p>
+
+  <p> Reach me through the contact page and share your experience with the art.</p> 
+  <p> I am slowly building this website through vibe coding, this means AI is helping me code it. I appreciate feedback with the website so I can improve it according to your user experience. </p>
+  
+</main>
+
+  <footer class="footer">
+  © 2025 Tuna Baydin — All rights reserved.  
+  <span class="tag">@ttunartt</span>
+</footer>
+
+<script>
+  // Block right-click on images and videos
+  document.addEventListener('contextmenu', function (event) {
+    if (event.target.closest('img, video')) {
+      event.preventDefault();
+    }
+  });
+
+  // Optional: also block dragging images/videos off the page
+  document.addEventListener('dragstart', function (event) {
+    if (event.target.closest('img, video')) {
+      event.preventDefault();
+    }
+  });
+</script>
+
+
+</body>
+</html>
