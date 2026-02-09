@@ -1,1 +1,223 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Andre Prosjekter — Tuna Baydin</title>
 
+<style>
+:root{
+  --muted:#444;
+  --text:#111;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+
+/* Background */
+body {
+  margin: 0;
+  padding-top: 70px;
+  background: url("backgroundphoto_1920x1080.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: inherit;
+}
+
+/* Frosted / translucent nav (global) */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+}
+
+/* Full-width bar with blurred background */
+.top-nav .nav-inner {
+  display: flex;
+  justify-content: center; /* keep items centered */
+  gap: 32px;
+
+  width: 100%;
+  padding: 14px 0;        /* vertical padding only */
+
+  border-radius: 0;
+  background: rgba(255,255,255,0.32);
+  border-bottom: 1.5px solid rgba(255,255,255,0.45);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.nav-item {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #000;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.nav-item:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+/* Make nav fit nicely on small screens */
+@media (max-width: 600px) {
+  .top-nav .nav-inner {
+    gap: 12px;          /* less space between items */
+    padding: 10px 4px;  /* narrower padding left/right */
+  }
+
+  .nav-item {
+    font-size: 0.9rem;  /* slightly smaller text */
+    padding: 6px 6px;   /* narrower buttons */
+  }
+}
+
+
+/* Page title */
+.page-header {
+  max-width: 900px;
+  margin: 40px auto 20px;  /* ✔ same top spacing as Art page */
+  padding: 0;
+  text-align: center;
+  color: #111;
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+
+
+/* Gallery grid – same as art.html */
+.gallery {
+  max-width: 1100px;
+  margin: 40px auto 80px;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+/* Each clickable card */
+.gallery-item {
+  display: block;              /* whole card is clickable */
+  text-decoration: none;
+  color: #111;
+
+  background: rgba(255,255,255,0.9);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.18);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.gallery-item:hover,
+.gallery-item:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0px 10px 28px rgba(0,0,0,0.28);
+}
+
+/* Image cover */
+.gallery-cover {
+  aspect-ratio: 4 / 5;               /* Instagram-like portrait */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Title area */
+.gallery-title {
+  padding: 10px 12px 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;     /* ✔ center titles */
+}
+
+
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 18px 0;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.9);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.38);
+}
+
+.footer .tag {
+  font-weight: 600;
+  margin-left: 6px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav class="top-nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a class="nav-item" href="index.html">Home</a>
+    <a class="nav-item" href="art.html">Art</a>
+    <a class="nav-item" href="otherprojects.html">Other Projects</a>
+    <a class="nav-item" href="artist.html">Artist</a>
+    <a class="nav-item" href="contact.html">Contact</a>
+  </div>
+</nav>
+
+
+<!-- HEADER -->
+<div class="page-header">Other Projects</div>
+
+<div class="gallery">
+
+  <a class="gallery-item" href="photography.html">
+    <div class="gallery-cover" style="background-image: url('assets/otherprojects/theuniversewinks.jpg');"></div>
+    <div class="gallery-title">Photography</div>
+  </a>
+
+  <a class="gallery-item" href="crochet.html">
+    <div class="gallery-cover" style="background-image: url('assets/otherprojects/blanket.jpg');"></div>
+    <div class="gallery-title">Crochet</div>
+  </a>
+
+  <a class="gallery-item" href="dreamreconstruction.html">
+    <div class="gallery-cover" style="background-image: url('assets/otherprojects/dream2.png');"></div>
+    <div class="gallery-title">Dream Reconstruction</div>
+  </a>
+
+  <a class="gallery-item" href="music.html">
+    <div class="gallery-cover" style="background-image: url('assets/otherprojects/littlehuman.jpg');"></div>
+    <div class="gallery-title">Music</div>
+  </a>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  © 2025 Tuna Baydin — All rights reserved. <span class="tag">@ttunartt</span>
+</footer>
+
+<script>
+  // Block right-click on images and videos
+  document.addEventListener('contextmenu', function (event) {
+    if (event.target.closest('img, video')) {
+      event.preventDefault();
+    }
+  });
+
+  // Optional: also block dragging images/videos off the page
+  document.addEventListener('dragstart', function (event) {
+    if (event.target.closest('img, video')) {
+      event.preventDefault();
+    }
+  });
+</script>
+
+
+</body>
+</html>
