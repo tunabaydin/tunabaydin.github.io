@@ -224,7 +224,7 @@ a { color: #0077cc; text-decoration: none; }
 
     <div class="form-group">
       <label for="name">Navn</label>
-      <input id="name" name="name" type="text" placeholder="Your name" required>
+      <input id="name" name="name" type="text" placeholder="Navnet ditt" required>
     </div>
 
     <div class="form-group">
@@ -234,7 +234,7 @@ a { color: #0077cc; text-decoration: none; }
 
       <div class="form-group">
       <label for="message">Melding</label>
-      <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+      <textarea id="message" name="message" placeholder="Skriv meldingen din her..." required></textarea>
     </div>
 
     <button type="submit">Send</button>
@@ -253,7 +253,7 @@ a { color: #0077cc; text-decoration: none; }
   form.addEventListener("submit", async function (event) {
     event.preventDefault(); // don't do normal page reload submit
 
-    statusEl.textContent = "Sending...";
+    statusEl.textContent = "Sender...";
     statusEl.classList.remove("error");
 
     const data = new FormData(form);
@@ -267,16 +267,16 @@ a { color: #0077cc; text-decoration: none; }
 
       if (response.ok) {
         // Custom thank-you behavior:
-        statusEl.textContent = "Thank you! Your message has been sent.";
+        statusEl.textContent = "Takk! Meldingen din er sendt.";
         form.reset();
         // Optional: hide the form after success
         // form.style.display = "none";
       } else {
-        statusEl.textContent = "Oops! There was a problem sending your message.";
+        statusEl.textContent = "Beklager! Det oppsto et problem da meldingen din skulle sendes.";
         statusEl.classList.add("error");
       }
     } catch (error) {
-      statusEl.textContent = "Oops! There was a network error. Please try again.";
+      statusEl.textContent = "Ups! Det oppsto en nettverksfeil. Prøv på nytt.";
       statusEl.classList.add("error");
     }
   });
