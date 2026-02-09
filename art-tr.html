@@ -1,1 +1,388 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sanat — Tuna Baydin</title>
 
+<style>
+/* Page background image + page layout */
+body {
+  background: url("backgroundphoto_1920x1080.jpg") no-repeat center center fixed;
+  background-size: cover;
+
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  padding-top: 70px;
+  text-align: center;
+  color: #111;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.3rem;
+}
+
+/* Gallery grid */
+.gallery {
+  max-width: 1100px;
+  margin: 40px auto 80px;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+/* Each clickable card */
+.gallery-item {
+  display: block;              /* whole card is clickable */
+  text-decoration: none;
+  color: #111;
+
+  background: rgba(255,255,255,0.9);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.18);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.gallery-item:hover,
+.gallery-item:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0px 10px 28px rgba(0,0,0,0.28);
+}
+
+/* Image cover */
+.gallery-cover {
+  aspect-ratio: 4 / 5;               /* Instagram-like portrait */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Title area */
+.gallery-title {
+  padding: 10px 12px 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+
+  /* title + dot on one line */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;   /* dot sits toward the bottom edge */
+}
+
+/* Centered title text inside flex row */
+.title-text {
+  flex: 1;
+  text-align: center;
+}
+
+/* Small status dot on the right side of the title bar */
+.status-dot {
+  width: 10px;      /* <<< EDIT THIS to change dot size */
+  height: 10px;     /* <<< EDIT THIS to change dot size */
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Green = available */
+.status-dot.available {
+  background: #18b46b;
+}
+
+/* Red = not available */
+.status-dot.unavailable {
+  background: #d64545;
+}
+
+
+
+
+/* Frosted / translucent nav (global) */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+}
+
+/* Full-width bar with blurred background */
+.top-nav .nav-inner {
+  display: flex;
+  justify-content: center; /* keep items centered */
+  gap: 32px;
+
+  width: 100%;
+  padding: 14px 0;        /* vertical padding only */
+
+  border-radius: 0;
+  background: rgba(255,255,255,0.32);
+  border-bottom: 1.5px solid rgba(255,255,255,0.45);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.nav-item {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #000;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.nav-item:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+/* Make nav fit nicely on small screens */
+@media (max-width: 600px) {
+  .top-nav .nav-inner {
+    gap: 12px;          /* less space between items */
+    padding: 10px 4px;  /* narrower padding left/right */
+  }
+
+  .nav-item {
+    font-size: 0.9rem;  /* slightly smaller text */
+    padding: 6px 6px;   /* narrower buttons */
+  }
+}
+
+
+/* Footer copyright (same style on all pages) */
+.footer {
+  text-align: center;
+  padding: 18px 0;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.9);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.38);
+  box-sizing: border-box;
+}
+
+/* Tag style */
+.footer .tag {
+  font-weight: 600;
+  margin-left: 6px;
+}
+  
+  
+</style>
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<div class="top-nav">
+  <div class="nav-inner">
+    <a class="nav-item" href="index.html">Home</a>
+    <a class="nav-item" href="art.html">Art</a>
+    <a class="nav-item" href="otherprojects.html">Other Projects</a>
+    <a class="nav-item" href="artist.html">Artist</a>
+    <a class="nav-item" href="contact.html">Contact</a>
+  </div>
+</div>
+
+
+
+<h1>Art Gallery</h1>
+
+<div class="gallery">
+
+       <!-- Jupiter card -->
+  <a class="gallery-item" href="jupiter.html">
+    <div class="gallery-cover" style="background-image: url('assets/art/jupiter.jpg');"></div>
+    <div class="gallery-title">
+      <span class="title-text">Jupiter</span>
+      <span class="status-dot available"></span>
+    </div>
+  </a>
+  
+  <!-- Snowflake card -->
+  <a class="gallery-item" href="snowflake.html">
+    <div class="gallery-cover" style="background-image: url('assets/art/snowflake.jpg');"></div>
+    <div class="gallery-title">
+      <span class="title-text">Snowflake</span>
+      <span class="status-dot unavailable"></span>
+    </div>
+  </a>
+
+  <!-- Baby card -->
+  <a class="gallery-item" href="baby.html">
+    <div class="gallery-cover" style="background-image: url('assets/art/baby.jpg');"></div>
+    <div class="gallery-title">
+      <span class="title-text">Baby</span>
+      <span class="status-dot unavailable"></span>
+    </div>
+  </a>
+
+  <!-- Emulsion card -->
+  <a class="gallery-item" href="emulsion.html">
+    <div class="gallery-cover" style="background-image: url('assets/art/emulsion.jpg');"></div>
+    <div class="gallery-title">
+      <span class="title-text">Emulsion</span>
+      <span class="status-dot unavailable"></span>
+    </div>
+  </a>
+
+  <!-- Plant card -->
+  <a class="gallery-item" href="plant.html">
+    <div class="gallery-cover" style="background-image: url('assets/art/plant.jpg');"></div>
+    <div class="gallery-title">
+      <span class="title-text">Plant</span>
+      <span class="status-dot unavailable"></span>
+    </div>
+  </a>
+
+  <!-- Abduction card -->
+  <a class="gallery-item" href="abduction.html">
+    <div class="gallery-cover" style="background-image: url('assets/art/abduction.jpg');"></div>
+    <div class="gallery-title">
+      <span class="title-text">Abduction</span>
+      <span class="status-dot unavailable"></span>
+    </div>
+  </a>
+
+  <!-- Walk card -->
+  <a class="gallery-item" href="walk.html">
+    <div class="gallery-cover" style="background-image: url('assets/art/walk.jpg');"></div>
+    <div class="gallery-title">
+      <span class="title-text">Walk</span>
+      <span class="status-dot unavailable"></span>
+    </div>
+  </a>
+
+  <!-- Olive pit card -->
+  <a class="gallery-item" href="olivepit.html">
+    <div class="gallery-cover" style="background-image: url('assets/art/olivepit.jpg');"></div>
+    <div class="gallery-title">
+      <span class="title-text">Olive pit</span>
+      <span class="status-dot unavailable"></span>
+    </div>
+  </a>
+
+  <!-- Warm card -->
+  <a class="gallery-item" href="warm.html">
+    <div class="gallery-cover" style="background-image: url('assets/art/warm.jpg');"></div>
+    <div class="gallery-title">
+      <span class="title-text">Warm</span>
+      <span class="status-dot available"></span>
+    </div>
+  </a>
+
+  <!-- Cookie card -->
+  <a class="gallery-item" href="cookie.html">
+    <div class="gallery-cover" style="background-image: url('assets/art/cookie.jpg');"></div>
+    <div class="gallery-title">
+      <span class="title-text">Cookie</span>
+      <span class="status-dot unavailable"></span>
+    </div>
+  </a>
+
+  <!-- Coming Down card -->
+  <a class="gallery-item" href="comingdown.html">
+    <div class="gallery-cover" style="background-image: url('assets/art/comingdowncover.jpg');"></div>
+    <div class="gallery-title">
+      <span class="title-text">Coming Down</span>
+      <span class="status-dot available"></span>
+    </div>
+  </a>
+
+  <!-- Lips card -->
+  <a class="gallery-item" href="lips.html">
+    <div class="gallery-cover" style="background-image: url('assets/art/lips.jpg');"></div>
+    <div class="gallery-title">
+      <span class="title-text">Lips</span>
+      <span class="status-dot unavailable"></span>
+    </div>
+  </a>
+
+
+</div>
+
+
+
+ <footer class="footer">
+  © 2025 Tuna Baydin — All rights reserved. <span class="tag">@ttunartt</span>
+</footer>
+ 
+<script>
+  // Block right-click on images and videos
+  document.addEventListener('contextmenu', function (event) {
+    if (event.target.closest('img, video')) {
+      event.preventDefault();
+    }
+  });
+
+  // Optional: also block dragging images/videos off the page
+  document.addEventListener('dragstart', function (event) {
+    if (event.target.closest('img, video')) {
+      event.preventDefault();
+    }
+  });
+</script>
+
+<script>
+  // --- OPTION 2: remember where user came from (GALLERY) ---
+  document.addEventListener("DOMContentLoaded", () => {
+    const galleryLinks = document.querySelectorAll(".gallery a.gallery-item");
+
+    // Add ?from=gallery to all art links (robust even if opened in new tab)
+    galleryLinks.forEach(a => {
+      const href = a.getAttribute("href");
+      if (!href) return;
+
+      // Skip if it already has from=
+      if (href.includes("from=")) return;
+
+      const joiner = href.includes("?") ? "&" : "?";
+      a.setAttribute("href", href + joiner + "from=gallery");
+    });
+
+    // Save scroll position when user enters an artwork from art.html
+    galleryLinks.forEach(a => {
+      a.addEventListener("click", () => {
+        sessionStorage.setItem("gallery_scrollY", String(window.scrollY));
+      });
+    });
+  });
+</script>
+
+
+
+  <script>
+  // Save scroll continuously (most reliable on mobile)
+  window.addEventListener("scroll", () => {
+    sessionStorage.setItem("gallery_scrollY", String(window.scrollY));
+  }, { passive: true });
+
+  // Also save immediately when clicking a card
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest("a.gallery-item");
+    if (!a) return;
+    sessionStorage.setItem("gallery_scrollY", String(window.scrollY));
+  });
+
+  // Restore scroll when coming back
+  window.addEventListener("load", () => {
+    const params = new URLSearchParams(location.search);
+    if (params.get("back") === "gallery") {
+      const y = sessionStorage.getItem("gallery_scrollY");
+      if (y) window.scrollTo(0, parseInt(y, 10) || 0);
+    }
+  });
+</script>
+
+
+  
+</body>
+</html>
