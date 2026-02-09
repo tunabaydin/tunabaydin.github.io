@@ -224,7 +224,7 @@ a { color: #0077cc; text-decoration: none; }
 
     <div class="form-group">
       <label for="name">İsim</label>
-      <input id="name" name="name" type="text" placeholder="Your name" required>
+      <input id="name" name="name" type="text" placeholder="İsminiz" required>
     </div>
 
     <div class="form-group">
@@ -234,10 +234,10 @@ a { color: #0077cc; text-decoration: none; }
 
       <div class="form-group">
       <label for="message">Mesajınız</label>
-      <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+      <textarea id="message" name="message" placeholder="Mesajınızı buraya yazın..." required></textarea>
     </div>
 
-    <button type="submit">Send</button>
+    <button type="submit">Gönder</button>
 
     <!-- Status / thank-you message appears here -->
     <div id="form-status" class="form-status"></div>
@@ -253,7 +253,7 @@ a { color: #0077cc; text-decoration: none; }
   form.addEventListener("submit", async function (event) {
     event.preventDefault(); // don't do normal page reload submit
 
-    statusEl.textContent = "Sending...";
+    statusEl.textContent = "Gönderiyor...";
     statusEl.classList.remove("error");
 
     const data = new FormData(form);
@@ -267,16 +267,16 @@ a { color: #0077cc; text-decoration: none; }
 
       if (response.ok) {
         // Custom thank-you behavior:
-        statusEl.textContent = "Thank you! Your message has been sent.";
+        statusEl.textContent = "Teşekkürler! Mesajınız gönderildi.";
         form.reset();
         // Optional: hide the form after success
         // form.style.display = "none";
       } else {
-        statusEl.textContent = "Oops! There was a problem sending your message.";
+        statusEl.textContent = "Aman! Mesajınız gönderilirken bir sorun oluştu.";
         statusEl.classList.add("error");
       }
     } catch (error) {
-      statusEl.textContent = "Oops! There was a network error. Please try again.";
+      statusEl.textContent = "Aman! Bir ağ hatası oluştu. Lütfen tekrar deneyin.";
       statusEl.classList.add("error");
     }
   });
