@@ -440,8 +440,8 @@ html.is-restoring-home body { visibility: hidden; }
 <nav class="top-nav" aria-label="Primary">
   <div class="nav-inner">
     <a class="nav-item" href="index-tr.html">Ana Sayfa</a>
-    <a class="nav-item" href="art.html">Sanat</a>
-    <a class="nav-item" href="otherprojects.html">Diğer Projeler</a>
+    <a class="nav-item" href="art-tr.html">Sanat</a>
+    <a class="nav-item" href="otherprojects-tr.html">Diğer Projeler</a>
     <a class="nav-item" href="artist-tr.html">Sanatçı</a>
     <a class="nav-item" href="contact-tr.html">İletişim</a>
     
@@ -523,9 +523,9 @@ html.is-restoring-home body { visibility: hidden; }
 
   async function loadArtSection() {
     try {
-      const res = await fetch('art.html');
+      const res = await fetch('art-tr.html');
       if (!res.ok) {
-        console.error('Failed to load art.html', res.status);
+        console.error('Failed to load art-tr.html', res.status);
         return;
       }
 
@@ -561,9 +561,9 @@ html.is-restoring-home body { visibility: hidden; }
 
   async function loadProjectsSection() {
     try {
-      const res = await fetch('otherprojects.html');
+      const res = await fetch('otherprojects-tr.html');
       if (!res.ok) {
-        console.error('Failed to load otherprojects.html', res.status);
+        console.error('Failed to load otherprojects-tr.html', res.status);
         return;
       }
 
