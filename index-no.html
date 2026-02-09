@@ -439,11 +439,11 @@ html.is-restoring-home body { visibility: hidden; }
   <!-- TOP NAV ROW -->
 <nav class="top-nav" aria-label="Primary">
   <div class="nav-inner">
-    <a class="nav-item" href="index.html">Hjem</a>
+    <a class="nav-item" href="index-no.html">Hjem</a>
     <a class="nav-item" href="art.html">Kunst</a>
     <a class="nav-item" href="otherprojects.html">Andre Prosjekter</a>
     <a class="nav-item" href="artist-no.html">Kunstner</a>
-    <a class="nav-item" href="contact.html">Kontakt</a>
+    <a class="nav-item" href="contact-no.html">Kontakt</a>
     
     <a class="nav-item" href="index.html">EN</a>
     <a class="nav-item" href="index-tr.html">TR</a>
@@ -469,7 +469,7 @@ html.is-restoring-home body { visibility: hidden; }
   <!-- HOME ARTIST SECTION (filled from artist-no.html) -->
   <section id="home-artist"></section>
 
-  <!-- HOME CONTACT SECTION (filled from contact.html) -->
+  <!-- HOME CONTACT SECTION (filled from contact-no.html) -->
   <section id="home-contact"></section>
   
   <footer class="footer">
@@ -629,9 +629,9 @@ html.is-restoring-home body { visibility: hidden; }
 
   async function loadContactSection() {
     try {
-      const res = await fetch('contact.html');
+      const res = await fetch('contact-no.html');
       if (!res.ok) {
-        console.error('Failed to load contact.html', res.status);
+        console.error('Failed to load contact-no.html', res.status);
         return;
       }
 
