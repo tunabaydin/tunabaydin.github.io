@@ -439,11 +439,12 @@ html.is-restoring-home body { visibility: hidden; }
   <!-- TOP NAV ROW -->
 <nav class="top-nav" aria-label="Primary">
   <div class="nav-inner">
-    <a class="nav-item" href="index.html">Home</a>
-    <a class="nav-item" href="art.html">Art</a>
-    <a class="nav-item" href="otherprojects.html">Other Projects</a>
-    <a class="nav-item" href="artist.html">Artist</a>
-    <a class="nav-item" href="contact.html">Contact</a>
+    <a class="nav-item" href="index.html">Ana Sayfa</a>
+    <a class="nav-item" href="art.html">Sanat</a>
+    <a class="nav-item" href="otherprojects.html">Diğer Projeler</a>
+    <a class="nav-item" href="artist-tr.html">Sanatçı</a>
+    <a class="nav-item" href="contact.html">İletişim</a>
+    
     <a class="nav-item" href="index.html">EN</a>
     <a class="nav-item" href="index-tr.html">TR</a>
     <a class="nav-item" href="index-no.html">NO</a>
@@ -464,7 +465,7 @@ html.is-restoring-home body { visibility: hidden; }
   <!-- HOME OTHER PROJECTS SECTION (filled from otherprojects.html) -->
   <section id="home-projects"></section>
 
-  <!-- HOME ARTIST SECTION (filled from artist.html) -->
+  <!-- HOME ARTIST SECTION (filled from artist-tr.html) -->
   <section id="home-artist"></section>
 
   <!-- HOME CONTACT SECTION (filled from contact.html) -->
@@ -601,9 +602,9 @@ html.is-restoring-home body { visibility: hidden; }
 
   async function loadArtistSection() {
     try {
-      const res = await fetch('artist.html');
+      const res = await fetch('artist-tr.html');
       if (!res.ok) {
-        console.error('Failed to load artist.html', res.status);
+        console.error('Failed to load artist-tr.html', res.status);
         return;
       }
 
