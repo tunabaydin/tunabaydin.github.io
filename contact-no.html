@@ -195,6 +195,203 @@ a { color: #0077cc; text-decoration: none; }
 <body>
 
 <!-- TOP NAV -->
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kontakt — Tuna Baydin</title>
+ 
+<style>
+:root{
+  font-family: system-ui, apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  --muted: #444;
+}
+
+/* Single merged body block (keeps background image visible) */
+body {
+  margin: 0;
+  padding-top: 70px; /* space for fixed nav */
+  background: url("backgroundphoto_1920x1080.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Frosted / translucent nav (global) */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+}
+
+/* Full-width bar with blurred background */
+.top-nav .nav-inner {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  padding: 14px 44px;
+  box-sizing: border-box;
+
+  border-radius: 0;
+  background: rgba(255,255,255,0.32);
+  border-bottom: 1.5px solid rgba(255,255,255,0.45);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.nav-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.nav-lang {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-item {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #000;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.nav-item:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+/* Make nav fit nicely on small screens */
+@media (max-width: 600px) {
+  .top-nav .nav-inner {
+    gap: 12px;          /* less space between items */
+    padding: 10px 4px;  /* narrower padding left/right */
+  }
+
+  .nav-item {
+    font-size: 0.9rem;  /* slightly smaller text */
+    padding: 6px 6px;   /* narrower buttons */
+  }
+}
+
+/* Contact card */
+.card {
+  max-width: 800px;
+  margin: 6rem auto;
+  padding: 48px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 6px 30px rgba(10, 10, 20, 0.06);
+}
+
+h1 { font-size: 36px; margin-bottom: 1rem; }
+p { font-size: 20px; line-height: 1.6; }
+a { color: #0077cc; text-decoration: none; }
+
+/* Contact form styles */
+.contact-form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Submit button */
+.contact-form button {
+  align-self: flex-start;
+  margin-top: 4px;
+  padding: 10px 24px;
+  border-radius: 999px;
+  border: none;
+  background: #111;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #333;
+}
+
+ /* Status / thank-you text */
+.form-status {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #1b7a2f; /* green-ish success text */
+}
+
+.form-status.error {
+  color: #b00020; /* red for error */
+}
+ 
+  
+@media (max-width: 720px) {
+  .card { margin: 4rem 1.2rem; padding: 32px; }
+}
+
+/* Footer copyright (same style on all pages) */
+.footer {
+  text-align: center;
+  padding: 18px 0;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.9);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.38);
+  box-sizing: border-box;
+}
+
+/* Tag style */
+.footer .tag {
+  font-weight: 600;
+  margin-left: 6px;
+}
+  
+</style>
+
+</head>
+
+<body>
+
+<!-- TOP NAV -->
 <div class="top-nav">
   <div class="nav-inner">
 
