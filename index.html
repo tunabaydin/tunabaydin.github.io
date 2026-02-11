@@ -176,7 +176,76 @@ html.is-restoring-home body { visibility: hidden; }
   background: #d64545;
 }
 
+/* ===== HERO INTRO (Past Lives video box above the current home content) ===== */
+.hero-intro{
+  position: relative;
+  height: 100vh;          /* full screen block */
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;             /* sits above bg-video (which is -2) */
+}
 
+.hero-intro__video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.78) saturate(0.95);
+}
+
+/* subtle readability layer */
+.hero-intro__overlay{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.35),
+    rgba(0,0,0,0.05) 45%,
+    rgba(0,0,0,0.15)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.hero-intro__text{
+  text-align: center;
+  color: rgba(255,255,255,0.92);
+  user-select: none;
+}
+
+.hero-intro__title{
+  font-size: clamp(44px, 6vw, 96px);
+  letter-spacing: 0.12em;
+  font-weight: 600;
+}
+
+.hero-intro__subtitle{
+  margin-top: 12px;
+  font-size: clamp(14px, 1.6vw, 20px);
+  letter-spacing: 0.08em;
+  opacity: 0.9;
+}
+
+/* Sound button (because autoplay-with-sound is blocked on most browsers) */
+.hero-intro__sound{
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  border: 1px solid rgba(255,255,255,0.55);
+  background: rgba(0,0,0,0.35);
+  color: rgba(255,255,255,0.92);
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.hero-intro__sound:hover{
+  background: rgba(0,0,0,0.5);
+}
 
     /* Background video - full screen, behind content */
     #bg-video{
@@ -470,6 +539,23 @@ html.is-restoring-home body { visibility: hidden; }
   </div>
 </nav>
 
+  <!-- HERO: Past Lives intro video (scroll down to see the normal homepage) -->
+<section class="hero-intro" aria-label="Past Lives intro">
+  <video id="pastlives-video" class="hero-intro__video" autoplay loop playsinline preload="auto">
+    <source src="pastlives.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-intro__overlay">
+    <div class="hero-intro__text">
+      <div class="hero-intro__title">PAST LIVES</div>
+      <div class="hero-intro__subtitle">Chapters from lives we don’t remember</div>
+    </div>
+
+    <button class="hero-intro__sound" id="sound-btn" type="button" aria-label="Toggle sound">
+      Sound
+    </button>
+  </div>
+</section>
 
     <div class="card">
     <h1>Tuna Baydin — Creative Portfolio</h1>
@@ -748,7 +834,43 @@ document.addEventListener("DOMContentLoaded", async () => {
 </script>
 
 
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const v = document.getElementById("pastlives-video");
+    const btn = document.getElementById("sound-btn");
 
+    if (!v) return;
+
+    // Autoplay will work reliably only if muted at start
+    v.muted = true;
+    v.volume = 0.9;
+
+    // Try play (some browsers need it called)
+    v.play().catch(() => {});
+
+    // Toggle sound on button click
+    if (btn) {
+      const setLabel = () => (btn.textContent = v.muted ? "Sound" : "Mute");
+      setLabel();
+
+      btn.addEventListener("click", () => {
+        v.muted = !v.muted;
+        setLabel();
+        v.play().catch(() => {});
+      });
+    }
+
+    // Optional: unmute on first user interaction (scroll/click)
+    const unlock = () => {
+      // Do nothing if user prefers it muted
+      // (they can press Sound button)
+      document.removeEventListener("click", unlock);
+      document.removeEventListener("scroll", unlock);
+    };
+    document.addEventListener("click", unlock, { once: true });
+    document.addEventListener("scroll", unlock, { once: true, passive: true });
+  });
+</script>
   
 </body>
 </html>
