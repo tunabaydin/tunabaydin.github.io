@@ -188,10 +188,10 @@ html.is-restoring-home body { visibility: hidden; }
 .hero-intro__video{
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 65%;
+  object-fit: contain;      /* ✅ show full video */
+  object-position: center;  /* ✅ center it */
   display: block;
-  filter: brightness(0.78) saturate(0.95);
+  background: #000;         /* ✅ fills any empty space (letterbox) */
 }
 
 /* subtle readability layer */
