@@ -851,11 +851,14 @@ document.addEventListener("DOMContentLoaded", async () => {
       const setLabel = () => (btn.textContent = v.muted ? "Sound" : "Mute");
       setLabel();
 
-      btn.addEventListener("click", () => {
-        v.muted = !v.muted;
-        setLabel();
-        v.play().catch(() => {});
-      });
+     btn.addEventListener("click", (e) => {
+  e.stopPropagation();   // prevent click from bubbling to the <a>
+  e.preventDefault();    // prevent link navigation
+
+  v.muted = !v.muted;
+  setLabel();
+  v.play().catch(() => {});
+});
     }
 
     // Optional: unmute on first user interaction (scroll/click)
