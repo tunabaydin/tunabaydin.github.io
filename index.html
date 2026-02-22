@@ -183,9 +183,9 @@ html.is-restoring-home body { visibility: hidden; }
   width: 100%;
   overflow: hidden;
   z-index: 0;
-  background: #000; /* letterbox background */
+  background: transparent; /* show moving bg-video behind */
 }
-
+    
 .hero-track{
   height: 100%;
   display: flex;
@@ -217,10 +217,10 @@ html.is-restoring-home body { visibility: hidden; }
 .hero-media{
   width: 100%;
   height: 100%;
-  object-fit: contain;       /* show full media */
+  object-fit: contain;       /* keep full media visible */
   object-position: center;
   display: block;
-  background: #000;
+  background: transparent;   /* show moving bg-video behind */
 }
 
 /* Overlay layer */
@@ -280,7 +280,31 @@ html.is-restoring-home body { visibility: hidden; }
 }
 
 .hero-sound:hover{ background: rgba(0,0,0,0.5); }
+.hero-arrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 7;
 
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.55);
+  background: rgba(0,0,0,0.25);
+  color: rgba(255,255,255,0.92);
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.hero-arrow:hover{ background: rgba(0,0,0,0.4); }
+
+.hero-arrow--left{ left: 14px; }
+.hero-arrow--right{ right: 14px; }
+    
     /* Background video - full screen, behind content */
     #bg-video{
       position:fixed;
@@ -607,6 +631,10 @@ html.is-restoring-home body { visibility: hidden; }
   <!-- dots -->
   <div class="hero-dots" id="hero-dots" aria-label="Carousel pagination"></div>
 
+ <!-- arrows -->
+<button class="hero-arrow hero-arrow--left" id="hero-left" type="button" aria-label="Previous slide">‹</button>
+<button class="hero-arrow hero-arrow--right" id="hero-right" type="button" aria-label="Next slide">›</button>
+  
   <!-- sound button -->
   <button class="hero-sound" id="hero-sound" type="button">Sound</button>
 </section>
@@ -893,7 +921,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const track = document.getElementById("hero-track");
   const dotsWrap = document.getElementById("hero-dots");
   const soundBtn = document.getElementById("hero-sound");
-
+const leftBtn = document.getElementById("hero-left");
+const rightBtn = document.getElementById("hero-right");
   if (!track || !dotsWrap) return;
 
   const slides = Array.from(track.querySelectorAll(".hero-slide"));
@@ -967,6 +996,27 @@ document.addEventListener("DOMContentLoaded", () => {
     soundBtn.textContent = v.muted ? "Sound" : "Mute";
   });
 
+  function goTo(index){
+  index = Math.max(0, Math.min(slides.length - 1, index));
+  track.scrollTo({ left: index * track.clientWidth, behavior: "smooth" });
+}
+
+if (leftBtn) {
+  leftBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    goTo(getIndexFromScroll() - 1);
+  });
+}
+
+if (rightBtn) {
+  rightBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    goTo(getIndexFromScroll() + 1);
+  });
+}
+  
   // Init
   setActive(0);
 });
