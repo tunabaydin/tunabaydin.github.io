@@ -176,28 +176,55 @@ html.is-restoring-home body { visibility: hidden; }
   background: #d64545;
 }
 
-/* ===== HERO INTRO (Past Lives video box above the current home content) ===== */
-.hero-intro{
+/* ===== HERO CAROUSEL (swipeable intro) ===== */
+.hero-carousel{
   position: relative;
-  height: 100vh;          /* full screen block */
+  height: 100vh;
   width: 100%;
   overflow: hidden;
-  z-index: 0;             /* sits above bg-video (which is -2) */
+  z-index: 0;
+  background: #000; /* letterbox background */
+}
+
+.hero-track{
+  height: 100%;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.hero-track::-webkit-scrollbar{ display:none; }
+.hero-track{ scrollbar-width: none; }
+
+.hero-slide{
+  flex: 0 0 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+/* Each slide is a link (optional) */
+.hero-link{
+  position: absolute;
+  inset: 0;
   display: block;
   text-decoration: none;
 }
 
-.hero-intro__video{
+/* Video or image fills the slide */
+.hero-media{
   width: 100%;
   height: 100%;
-  object-fit: contain;      /* ✅ show full video */
-  object-position: center;  /* ✅ center it */
+  object-fit: contain;       /* show full media */
+  object-position: center;
   display: block;
-  background: #000;         /* ✅ fills any empty space (letterbox) */
+  background: #000;
 }
 
-/* subtle readability layer */
-.hero-intro__overlay{
+/* Overlay layer */
+.hero-overlay{
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -206,36 +233,40 @@ html.is-restoring-home body { visibility: hidden; }
     rgba(0,0,0,0.05) 45%,
     rgba(0,0,0,0.15)
   );
+  pointer-events: none; /* so link works */
+}
+
+/* Dots */
+.hero-dots{
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
+  gap: 10px;
+  z-index: 5;
 }
 
-.hero-intro__text{
-  text-align: center;
-  color: rgba(255,255,255,0.92);
-  user-select: none;
+.hero-dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.25);
+  cursor: pointer;
 }
 
-.hero-intro__title{
-  font-size: clamp(44px, 6vw, 96px);
-  letter-spacing: 0.12em;
-  font-weight: 600;
+.hero-dot.is-active{
+  background: rgba(255,255,255,0.95);
 }
 
-.hero-intro__subtitle{
-  margin-top: 12px;
-  font-size: clamp(14px, 1.6vw, 20px);
-  letter-spacing: 0.08em;
-  opacity: 0.9;
-}
-
-/* Sound button (because autoplay-with-sound is blocked on most browsers) */
-.hero-intro__sound{
+/* Sound button (only controls active video slide) */
+.hero-sound{
   position: absolute;
   right: 18px;
   bottom: 18px;
+  z-index: 6;
+
   border: 1px solid rgba(255,255,255,0.55);
   background: rgba(0,0,0,0.35);
   color: rgba(255,255,255,0.92);
@@ -243,12 +274,12 @@ html.is-restoring-home body { visibility: hidden; }
   border-radius: 999px;
   font-size: 14px;
   cursor: pointer;
+
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
-.hero-intro__sound:hover{
-  background: rgba(0,0,0,0.5);
-}
+
+.hero-sound:hover{ background: rgba(0,0,0,0.5); }
 
     /* Background video - full screen, behind content */
     #bg-video{
@@ -542,18 +573,43 @@ html.is-restoring-home body { visibility: hidden; }
   </div>
 </nav>
 
-  <!-- HERO: Past Lives intro video (scroll down to see the normal homepage) -->
-<a href="pastlives.html" class="hero-intro" aria-label="Past Lives intro">
-  <video id="pastlives-video" class="hero-intro__video" autoplay loop playsinline preload="auto">
-    <source src="assets/pastlives/pastlives.mp4" type="video/mp4">
-  </video>
+<!-- HERO: swipeable carousel -->
+<section class="hero-carousel" aria-label="Intro carousel">
+  <div class="hero-track" id="hero-track">
 
-  <div class="hero-intro__overlay">
-    <button class="hero-intro__sound" id="sound-btn" type="button" aria-label="Toggle sound">
-      Sound
-    </button>
+    <!-- Slide 1: Past Lives (video) -->
+    <div class="hero-slide" data-type="video">
+      <a class="hero-link" href="pastlives.html" aria-label="Past Lives"></a>
+      <video class="hero-media" autoplay loop muted playsinline preload="auto">
+        <source src="assets/pastlives/pastlives.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+    </div>
+
+    <!-- Slide 2: image example (replace src) -->
+    <div class="hero-slide" data-type="image">
+      <a class="hero-link" href="art.html" aria-label="Featured artwork"></a>
+      <img class="hero-media" src="assets/hero/slide2.jpg" alt="Featured artwork">
+      <div class="hero-overlay"></div>
+    </div>
+
+    <!-- Slide 3: video example (replace src) -->
+    <div class="hero-slide" data-type="video">
+      <a class="hero-link" href="otherprojects.html" aria-label="Featured project"></a>
+      <video class="hero-media" autoplay loop muted playsinline preload="auto">
+        <source src="assets/hero/slide3.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+    </div>
+
   </div>
-</a>
+
+  <!-- dots -->
+  <div class="hero-dots" id="hero-dots" aria-label="Carousel pagination"></div>
+
+  <!-- sound button -->
+  <button class="hero-sound" id="hero-sound" type="button">Sound</button>
+</section>
 
     <div class="card">
     <h1>Tuna Baydin — Creative Portfolio</h1>
@@ -833,44 +889,87 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
 <script>
-  window.addEventListener("DOMContentLoaded", () => {
-    const v = document.getElementById("pastlives-video");
-    const btn = document.getElementById("sound-btn");
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.getElementById("hero-track");
+  const dotsWrap = document.getElementById("hero-dots");
+  const soundBtn = document.getElementById("hero-sound");
 
+  if (!track || !dotsWrap) return;
+
+  const slides = Array.from(track.querySelectorAll(".hero-slide"));
+  const videos = slides.map(s => s.querySelector("video")).filter(Boolean);
+
+  // Always start muted for autoplay reliability
+  videos.forEach(v => { v.muted = true; v.volume = 0.9; v.play().catch(()=>{}); });
+
+  // Build dots
+  slides.forEach((_, i) => {
+    const b = document.createElement("button");
+    b.className = "hero-dot";
+    b.type = "button";
+    b.setAttribute("aria-label", `Go to slide ${i+1}`);
+    b.addEventListener("click", () => {
+      track.scrollTo({ left: i * track.clientWidth, behavior: "smooth" });
+    });
+    dotsWrap.appendChild(b);
+  });
+
+  const dots = Array.from(dotsWrap.querySelectorAll(".hero-dot"));
+
+  function setActive(index){
+    dots.forEach((d, i) => d.classList.toggle("is-active", i === index));
+
+    // Pause/mute all videos except active slide video
+    slides.forEach((s, i) => {
+      const v = s.querySelector("video");
+      if (!v) return;
+      if (i === index) {
+        v.play().catch(()=>{});
+      } else {
+        v.muted = true;
+        v.pause();
+      }
+    });
+
+    // Update sound button label based on active slide video
+    const activeVideo = slides[index]?.querySelector("video");
+    if (!activeVideo) {
+      soundBtn.style.display = "none";
+    } else {
+      soundBtn.style.display = "block";
+      soundBtn.textContent = activeVideo.muted ? "Sound" : "Mute";
+    }
+  }
+
+  // Detect active slide by scroll position
+  function getIndexFromScroll(){
+    const i = Math.round(track.scrollLeft / track.clientWidth);
+    return Math.max(0, Math.min(slides.length - 1, i));
+  }
+
+  let raf = null;
+  track.addEventListener("scroll", () => {
+    if (raf) cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(() => setActive(getIndexFromScroll()));
+  }, { passive: true });
+
+  // Sound button toggles active slide’s video only
+  soundBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    const index = getIndexFromScroll();
+    const v = slides[index]?.querySelector("video");
     if (!v) return;
 
-    // Autoplay will work reliably only if muted at start
-    v.muted = true;
-    v.volume = 0.9;
-
-    // Try play (some browsers need it called)
-    v.play().catch(() => {});
-
-    // Toggle sound on button click
-    if (btn) {
-      const setLabel = () => (btn.textContent = v.muted ? "Sound" : "Mute");
-      setLabel();
-
-     btn.addEventListener("click", (e) => {
-  e.stopPropagation();   // prevent click from bubbling to the <a>
-  e.preventDefault();    // prevent link navigation
-
-  v.muted = !v.muted;
-  setLabel();
-  v.play().catch(() => {});
-});
-    }
-
-    // Optional: unmute on first user interaction (scroll/click)
-    const unlock = () => {
-      // Do nothing if user prefers it muted
-      // (they can press Sound button)
-      document.removeEventListener("click", unlock);
-      document.removeEventListener("scroll", unlock);
-    };
-    document.addEventListener("click", unlock, { once: true });
-    document.addEventListener("scroll", unlock, { once: true, passive: true });
+    v.muted = !v.muted;
+    v.play().catch(()=>{});
+    soundBtn.textContent = v.muted ? "Sound" : "Mute";
   });
+
+  // Init
+  setActive(0);
+});
 </script>
   
 </body>
