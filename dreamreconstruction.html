@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Dream Reconstruction — Tuna Baydin</title>
 
+<link rel="stylesheet" href="assets/css/global.css">
+ 
 <style>
 
   :root{
@@ -36,54 +38,6 @@ h1{
 }
 
 /* Frosted / translucent nav */
-.top-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 200;
-}
-
-.top-nav .nav-inner {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  width: 100%;
-  padding: 14px 0;
-  background: rgba(255,255,255,0.32);
-  border-bottom: 1.5px solid rgba(255,255,255,0.45);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-
-.nav-item {
-  font-weight: 600;
-  font-size: 1rem;
-  color: #000;
-  text-decoration: none;
-  padding: 6px 12px;
-  border-radius: 6px;
-}
-
-  @media (max-width: 600px) {
-  .top-nav .nav-inner {
-    gap: 12px;
-    padding: 10px 4px;
-  }
-
-  .nav-item {
-    font-size: 0.9rem;
-    padding: 6px 6px;
-    white-space: nowrap;
-  }
-}
-
-.nav-item:hover {
-  background: rgba(255,255,255,0.4);
-}
-
 /* Main container */
 .dream-section {
   max-width: 1100px;
@@ -153,23 +107,6 @@ h1{
 }
 
 /* Footer */
-.footer {
-  text-align: center;
-  padding: 18px 0;
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.9);
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  backdrop-filter: blur(10px);
-  background: rgba(0,0,0,0.38);
-}
-
-.footer .tag {
-  font-weight: 600;
-  margin-left: 6px;
-}
-
 /* Responsive */
 @media (max-width: 900px) {
   .dream-grid {
@@ -182,15 +119,7 @@ h1{
 <body>
 
 <!-- NAV -->
-<div class="top-nav">
-  <div class="nav-inner">
-    <a class="nav-item" href="index.html">Home</a>
-    <a class="nav-item" href="art.html">Art</a>
-    <a class="nav-item" href="otherprojects.html">Other Projects</a>
-    <a class="nav-item" href="artist.html">Artist</a>
-    <a class="nav-item" href="contact.html">Contact</a>
-  </div>
-</div>
+<div data-partial="partials/nav-en.html"></div>
 
 <h1>Dream Reconstruction</h1>
 
@@ -238,9 +167,7 @@ h1{
   </div>
 </div>
 
-<footer class="footer">
-  © 2025 Tuna Baydin — All rights reserved. <span class="tag">@ttunartt</span>
-</footer>
+<div data-partial="partials/footer.html"></div>
 
 <script>
 document.addEventListener('contextmenu', function (event) {
@@ -256,6 +183,7 @@ document.addEventListener('dragstart', function (event) {
 });
 </script>
 
+<script src="assets/js/includes.js" defer></script>
 </body>
 </html>
 
