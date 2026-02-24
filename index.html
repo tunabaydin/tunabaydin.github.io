@@ -580,23 +580,7 @@ html.is-restoring-home body { visibility: hidden; }
   </video>
 
   <!-- TOP NAV ROW -->
-<nav class="top-nav" aria-label="Primary">
-  <div class="nav-inner">
-    <div class="nav-main">
-      <a class="nav-item" href="index.html">Home</a>
-      <a class="nav-item" href="art.html">Art</a>
-      <a class="nav-item" href="otherprojects.html">Other Projects</a>
-      <a class="nav-item" href="artist.html">Artist</a>
-      <a class="nav-item" href="contact.html">Contact</a>
-    </div>
-
-    <div class="nav-lang" aria-label="Language">
-      <a class="nav-item lang-item" href="index.html">EN</a>
-      <a class="nav-item lang-item" href="index-tr.html">TR</a>
-      <a class="nav-item lang-item" href="index-no.html">NO</a>
-    </div>
-  </div>
-</nav>
+  <div data-partial="partials/nav-en.html"></div>
 
 <!-- HERO: swipeable carousel -->
 <section class="hero-carousel" aria-label="Intro carousel">
@@ -660,9 +644,7 @@ html.is-restoring-home body { visibility: hidden; }
   <!-- HOME CONTACT SECTION (filled from contact.html) -->
   <section id="home-contact"></section>
   
-  <footer class="footer">
-    © 2025 Tuna Baydin — All rights reserved. <span class="tag">@ttunartt</span>
-  </footer>
+  <div data-partial="partials/footer.html"></div>
 
 
 
@@ -1023,5 +1005,6 @@ if (rightBtn) {
 });
 </script>
   
+<script src="assets/js/includes.js" defer></script>
 </body>
 </html>
