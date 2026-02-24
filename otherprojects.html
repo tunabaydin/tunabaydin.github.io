@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Other Projects — Tuna Baydin</title>
 
+<link rel="stylesheet" href="assets/css/global.css">
+ 
 <style>
 :root{
   --muted:#444;
@@ -19,70 +21,6 @@ body {
   background: url("backgroundphoto_1920x1080.jpg") no-repeat center center fixed;
   background-size: cover;
   font-family: inherit;
-}
-
-/* Frosted / translucent nav (global) */
-.top-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 200;
-}
-
-/* Full-width bar with blurred background */
-.top-nav .nav-inner {
-  display: flex;
-  align-items: center;
-
-  width: 100%;
-  padding: 14px 44px;
-  box-sizing: border-box;
-
-  border-radius: 0;
-  background: rgba(255,255,255,0.32);
-  border-bottom: 1.5px solid rgba(255,255,255,0.45);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-.nav-main {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-}
-
-.nav-lang {
-  display: flex;
-  gap: 12px;
-}
-
-.nav-item {
-  font-weight: 600;
-  font-size: 1rem;
-  color: #000;
-  text-decoration: none;
-  padding: 6px 12px;
-  border-radius: 6px;
-}
-
-.nav-item:hover {
-  background: rgba(255,255,255,0.4);
-}
-
-/* Make nav fit nicely on small screens */
-@media (max-width: 600px) {
-  .top-nav .nav-inner {
-    gap: 12px;          /* less space between items */
-    padding: 10px 4px;  /* narrower padding left/right */
-  }
-
-  .nav-item {
-    font-size: 0.9rem;  /* slightly smaller text */
-    padding: 6px 6px;   /* narrower buttons */
-  }
 }
 
 
@@ -147,22 +85,6 @@ body {
 
 
 /* Footer */
-.footer {
-  text-align: center;
-  padding: 18px 0;
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.9);
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  backdrop-filter: blur(10px);
-  background: rgba(0,0,0,0.38);
-}
-
-.footer .tag {
-  font-weight: 600;
-  margin-left: 6px;
-}
 </style>
 
 </head>
@@ -170,25 +92,7 @@ body {
 <body>
 
 <!-- NAVIGATION -->
-<div class="top-nav">
-  <div class="nav-inner">
-
-    <div class="nav-main">
-      <a class="nav-item" href="index.html">Home</a>
-      <a class="nav-item" href="art.html">Art</a>
-      <a class="nav-item" href="otherprojects.html">Other Projects</a>
-      <a class="nav-item" href="artist.html">Artist</a>
-      <a class="nav-item" href="contact.html">Contact</a>
-    </div>
-
-    <div class="nav-lang">
-      <a class="nav-item" href="index.html">EN</a>
-      <a class="nav-item" href="index-tr.html">TR</a>
-      <a class="nav-item" href="index-no.html">NO</a>
-    </div>
-
-  </div>
-</div>
+<div data-partial="partials/nav-en.html"></div>
 
 
 <!-- HEADER -->
@@ -220,9 +124,7 @@ body {
 
 
 <!-- FOOTER -->
-<footer class="footer">
-  © 2025 Tuna Baydin — All rights reserved. <span class="tag">@ttunartt</span>
-</footer>
+<div data-partial="partials/footer.html"></div>
 
 <script>
   // Block right-click on images and videos
@@ -241,5 +143,6 @@ body {
 </script>
 
 
+<script src="assets/js/includes.js" defer></script>
 </body>
 </html>

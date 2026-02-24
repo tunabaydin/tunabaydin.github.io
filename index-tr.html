@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Tuna Baydin — @ttunartt</title>
  
-  <style>
+  <link rel="stylesheet" href="assets/css/global.css">
+ 
+<style>
     
  body{
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
@@ -192,74 +194,9 @@ html.is-restoring-home body { visibility: hidden; }
       filter:brightness(0.65) saturate(.95);
     }
 
-    /* Frosted / translucent nav (global) */
-.top-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 200;
-}
-
-/* Full-width bar with blurred background */
-.top-nav .nav-inner {
-  display: flex;
-  align-items: center;
-
-  width: 100%;
-  padding: 14px 44px;
-  box-sizing: border-box;
-
-  border-radius: 0;
-  background: rgba(255,255,255,0.32);
-  border-bottom: 1.5px solid rgba(255,255,255,0.45);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-.nav-main {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-}
-
-.nav-lang {
-  display: flex;
-  gap: 12px;
-}
-
-.nav-item {
-  font-weight: 600;
-  font-size: 1rem;
-  color: #000;
-  text-decoration: none;
-  padding: 6px 12px;
-  border-radius: 6px;
-}
-
-.nav-item:hover {
-  background: rgba(255,255,255,0.4);
-}
-
-/* Make nav fit nicely on small screens */
-@media (max-width: 600px) {
-  .top-nav .nav-inner {
-    gap: 12px;          /* less space between items */
-    padding: 10px 4px;  /* narrower padding left/right */
-  }
-
-  .nav-item {
-    font-size: 0.9rem;  /* slightly smaller text */
-    padding: 6px 6px;   /* narrower buttons */
-  }
-}
-
-/* ===== FUTURE NAV DROPDOWN (currently unused) =====
+    /* ===== FUTURE NAV DROPDOWN (currently unused) =====
 .dropdown { position: relative; }
-.dropdown > .nav-item { cursor: pointer; display: inline-block; }
-.dropdown-menu {
+.dropdown > .dropdown-menu {
   display: none;
   position: absolute;
   top: 38px;
@@ -393,29 +330,7 @@ html.is-restoring-home body { visibility: hidden; }
 
     
     /* FOOTER: fixed at bottom, left aligned, larger text */
-   /* Footer copyright (matches artist page) */
-.footer {
-  text-align: center;
-  padding: 18px 0;
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.9);
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  background: rgba(0,0,0,0.38);
-  box-sizing: border-box;
-}
-
-/* Tag style */
-.footer .tag {
-  font-weight: 600;
-  margin-left: 6px;
-}
-
-
-    /* make footer slightly smaller on small screens */
+   /* make footer slightly smaller on small screens */
     @media (max-width:520px){
       .site-footer { font-size: 15px; padding:10px 16px; }
       .card { margin: 0 16px; }
@@ -449,25 +364,7 @@ html.is-restoring-home body { visibility: hidden; }
   </video>
 
   <!-- TOP NAV ROW -->
-<nav class="top-nav" aria-label="Primary">
-  <div class="nav-inner">
-
-    <div class="nav-main">
-      <a class="nav-item" href="index-tr.html">Ana Sayfa</a>
-      <a class="nav-item" href="art-tr.html">Sanat</a>
-      <a class="nav-item" href="otherprojects-tr.html">Diğer Projeler</a>
-      <a class="nav-item" href="artist-tr.html">Sanatçı</a>
-      <a class="nav-item" href="contact-tr.html">İletişim</a>
-    </div>
-
-    <div class="nav-lang">
-      <a class="nav-item" href="index.html">EN</a>
-      <a class="nav-item" href="index-tr.html">TR</a>
-      <a class="nav-item" href="index-no.html">NO</a>
-    </div>
-
-  </div>
-</nav>
+  <div data-partial="partials/nav-tr.html"></div>
 
 
     <div class="card">
@@ -489,9 +386,7 @@ html.is-restoring-home body { visibility: hidden; }
   <!-- HOME CONTACT SECTION (filled from contact-tr.html) -->
   <section id="home-contact"></section>
   
-  <footer class="footer">
-    © 2025 Tuna Baydin — All rights reserved. <span class="tag">@ttunartt</span>
-  </footer>
+  <div data-partial="partials/footer.html"></div>
 
 
 
@@ -748,5 +643,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
   
+<script src="assets/js/includes.js" defer></script>
 </body>
 </html>
