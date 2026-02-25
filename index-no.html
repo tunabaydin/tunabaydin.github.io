@@ -367,6 +367,50 @@ html.is-restoring-home body { visibility: hidden; }
   <div data-partial="partials/nav-no.html"></div>
 
 
+<!-- HERO: swipeable carousel -->
+<section class="hero-carousel" aria-label="Intro carousel">
+  <div class="hero-track" id="hero-track">
+
+    <!-- Slide 1: Past Lives (video) -->
+    <div class="hero-slide" data-type="video">
+      <a class="hero-link" href="pastlives.html" aria-label="Past Lives"></a>
+      <video class="hero-media" autoplay loop muted playsinline preload="auto">
+        <source src="assets/pastlives/pastlives.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+    </div>
+
+    <!-- Slide 2: image example (replace src) -->
+    <div class="hero-slide" data-type="image">
+      <a class="hero-link" href="art-no.html" aria-label="Featured artwork"></a>
+      <img class="hero-media" src="assets/hero/slide2.jpg" alt="Featured artwork">
+      <div class="hero-overlay"></div>
+    </div>
+
+    <!-- Slide 3: video example (replace src) -->
+    <div class="hero-slide" data-type="video">
+      <a class="hero-link" href="otherprojects-no.html" aria-label="Featured project"></a>
+      <video class="hero-media" autoplay loop muted playsinline preload="auto">
+        <source src="assets/hero/slide3.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+    </div>
+
+  </div>
+
+  <!-- dots -->
+  <div class="hero-dots" id="hero-dots" aria-label="Carousel pagination"></div>
+
+ <!-- arrows -->
+<button class="hero-arrow hero-arrow--left" id="hero-left" type="button" aria-label="Previous slide">‹</button>
+<button class="hero-arrow hero-arrow--right" id="hero-right" type="button" aria-label="Next slide">›</button>
+  
+  <!-- sound button -->
+  <button class="hero-sound" id="hero-sound" type="button">Sound</button>
+</section>
+
+
+
     <div class="card">
     <h1>Tuna Baydin — Creative Portfolio</h1>
     <p> Velkommen!</p>
