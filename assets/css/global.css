@@ -198,6 +198,20 @@ html.is-restoring-home body { visibility: hidden; }
   position: relative;
 }
 
+.hero-card-wrap{
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.hero-slide--intro .card{
+  margin: 0;
+}
+
 /* Each slide is a link (optional) */
 .hero-link{
   position: absolute;
