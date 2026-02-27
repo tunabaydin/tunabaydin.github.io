@@ -98,6 +98,30 @@ if (rightBtn) {
   });
 }
   
+
+
+  // Subtle portal transition for Past Lives links on home carousel
+  const portalLinks = track.querySelectorAll('.hero-link[href^="pastlives"]');
+  const canPortalNavigate = (event) => {
+    if (event.defaultPrevented) return false;
+    if (event.button !== 0) return false;
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return false;
+    return true;
+  };
+
+  portalLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      if (!canPortalNavigate(event)) return;
+
+      event.preventDefault();
+      document.documentElement.classList.add('home-portal-transition', 'is-navigating');
+
+      window.setTimeout(() => {
+        window.location.href = link.href;
+      }, 220);
+    });
+  });
+
   // Init
   setActive(0);
 });

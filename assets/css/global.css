@@ -239,6 +239,7 @@ html.is-restoring-home body { visibility: hidden; }
 .hero-overlay{
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: linear-gradient(
   to bottom,
   rgba(0,0,0,0.12),
@@ -316,6 +317,63 @@ html.is-restoring-home body { visibility: hidden; }
 
 .hero-arrow--left{ left: 14px; }
 .hero-arrow--right{ right: 14px; }
+
+.hero-pastlives-copy{
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  color: rgba(255,255,255,0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: clamp(42px, 8vh, 74px) clamp(18px, 3.5vw, 36px) clamp(76px, 14vh, 128px);
+  text-shadow: 0 8px 18px rgba(0,0,0,0.35);
+}
+
+.hero-pastlives-title{
+  margin: 0;
+  font-size: clamp(44px, 8vw, 118px);
+  letter-spacing: 0.12em;
+  font-weight: 300;
+  line-height: 0.95;
+}
+
+.hero-pastlives-subtitle{
+  margin: 0 0 10px;
+  max-width: min(92vw, 980px);
+  font-size: clamp(20px, 3.8vw, 60px);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+.hero-pastlives-meta,
+.hero-pastlives-cta{
+  margin: 0;
+  font-size: clamp(12px, 1.4vw, 18px);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.hero-pastlives-cta{
+  margin-top: 8px;
+  font-size: clamp(12px, 1.6vw, 20px);
+  opacity: 0.82;
+}
+
+html.home-portal-transition {
+  opacity: 1;
+  transition: opacity 220ms ease;
+}
+
+html.home-portal-transition.is-navigating {
+  opacity: 0;
+}
     
     /* Background video - full screen, behind content */
     #bg-video{
