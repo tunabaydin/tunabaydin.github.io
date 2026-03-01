@@ -210,6 +210,12 @@ html.is-restoring-home body { visibility: hidden; }
 
 .hero-slide--intro .card{
   margin: 0;
+  width: min(92vw, 1120px);
+  min-height: clamp(320px, 58vh, 620px);
+  padding: clamp(28px, 5.5vh, 56px) clamp(22px, 4.8vw, 64px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Each slide is a link (optional) */
@@ -363,6 +369,12 @@ html.is-restoring-home body { visibility: hidden; }
   margin-top: 8px;
   font-size: clamp(12px, 1.6vw, 20px);
   opacity: 0.82;
+  animation: heroCtaBlink 1.2s steps(2, start) infinite;
+}
+
+@keyframes heroCtaBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.28; }
 }
 
 html.home-portal-transition {

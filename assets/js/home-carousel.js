@@ -78,7 +78,9 @@ const rightBtn = document.getElementById("hero-right");
   });
 
   function goTo(index){
-  index = Math.max(0, Math.min(slides.length - 1, index));
+  const count = slides.length;
+  if (!count) return;
+  index = ((index % count) + count) % count;
   track.scrollTo({ left: index * track.clientWidth, behavior: "smooth" });
 }
 
