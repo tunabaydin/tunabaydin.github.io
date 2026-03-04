@@ -10,6 +10,8 @@
 <style>
 /* Page background image + page layout */
 body {
+  background: url("backgroundphoto_1920x1080.jpg") no-repeat center center fixed;
+  background-size: cover;
 
   margin: 0;
   font-family: system-ui, sans-serif;
@@ -56,6 +58,7 @@ h1 {
 /* Image cover */
 .gallery-cover {
   aspect-ratio: 4 / 5;               /* Instagram-like portrait */
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -104,7 +107,7 @@ h1 {
 
 </head>
 
-<body class="page-with-bg">
+<body>
 
 <!-- Navigation -->
 <div data-partial="/partials/nav.html"></div>
