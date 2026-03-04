@@ -8,6 +8,25 @@
   color:#111;
 }
 
+/* Shared fixed background used by localized content pages */
+body.page-with-bg {
+  background: url("/backgroundphoto_1920x1080.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Mobile Safari + small screens: avoid fixed background jitter */
+@media (max-width: 720px) {
+  body.page-with-bg {
+    background-attachment: scroll;
+    background-position: center top;
+  }
+}
+
+/* Contact pages should be left-aligned inside the card */
+body.contact-page .card {
+  text-align: left;
+}
+
     .card{
   max-width:700px;
   margin:120px auto 60px;
