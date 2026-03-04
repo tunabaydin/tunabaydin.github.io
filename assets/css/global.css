@@ -127,6 +127,7 @@ html.is-restoring-home body { visibility: hidden; }
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 24px;
+    justify-content: center;
     }
 
     .gallery-item {
