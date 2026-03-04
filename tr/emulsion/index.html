@@ -1,22 +1,233 @@
 <!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Emulsion — Tuna Baydin</title>
-  <link rel="stylesheet" href="/assets/css/global.css" />
-  <style>
-    body { margin: 0; padding-top: 70px; background:#fafafa; color:#111; }
-    .placeholder { max-width: 760px; margin: 6rem auto; padding: 2rem; border-radius: 16px; background: rgba(255,255,255,0.92); box-shadow: 0 10px 30px rgba(0,0,0,0.08); text-align:center; }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Emulsion — Art by Tuna Baydin</title>
+
+<link rel="stylesheet" href="/assets/css/global.css">
+ 
+<style>
+:root{
+  font-family: system-ui, apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  --muted: #444;
+}
+
+/* Background image */
+body {
+  margin: 0;
+  padding-top: 70px; /* space for fixed nav */
+}
+
+/* Artwork card */
+.art-card {
+  max-width: 1100px;
+  margin: 6rem auto;
+  padding: 40px 48px 48px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 6px 30px rgba(10, 10, 20, 0.06);
+}
+
+/* Back link */
+.back-link {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.back-link a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}
+
+/* Title & meta */
+h1 {
+  font-size: 32px;
+  margin: 0 0 0.35rem;
+}
+
+.art-meta {
+  margin: 0 0 1.8rem;
+}
+
+.art-meta p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+
+/* Layout: image on left, text on right (can adjust later) */
+.art-layout {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+/* Left column: image (and later video if you want) */
+.art-media-column {
+  flex: 1 1 340px;
+}
+
+/* Image */
+.art-image img {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.18);
+}
+
+/* Legend text under images */
+.image-legend{
+  font-size: 0.85rem;
+  color: #555;
+  margin: 6px 2px 0;
+  line-height: 1.4;
+}
+  
+  
+/* Right column: text */
+.art-description {
+  flex: 1 1 280px;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .art-card {
+    margin: 4rem 1.2rem 5rem;
+    padding: 28px 24px 32px;
+  }
+
+  .art-layout {
+    flex-direction: column;
+  }
+}
+
+/* Footer */
+
+.translation-note {
+  margin: 0 0 1rem;
+  font-size: 0.92rem;
+  color: #666;
+  font-style: italic;
+}
+
+</style>
+
 </head>
+
 <body class="page-with-bg">
-  <div data-partial="/partials/nav.html"></div>
-  <main class="placeholder">
-    <h1>Emulsion</h1>
-    <p>This page is not yet available in this language.</p>
-  </main>
-  <div data-partial="/partials/footer.html"></div>
-  <script src="/assets/js/includes.js" defer></script>
+
+<!-- TOP NAV -->
+<div data-partial="/partials/nav.html"></div>
+
+<!-- EMULSION CARD -->
+<div class="art-card">
+
+  <p class="back-link"><a id="smart-back" href="/tr/art/?back=gallery">← Back</a></p>
+  <p class="translation-note">Çeviri yakında.</p>
+
+  <h1>Emulsion</h1>
+<div class="art-meta">
+  <strong>Materials:</strong> Acrylic, marker, wrapping paper, herbs and chili flakes on paper<br>
+  <strong>Year:</strong> 2021<br>
+  <strong>Dimensions:</strong> 21 × 29.7 cm<br>
+  <strong>Status:</strong> Not available for purchase<br>
+</div>
+
+
+
+  <div class="art-layout">
+
+<!-- LEFT: image -->
+<div class="art-media-column">
+
+  <!-- Emulsion artwork -->
+  <div class="art-image">
+    <img src="/assets/art/emulsion.jpg" alt="Emulsion artwork by Tuna Baydin">
+  </div>
+
+
+  <!-- Microscope image (goes under emulsion) + legend -->
+  <div class="art-image" style="margin-top:16px;">
+    <img src="/assets/art/realemulsion.jpg" alt="Microscope emulsion image by Tuna Baydin">
+    <p class="image-legend">Corn oil emulsion, stabilized by 2% (w/w) polysorbate 80. The photograph was taken with Nikon
+Eclipse TS100 at 40X magnification. </p>
+  </div>
+
+</div>
+
+
+
+    <!-- RIGHT: description -->
+    <div class="art-description">
+      <p>
+        I have worked with edible emulsions since 2016 as a part of my master's and PhD project. Emulsions are a mixture of two liquids that normally do not mix with each other, like oil and water.
+        With the help of surfactants, emulsions are generated through a process called homogenization.
+        I photographed emulsions under a microscope (see below). In the miscroscope image you can see that the oil droplets are dispersed in water. This scientific activity inspired the piece.
+      </p>
+      <p>
+        In the artwork, every emulsion drop is unique. It is almost like every drop is a universe within itself. Just like us. 
+      </p>
+      <p>
+       Does every choice we make create a new universe? Could it be that in each parallel universe we create, there is a slightly different version of us? 
+      </p>
+
+
+    <!-- Decoration image (goes under the text) -->
+  <div class="art-image" style="margin-top:16px;">
+    <img src="/assets/art/emulsiondecoration.jpg" alt="Emulsion decoration detail">
+  </div>
+
+  </div>
+
+</div>
+
+<div data-partial="/partials/footer.html"></div>
+
+<script>
+  // Block right-click on images and videos
+  document.addEventListener('contextmenu', function (event) {
+    if (event.target.closest('img, video')) {
+      event.preventDefault();
+    }
+  });
+
+  // Optional: also block dragging images/videos off the page
+  document.addEventListener('dragstart', function (event) {
+    if (event.target.closest('img, video')) {
+      event.preventDefault();
+    }
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const back = document.getElementById("smart-back");
+    if (!back) return;
+
+    const from = new URLSearchParams(window.location.search).get("from");
+
+    if (from === "home") {
+      back.textContent = "← Back to Home";
+      back.href = "/en/?back=home";
+    } else {
+      back.textContent = "← Back to gallery";
+      back.href = "/en/art/?back=gallery";
+    }
+  });
+</script>
+  
+
+<script src="/assets/js/includes.js" defer></script>
 </body>
 </html>

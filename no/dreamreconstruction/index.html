@@ -1,22 +1,197 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dreamreconstruction — Tuna Baydin</title>
-  <link rel="stylesheet" href="/assets/css/global.css" />
-  <style>
-    body { margin: 0; padding-top: 70px; background:#fafafa; color:#111; }
-    .placeholder { max-width: 760px; margin: 6rem auto; padding: 2rem; border-radius: 16px; background: rgba(255,255,255,0.92); box-shadow: 0 10px 30px rgba(0,0,0,0.08); text-align:center; }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dream Reconstruction — Tuna Baydin</title>
+
+<link rel="stylesheet" href="/assets/css/global.css">
+ 
+<style>
+
+  :root{
+  --muted:#444;
+  --text:#111;
+  font-family: system-ui, -apple-system, Roboto, "Helvetica Neue", Arial;
+}
+
+  
+/* Page background */
+body {
+margin: 0;
+  font-family: inherit;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+  padding-top: 70px;
+  color: var(--text);
+}
+
+/* Headings */
+h1{
+  margin-top: 0;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+  text-align: center;
+  padding-top: 40px;
+}
+
+/* Frosted / translucent nav */
+/* Main container */
+.dream-section {
+  max-width: 1100px;
+  margin: 40px auto 100px;
+  padding: 24px;
+  background: rgba(255,255,255,0.92);
+  border-radius: 20px;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.12);
+}
+
+/* Grid layout */
+.dream-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 28px;
+}
+
+/* Left column images */
+.dream-left {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.dream-left img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+}
+
+/* Right column */
+.dream-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Text box */
+.dream-text {
+  background: rgba(255,255,255,0.95);
+  padding: 20px 22px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.dream-text h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+.dream-text p {
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Stacked images on right */
+.dream-stack {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.dream-stack img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+}
+
+/* Footer */
+/* Responsive */
+@media (max-width: 900px) {
+  .dream-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.translation-note {
+  margin: 0 0 1rem;
+  font-size: 0.92rem;
+  color: #666;
+  font-style: italic;
+}
+
+</style>
 </head>
+
 <body class="page-with-bg">
-  <div data-partial="/partials/nav.html"></div>
-  <main class="placeholder">
-    <h1>Dreamreconstruction</h1>
-    <p>This page is not yet available in this language.</p>
-  </main>
-  <div data-partial="/partials/footer.html"></div>
-  <script src="/assets/js/includes.js" defer></script>
+
+<!-- NAV -->
+<div data-partial="/partials/nav.html"></div>
+
+<h1>Dream Reconstruction</h1>
+
+
+  <p class="translation-note">Oversettelse kommer.</p>
+<div class="dream-section">
+
+  <div class="dream-grid">
+
+    <!-- LEFT COLUMN: dream1–dream4 -->
+    <div class="dream-left">
+      <img src="/assets/otherprojects/dream1.png" alt="Dream reconstruction 1">
+      <img src="/assets/otherprojects/dream2.png" alt="Dream reconstruction 2">
+      <img src="/assets/otherprojects/dream3.png" alt="Dream reconstruction 3">
+      <img src="/assets/otherprojects/dream4.png" alt="Dream reconstruction 4">
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="dream-right">
+
+      <!-- TEXT BOX -->
+      <div class="dream-text">
+        <h2>About the project</h2>
+        <p>
+          I dreamt of an awe inspiring place. I was traveling in a safari style vehicle, riding along the coast. I was fascinated by the black sand beach and the ancient sculptures. 
+          Once I caught my breath, I was told to turn around and that is when I saw the majestic 3 peaks.
+        </p>    
+          <p> Upon waking up, I remembered this place in utmost detail and decided to recreate it. I described the scene to AI and generated the image on the top of the page. 
+          Once I started telling AI what to fix in this image, I realized that AI fails to contain the details which were correct in the first image. It simply can not not change something.
+          So I worked on the prompt text to include as much detail as possible about the scene. The rest of the images here are a byproduct of this quest.
+          </p> 
+        <p>
+        In the meantime, I am creating the scene in Blender, a 3D model creation software. I am aiming to create a short video, implement the camera as me expriencing the scene.
+      </p>
+      </div>
+
+      <!-- dream5–dream8 -->
+      <div class="dream-stack">
+        <img src="/assets/otherprojects/dream5.png" alt="Dream reconstruction 5">
+        <img src="/assets/otherprojects/dream6.png" alt="Dream reconstruction 6">
+        <img src="/assets/otherprojects/dream7.png" alt="Dream reconstruction 7">
+        <img src="/assets/otherprojects/dream8.png" alt="Dream reconstruction 8">
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<div data-partial="/partials/footer.html"></div>
+
+<script>
+document.addEventListener('contextmenu', function (event) {
+  if (event.target.closest('img')) {
+    event.preventDefault();
+  }
+});
+
+document.addEventListener('dragstart', function (event) {
+  if (event.target.closest('img')) {
+    event.preventDefault();
+  }
+});
+</script>
+
+<script src="/assets/js/includes.js" defer></script>
 </body>
 </html>
+

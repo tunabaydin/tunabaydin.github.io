@@ -1,22 +1,261 @@
 <!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Jupiter — Tuna Baydin</title>
-  <link rel="stylesheet" href="/assets/css/global.css" />
-  <style>
-    body { margin: 0; padding-top: 70px; background:#fafafa; color:#111; }
-    .placeholder { max-width: 760px; margin: 6rem auto; padding: 2rem; border-radius: 16px; background: rgba(255,255,255,0.92); box-shadow: 0 10px 30px rgba(0,0,0,0.08); text-align:center; }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jupiter — Art by Tuna Baydin</title>
+
+<link rel="stylesheet" href="/assets/css/global.css">
+ 
+<style>
+:root{
+  font-family: system-ui, apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  --muted: #444;
+}
+
+/* Background image */
+body {
+  margin: 0;
+  padding-top: 70px; /* space for fixed nav */
+}
+
+/* Frosted / translucent nav (same as contact page) */
+/* Make nav fit nicely on small screens */
+/* Artwork card (similar to contact .card) */
+.art-card {
+  max-width: 1100px;
+  margin: 6rem auto;
+  padding: 40px 48px 48px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.92); /* slightly transparent white */
+  box-shadow: 0 6px 30px rgba(10, 10, 20, 0.06);
+}
+
+/* Back link */
+.back-link {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.back-link a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}
+
+/* Title & meta */
+h1 {
+  font-size: 32px;
+  margin: 0 0 0.35rem;
+}
+
+.art-meta {
+  margin: 0 0 1.8rem;
+}
+
+.art-meta p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+
+/* Layout: media column (image + video) + text column */
+.art-layout {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  flex-wrap: wrap;              /* stacks on smaller screens */
+  margin-bottom: 1.5rem;
+}
+
+/* Left column: image + video stacked */
+.art-media-column {
+  flex: 1 1 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Keep this for general flexibility if needed */
+.art-media {
+  width: 100%;
+}
+
+/* Image styling */
+.art-image img {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.18);
+}
+
+  /* Small credit text under inspiration image */
+.inspo-credit{
+  font-size: 0.85rem;
+  color: #555;
+  margin: 6px 2px 0;
+  line-height: 1.4;
+}
+
+
+/* Video styling */
+.art-video {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.18);
+  display: block;
+}
+
+/* Right column: description text */
+.art-description {
+  flex: 1 1 280px;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* Responsive tweaks */
+@media (max-width: 800px) {
+  .art-card {
+    margin: 4rem 1.2rem 5rem;
+    padding: 28px 24px 32px;
+  }
+
+  .art-layout {
+    flex-direction: column;
+  }
+}
+
+
+
+.translation-note {
+  margin: 0 0 1rem;
+  font-size: 0.92rem;
+  color: #666;
+  font-style: italic;
+}
+
+</style>
+
 </head>
+
 <body class="page-with-bg">
-  <div data-partial="/partials/nav.html"></div>
-  <main class="placeholder">
-    <h1>Jupiter</h1>
-    <p>This page is not yet available in this language.</p>
-  </main>
-  <div data-partial="/partials/footer.html"></div>
-  <script src="/assets/js/includes.js" defer></script>
+
+<!-- TOP NAV -->
+<div data-partial="/partials/nav.html"></div>
+
+<!-- JUPITER CARD -->
+<div class="art-card">
+
+<p class="back-link"><a id="smart-back" href="/tr/art/?back=gallery">← Back</a></p>
+  <p class="translation-note">Çeviri yakında.</p>
+
+  <h1>Jupiter</h1>
+
+  <div class="art-meta">
+  <strong>Materials:</strong> Acrylic on canvas<br>
+  <strong>Year:</strong> 2025<br>
+  <strong>Dimensions:</strong> 50 × 50 cm<br>
+    <strong>Status:</strong> Available for purchase<br>
+</div>
+
+
+   <div class="art-layout">
+
+    <!-- LEFT COLUMN: image + video stacked -->
+    <div class="art-media-column">
+
+      <!-- Image -->
+      <div class="art-media art-image">
+        <img src="/assets/art/jupiter2.jpg" alt="Jupiter artwork by Tuna Baydin">
+      </div>
+
+      <!-- Inspiration image -->
+<div class="art-media art-image">
+  <img src="/assets/art/jupiterinspiration.jpg" alt="Jupiter inspiration image">
+</div>
+<p class="inspo-credit">Image data: NASA/JPL-Caltech/SwRI/MSSS / Image processing by Prateek Sarpal, © CC NC SA</p>
+
+    </div>
+
+    <!-- RIGHT COLUMN: text -->
+    <div class="art-description">
+      <p>
+        This piece was inspired by a real image of the gas giant, turned 90&#176; (see below for reference). 
+        I started planning and drawing shapes looking at the reference but as the painting progressed, I realized looking at the reference image obstruted my creativity and the progression of the piece almost came to a halt. 
+        I was once again reminded to rely on inutition and source information.
+      </p>
+      <p>
+        As a person with a science background, I developed a lot of shame around astrology. 
+        I was influenced by external input and thought that astroloy was a scam and only ignorant people can "believe" in it. 
+        I had to go through crises and transformation only to go back to my factory settings. No, I do not "believe" in astrology. 
+        I know that it is a tool to understand ourselves. Astrology does not work with scientific methods, nor there is causation. There is only meaningful correlation, what Carl Jung described as synchronicity.
+        A large amount of astrological data has been collected by different civilizations for thousands of years. 
+        This historical body of observations is symbolically correlated with contemporary events, either in human lives or on a societal level. 
+        As time passes, more observations are collected and interpreted, suggesting probabilistic tendencies.
+      </p>
+      <p>
+        An astrological chart can be made for any human being, event, country or establishment with a known birth (establihsment) date. 
+       It is a snapshot of the solar system as seen from an Earth-centered perspective at any given moment. From a psychological perspective, different planets in a chart can be seen as reflections of Jungian archetypes.
+      </p>
+      <p>
+      Jupiter is my favorite planet. It symbolizes expansion, meaning, and the human drive to understand life as a coherent whole. 
+        It is my chart ruler and I admire these concepts associated with it: growth, faith, optimism, hope, justice, ethics, higher knowledge, philosophy, abundance and broadening horizons.
+      </p>
+          <!-- Video -->
+      <div class="art-media">
+        <video class="art-video" controls>
+          <source src="/assets/art/jupitervideo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div data-partial="/partials/footer.html"></div>
+
+<script>
+  // Block right-click on images and videos
+  document.addEventListener('contextmenu', function (event) {
+    if (event.target.closest('img, video')) {
+      event.preventDefault();
+    }
+  });
+
+  // Optional: also block dragging images/videos off the page
+  document.addEventListener('dragstart', function (event) {
+    if (event.target.closest('img, video')) {
+      event.preventDefault();
+    }
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const back = document.getElementById("smart-back");
+    if (!back) return;
+
+    const from = new URLSearchParams(window.location.search).get("from");
+
+    if (from === "home") {
+      back.textContent = "← Back to Home";
+      back.href = "/en/?back=home";
+    } else {
+      back.textContent = "← Back to gallery";
+      back.href = "/en/art/?back=gallery";
+    }
+  });
+</script>
+  
+
+<script src="/assets/js/includes.js" defer></script>
 </body>
 </html>
+
