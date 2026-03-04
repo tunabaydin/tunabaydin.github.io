@@ -1,0 +1,112 @@
+{
+  "abduction": {
+    "en": "/en/abduction/",
+    "tr": "/tr/abduction/",
+    "no": "/no/abduction/"
+  },
+  "art": {
+    "en": "/en/art/",
+    "tr": "/tr/art/",
+    "no": "/no/art/"
+  },
+  "artist": {
+    "en": "/en/artist/",
+    "tr": "/tr/artist/",
+    "no": "/no/artist/"
+  },
+  "baby": {
+    "en": "/en/baby/",
+    "tr": "/tr/baby/",
+    "no": "/no/baby/"
+  },
+  "comingdown": {
+    "en": "/en/comingdown/",
+    "tr": "/tr/comingdown/",
+    "no": "/no/comingdown/"
+  },
+  "contact": {
+    "en": "/en/contact/",
+    "tr": "/tr/contact/",
+    "no": "/no/contact/"
+  },
+  "cookie": {
+    "en": "/en/cookie/",
+    "tr": "/tr/cookie/",
+    "no": "/no/cookie/"
+  },
+  "crochet": {
+    "en": "/en/crochet/",
+    "tr": "/tr/crochet/",
+    "no": "/no/crochet/"
+  },
+  "dreamreconstruction": {
+    "en": "/en/dreamreconstruction/",
+    "tr": "/tr/dreamreconstruction/",
+    "no": "/no/dreamreconstruction/"
+  },
+  "emulsion": {
+    "en": "/en/emulsion/",
+    "tr": "/tr/emulsion/",
+    "no": "/no/emulsion/"
+  },
+  "home": {
+    "en": "/en/",
+    "tr": "/tr/",
+    "no": "/no/"
+  },
+  "jupiter": {
+    "en": "/en/jupiter/",
+    "tr": "/tr/jupiter/",
+    "no": "/no/jupiter/"
+  },
+  "lips": {
+    "en": "/en/lips/",
+    "tr": "/tr/lips/",
+    "no": "/no/lips/"
+  },
+  "music": {
+    "en": "/en/music/",
+    "tr": "/tr/music/",
+    "no": "/no/music/"
+  },
+  "olivepit": {
+    "en": "/en/olivepit/",
+    "tr": "/tr/olivepit/",
+    "no": "/no/olivepit/"
+  },
+  "otherprojects": {
+    "en": "/en/otherprojects/",
+    "tr": "/tr/otherprojects/",
+    "no": "/no/otherprojects/"
+  },
+  "pastlives": {
+    "en": "/en/pastlives/",
+    "tr": "/tr/pastlives/",
+    "no": "/no/pastlives/"
+  },
+  "photography": {
+    "en": "/en/photography/",
+    "tr": "/tr/photography/",
+    "no": "/no/photography/"
+  },
+  "plant": {
+    "en": "/en/plant/",
+    "tr": "/tr/plant/",
+    "no": "/no/plant/"
+  },
+  "snowflake": {
+    "en": "/en/snowflake/",
+    "tr": "/tr/snowflake/",
+    "no": "/no/snowflake/"
+  },
+  "walk": {
+    "en": "/en/walk/",
+    "tr": "/tr/walk/",
+    "no": "/no/walk/"
+  },
+  "warm": {
+    "en": "/en/warm/",
+    "tr": "/tr/warm/",
+    "no": "/no/warm/"
+  }
+}
