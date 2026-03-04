@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kollasj — Tuna Baydin</title>
+
+<link rel="stylesheet" href="/assets/css/global.css">
+ 
+<style>
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  padding-top: 70px;
+  text-align: center;
+  color: #111;
+}
+
+h1 {
+  font-size: 2.3rem;
+}
+
+.project-section {
+  max-width: 1100px;
+  margin: 30px auto 80px;
+  padding: 0 20px;
+}
+
+.project-card {
+  background: rgba(255,255,255,0.92);
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  text-align: left;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #222;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  text-decoration: underline;
+}
+
+.project-card h2 {
+  margin-top: 8px;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.project-card p {
+  line-height: 1.6;
+  color: #333;
+}
+
+.project-media img {
+  width: 100%;
+  max-height: 580px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+  margin: 12px 0 18px;
+}
+
+.project-meta {
+  margin: 0;
+  padding-left: 20px;
+  color: #333;
+}
+
+@media (max-width: 800px) {
+  .project-card {
+    padding: 18px;
+  }
+}
+</style>
+
+</head>
+
+<body class="page-with-bg">
+
+<div data-partial="/partials/nav.html"></div>
+
+<h1>Kollasj</h1>
+
+<div class="project-section">
+  <div class="project-card">
+    <a class="back-link" href="/no/otherprojects/">← Tilbake til galleri</a>
+
+    <h2>Kollasj</h2>
+    <!-- TODO: Replace title translation -->
+
+    <p>
+      <!-- TODO: Replace intro text -->
+      Denne siden er en plassholder for prosjektdetaljer om Kollasj.
+    </p>
+
+    <div class="project-media">
+      <h3>Media</h3>
+      <!-- TODO: Add/replace media file path -->
+      <img src="/assets/otherprojects/collage-placeholder.jpg" alt="Kollasj media placeholder">
+    </div>
+
+    <p>
+      <!-- TODO: Add project description -->
+      Legg til prosjektets historie, prosess og detaljer her.
+    </p>
+
+    <ul class="project-meta">
+      <li>Format: TODO</li>
+      <li>Year: TODO</li>
+      <li>Status: TODO</li>
+    </ul>
+    <!-- TODO: Add any extra sections -->
+  </div>
+</div>
+
+<div data-partial="/partials/footer.html"></div>
+
+<script>
+  document.addEventListener('contextmenu', function (event) {
+    if (event.target.closest('img, video')) {
+      event.preventDefault();
+    }
+  });
+
+  document.addEventListener('dragstart', function (event) {
+    if (event.target.closest('img, video')) {
+      event.preventDefault();
+    }
+  });
+</script>
+
+<script src="/assets/js/includes.js" defer></script>
+</body>
+</html>

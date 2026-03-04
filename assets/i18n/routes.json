@@ -29,6 +29,11 @@
     "tr": "/tr/contact/",
     "no": "/no/contact/"
   },
+  "collage": {
+    "en": "/en/collage/",
+    "tr": "/tr/collage/",
+    "no": "/no/collage/"
+  },
   "cookie": {
     "en": "/en/cookie/",
     "tr": "/tr/cookie/",
@@ -39,10 +44,20 @@
     "tr": "/tr/crochet/",
     "no": "/no/crochet/"
   },
+  "ceramics": {
+    "en": "/en/ceramics/",
+    "tr": "/tr/ceramics/",
+    "no": "/no/ceramics/"
+  },
   "dreamreconstruction": {
     "en": "/en/dreamreconstruction/",
     "tr": "/tr/dreamreconstruction/",
     "no": "/no/dreamreconstruction/"
+  },
+  "cooking": {
+    "en": "/en/cooking/",
+    "tr": "/tr/cooking/",
+    "no": "/no/cooking/"
   },
   "emulsion": {
     "en": "/en/emulsion/",
