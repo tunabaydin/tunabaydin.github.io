@@ -44,20 +44,20 @@
     "tr": "/tr/crochet/",
     "no": "/no/crochet/"
   },
-  "ceramics": {
-    "en": "/en/ceramics/",
-    "tr": "/tr/ceramics/",
-    "no": "/no/ceramics/"
+  "sculpture": {
+    "en": "/en/sculpture/",
+    "tr": "/tr/sculpture/",
+    "no": "/no/sculpture/"
   },
   "dreamreconstruction": {
     "en": "/en/dreamreconstruction/",
     "tr": "/tr/dreamreconstruction/",
     "no": "/no/dreamreconstruction/"
   },
-  "cooking": {
-    "en": "/en/cooking/",
-    "tr": "/tr/cooking/",
-    "no": "/no/cooking/"
+  "recipes": {
+    "en": "/en/recipes/",
+    "tr": "/tr/recipes/",
+    "no": "/no/recipes/"
   },
   "emulsion": {
     "en": "/en/emulsion/",
