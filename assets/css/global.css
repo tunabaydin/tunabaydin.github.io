@@ -199,7 +199,7 @@ html.is-restoring-home body { visibility: hidden; }
   overflow: hidden;
   z-index: 0;
   background: transparent;
-  margin-bottom: 100px;
+  margin-bottom: 24px;
 }
     
 .hero-track{
