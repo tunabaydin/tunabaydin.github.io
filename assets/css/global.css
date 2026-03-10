@@ -192,7 +192,7 @@ html.is-restoring-home body { visibility: hidden; }
 /* ===== HERO CAROUSEL (swipeable intro) ===== */
 .hero-carousel{
   position: relative;
-  height: clamp(420px, 72vh, 720px);
+  height: clamp(520px, 82vh, 820px);
   width: 100%;
   overflow: hidden;
   z-index: 0;
