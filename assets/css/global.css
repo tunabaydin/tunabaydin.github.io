@@ -232,7 +232,6 @@ html.is-restoring-home body { visibility: hidden; }
 .hero-slide--intro .card{
   margin: 0;
   width: min(92vw, 1120px);
-  min-height: clamp(320px, 58vh, 620px);
   padding: clamp(28px, 5.5vh, 56px) clamp(22px, 4.8vw, 64px);
   display: flex;
   flex-direction: column;
