@@ -342,7 +342,31 @@ html.is-restoring-home body { visibility: hidden; }
     margin: 120px auto 120px; /* increase bottom spacing */
   }
 }
-    
+
+  .tuna-name-gallery{
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  align-items: start;
+}
+
+.tuna-name-gallery img{
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+}
+
+@media (max-width: 600px){
+  .tuna-name-gallery{
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+  
   </style>
 
   <script>
@@ -409,6 +433,11 @@ html.is-restoring-home body { visibility: hidden; }
           <p>Ja, det er faktisk mitt fornavn. På tyrkisk betyr Tuna "Donau", en elv i Europa. Det er et unisexnavn i Tyrkia, men brukes oftest til gutter.</p>
           <p>På norsk uttales det omtrent som «Tona».</p>
           <p>Og ja, det staves som tunfisk.</p>
+           <div class="tuna-name-gallery">
+        <img src="/assets/art/tona1.jpg" alt="Illustrasjon relatert til navnet Tuna 1">
+        <img src="/assets/art/tona2.jpg" alt="Illustrasjon relatert til navnet Tuna 2">
+        <img src="/assets/art/tona3.jpg" alt="Illustrasjon relatert til navnet Tuna 3">
+      </div>
         </div>
       </div>
     </div>
