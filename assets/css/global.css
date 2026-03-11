@@ -14,11 +14,74 @@ body.page-with-bg {
   background-size: cover;
 }
 
+/* Past Lives localized pages use the cave hero background */
+body.page-with-bg.pastlives-page {
+  background-image: url("/assets/pastlives/cave.png");
+  background-position: center center;
+  background-size: cover;
+}
+
 /* Mobile Safari + small screens: avoid fixed background jitter */
 @media (max-width: 720px) {
   body.page-with-bg {
     background-attachment: scroll;
     background-position: center top;
+  }
+
+  body.page-with-bg.pastlives-page {
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
+
+/* Past Lives card typography/layout */
+body.pastlives-page {
+  color: #1a1a1a;
+}
+
+.pastlives-page .pastlives-wrap {
+  max-width: 760px;
+  margin: clamp(3rem, 8vh, 6rem) auto;
+  padding: clamp(1.8rem, 4.4vw, 2.8rem);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.90);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.22);
+  text-align: left;
+}
+
+.pastlives-page .pastlives-wrap h1 {
+  margin: 0 0 1.2rem;
+  font-size: clamp(2rem, 3.1vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  color: #111;
+  text-transform: uppercase;
+}
+
+.pastlives-page .pastlives-wrap h2 {
+  margin: 1.35rem 0 0.45rem;
+  font-size: clamp(1.7rem, 2.2vw, 2.15rem);
+  line-height: 1.15;
+  color: #111;
+}
+
+.pastlives-page .pastlives-wrap p,
+.pastlives-page .pastlives-wrap li {
+  font-size: clamp(1.05rem, 1.5vw, 1.14rem);
+  color: #222;
+  line-height: 1.5;
+}
+
+.pastlives-page .pastlives-wrap ul {
+  margin: 0.2rem 0 0.8rem 1.35rem;
+}
+
+@media (max-width: 720px) {
+  .pastlives-page .pastlives-wrap {
+    margin: 2.4rem 1rem 6rem;
+    border-radius: 16px;
   }
 }
 
