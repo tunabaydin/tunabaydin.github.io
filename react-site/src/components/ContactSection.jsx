@@ -1,15 +1,19 @@
+import { useParams } from "react-router-dom";
+import { siteContent } from "../content/siteContent";
+
+
 export default function ContactSection() {
+  const { lang } = useParams();
+  const content = siteContent[lang] || siteContent.en;
+
   return (
     <section id="home-contact">
       <div className="card">
-        <h1 className="section-title-left">Contact</h1>
+        <h1 className="section-title-left">{content.contact.title}</h1>
 
-        <p>
-          If you’d like to inquire about artwork, exhibitions, or collaborations,
-          feel free to reach out.
-        </p>
+        <p>{content.contact.intro}</p>
 
-        <p style={{ marginTop: "2rem" }}>And follow me!</p>
+        <p style={{ marginTop: "2rem" }}>{content.contact.follow}</p>
 
         <p>
           <strong>Instagram:</strong>{" "}
@@ -37,38 +41,38 @@ export default function ContactSection() {
           />
 
           <div className="form-group">
-            <label htmlFor="name">Name</label>
-            <input
-              id="name"
-              name="name"
-              type="text"
-              placeholder="Your name"
-              required
-            />
-          </div>
+  <label htmlFor="name">{content.contact.name}</label>
+  <input
+    id="name"
+    name="name"
+    type="text"
+    placeholder={content.contact.namePlaceholder}
+    required
+  />
+</div>
 
           <div className="form-group">
-            <label htmlFor="email">Email address</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              placeholder="you@example.com"
-              required
-            />
-          </div>
+  <label htmlFor="email">{content.contact.email}</label>
+  <input
+    id="email"
+    name="email"
+    type="email"
+    placeholder={content.contact.emailPlaceholder}
+    required
+  />
+</div>
 
           <div className="form-group">
-            <label htmlFor="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Write your message here..."
-              required
-            ></textarea>
-          </div>
+  <label htmlFor="message">{content.contact.message}</label>
+  <textarea
+    id="message"
+    name="message"
+    placeholder={content.contact.messagePlaceholder}
+    required
+  ></textarea>
+</div>
 
-          <button type="submit">Send</button>
+          <button type="submit">{content.contact.send}</button>
           <div id="form-status" className="form-status"></div>
         </form>
       </div>

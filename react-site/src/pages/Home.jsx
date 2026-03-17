@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { siteContent } from "../content/siteContent";
 import pastLivesVideo from "../../../assets/pastlives/pastlivesnewsmall.mp4";
 import Navbar from "../components/Navbar";
 import ArtGallery from "../components/ArtGallery";
@@ -8,6 +10,11 @@ import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 
 export default function Home() {
+  const { lang } = useParams();
+  const content = siteContent[lang] || siteContent.en;
+const hero = content.hero;
+  console.log("Current language:", lang);
+
   useEffect(() => {
     const track = document.getElementById("hero-track");
     const dotsWrap = document.getElementById("hero-dots");
@@ -185,11 +192,11 @@ export default function Home() {
           </video>
           <div className="hero-overlay" />
           <div className="hero-pastlives-copy" aria-hidden="true">
-            <h2 className="hero-pastlives-title">PAST LIVES</h2>
-            <div className="hero-pastlives-bottom">
-              <p className="hero-pastlives-subtitle">Chapters from lives we don't remember</p>
-              <p className="hero-pastlives-meta">An ongoing visual series</p>
-              <p className="hero-pastlives-cta">CLICK TO ENTER</p>
+           <h2 className="hero-pastlives-title">{hero.pastLivesTitle}</h2>
+          <div className="hero-pastlives-bottom">
+          <p className="hero-pastlives-subtitle">{hero.pastLivesSubtitle}</p>
+          <p className="hero-pastlives-meta">{hero.pastLivesMeta}</p>
+          <p className="hero-pastlives-cta">{hero.pastLivesCta}</p>
             </div>
           </div>
         </div>
@@ -198,9 +205,9 @@ export default function Home() {
           <div className="hero-overlay" />
           <div className="hero-card-wrap">
             <div className="card">
-              <h1>Tuna Baydin&apos;s Creative Portfolio</h1>
-              <p>Welcome to the space where I share my artwork and ongoing projects.</p>
-              <p>↓ Scroll and click on the cards to explore projects.</p>
+              <h1>{hero.introTitle}</h1>
+<p>{hero.introText1}</p>
+<p>{hero.introText2}</p>
             </div>
           </div>
         </div>
@@ -209,13 +216,24 @@ export default function Home() {
           <div className="hero-overlay" />
           <div className="hero-card-wrap">
             <div className="card">
-              <h1>Is your name really Tuna?</h1>
-              <p>
-                Yes, that is my given first name. In Turkish, Tuna means “Danube”. The Danube is
-                a river in Europe. It is a unisex name in Turkey, though mostly given to boys.
-              </p>
-              <p>And yes, it&apos;s spelled like the fish.</p>
-            </div>
+  <h1>{hero.nameTitle}</h1>
+  <p>{hero.nameText1}</p>
+  {hero.nameText2 && <p>{hero.nameText2}</p>}
+  {hero.nameText3 && <p>{hero.nameText3}</p>}
+
+  {hero.nameImages && (
+    <div className="tona-gallery">
+      {hero.nameImages.map((src, index) => (
+        <img
+          key={index}
+          src={src}
+          alt={`Tona cup ${index + 1}`}
+          className="tona-gallery-image"
+        />
+      ))}
+    </div>
+  )}
+</div>
           </div>
         </div>
       </div>
