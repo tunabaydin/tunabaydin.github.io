@@ -186,7 +186,7 @@ const hero = content.hero;
     <section id="top" className="hero-carousel" aria-label="Intro carousel">
       <div className="hero-track" id="hero-track">
         <div className="hero-slide" data-type="video">
-          <a className="hero-link" href="/en/pastlives/" aria-label="Past Lives" />
+          <a className="hero-link" href={`/${lang}/pastlives`} aria-label="Past Lives" />
           <video className="hero-media" autoPlay loop muted playsInline preload="auto">
             <source src={pastLivesVideo} type="video/mp4" />
           </video>

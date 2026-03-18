@@ -1,9 +1,13 @@
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { siteContent } from "../content/siteContent";
+
 export default function Navbar() {
   const { lang } = useParams();
   const content = siteContent[lang] || siteContent.en;
   const currentLang = lang || "en";
+  const location = useLocation();
+  const pathAfterLang = location.pathname.replace(/^\/(en|tr|no)/, "") || "";
+
   return (
     <nav className="top-nav" aria-label="Primary">
       <div className="nav-inner">
@@ -16,9 +20,9 @@ export default function Navbar() {
         </div>
 
         <div className="nav-lang" aria-label="Language">
-         <a className="nav-item lang-item" href="/en">EN</a>
-<a className="nav-item lang-item" href="/tr">TR</a>
-<a className="nav-item lang-item" href="/no">NO</a>
+         <a className="nav-item lang-item" href={`/en${pathAfterLang}`}>EN</a>
+<a className="nav-item lang-item" href={`/tr${pathAfterLang}`}>TR</a>
+<a className="nav-item lang-item" href={`/no${pathAfterLang}`}>NO</a>
         </div>
       </div>
     </nav>

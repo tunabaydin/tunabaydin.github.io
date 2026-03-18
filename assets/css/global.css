@@ -735,3 +735,117 @@ html.home-portal-transition.is-navigating {
     margin: 120px auto 120px; /* increase bottom spacing */
   }
 }
+
+.tona-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.tona-gallery-image {
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.bg-image {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page .card {
+  text-align: left;
+}
+
+.page .card h1 {
+  text-align: left;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.page .card h2 {
+  text-align: left;
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  font-weight: 600;
+  margin-top: 1.2rem;
+}
+
+.page .card ul {
+  padding-left: 1.2rem;
+}
+
+.page .card li {
+  margin-bottom: 1.5rem;
+}
+
+.art-card {
+  max-width: 1100px;
+  margin: 6rem auto;
+  padding: 40px 48px 48px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 6px 30px rgba(10, 10, 20, 0.06);
+}
+
+.back-link {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.art-meta {
+  margin: 0 0 1.8rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.art-layout {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.art-media-column {
+  flex: 1 1 340px;
+}
+
+.art-image img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.18);
+}
+
+.art-description {
+  flex: 1 1 280px;
+  line-height: 1.6;
+}
+
+@media (max-width: 800px) {
+  .art-layout {
+    flex-direction: column;
+  }
+}
+
+.inspo-credit {
+  font-size: 0.85rem;
+  color: #555;
+  margin: 6px 2px 0;
+  line-height: 1.4;
+}
+
+.art-video {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.18);
+  display: block;
+  margin-top: 1rem;
+}

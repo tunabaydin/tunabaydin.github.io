@@ -1,5 +1,36 @@
 export const siteContent = {
     en: {
+      pastLives: {
+  title: "PAST LIVES",
+  intro:
+    "A visual art project exploring the possibility that consciousness travels through many lives.",
+  purposeTitle: "Purpose",
+  purposeText:
+    "To soften the fear of death by exploring past lives as part of our journey as souls.",
+  conceptTitle: "The concept",
+  conceptText1:
+    "What if death is simply returning home? What if our existence unfolds in chapters rather than a single lifetime?",
+  conceptText2:
+    "Past Lives explores these chapters as artistic possibilities: moments that may be remembered, glimpsed, archetypal, or discovered through dreams and hypnosis.",
+  conceptText3:
+    "Through image, sound, and story, the project explores fragments of other lives and asks a simple question:",
+  conceptQuestion: "How many forms can one consciousness take?",
+  chaptersTitle: "First chapters",
+  chapter1Title: "Chapter I — Early Human",
+  chapter1Text1:
+    "During a past life regression hypnosis session, I experienced a vivid scene: I was an early human living tens of thousands of years ago.",
+  chapter1Text2:
+    "In the vision, I lived in a cave in a dry, rocky landscape. Life was simple and immediate; moving through nature, searching for food, reading the land and the animals around me.",
+  chapter1Text3:
+    "At one point I hunted a large animal using a spear. What stayed with me most strongly was not the hunt itself, but the sense of respect between hunter and animal — a quiet understanding that survival was shared within the same natural world.",
+  chapter2Title: "Chapter II — The Water Planet",
+  chapter2Text1:
+    "A recurring experience has appeared in my dreams.",
+  chapter2Text2:
+    "In these dreams I dive deep underwater and move through the ocean as if it were my natural environment. I can breathe there without effort.",
+  chapter2Text3:
+    "There is no fear. Only calm and curiosity, as if the underwater world is familiar.",
+},
       artist: {
   title: "Artist",
   text1:
@@ -54,6 +85,37 @@ contact: {
   },
 
   tr: {
+    pastLives: {
+  title: "Past Lives",
+  intro:
+    "Bilinçin birçok yaşam boyunca yolculuk edebileceği ihtimalini araştıran görsel bir sanat projesi.",
+  purposeTitle: "Amaç",
+  purposeText:
+    "Ölüm korkusunu yumuşatmak için, geçmiş yaşamları ruhsal yolculuğumuzun bir parçası olarak keşfetmek.",
+  conceptTitle: "Konsept",
+  conceptText1:
+    "Ya ölüm sadece eve dönmekse? Ya varoluşumuz tek bir yaşamdan ziyade bölümler halinde ilerliyorsa?",
+  conceptText2:
+    "Past Lives, bu bölümleri sanatsal olasılıklar olarak araştırır: hatırlanmış, sezilmiş, arketipsel ya da rüyalar ve hipnoz yoluyla keşfedilmiş anlar.",
+  conceptText3:
+    "Görüntü, ses ve hikâye aracılığıyla proje, başka yaşamların parçalarını keşfeder ve basit bir soru sorar:",
+  conceptQuestion: "Bir bilinç kaç farklı biçim alabilir?",
+  chaptersTitle: "İlk bölümler",
+  chapter1Title: "Bölüm I — Erken İnsan",
+  chapter1Text1:
+    "Bir geçmiş yaşam regresyonu hipnoz seansı sırasında canlı bir sahne deneyimledim: On binlerce yıl önce yaşayan bir ilk insandım.",
+  chapter1Text2:
+    "Bu görüntüde kuru ve kayalık bir manzaradaki bir mağarada yaşıyordum. Hayat basit ve doğrudandı; doğanın içinde hareket etmek, yiyecek aramak, toprağı ve etrafımdaki hayvanları okumak.",
+  chapter1Text3:
+    "Bir noktada bir mızrak kullanarak büyük bir hayvan avladım. Bende en güçlü iz bırakan şey avın kendisi değil, avcı ile hayvan arasındaki saygı duygusuydu — hayatta kalmanın aynı doğal dünyanın içinde paylaşıldığına dair sessiz bir anlayış.",
+  chapter2Title: "Bölüm II — Su Gezegeni",
+  chapter2Text1:
+    "Tekrar eden bir deneyim rüyalarımda ortaya çıkıyor.",
+  chapter2Text2:
+    "Bu rüyalarda okyanusun derinliklerine dalıyor ve sanki doğal ortamım orasıymış gibi suyun içinde hareket ediyorum. Hiç zorlanmadan nefes alabiliyorum.",
+  chapter2Text3:
+    "Korku yok. Sadece sakinlik ve merak var, sanki sualtı dünyası bana tanıdık.",
+},
     artist: {
   title: "Sanatçı",
   text1:
@@ -107,6 +169,37 @@ contact: {
   },
 
   no: {
+    pastLives: {
+  title: "Past Lives",
+  intro:
+    "Et visuelt kunstprosjekt som utforsker muligheten for at bevisstheten beveger seg gjennom mange liv.",
+  purposeTitle: "Formål",
+  purposeText:
+    "Å dempe frykten for døden ved å utforske tidligere liv som en del av vår reise som sjeler.",
+  conceptTitle: "Konseptet",
+  conceptText1:
+    "Hva om døden bare er å vende hjem? Hva om vår eksistens utfolder seg i kapitler i stedet for i ett enkelt liv?",
+  conceptText2:
+    "Past Lives utforsker disse kapitlene som kunstneriske muligheter: øyeblikk som kan være husket, glimtvis opplevd, arketypiske, eller oppdaget gjennom drømmer og hypnose.",
+  conceptText3:
+    "Gjennom bilde, lyd og fortelling utforsker prosjektet fragmenter av andre liv og stiller et enkelt spørsmål:",
+  conceptQuestion: "Hvor mange former kan én bevissthet ta?",
+  chaptersTitle: "Første kapitler",
+  chapter1Title: "Kapittel I — Tidlig menneske",
+  chapter1Text1:
+    "Under en regresjonshypnose for tidligere liv opplevde jeg en levende scene: Jeg var et tidlig menneske som levde for titusenvis av år siden.",
+  chapter1Text2:
+    "I denne visjonen bodde jeg i en hule i et tørt og steinete landskap. Livet var enkelt og umiddelbart — å bevege seg gjennom naturen, lete etter mat og lese landskapet og dyrene rundt meg.",
+  chapter1Text3:
+    "På et tidspunkt jaktet jeg på et stort dyr med et spyd. Det som satt sterkest igjen hos meg var ikke selve jakten, men følelsen av respekt mellom jegeren og dyret — en stille forståelse av at overlevelse deles innenfor den samme naturlige verden.",
+  chapter2Title: "Kapittel II — Vannplaneten",
+  chapter2Text1:
+    "En tilbakevendende opplevelse dukker opp i drømmene mine.",
+  chapter2Text2:
+    "I disse drømmene dykker jeg dypt under vann og beveger meg gjennom havet som om det var mitt naturlige miljø. Jeg kan puste uten anstrengelse.",
+  chapter2Text3:
+    "Det finnes ingen frykt. Bare ro og nysgjerrighet — som om undervannsverdenen er kjent for meg.",
+},
     artist: {
   title: "Kunstner",
   text1:
