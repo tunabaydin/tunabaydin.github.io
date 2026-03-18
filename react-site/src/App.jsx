@@ -3,6 +3,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import PastLives from "./pages/PastLives";
 import ArtDetail from "./pages/ArtDetail";
+import DetailRouter from "./pages/DetailRouter";
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <Route path="/" element={<Navigate to="/en" replace />} />
       <Route path="/:lang" element={<Home />} />
       <Route path="/:lang/pastlives" element={<PastLives />} />
-      <Route path="/:lang/:slug" element={<ArtDetail />} />
+      <Route path="/:lang/:slug" element={<DetailRouter />} />
       <Route path="*" element={<Navigate to="/en" replace />} />
     </Routes>
   );

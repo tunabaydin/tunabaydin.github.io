@@ -849,3 +849,146 @@ html.home-portal-transition.is-navigating {
   display: block;
   margin-top: 1rem;
 }
+
+/* ===== PHOTOGRAPHY PROJECT ===== */
+
+.photo-section {
+  max-width: 1100px;
+  margin: 40px auto 80px;
+  padding: 0 20px;
+}
+
+.photo-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 50px;
+  background: rgba(255,255,255,0.92);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.photo-row:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.photo-img {
+  width: 55%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+}
+
+.photo-text {
+  flex: 1;
+  text-align: left;
+}
+
+.photo-text h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.photo-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.photo-video {
+  width: 100%;
+  height: auto;
+  max-height: 530px;
+  margin-top: 12px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+  display: block;
+  object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .photo-row,
+  .photo-row:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .photo-img {
+    width: 100%;
+  }
+
+  .photo-text {
+    text-align: center;
+  }
+}
+
+/* ===== DREAM RECONSTRUCTION PROJECT ===== */
+
+.dream-section {
+  max-width: 1100px;
+  margin: 40px auto 100px;
+  padding: 24px;
+  background: rgba(255,255,255,0.92);
+  border-radius: 20px;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.12);
+}
+
+.dream-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 28px;
+}
+
+.dream-left {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.dream-left img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+}
+
+.dream-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dream-text {
+  background: rgba(255,255,255,0.95);
+  padding: 20px 22px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  text-align: left;
+}
+
+.dream-text h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+.dream-text p {
+  line-height: 1.6;
+  color: #333;
+}
+
+.dream-stack {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.dream-stack img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+}
+
+@media (max-width: 900px) {
+  .dream-grid {
+    grid-template-columns: 1fr;
+  }
+}
