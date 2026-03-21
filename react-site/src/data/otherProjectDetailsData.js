@@ -1,7 +1,11 @@
 export const otherProjectDetailsData = {
   photography: {
     slug: "photography",
-    title: "Photography",
+    title: {
+      en: "Photography",
+      tr: "Fotoğrafçılık",
+      no: "Fotografi",
+    },
     layout: "photography",
     rows: [
       {
@@ -20,9 +24,31 @@ export const otherProjectDetailsData = {
     ],
   },
 
+  crochet: {
+    slug: "crochet",
+    title: {
+      en: "Crochet",
+      tr: "Tığ İşi",
+      no: "Hekling",
+    },
+    layout: "photography",
+    rows: [
+      {
+        title: "Blanket",
+        text: "I made this blanket.",
+        image: "/assets/otherprojects/blanket.jpg",
+        imageAlt: "Blanket",
+      },
+    ],
+  },
+
   dreamreconstruction: {
     slug: "dreamreconstruction",
-    title: "Dream Reconstruction",
+    title: {
+      en: "Dream Reconstruction",
+      tr: "Rüya Rekonstrüksiyonu",
+      no: "Drømmerekonstruksjon",
+    },
     layout: "dream",
     leftImages: [
       {
@@ -66,6 +92,78 @@ export const otherProjectDetailsData = {
       {
         src: "/assets/otherprojects/dream8.png",
         alt: "Dream reconstruction 8",
+      },
+    ],
+  },
+
+  music: {
+    slug: "music",
+    title: {
+      en: "Music",
+      tr: "Müzik",
+      no: "Musikk",
+    },
+    layout: "photography",
+    rows: [
+      {
+        title: "Coming soon",
+        text: "This page is not yet available in this language.",
+        image: "/assets/otherprojects/littlehuman.jpg",
+        imageAlt: "Music",
+      },
+    ],
+  },
+
+  sculpture: {
+    slug: "sculpture",
+    title: {
+      en: "Sculpture",
+      tr: "Heykel",
+      no: "Skulptur",
+    },
+    layout: "photography",
+    rows: [
+      {
+        title: "About the project",
+        text: "This page is a placeholder for the Ceramics project details. Add the full project story, process details, and context for this page.",
+        image: "/assets/otherprojects/sculpture-cover.jpg",
+        imageAlt: "Sculpture",
+      },
+    ],
+  },
+
+  recipes: {
+    slug: "recipes",
+    title: {
+      en: "Recipes",
+      tr: "Tarifler",
+      no: "Oppskrifter",
+    },
+    layout: "photography",
+    rows: [
+      {
+        title: "Recipe coming soon",
+        text: "This page is a placeholder for the Cooking project details. Add the full project story, process details, and context for this page.",
+        image: "/assets/otherprojects/saltychia.jpg",
+        imageAlt: "Recipes",
+      },
+    ],
+  },
+
+  collage: {
+    slug: "collage",
+    title: {
+      en: "Collage",
+      tr: "Kolaj",
+      no: "Kollasj",
+    },
+    layout: "photography",
+    rows: [
+      {
+        title: "About the project",
+        text: "This page is a placeholder for the Collage project details. Add the full project story, process details, and context for this page.",
+        image: "/assets/otherprojects/collage-cover.jpg",
+        imageAlt: "Collage",
       },
     ],
   },

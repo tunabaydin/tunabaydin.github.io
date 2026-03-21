@@ -789,17 +789,13 @@ html.home-portal-transition.is-navigating {
 
 .art-card {
   max-width: 1100px;
-  margin: 6rem auto;
+  margin: 2.5rem auto;
   padding: 40px 48px 48px;
   border-radius: 24px;
   background: rgba(255,255,255,0.92);
   box-shadow: 0 6px 30px rgba(10, 10, 20, 0.06);
 }
 
-.back-link {
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-}
 
 .art-meta {
   margin: 0 0 1.8rem;
@@ -853,9 +849,7 @@ html.home-portal-transition.is-navigating {
 /* ===== PHOTOGRAPHY PROJECT ===== */
 
 .photo-section {
-  max-width: 1100px;
-  margin: 40px auto 80px;
-  padding: 0 20px;
+  width: 100%;
 }
 
 .photo-row {
@@ -925,12 +919,7 @@ html.home-portal-transition.is-navigating {
 /* ===== DREAM RECONSTRUCTION PROJECT ===== */
 
 .dream-section {
-  max-width: 1100px;
-  margin: 40px auto 100px;
-  padding: 24px;
-  background: rgba(255,255,255,0.92);
-  border-radius: 20px;
-  box-shadow: 0 8px 26px rgba(0,0,0,0.12);
+  width: 100%;
 }
 
 .dream-grid {
@@ -991,4 +980,55 @@ html.home-portal-transition.is-navigating {
   .dream-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.photo-section > h1,
+.dream-section > h1 {
+  margin: 0 0 1.2rem;
+  text-align: left;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* ===== OTHER PROJECTS UNIVERSAL CARD ===== */
+
+.other-project-card {
+  max-width: 1100px;
+  margin: 40px auto 100px;
+  padding: 24px;
+  background: rgba(255,255,255,0.92);
+  border-radius: 20px;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.12);
+}
+
+.other-project-card h1 {
+  margin: 0 0 1.2rem;
+  text-align: left;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* ===== BACK BUTTON CARD (reusable) ===== */
+
+.back-card {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  backdrop-filter: blur(6px);
+}
+
+.back-card a {
+  color: #111;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.back-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.18);
 }

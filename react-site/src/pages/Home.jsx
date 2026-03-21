@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { siteContent } from "../content/siteContent";
 import pastLivesVideo from "../../../assets/pastlives/pastlivesnewsmall.mp4";
 import Navbar from "../components/Navbar";
@@ -11,9 +11,9 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   const { lang } = useParams();
+  const location = useLocation();
   const content = siteContent[lang] || siteContent.en;
-const hero = content.hero;
-  console.log("Current language:", lang);
+  const hero = content.hero;
 
   useEffect(() => {
     const track = document.getElementById("hero-track");
@@ -173,99 +173,121 @@ const hero = content.hero;
     };
   }, []);
 
+  useEffect(() => {
+    if (!location.hash) {
+      window.scrollTo({ top: 0, behavior: "auto" });
+      return;
+    }
+
+    const id = location.hash.slice(1);
+
+    const scrollToSection = () => {
+      const element = document.getElementById(id);
+      if (!element) return;
+
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+
+    const timeoutId = window.setTimeout(scrollToSection, 50);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [location.hash]);
+
   return (
-  <>
-    {/* Background Video */}
-    <div className="bg-video">
-      <video autoPlay loop muted playsInline>
-        <source src="/assets/background.mp4" type="video/mp4" />
-      </video>
-    </div>
-
-    <Navbar />
-    <section id="top" className="hero-carousel" aria-label="Intro carousel">
-      <div className="hero-track" id="hero-track">
-        <div className="hero-slide" data-type="video">
-          <a className="hero-link" href={`/${lang}/pastlives`} aria-label="Past Lives" />
-          <video className="hero-media" autoPlay loop muted playsInline preload="auto">
-            <source src={pastLivesVideo} type="video/mp4" />
-          </video>
-          <div className="hero-overlay" />
-          <div className="hero-pastlives-copy" aria-hidden="true">
-           <h2 className="hero-pastlives-title">{hero.pastLivesTitle}</h2>
-          <div className="hero-pastlives-bottom">
-          <p className="hero-pastlives-subtitle">{hero.pastLivesSubtitle}</p>
-          <p className="hero-pastlives-meta">{hero.pastLivesMeta}</p>
-          <p className="hero-pastlives-cta">{hero.pastLivesCta}</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="hero-slide hero-slide--intro" data-type="intro">
-          <div className="hero-overlay" />
-          <div className="hero-card-wrap">
-            <div className="card">
-              <h1>{hero.introTitle}</h1>
-<p>{hero.introText1}</p>
-<p>{hero.introText2}</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="hero-slide hero-slide--intro" data-type="intro">
-          <div className="hero-overlay" />
-          <div className="hero-card-wrap">
-            <div className="card">
-  <h1>{hero.nameTitle}</h1>
-  <p>{hero.nameText1}</p>
-  {hero.nameText2 && <p>{hero.nameText2}</p>}
-  {hero.nameText3 && <p>{hero.nameText3}</p>}
-
-  {hero.nameImages && (
-    <div className="tona-gallery">
-      {hero.nameImages.map((src, index) => (
-        <img
-          key={index}
-          src={src}
-          alt={`Tona cup ${index + 1}`}
-          className="tona-gallery-image"
-        />
-      ))}
-    </div>
-  )}
-</div>
-          </div>
-        </div>
+    <>
+      <div className="bg-video">
+        <video autoPlay loop muted playsInline>
+          <source src="/assets/background.mp4" type="video/mp4" />
+        </video>
       </div>
 
-      <div className="hero-dots" id="hero-dots" aria-label="Carousel pagination" />
+      <Navbar />
 
-      <button
-        className="hero-arrow hero-arrow--left"
-        id="hero-left"
-        type="button"
-        aria-label="Previous slide"
-      >
-        ‹
-      </button>
-      <button
-        className="hero-arrow hero-arrow--right"
-        id="hero-right"
-        type="button"
-        aria-label="Next slide"
-      >
-        ›
-      </button>
+      <section id="top" className="hero-carousel" aria-label="Intro carousel">
+        <div className="hero-track" id="hero-track">
+          <div className="hero-slide" data-type="video">
+            <a className="hero-link" href={`/${lang}/pastlives`} aria-label="Past Lives" />
+            <video className="hero-media" autoPlay loop muted playsInline preload="auto">
+              <source src={pastLivesVideo} type="video/mp4" />
+            </video>
+            <div className="hero-overlay" />
+            <div className="hero-pastlives-copy" aria-hidden="true">
+              <h2 className="hero-pastlives-title">{hero.pastLivesTitle}</h2>
+              <div className="hero-pastlives-bottom">
+                <p className="hero-pastlives-subtitle">{hero.pastLivesSubtitle}</p>
+                <p className="hero-pastlives-meta">{hero.pastLivesMeta}</p>
+                <p className="hero-pastlives-cta">{hero.pastLivesCta}</p>
+              </div>
+            </div>
+          </div>
 
-      <button className="hero-sound" id="hero-sound" type="button">
-        Sound
-      </button>
-    </section>
-     <ArtGallery />
-     <OtherProjects />
-     <ArtistSection />
-     <ContactSection />
-     <Footer />
+          <div className="hero-slide hero-slide--intro" data-type="intro">
+            <div className="hero-overlay" />
+            <div className="hero-card-wrap">
+              <div className="card">
+                <h1>{hero.introTitle}</h1>
+                <p>{hero.introText1}</p>
+                <p>{hero.introText2}</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="hero-slide hero-slide--intro" data-type="intro">
+            <div className="hero-overlay" />
+            <div className="hero-card-wrap">
+              <div className="card">
+                <h1>{hero.nameTitle}</h1>
+                <p>{hero.nameText1}</p>
+                {hero.nameText2 && <p>{hero.nameText2}</p>}
+                {hero.nameText3 && <p>{hero.nameText3}</p>}
+
+                {hero.nameImages && (
+                  <div className="tona-gallery">
+                    {hero.nameImages.map((src, index) => (
+                      <img
+                        key={index}
+                        src={src}
+                        alt={`Tona cup ${index + 1}`}
+                        className="tona-gallery-image"
+                      />
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="hero-dots" id="hero-dots" aria-label="Carousel pagination" />
+
+        <button
+          className="hero-arrow hero-arrow--left"
+          id="hero-left"
+          type="button"
+          aria-label="Previous slide"
+        >
+          ‹
+        </button>
+
+        <button
+          className="hero-arrow hero-arrow--right"
+          id="hero-right"
+          type="button"
+          aria-label="Next slide"
+        >
+          ›
+        </button>
+
+        <button className="hero-sound" id="hero-sound" type="button">
+          Sound
+        </button>
+      </section>
+
+      <ArtGallery />
+      <OtherProjects />
+      <ArtistSection />
+      <ContactSection />
+      <Footer />
     </>
   );
 }
