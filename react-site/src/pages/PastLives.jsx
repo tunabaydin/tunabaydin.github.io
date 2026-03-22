@@ -50,9 +50,20 @@ export default function PastLives() {
               <p>{pastLives.chapter2Text2}</p>
               <p>{pastLives.chapter2Text3}</p>
             </li>
+
+            {/* NEW: Chapter III */}
+            {pastLives.chapter3Title && (
+              <li>
+                <strong>{pastLives.chapter3Title}</strong>
+                {pastLives.chapter3Text1 && <p>{pastLives.chapter3Text1}</p>}
+                {pastLives.chapter3Text2 && <p>{pastLives.chapter3Text2}</p>}
+                {pastLives.chapter3Text3 && <p>{pastLives.chapter3Text3}</p>}
+              </li>
+            )}
           </ul>
         </div>
       </section>
+
       <Footer />
     </>
   );

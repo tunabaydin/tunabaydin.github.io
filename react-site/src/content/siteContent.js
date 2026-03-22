@@ -30,6 +30,7 @@ export const siteContent = {
     "In these dreams I dive deep underwater and move through the ocean as if it were my natural environment. I can breathe there without effort.",
   chapter2Text3:
     "There is no fear. Only calm and curiosity, as if the underwater world is familiar.",
+    chapter3Title: "Chapter III — The Temple",
 },
       artist: {
   title: "Artist",
@@ -125,6 +126,7 @@ contact: {
     "Bu rüyalarda okyanusun derinliklerine dalıyor ve sanki doğal ortamım orasıymış gibi suyun içinde hareket ediyorum. Hiç zorlanmadan nefes alabiliyorum.",
   chapter2Text3:
     "Korku yok. Sadece sakinlik ve merak var, sanki sualtı dünyası bana tanıdık.",
+  chapter3Title: "Bölüm III — Tapınak",
 },
     artist: {
   title: "Sanatçı",
@@ -219,6 +221,7 @@ contact: {
     "I disse drømmene dykker jeg dypt under vann og beveger meg gjennom havet som om det var mitt naturlige miljø. Jeg kan puste uten anstrengelse.",
   chapter2Text3:
     "Det finnes ingen frykt. Bare ro og nysgjerrighet — som om undervannsverdenen er kjent for meg.",
+  chapter3Title: "Kapittel III — Tempelet",
 },
     artist: {
   title: "Kunstner",

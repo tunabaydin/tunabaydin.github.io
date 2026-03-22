@@ -14,8 +14,23 @@ export default function ProjectDetail() {
     return <Navigate to={`/${currentLang}`} replace />;
   }
 
-  const projectTitle =
-    project.title?.[currentLang] || project.title?.en || project.title;
+  const getLocalizedText = (value) => {
+    if (typeof value === "string") {
+      return value;
+    }
+
+    return value?.[currentLang] || value?.en || "";
+  };
+
+  const getLocalizedArray = (value) => {
+    if (Array.isArray(value)) {
+      return value;
+    }
+
+    return value?.[currentLang] || value?.en || [];
+  };
+
+  const projectTitle = getLocalizedText(project.title);
 
   return (
     <>
@@ -62,8 +77,8 @@ export default function ProjectDetail() {
                 />
 
                 <div className="photo-text">
-                  <h2>{row.title}</h2>
-                  <p>{row.text}</p>
+                  <h2>{getLocalizedText(row.title)}</h2>
+                  <p>{getLocalizedText(row.text)}</p>
 
                   {row.video && (
                     <video
@@ -91,9 +106,9 @@ export default function ProjectDetail() {
 
               <div className="dream-right">
                 <div className="dream-text">
-                  <h2>{project.textBox.heading}</h2>
+                  <h2>{getLocalizedText(project.textBox.heading)}</h2>
 
-                  {project.textBox.paragraphs.map((paragraph, index) => (
+                  {getLocalizedArray(project.textBox.paragraphs).map((paragraph, index) => (
                     <p key={index}>{paragraph}</p>
                   ))}
                 </div>
