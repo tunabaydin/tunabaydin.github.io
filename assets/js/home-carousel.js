@@ -13,13 +13,14 @@ const rightBtn = document.getElementById("hero-right");
   videos.forEach(v => { v.muted = true; v.volume = 0.9; v.play().catch(()=>{}); });
 
   // Build dots
-  slides.forEach((_, i) => {
+    // Build dots
+  slides.forEach((slide, i) => {
     const b = document.createElement("button");
     b.className = "hero-dot";
     b.type = "button";
     b.setAttribute("aria-label", `Go to slide ${i+1}`);
     b.addEventListener("click", () => {
-      track.scrollTo({ left: i * track.clientWidth, behavior: "smooth" });
+      track.scrollTo({ left: slide.offsetLeft, behavior: "smooth" });
     });
     dotsWrap.appendChild(b);
   });
@@ -53,8 +54,18 @@ const rightBtn = document.getElementById("hero-right");
 
   // Detect active slide by scroll position
   function getIndexFromScroll(){
-    const i = Math.round(track.scrollLeft / track.clientWidth);
-    return Math.max(0, Math.min(slides.length - 1, i));
+     let closestIndex = 0;
+    let closestDistance = Number.POSITIVE_INFINITY;
+
+    slides.forEach((slide, i) => {
+      const distance = Math.abs(track.scrollLeft - slide.offsetLeft);
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestIndex = i;
+      }
+    });
+
+    return closestIndex;
   }
 
   let raf = null;
@@ -77,12 +88,12 @@ const rightBtn = document.getElementById("hero-right");
     soundBtn.textContent = v.muted ? "Sound" : "Mute";
   });
 
-  function goTo(index){
-  const count = slides.length;
-  if (!count) return;
-  index = ((index % count) + count) % count;
-  track.scrollTo({ left: index * track.clientWidth, behavior: "smooth" });
-}
+    function goTo(index){
+    const count = slides.length;
+    if (!count) return;
+    index = ((index % count) + count) % count;
+    track.scrollTo({ left: slides[index].offsetLeft, behavior: "smooth" });
+  }
 
 if (leftBtn) {
   leftBtn.addEventListener("click", (e) => {

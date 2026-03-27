@@ -42,8 +42,15 @@ export default function Home() {
       b.setAttribute("aria-label", `Go to slide ${i + 1}`);
 
       const onDotClick = () => {
-        track.scrollTo({ left: i * track.clientWidth, behavior: "smooth" });
-      };
+  const slide = slides[i];
+const trackCenter = track.clientWidth / 2;
+const slideCenter = slide.offsetLeft + slide.clientWidth / 2;
+
+track.scrollTo({
+  left: slideCenter - trackCenter,
+  behavior: "smooth",
+});
+};
 
       b.addEventListener("click", onDotClick);
       dotCleanup.push(() => b.removeEventListener("click", onDotClick));
@@ -101,12 +108,21 @@ export default function Home() {
     };
     soundBtn.addEventListener("click", onSoundClick);
 
-    function goTo(index) {
-      const count = slides.length;
-      if (!count) return;
-      const nextIndex = ((index % count) + count) % count;
-      track.scrollTo({ left: nextIndex * track.clientWidth, behavior: "smooth" });
-    }
+function goTo(index) {
+  const count = slides.length;
+  if (!count) return;
+
+  const nextIndex = ((index % count) + count) % count;
+  const slide = slides[nextIndex];
+
+  const trackCenter = track.clientWidth / 2;
+  const slideCenter = slide.offsetLeft + slide.clientWidth / 2;
+
+  track.scrollTo({
+    left: slideCenter - trackCenter,
+    behavior: "smooth",
+  });
+}
 
     const onLeftClick = (e) => {
       e.preventDefault();
