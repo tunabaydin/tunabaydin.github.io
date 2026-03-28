@@ -596,7 +596,7 @@ html.home-portal-transition.is-navigating {
   box-sizing: border-box;
 
   border-radius: 0;
-  background: rgba(255,255,255,0.32);
+  background: rgba(255,255,255,0.7);
   border-bottom: 1.5px solid rgba(255,255,255,0.45);
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
   backdrop-filter: blur(10px);
@@ -819,7 +819,7 @@ html.home-portal-transition.is-navigating {
   width: 100%;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  background: rgba(0,0,0,0.38);
+  background: rgba(0,0,0,0.5);
   box-sizing: border-box;
 }
 
