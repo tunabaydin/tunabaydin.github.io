@@ -28,17 +28,21 @@ export default function PastLives() {
           <h2>{pastLives.purposeTitle}</h2>
           <p>{pastLives.purposeText}</p>
 
-          <h2>{pastLives.conceptTitle}</h2>
-          <p>{pastLives.conceptText1}</p>
-          <p>{pastLives.conceptText2}</p>
-          <p>{pastLives.conceptText3}</p>
-          <p>{pastLives.conceptQuestion}</p>
+
 
           <h2>{pastLives.chaptersTitle}</h2>
 
           <ul>
             <li>
               <strong>{pastLives.chapter1Title}</strong>
+              <video
+                  className="chapter-video"
+                  src="/assets/pastlives/earlyhumanprocess.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
               <p>{pastLives.chapter1Text1}</p>
               <p>{pastLives.chapter1Text2}</p>
               <p>{pastLives.chapter1Text3}</p>
@@ -46,21 +50,35 @@ export default function PastLives() {
 
             <li>
               <strong>{pastLives.chapter2Title}</strong>
+              <video
+                  className="chapter-video"
+                  src="/assets/pastlives/waterplanetprocess.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
               <p>{pastLives.chapter2Text1}</p>
               <p>{pastLives.chapter2Text2}</p>
               <p>{pastLives.chapter2Text3}</p>
             </li>
 
-            {/* NEW: Chapter III */}
-            {pastLives.chapter3Title && (
-              <li>
-                <strong>{pastLives.chapter3Title}</strong>
-                {pastLives.chapter3Text1 && <p>{pastLives.chapter3Text1}</p>}
-                {pastLives.chapter3Text2 && <p>{pastLives.chapter3Text2}</p>}
-                {pastLives.chapter3Text3 && <p>{pastLives.chapter3Text3}</p>}
-              </li>
-            )}
+           {/* Chapter 3 */}
+{pastLives.chapter3Title && (
+  <li>
+    <strong>{pastLives.chapter3Title}</strong>
+
+    <p>{pastLives.chapter3Text1}</p>
+    <p className="chapter-quote">{pastLives.chapter3Text2}</p>
+    <p>{pastLives.chapter3Text3}</p>
+  </li>
+)}
           </ul>
+                    <h2>{pastLives.conceptTitle}</h2>
+          <p>{pastLives.conceptText1}</p>
+          <p>{pastLives.conceptText2}</p>
+          <p>{pastLives.conceptText3}</p>
+          <p>{pastLives.conceptQuestion}</p>
         </div>
       </section>
 

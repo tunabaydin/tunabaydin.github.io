@@ -1152,3 +1152,21 @@ html.home-portal-transition.is-navigating {
   transform: translateY(-1px);
   box-shadow: 0 10px 24px rgba(0,0,0,0.18);
 }
+
+.chapter-video {
+  width: 100%;
+  max-width: 520px;   /* controls how big it gets */
+  height: auto;
+
+  display: block;
+  margin: 12px 0 16px 0;
+
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.chapter-quote {
+  font-style: italic;
+  opacity: 0.9;
+  margin: 10px 0;
+}
