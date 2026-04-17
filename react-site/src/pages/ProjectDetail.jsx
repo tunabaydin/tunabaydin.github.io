@@ -84,9 +84,11 @@ export default function ProjectDetail() {
                     <video
                       className="photo-video"
                       src={row.video}
-                      controls
-                      playsInline
+                      autoPlay
+                      loop
                       muted
+                      playsInline
+                      controls
                     />
                   )}
                 </div>

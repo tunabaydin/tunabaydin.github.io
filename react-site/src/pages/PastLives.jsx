@@ -36,13 +36,14 @@ export default function PastLives() {
             <li>
               <strong>{pastLives.chapter1Title}</strong>
               <video
-                  className="chapter-video"
-                  src="/assets/pastlives/earlyhumanprocess.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                />
+                className="chapter-video"
+                src="/assets/pastlives/earlyhumanprocess.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                controls
+              />
               <p>{pastLives.chapter1Text1}</p>
               <p>{pastLives.chapter1Text2}</p>
               <p>{pastLives.chapter1Text3}</p>
@@ -57,6 +58,7 @@ export default function PastLives() {
                   loop
                   muted
                   playsInline
+                  controls
                 />
               <p>{pastLives.chapter2Text1}</p>
               <p>{pastLives.chapter2Text2}</p>
@@ -74,11 +76,14 @@ export default function PastLives() {
   </li>
 )}
           </ul>
-                    <h2>{pastLives.conceptTitle}</h2>
-          <p>{pastLives.conceptText1}</p>
-          <p>{pastLives.conceptText2}</p>
-          <p>{pastLives.conceptText3}</p>
-          <p>{pastLives.conceptQuestion}</p>
+          <h2>{pastLives.conceptTitle}</h2>
+
+<div className="concept-text">
+  <p>{pastLives.conceptText1}</p>
+  <p>{pastLives.conceptText2}</p>
+  <p>{pastLives.conceptText3}</p>
+  <p>{pastLives.conceptQuestion}</p>
+</div>
         </div>
       </section>
 

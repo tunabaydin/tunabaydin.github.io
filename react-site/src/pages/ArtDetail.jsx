@@ -77,7 +77,15 @@ export default function ArtDetail() {
 
                 if (item.type === "video") {
                   return (
-                    <video className="art-video" controls key={index}>
+                    <video
+                      className="art-video"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      controls
+                      key={index}
+                    >
                       <source src={item.src} type="video/mp4" />
                     </video>
                   );
@@ -108,7 +116,15 @@ export default function ArtDetail() {
               {artworkDetails?.extraMedia?.map((item, index) => {
                 if (item.type === "video") {
                   return (
-                    <video className="art-video" controls key={index}>
+                    <video
+                      className="art-video"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      controls
+                      key={index}
+                    >
                       <source src={item.src} type="video/mp4" />
                     </video>
                   );

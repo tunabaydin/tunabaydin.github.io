@@ -95,7 +95,7 @@ body.contact-page .card {
 }
 
     .card{
-  max-width:700px;
+  max-width:900px;
   margin:120px auto 60px;
   padding:32px;
   background: rgba(255,255,255,0.92);
@@ -885,7 +885,7 @@ html.home-portal-transition.is-navigating {
 }
 
 .page .card h1 {
-  text-align: left;
+  text-align: center;
   font-size: clamp(2rem, 3vw, 2.8rem);
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -893,10 +893,11 @@ html.home-portal-transition.is-navigating {
 }
 
 .page .card h2 {
-  text-align: left;
+  text-align: center;
   font-size: clamp(1.4rem, 2vw, 1.8rem);
   font-weight: 600;
-  margin-top: 1.2rem;
+  margin-top: 2.2rem;
+  margin-bottom: 0.6rem;
 }
 
 .page .card ul {
@@ -1169,4 +1170,27 @@ html.home-portal-transition.is-navigating {
   font-style: italic;
   opacity: 0.9;
   margin: 10px 0;
+}
+
+.pastlives-wrap h1 {
+  text-align: center;
+}
+
+.page .card > p:nth-of-type(1),
+.page .card > h2:nth-of-type(1),
+.page .card > p:nth-of-type(2) {
+  text-align: center;
+}
+
+
+.page .card li strong {
+  display: block;
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.concept-text {
+  text-align: center;
 }
