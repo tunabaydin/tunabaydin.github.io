@@ -1194,3 +1194,24 @@ html.home-portal-transition.is-navigating {
 .concept-text {
   text-align: center;
 }
+
+.recipe-text h3 {
+  font-size: 1.1rem;
+  margin: 1rem 0 0.4rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.recipe-text ul {
+  margin: 0 0 1rem 1.2rem;
+  padding-left: 1rem;
+}
+
+.recipe-text li {
+  margin-bottom: 0.35rem;
+  line-height: 1.5;
+}
+
+.recipe-text p {
+  line-height: 1.6;
+}

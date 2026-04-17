@@ -199,15 +199,30 @@ export const otherProjectDetailsData = {
     rows: [
       {
         title: {
-          en: "Recipe coming soon",
-          tr: "Tarif yakında",
-          no: "Oppskrift kommer snart",
+          en: "Salty Chia Pudding (Tzatziki Chia)",
+          tr: "Tuzlu Chia Puding (Cacık Chia)",
+          no: "Saltet Chia Pudding (tzatziki-chia)",
         },
-        text: {
-          en: "This page is a placeholder for the Cooking project details. Add the full project story, process details, and context for this page.",
-          tr: "Bu sayfa, Yemek projesinin detayları için bir yer tutucudur. Bu sayfaya projenin tüm hikâyesini, üretim süreci detaylarını ve bağlamını ekleyin.",
-          no: "Denne siden er en plassholder for prosjektdetaljene til matlagingsprosjektet. Legg til hele prosjekthistorien, prosessdetaljer og kontekst for denne siden.",
-        },
+       text: {
+  en: {
+    ingredientsTitle: "Ingredients",
+    ingredients: ["Greek/Turkish yogurt", "Chia seeds", "Cucumber", "Garlic", "Fresh mint leaves", "Olive oil", "Salt", "Dried mint"],
+    methodTitle: "Preparation",
+    method: "........",
+  },
+  tr: {
+    ingredientsTitle: "Malzemeler",
+    ingredients: ["Yoğurt", "Chia tohumu", "Salatalık", "Sarımsak", "Taze nane", "Zeytinyağı", "Tuz", "Kuru nane"],
+    methodTitle: "Yapılışı",
+    method: "........",
+  },
+  no: {
+    ingredientsTitle: "Ingredienser",
+    ingredients: ["Gresk/tyrkisk yoghurt", "Chiafrø", "Agurk", "Hvitløk", "Ferske mynteblader", "Olivenolje", "Salt", "Tørket mynte"],
+    methodTitle: "Fremgangsmåte",
+    method: "........",
+  },
+},
         image: "/assets/otherprojects/saltychia.jpg",
         imageAlt: "Recipes",
       },
@@ -225,14 +240,14 @@ export const otherProjectDetailsData = {
     rows: [
       {
         title: {
-          en: "About the project",
-          tr: "Proje hakkında",
-          no: "Om prosjektet",
+          en: "Cherry on top",
+          tr: "Cherry on top",
+          no: "Cherry on top",
         },
         text: {
-          en: "This page is a placeholder for the Collage project details. Add the full project story, process details, and context for this page.",
-          tr: "Bu sayfa, Kolaj projesinin detayları için bir yer tutucudur. Bu sayfaya projenin tüm hikâyesini, üretim süreci detaylarını ve bağlamını ekleyin.",
-          no: "Denne siden er en plassholder for prosjektdetaljene til collageprosjektet. Legg til hele prosjekthistorien, prosessdetaljer og kontekst for denne siden.",
+          en: "I made this collage at a workshop. It reminds me of the problems our brain creates to keep us busy. Sometimes I find myself anxious for a reason I already forgot about, trying to remember why I was anxious. Staying present in the moment and being aware of the tools our minds use to keep us occupied is a promising starting point to overcome anxiety.",
+          tr: "Bu kolajı bir atölyede yaptım. Bana zihnimizin bizi meşgul etmek için yarattığı sorunları hatırlatıyor. Bazen kendimi, nedenini çoktan unuttuğum bir sebeple kaygılı hissederken buluyorum; neden kaygılandığımı hatırlamaya çalışıyorum. Anda kalmak ve zihnimizin bizi meşgul etmek için kullandığı araçların farkında olmak, kaygının üstesinden gelmek için umut verici bir başlangıç noktası olabilir.",
+          no: "Jeg laget denne collagen på en workshop. Den minner meg om problemene hjernen vår skaper for å holde oss opptatt. Noen ganger opplever jeg at jeg er engstelig av en grunn jeg allerede har glemt, og prøver å huske hvorfor jeg var engstelig. Å være til stede i øyeblikket og være bevisst på verktøyene sinnet bruker for å holde oss opptatt, er et lovende utgangspunkt for å overvinne angst.",
         },
         image: "/assets/otherprojects/cherryontop.jpg",
         imageAlt: "Collage",
