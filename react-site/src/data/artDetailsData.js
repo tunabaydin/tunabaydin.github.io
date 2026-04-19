@@ -5,9 +5,9 @@
       year: "2025",
       dimensions: "50 × 50 cm",
       status: {
-        en: "Available for purchase",
-        tr: "Satın alınabilir",
-        no: "Tilgjengelig for kjøp",
+        en: "Not available for purchase",
+        tr: "Mevcut değil",
+        no: "Ikke tilgjengelig for kjøp",
       },
     },
 
@@ -64,7 +64,7 @@
       dimensions: "41.5 × 76.5 cm",
       status: {
         en: "Not available for purchase",
-        tr: "Satın alınamaz",
+        tr: "Mevcut değil",
         no: "Ikke tilgjengelig for kjøp",
       },
     },
@@ -109,7 +109,7 @@
       dimensions: "29.7 × 42 cm",
       status: {
         en: "Not available for purchase",
-        tr: "Satın alınamaz",
+        tr: "Mevcut değil",
         no: "Ikke tilgjengelig for kjøp",
       },
     },
@@ -147,7 +147,7 @@
       dimensions: "21 × 29.7 cm",
       status: {
         en: "Not available for purchase",
-        tr: "Satın alınamaz",
+        tr: "Mevcut değil",
         no: "Ikke tilgjengelig for kjøp",
       },
     },
@@ -203,7 +203,7 @@
       dimensions: "5.4 × 8.6 cm",
       status: {
         en: "Not available for purchase",
-        tr: "Satın alınamaz",
+        tr: "Mevcut değil",
         no: "Ikke tilgjengelig for kjøp",
       },
     },
@@ -248,7 +248,7 @@
       dimensions: "50 × 100 cm",
       status: {
         en: "Not available for purchase",
-        tr: "Satın alınamaz",
+        tr: "Mevcut değil",
         no: "Ikke tilgjengelig for kjøp",
       },
     },
@@ -292,7 +292,7 @@
       dimensions: "? × ? cm",
       status: {
         en: "Not available for purchase",
-        tr: "Satın alınamaz",
+        tr: "Mevcut değil",
         no: "Ikke tilgjengelig for kjøp",
       },
     },
@@ -333,7 +333,7 @@
       dimensions: "21 × 30 cm",
       status: {
         en: "Not available for purchase",
-        tr: "Satın alınamaz",
+        tr: "Mevcut değil",
         no: "Ikke tilgjengelig for kjøp",
       },
     },
@@ -426,8 +426,8 @@
       year: "2023",
       dimensions: "4 × 4 cm",
       status: {
-        en: "Not available for purchase",
-        tr: "Satın alınamaz",
+         en: "Not available for purchase",
+        tr: "Mevcut değil",
         no: "Ikke tilgjengelig for kjøp",
       },
     },
@@ -515,7 +515,7 @@
       dimensions: "80 × 80 cm",
       status: {
         en: "Not available for purchase",
-        tr: "Satın alınamaz",
+        tr: "Mevcut değil",
         no: "Ikke tilgjengelig for kjøp",
       },
     },

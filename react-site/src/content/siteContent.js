@@ -7,7 +7,7 @@ export const siteContent = {
   purposeTitle: "Purpose",
   purposeText:
     "To soften the fear of death by exploring past lives as part of our journey as souls.",
-  conceptTitle: "The concept",
+  conceptTitle: "The Concept",
   conceptText1:
     "What if death is simply returning home? What if our existence unfolds in chapters rather than a single lifetime?",
   conceptText2:
@@ -15,22 +15,28 @@ export const siteContent = {
   conceptText3:
     "Through image, sound, and story, the project explores fragments of other lives and asks a simple question:",
   conceptQuestion: "How many forms can one consciousness take?",
-  chaptersTitle: "First chapters",
-  chapter1Title: "Chapter I — Early Human",
+  chaptersTitle: "First Chapters (in progress)",
+  chapter1Title: "Chapter 1: Early Human",
   chapter1Text1:
-    "During a past life regression hypnosis session, I experienced a vivid scene: I was an early human living tens of thousands of years ago.",
+    "During a past life regression hypnosis session, I experienced a vivid scene: I was an early human living tens of thousands of years ago. I remember looking down and seeing that I had a tall and strong male body.",
   chapter1Text2:
-    "In the vision, I lived in a cave in a dry, rocky landscape. Life was simple and immediate; moving through nature, searching for food, reading the land and the animals around me.",
+    "In the vision, I lived in a cave in a dry, rocky landscape where earthquakes happened often. Life was simple: moving through nature, searching for food, reading the land and the animals around me.",
   chapter1Text3:
-    "At one point I hunted a large animal using a spear. What stayed with me most strongly was not the hunt itself, but the sense of respect between hunter and animal — a quiet understanding that survival was shared within the same natural world.",
-  chapter2Title: "Chapter II — The Water Planet",
+    "I was running fast and chasing a large animal (likely an ancient antelope). I hunted it down using a spear. As it was dying, I put my hand on the animal, closed my eyes, and shed a tear. I was respectful and grateful that I had found food to survive.",
+  chapter2Title: "Chapter 2: The Water Planet",
   chapter2Text1:
     "A recurring experience has appeared in my dreams.",
   chapter2Text2:
-    "In these dreams I dive deep underwater and move through the ocean as if it were my natural environment. I can breathe there without effort.",
+    "In these dreams, I dive deep underwater and move through the ocean as if it were my natural environment. I can breathe there without effort.",
   chapter2Text3:
-    "There is no fear. Only calm and curiosity, as if the underwater world is familiar.",
-    chapter3Title: "Chapter III — The Temple",
+    "I am not afraid. Only calm and curious, as if the underwater world is familiar.",
+    chapter3Title: "Chapter 3: The Energy Being",
+    chapter3Text1:
+  "I experienced this scene in a past life regression hypnosis session. I was looking at a temple wall carved into the land. The color of the soil and stone reminded me of Petra, Jordan. However, there was no apparent entrance to the temple. I soon realized that I was an energy being and did not have a physical body, so I could go through the wall and enter the temple. There was sunlight entering the temple through a window in the ceiling of this very tall structure.",
+chapter3Text2:
+  "\"It's very peaceful here, I can hear the birds. Not sure if I have a body. People come here and they give offerings, it's like a worship place. There are crystals around.\"",
+chapter3Text3:
+  "This is how I described some of my experience in the voice recording from the session.",
 },
       artist: {
   title: "Artist",
@@ -99,34 +105,40 @@ contact: {
     pastLives: {
   title: "Past Lives",
   intro:
-    "Bilinçin birçok yaşam boyunca yolculuk edebileceği ihtimalini araştıran görsel bir sanat projesi.",
+    "Bilinçin birçok yaşam boyunca yolculuk edebileceği ihtimalini keşfeden görsel bir sanat projesi.",
   purposeTitle: "Amaç",
   purposeText:
-    "Ölüm korkusunu yumuşatmak için, geçmiş yaşamları ruhsal yolculuğumuzun bir parçası olarak keşfetmek.",
+    "Ölüm korkusunu yumuşatmak için geçmiş yaşamları ruhsal yolculuğumuzun bir parçası olarak keşfetmek.",
   conceptTitle: "Konsept",
   conceptText1:
-    "Ya ölüm sadece eve dönmekse? Ya varoluşumuz tek bir yaşamdan ziyade bölümler halinde ilerliyorsa?",
+    "Ya ölüm sadece eve dönmekse? Ya varoluşumuz tek bir yaşam yerine bölümler halinde ilerliyorsa?",
   conceptText2:
-    "Past Lives, bu bölümleri sanatsal olasılıklar olarak araştırır: hatırlanmış, sezilmiş, arketipsel ya da rüyalar ve hipnoz yoluyla keşfedilmiş anlar.",
+    "Past Lives, bu bölümleri sanatsal olasılıklar olarak keşfeder: hatırlanmış, sezilmiş, arketipsel ya da rüyalar ve hipnoz yoluyla keşfedilmiş anlar.",
   conceptText3:
     "Görüntü, ses ve hikâye aracılığıyla proje, başka yaşamların parçalarını keşfeder ve basit bir soru sorar:",
   conceptQuestion: "Bir bilinç kaç farklı biçim alabilir?",
-  chaptersTitle: "İlk bölümler",
-  chapter1Title: "Bölüm I — Erken İnsan",
+  chaptersTitle: "İlk Bölümler (devam ediyor)",
+  chapter1Title: "Bölüm 1: İlk İnsan",
   chapter1Text1:
-    "Bir geçmiş yaşam regresyonu hipnoz seansı sırasında canlı bir sahne deneyimledim: On binlerce yıl önce yaşayan bir ilk insandım.",
+    "Bir geçmiş yaşam regresyonu hipnoz seansı sırasında canlı bir sahne deneyimledim: On binlerce yıl önce yaşayan bir ilk insandım. Aşağı baktığımda uzun ve güçlü bir erkek bedenine sahip olduğumu gördüğümü hatırlıyorum.",
   chapter1Text2:
-    "Bu görüntüde kuru ve kayalık bir manzaradaki bir mağarada yaşıyordum. Hayat basit ve doğrudandı; doğanın içinde hareket etmek, yiyecek aramak, toprağı ve etrafımdaki hayvanları okumak.",
+    "Bu görüntüde, sık sık depremlerin olduğu kuru ve kayalık bir manzarada bir mağarada yaşıyordum. Hayat basitti: doğanın içinde hareket etmek, yiyecek aramak, toprağı ve etrafımdaki hayvanları okumak.",
   chapter1Text3:
-    "Bir noktada bir mızrak kullanarak büyük bir hayvan avladım. Bende en güçlü iz bırakan şey avın kendisi değil, avcı ile hayvan arasındaki saygı duygusuydu — hayatta kalmanın aynı doğal dünyanın içinde paylaşıldığına dair sessiz bir anlayış.",
-  chapter2Title: "Bölüm II — Su Gezegeni",
+    "Hızlı koşuyor ve büyük bir hayvanı (muhtemelen antik bir antilop) kovalıyordum. Onu bir mızrakla avladım. Ölürken elimi hayvanın üzerine koydum, gözlerimi kapattım ve bir damla gözyaşı döktüm. Hayatta kalmak için yiyecek bulduğum için saygılı ve minnettardım.",
+  chapter2Title: "Bölüm 2: Su Gezegeni",
   chapter2Text1:
-    "Tekrar eden bir deneyim rüyalarımda ortaya çıkıyor.",
+    "Tekrarlayan bir deneyim rüyalarımda ortaya çıkıyor.",
   chapter2Text2:
-    "Bu rüyalarda okyanusun derinliklerine dalıyor ve sanki doğal ortamım orasıymış gibi suyun içinde hareket ediyorum. Hiç zorlanmadan nefes alabiliyorum.",
+    "Bu rüyalarda suyun derinliklerine dalıyor ve sanki doğal ortamım orasıymış gibi okyanusun içinde hareket ediyorum. Hiç zorlanmadan nefes alabiliyorum.",
   chapter2Text3:
     "Korku yok. Sadece sakinlik ve merak var, sanki sualtı dünyası bana tanıdık.",
-  chapter3Title: "Bölüm III — Tapınak",
+  chapter3Title: "Bölüm 3: Enerji Varlığı",
+  chapter3Text1:
+  "Bu sahneyi bir geçmiş yaşam regresyonu hipnoz seansında deneyimledim. Toprağa oyulmuş bir tapınak duvarına bakıyordum. Toprağın ve taşın rengi bana Petra, Ürdün’ü hatırlattı. Ancak tapınağın görünür bir girişi yoktu. Kısa süre sonra bir enerji varlığı olduğumu ve fiziksel bir bedenim olmadığını fark ettim, bu yüzden duvarın içinden geçerek tapınağa girebildim. Bu çok yüksek tapınağın tavanındaki bir açıklıktan içeri güneş ışığı giriyordu.",
+chapter3Text2:
+  "\"Burası çok huzurlu, kuşları duyabiliyorum. Bir bedenim olup olmadığından emin değilim. İnsanlar buraya geliyor ve adaklar bırakıyor, burası bir ibadet yeri gibi. Etrafında kristaller var.\"",
+chapter3Text3:
+  "Bu, seans sırasında yaptığım ses kaydında deneyimimin bir kısmını böyle ifade ettiğim şekildir.",
 },
     artist: {
   title: "Sanatçı",
@@ -197,31 +209,37 @@ contact: {
     "Et visuelt kunstprosjekt som utforsker muligheten for at bevisstheten beveger seg gjennom mange liv.",
   purposeTitle: "Formål",
   purposeText:
-    "Å dempe frykten for døden ved å utforske tidligere liv som en del av vår reise som sjeler.",
+    "Å myke opp frykten for døden ved å utforske tidligere liv som en del av vår reise som sjeler.",
   conceptTitle: "Konseptet",
   conceptText1:
-    "Hva om døden bare er å vende hjem? Hva om vår eksistens utfolder seg i kapitler i stedet for i ett enkelt liv?",
+    "Hva om døden bare er å vende hjem? Hva om vår eksistens utfolder seg i kapitler i stedet for ett enkelt liv?",
   conceptText2:
-    "Past Lives utforsker disse kapitlene som kunstneriske muligheter: øyeblikk som kan være husket, glimtvis opplevd, arketypiske, eller oppdaget gjennom drømmer og hypnose.",
+    "Past Lives utforsker disse kapitlene som kunstneriske muligheter: øyeblikk som kan være husket, glimtvis opplevd, arketypiske eller oppdaget gjennom drømmer og hypnose.",
   conceptText3:
     "Gjennom bilde, lyd og fortelling utforsker prosjektet fragmenter av andre liv og stiller et enkelt spørsmål:",
   conceptQuestion: "Hvor mange former kan én bevissthet ta?",
-  chaptersTitle: "Første kapitler",
-  chapter1Title: "Kapittel I — Tidlig menneske",
+  chaptersTitle: "Første Kapitler (under utvikling)",
+  chapter1Title: "Kapittel 1: Tidlig menneske",
   chapter1Text1:
-    "Under en regresjonshypnose for tidligere liv opplevde jeg en levende scene: Jeg var et tidlig menneske som levde for titusenvis av år siden.",
+    "Under en regresjonshypnose for tidligere liv opplevde jeg en levende scene: Jeg var et tidlig menneske som levde for titusenvis av år siden. Jeg husker at jeg så ned og la merke til at jeg hadde en høy og sterk mannskropp.",
   chapter1Text2:
-    "I denne visjonen bodde jeg i en hule i et tørt og steinete landskap. Livet var enkelt og umiddelbart — å bevege seg gjennom naturen, lete etter mat og lese landskapet og dyrene rundt meg.",
+    "I denne visjonen levde jeg i en hule i et tørt og steinete landskap der jordskjelv skjedde ofte. Livet var enkelt: å bevege seg gjennom naturen, lete etter mat og lese landskapet og dyrene rundt meg.",
   chapter1Text3:
-    "På et tidspunkt jaktet jeg på et stort dyr med et spyd. Det som satt sterkest igjen hos meg var ikke selve jakten, men følelsen av respekt mellom jegeren og dyret — en stille forståelse av at overlevelse deles innenfor den samme naturlige verden.",
-  chapter2Title: "Kapittel II — Vannplaneten",
+    "Jeg løp raskt og jaget et stort dyr (trolig en forhistorisk antilope). Jeg jaktet det ned med et spyd. Mens det døde, la jeg hånden min på dyret, lukket øynene og felte en tåre. Jeg følte respekt og takknemlighet for at jeg hadde funnet mat for å overleve.",
+  chapter2Title: "Kapittel 2: Vannplaneten",
   chapter2Text1:
-    "En tilbakevendende opplevelse dukker opp i drømmene mine.",
+    "En tilbakevendende opplevelse har dukket opp i drømmene mine.",
   chapter2Text2:
-    "I disse drømmene dykker jeg dypt under vann og beveger meg gjennom havet som om det var mitt naturlige miljø. Jeg kan puste uten anstrengelse.",
+    "I disse drømmene dykker jeg dypt under vann og beveger meg gjennom havet som om det var mitt naturlige miljø. Jeg kan puste der uten anstrengelse.",
   chapter2Text3:
-    "Det finnes ingen frykt. Bare ro og nysgjerrighet — som om undervannsverdenen er kjent for meg.",
-  chapter3Title: "Kapittel III — Tempelet",
+    "Jeg er ikke redd. Bare rolig og nysgjerrig, som om undervannsverdenen er kjent for meg.",
+  chapter3Title: "Kapittel 3: Energivesen",
+  chapter3Text1:
+  "Jeg opplevde denne scenen under en regresjonshypnose for tidligere liv. Jeg så på en tempelvegg som var hugget inn i landskapet. Fargen på jorden og steinen minnet meg om Petra i Jordan. Det var imidlertid ingen synlig inngang til tempelet. Jeg innså snart at jeg var et energivesen og ikke hadde en fysisk kropp, så jeg kunne gå gjennom veggen og inn i tempelet. Sollys kom inn i dette svært høye tempelet gjennom en åpning i taket.",
+chapter3Text2:
+  "\"Det er veldig fredelig her, jeg kan høre fuglene. Jeg er ikke sikker på om jeg har en kropp. Folk kommer hit og gir offergaver, det er som et tilbedelsessted. Det er krystaller rundt.\"",
+chapter3Text3:
+  "Slik beskrev jeg deler av opplevelsen min i lydopptaket fra seansen.",
 },
     artist: {
   title: "Kunstner",

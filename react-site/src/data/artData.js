@@ -3,7 +3,7 @@ export const artData = [
     title: "Jupiter",
     slug: "jupiter",
     image: "/assets/art/jupiter.jpg",
-    available: true,
+    available: false,
   },
   {
     title: "Snowflake",

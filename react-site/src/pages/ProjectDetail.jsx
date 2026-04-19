@@ -78,15 +78,36 @@ export default function ProjectDetail() {
 
                 <div className="photo-text">
                   <h2>{getLocalizedText(row.title)}</h2>
-                  <p>{getLocalizedText(row.text)}</p>
+                  {typeof row.text?.[currentLang] === "object" || typeof row.text?.en === "object" ? (
+  (() => {
+    const recipeText = row.text?.[currentLang] || row.text?.en || {};
+    return (
+      <div className="recipe-text">
+        <h3>{recipeText.ingredientsTitle}</h3>
+        <ul>
+          {(recipeText.ingredients || []).map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
+
+        <h3>{recipeText.methodTitle}</h3>
+        <p>{recipeText.method}</p>
+      </div>
+    );
+  })()
+) : (
+  <p>{getLocalizedText(row.text)}</p>
+)}
 
                   {row.video && (
                     <video
                       className="photo-video"
                       src={row.video}
-                      controls
-                      playsInline
+                      autoPlay
+                      loop
                       muted
+                      playsInline
+                      controls
                     />
                   )}
                 </div>
