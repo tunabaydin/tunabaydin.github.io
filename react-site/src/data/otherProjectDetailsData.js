@@ -136,31 +136,48 @@ export const otherProjectDetailsData = {
     ],
   },
 
-  music: {
-    slug: "music",
-    title: {
-      en: "Music",
-      tr: "Müzik",
-      no: "Musikk",
-    },
-    layout: "photography",
-    rows: [
-      {
-        title: {
-          en: "Coming soon",
-          tr: "Yakında",
-          no: "Kommer snart",
-        },
-        text: {
-          en: "This page is not yet available in this language.",
-          tr: "Bu sayfa henüz bu dilde mevcut değil.",
-          no: "Denne siden er ikke tilgjengelig på dette språket ennå.",
-        },
-        image: "/assets/otherprojects/littlehuman.jpg",
-        imageAlt: "Music",
-      },
-    ],
+ music: {
+  slug: "music",
+  title: {
+    en: "Music",
+    tr: "Müzik",
+    no: "Musikk",
   },
+  layout: "photography",
+  rows: [
+    {
+      rowClass: "music-intro-row",
+      title: {
+        en: "Music",
+        tr: "Müzik",
+        no: "Musikk",
+      },
+      text: {
+        en: "I really like listening to and creating music. I have experience singing in a choir and in a band, as well as playing the piano and drums during my developmental years. As an adult, I took some vocal lessons and enjoy singing and composing in my free time. I still have a lot to learn and I am excited to keep improving my music skills.",
+        tr: "Müzik dinlemeyi ve üretmeyi gerçekten çok seviyorum. Gelişim yıllarımda koroda ve bir grupta şarkı söyleme, ayrıca piyano ve davul çalma deneyimim oldu. Yetişkinliğimde bir süre vokal dersleri de aldım ve boş zamanlarımda şarkı söyleyip beste yapmaktan keyif alıyorum. Hala öğrenecek çok şeyim var ve müzik becerilerimi geliştirmek için heyecanlıyım.",
+        no: "Jeg liker veldig godt å høre på og lage musikk. I oppveksten har jeg erfaring med å synge i kor og i band, i tillegg til å spille piano og trommer. Som voksen har jeg også tatt noen sangtimer, og jeg liker å synge og komponere på fritiden. Jeg har fortsatt mye å lære, og jeg gleder meg til å fortsette å utvikle mine musikalske ferdigheter.",
+      },
+      image: "/assets/otherprojects/littlehuman.jpg",
+      imageAlt: "Childhood photo",
+    },
+    {
+      rowClass: "music-song-row",
+      title: {
+        en: "Spanish-inspired composition",
+        tr: "İspanyol esintili beste",
+        no: "Spansk-inspirert komposisjon",
+      },
+      text: {
+        en: "This song is inspired by flamenco music and traditional Andalusian sounds. I made this song back in [YEAR] using Soundtrap, which is an online music production software. The program is beginner-friendly because it has a very simple user interface, but it does not offer the highest-quality virtual instruments. I am currently looking for a new software to learn so I can create higher-quality sounds.",
+        tr: "Bu şarkı flamenko müziği ve geleneksel Endülüs tınılarından ilham alıyor. Bu şarkıyı [YEAR] yılında, çevrim içi bir müzik prodüksiyon yazılımı olan Soundtrap kullanarak yaptım. Program, çok basit bir kullanıcı arayüzüne sahip olduğu için başlangıç için oldukça uygun; ancak en yüksek kalitede sanal enstrümanları sunmuyor. Daha yüksek kaliteli sesler üretebilmek için şu anda öğrenebileceğim yeni bir yazılım arıyorum.",
+        no: "Denne sangen er inspirert av flamenco-musikk og tradisjonelle andalusiske lyder. Jeg laget denne sangen i [YEAR] ved å bruke Soundtrap, som er et nettbasert program for musikkproduksjon. Programmet er nybegynnervennlig fordi det har et veldig enkelt brukergrensesnitt, men det tilbyr ikke virtuelle instrumenter av høyeste kvalitet. Jeg ser nå etter et nytt program å lære, slik at jeg kan lage lyd av høyere kvalitet.",
+      },
+      image: "/assets/otherprojects/spanishprocess.png",
+      imageAlt: "Spanish-inspired music process",
+      audio: "/assets/otherprojects/spanish.mp3",
+    },
+  ],
+},
 
   sculpture: {
     slug: "sculpture",
@@ -173,15 +190,17 @@ export const otherProjectDetailsData = {
     rows: [
       {
         title: {
-          en: "About the project",
-          tr: "Proje hakkında",
-          no: "Om prosjektet",
+          en: "Head",
+          tr: "Kafa",
+          no: "Hodet",
         },
         text: {
-          en: "This page is a placeholder for the Ceramics project details. Add the full project story, process details, and context for this page.",
-          tr: "Bu sayfa, Seramik projesinin detayları için bir yer tutucudur. Bu sayfaya projenin tüm hikâyesini, üretim süreci detaylarını ve bağlamını ekleyin.",
-          no: "Denne siden er en plassholder for prosjektdetaljene til keramikkprosjektet. Legg til hele prosjekthistorien, prosessdetaljer og kontekst for denne siden.",
-        },
+  en: "This clay sculpture is a prototype for the upcoming scaled up version. I am amazed by how different and beautiful our human faces are. In this project, I am attempting to create a new face.",
+
+  tr: "Bu kil heykel, ileride daha büyük ölçekte yapılacak versiyon için bir prototiptir. İnsan yüzlerinin ne kadar farklı ve güzel olduğuna hayranım. Bu projede yeni bir yüz yaratmayı deniyorum.",
+
+  no: "Denne leireskulpturen er en prototype for en kommende oppskalert versjon. Jeg er fascinert av hvor forskjellige og vakre menneskelige ansikter er. I dette prosjektet forsøker jeg å skape et nytt ansikt."
+},
         image: "/assets/otherprojects/sculpture-cover.jpg",
         imageAlt: "Sculpture",
       },
@@ -205,26 +224,30 @@ export const otherProjectDetailsData = {
         },
        text: {
   en: {
+    description: "We have all had or heard of sweet chia puddings before. As a person who loves savory snacks, I came up with a salty chia pudding, which is essentially a more nutritious tzatziki.",
     ingredientsTitle: "Ingredients",
     ingredients: ["Greek/Turkish yogurt", "Chia seeds", "Cucumber", "Garlic", "Fresh mint leaves", "Olive oil", "Salt", "Dried mint"],
     methodTitle: "Preparation",
-    method: "........",
+    method: "Hydrate the chia seeds for 5–10 minutes until you obtain a thick pudding. Then add Greek yogurt, grated or diced cucumber, chopped garlic, chopped fresh mint leaves, olive oil, salt, and dried mint to taste. There are no exact measurements for this recipe.",
   },
   tr: {
+    description: "Hepimiz daha önce tatlı chia pudingleri yemiş ya da duymuşuzdur. Tuzlu atıştırmalıkları seven biri olarak, aslında daha besleyici bir cacık olan bu tuzlu chia pudingi geliştirdim.",
     ingredientsTitle: "Malzemeler",
     ingredients: ["Yoğurt", "Chia tohumu", "Salatalık", "Sarımsak", "Taze nane", "Zeytinyağı", "Tuz", "Kuru nane"],
     methodTitle: "Yapılışı",
-    method: "........",
+    method: "Chia tohumlarını 5–10 dakika bekleterek koyu bir puding elde edin. Ardından yoğurt, rendelenmiş veya doğranmış salatalık, doğranmış sarımsak, taze nane yaprakları, zeytinyağı, tuz ve kuru naneyi damak tadınıza göre ekleyin. Bu tarifte kesin ölçüler kullanmadım çünkü herkesin kendine özgü bir cacık tarifi vardır.",
   },
   no: {
+    description: "Vi har alle smakt eller hørt om søte chia puddinger før. Som en person som liker salte snacks, fant jeg på en salt chia pudding, som egentlig er en mer næringsrik tzatziki.",
     ingredientsTitle: "Ingredienser",
     ingredients: ["Gresk/tyrkisk yoghurt", "Chiafrø", "Agurk", "Hvitløk", "Ferske mynteblader", "Olivenolje", "Salt", "Tørket mynte"],
     methodTitle: "Fremgangsmåte",
-    method: "........",
+    method: "La chiafrøene hydrere i 5–10 minutter til du får en tykk pudding. Tilsett deretter gresk yoghurt, revet eller hakket agurk, hakket hvitløk, ferske mynteblader, olivenolje, salt og tørket mynte etter smak. Det finnes ingen eksakte mål i denne oppskriften.",
   },
 },
         image: "/assets/otherprojects/saltychia.jpg",
         imageAlt: "Recipes",
+        video: "/assets/otherprojects/saltychiaprocess.mp4",
       },
     ],
   },

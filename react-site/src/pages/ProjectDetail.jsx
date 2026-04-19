@@ -69,7 +69,7 @@ export default function ProjectDetail() {
         {project.layout === "photography" && (
           <div className="photo-section">
             {project.rows.map((row, index) => (
-              <div className="photo-row" key={index}>
+              <div className={`photo-row ${row.rowClass || ""}`} key={index}>
                 <img
                   className="photo-img"
                   src={row.image}
@@ -83,6 +83,8 @@ export default function ProjectDetail() {
     const recipeText = row.text?.[currentLang] || row.text?.en || {};
     return (
       <div className="recipe-text">
+        <p className="recipe-description">{recipeText.description}</p>
+
         <h3>{recipeText.ingredientsTitle}</h3>
         <ul>
           {(recipeText.ingredients || []).map((item, i) => (
@@ -108,6 +110,15 @@ export default function ProjectDetail() {
                       muted
                       playsInline
                       controls
+                    />
+                  )}
+                  {row.audio && (
+                    <audio
+                      className="photo-audio"
+                      controls
+                      controlsList="nodownload"
+                      onContextMenu={(e) => e.preventDefault()}
+                      src={row.audio}
                     />
                   )}
                 </div>
