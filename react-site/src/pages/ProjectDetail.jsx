@@ -59,7 +59,7 @@ export default function ProjectDetail() {
         </div>
 
         <div style={{ textAlign: "center" }}>
-          <h1 style={{ margin: 0 }}>{projectTitle}</h1>
+          <h1 className="other-project-detail-title" style={{ margin: 0 }}>{projectTitle}</h1>
         </div>
 
         <div />

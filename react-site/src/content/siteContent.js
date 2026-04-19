@@ -152,7 +152,7 @@ chapter3Text3:
   text4:
     "Benimle iletişim sayfası üzerinden iletişime geçebilir ve sanatla ilgili deneyiminizi paylaşabilirsiniz.",
   text5:
-    "Bu web sitesini yavaş yavaş “vibe coding” yöntemiyle oluşturuyorum; yani yapay zeka kodlama sürecinde bana yardımcı oluyor. Siz de bir kullanıcı olarak siteyle ilgili geri bildirimlerinizi benimle paylaşırsanız, siteyi geliştirmemde bana yardımcı olursunuz.",
+    "Bu web sitesini yavaş yavaş “vibe coding” yöntemiyle geliştiriyorum; yani kodlama sürecinde yapay zeka bana yardımcı oluyor. Başlangıçta siteyi doğrudan GitHub üzerinde, ağırlıklı olarak HTML kullanarak, biraz da CSS ve JavaScript ile yazdım. Şu anda projeyi daha esnek ve zaman içinde daha kolay geliştirilebilir hale getirmek için React tabanlı bir yapıya dönüştürüyorum. Kullanıcı deneyimini iyileştirmek adına web sitemle ilgili her türlü geri bildirime açığım.",
 },
 contact: {
   title: "İletişim",
@@ -255,7 +255,7 @@ chapter3Text3:
   text4:
     "Du kan kontakte meg via kontaktsiden og dele din opplevelse av kunsten.",
   text5:
-    "Jeg bygger denne nettsiden gradvis ved hjelp av vibe coding, som betyr at kunstig intelligens hjelper meg med å kode den. Jeg setter pris på tilbakemeldinger slik at jeg kan forbedre nettsiden basert på din brukeropplevelse.",
+    "Jeg bygger denne nettsiden gradvis ved hjelp av “vibe coding”, som betyr at kunstig intelligens hjelper meg med å kode den. Jeg startet med å skrive siden direkte i GitHub, hovedsakelig med HTML, samt noe CSS og JavaScript. Nå utvikler jeg prosjektet videre til en React-basert struktur for å gjøre det mer fleksibelt og enklere å videreutvikle over tid. Jeg setter pris på all tilbakemelding på nettsiden min for å forbedre brukeropplevelsen.",
 },
 contact: {
   title: "Kontakt",
