@@ -899,6 +899,7 @@ html.home-portal-transition.is-navigating {
   text-align: center;
   font-size: clamp(2rem, 3vw, 2.8rem);
   font-weight: 700;
+  margin-top: 20px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -1147,8 +1148,8 @@ html.home-portal-transition.is-navigating {
 
 .photo-section > h1,
 .dream-section > h1 {
-  margin: 0 0 1.2rem;
-  text-align: left;
+  margin: 12px 0 1.2rem;
+  text-align: center;
   font-size: clamp(2rem, 3vw, 2.8rem);
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -1176,12 +1177,17 @@ html.home-portal-transition.is-navigating {
 /* ===== BACK BUTTON CARD (reusable) ===== */
 
 .back-card {
-  display: inline-block;
-  padding: 10px 16px;
+  position: absolute;
+  top: 90px;        /* distance from top (tweak if needed) */
+  left: 16px;
+
+  padding: 8px 14px;
   border-radius: 14px;
   background: rgba(255,255,255,0.92);
   box-shadow: 0 6px 20px rgba(0,0,0,0.12);
   backdrop-filter: blur(6px);
+
+  z-index: 10;
 }
 
 .back-card a {
@@ -1477,4 +1483,12 @@ html.home-portal-transition.is-navigating {
   line-height: 1.2;
   text-align: left;
 }
+
+.photo-section > h1,
+.dream-section > h1 {
+  margin: 18px 0 1rem;
+  text-align: center;
+  font-size: 2.3rem;
+}
+
 }
