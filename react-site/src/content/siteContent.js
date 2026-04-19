@@ -98,6 +98,7 @@ contact: {
       nameText1:
         "Yes, that is my given first name. In Turkish, Tuna means “Danube”. The Danube is a river in Europe. It is a unisex name in Turkey, though mostly given to boys.",
       nameText2: "And yes, it’s spelled like the fish.",
+      workTitle: "Working on new things",
     },
   },
 
@@ -199,6 +200,8 @@ contact: {
       nameTitle: "TODO (TR): Replace slide 3 title",
       nameText1: "TODO (TR): Replace slide 3 text.",
       nameText2: "",
+
+      workTitle: "Yeni şeyler üzerinde çalışıyorum",
     },
   },
 
@@ -308,6 +311,8 @@ contact: {
   "/tona2.JPG",
   "/tona3.jpg",
 ],
+
+workTitle: "Jobber med nye ting",
     },
   },
 };

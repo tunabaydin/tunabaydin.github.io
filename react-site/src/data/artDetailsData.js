@@ -144,7 +144,7 @@
     meta: {
       materials: "Acrylic, marker, wrapping paper, herbs and chili flakes on paper",
       year: "2021",
-      dimensions: "21 × 29.7 cm",
+      dimensions: "24.5 × 35 cm",
       status: {
         en: "Not available for purchase",
         tr: "Mevcut değil",
@@ -289,7 +289,7 @@
     meta: {
       materials: "Oil on canvas",
       year: "2023",
-      dimensions: "? × ? cm",
+      dimensions: "50 × 70 cm",
       status: {
         en: "Not available for purchase",
         tr: "Mevcut değil",

@@ -15,7 +15,7 @@ export default function Home() {
   const content = siteContent[lang] || siteContent.en;
   const hero = content.hero;
 
-  useEffect(() => {
+    useEffect(() => {
     const track = document.getElementById("hero-track");
     const dotsWrap = document.getElementById("hero-dots");
     const soundBtn = document.getElementById("hero-sound");
@@ -24,10 +24,56 @@ export default function Home() {
 
     if (!track || !dotsWrap || !soundBtn) return;
 
-    const slides = Array.from(track.querySelectorAll(".hero-slide"));
-    const videos = slides.map((s) => s.querySelector("video")).filter(Boolean);
+    const originalSlides = Array.from(track.querySelectorAll(".hero-slide"));
+    if (originalSlides.length < 2) return;
 
-    videos.forEach((v) => {
+    const firstClone = originalSlides[0].cloneNode(true);
+    const lastClone = originalSlides[originalSlides.length - 1].cloneNode(true);
+
+    firstClone.setAttribute("data-clone", "true");
+    lastClone.setAttribute("data-clone", "true");
+
+    track.insertBefore(lastClone, originalSlides[0]);
+    track.appendChild(firstClone);
+
+    const slides = Array.from(track.querySelectorAll(".hero-slide"));
+    const realSlideCount = originalSlides.length;
+
+    const getCenteredScrollLeft = (slide) => {
+      const trackCenter = track.clientWidth / 2;
+      const slideCenter = slide.offsetLeft + slide.clientWidth / 2;
+      return slideCenter - trackCenter;
+    };
+
+    const getClosestVisualIndex = () => {
+      let closestIndex = 0;
+      let closestDistance = Number.POSITIVE_INFINITY;
+
+      slides.forEach((slide, i) => {
+        const distance = Math.abs(track.scrollLeft - getCenteredScrollLeft(slide));
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestIndex = i;
+        }
+      });
+
+      return closestIndex;
+    };
+
+    const getRealIndexFromVisualIndex = (visualIndex) => {
+      if (visualIndex === 0) return realSlideCount - 1;
+      if (visualIndex === slides.length - 1) return 0;
+      return visualIndex - 1;
+    };
+
+    const getCurrentVideo = () => {
+      const visualIndex = getClosestVisualIndex();
+      return slides[visualIndex]?.querySelector("video") || null;
+    };
+
+    const allVideos = slides.map((s) => s.querySelector("video")).filter(Boolean);
+
+    allVideos.forEach((v) => {
       v.muted = true;
       v.volume = 0.9;
       v.play().catch(() => {});
@@ -35,22 +81,19 @@ export default function Home() {
 
     const dotCleanup = [];
 
-    slides.forEach((_, i) => {
+    originalSlides.forEach((_, i) => {
       const b = document.createElement("button");
       b.className = "hero-dot";
       b.type = "button";
       b.setAttribute("aria-label", `Go to slide ${i + 1}`);
 
       const onDotClick = () => {
-  const slide = slides[i];
-const trackCenter = track.clientWidth / 2;
-const slideCenter = slide.offsetLeft + slide.clientWidth / 2;
-
-track.scrollTo({
-  left: slideCenter - trackCenter,
-  behavior: "smooth",
-});
-};
+        const targetVisualIndex = i + 1;
+        track.scrollTo({
+          left: getCenteredScrollLeft(slides[targetVisualIndex]),
+          behavior: "smooth",
+        });
+      };
 
       b.addEventListener("click", onDotClick);
       dotCleanup.push(() => b.removeEventListener("click", onDotClick));
@@ -59,87 +102,122 @@ track.scrollTo({
 
     const dots = Array.from(dotsWrap.querySelectorAll(".hero-dot"));
 
-    function setActive(index) {
-      dots.forEach((d, i) => d.classList.toggle("is-active", i === index));
+    function setActiveFromVisualIndex(visualIndex) {
+      const realIndex = getRealIndexFromVisualIndex(visualIndex);
 
-      slides.forEach((s, i) => {
-        const v = s.querySelector("video");
-        if (!v) return;
-        if (i === index) {
-          v.play().catch(() => {});
-        } else {
-          v.muted = true;
-          v.pause();
-        }
+      dots.forEach((d, i) => d.classList.toggle("is-active", i === realIndex));
+
+      allVideos.forEach((v) => {
+        v.muted = true;
+        v.pause();
       });
 
-      const activeVideo = slides[index]?.querySelector("video");
-      if (!activeVideo) {
-        soundBtn.style.display = "none";
-      } else {
+      const activeVideo = slides[visualIndex]?.querySelector("video");
+      if (activeVideo) {
+        activeVideo.play().catch(() => {});
         soundBtn.style.display = "block";
         soundBtn.textContent = activeVideo.muted ? "Sound" : "Mute";
+      } else {
+        soundBtn.style.display = "none";
       }
     }
 
-    function getIndexFromScroll() {
-      const i = Math.round(track.scrollLeft / track.clientWidth);
-      return Math.max(0, Math.min(slides.length - 1, i));
+        function jumpIfOnClone() {
+      const visualIndex = getClosestVisualIndex();
+
+      let targetIndex = null;
+
+      if (visualIndex === 0) {
+        targetIndex = realSlideCount;
+      } else if (visualIndex === slides.length - 1) {
+        targetIndex = 1;
+      }
+
+      if (targetIndex === null) return;
+
+      track.classList.add("is-loop-resetting");
+      track.scrollLeft = getCenteredScrollLeft(slides[targetIndex]);
+      setActiveFromVisualIndex(targetIndex);
+
+      requestAnimationFrame(() => {
+        track.classList.remove("is-loop-resetting");
+      });
     }
 
+    const initialVisualIndex = 1;
+    track.scrollTo({
+      left: getCenteredScrollLeft(slides[initialVisualIndex]),
+      behavior: "auto",
+    });
+    setActiveFromVisualIndex(initialVisualIndex);
+
     let raf = null;
+    let settleTimer = null;
+
     const onTrackScroll = () => {
       if (raf) cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => setActive(getIndexFromScroll()));
+      raf = requestAnimationFrame(() => {
+        setActiveFromVisualIndex(getClosestVisualIndex());
+      });
+
+      if (settleTimer) window.clearTimeout(settleTimer);
+      settleTimer = window.setTimeout(() => {
+        jumpIfOnClone();
+      }, 140);
     };
+
     track.addEventListener("scroll", onTrackScroll, { passive: true });
 
     const onSoundClick = (e) => {
       e.preventDefault();
       e.stopPropagation();
 
-      const index = getIndexFromScroll();
-      const v = slides[index]?.querySelector("video");
+      const v = getCurrentVideo();
       if (!v) return;
 
       v.muted = !v.muted;
       v.play().catch(() => {});
       soundBtn.textContent = v.muted ? "Sound" : "Mute";
     };
+
     soundBtn.addEventListener("click", onSoundClick);
-
-function goTo(index) {
-  const count = slides.length;
-  if (!count) return;
-
-  const nextIndex = ((index % count) + count) % count;
-  const slide = slides[nextIndex];
-
-  const trackCenter = track.clientWidth / 2;
-  const slideCenter = slide.offsetLeft + slide.clientWidth / 2;
-
-  track.scrollTo({
-    left: slideCenter - trackCenter,
-    behavior: "smooth",
-  });
-}
 
     const onLeftClick = (e) => {
       e.preventDefault();
       e.stopPropagation();
-      goTo(getIndexFromScroll() - 1);
+
+      const currentVisualIndex = getClosestVisualIndex();
+      const targetVisualIndex =
+        currentVisualIndex === 1 ? 0 : currentVisualIndex - 1;
+
+      track.scrollTo({
+        left: getCenteredScrollLeft(slides[targetVisualIndex]),
+        behavior: "smooth",
+      });
     };
 
     const onRightClick = (e) => {
       e.preventDefault();
       e.stopPropagation();
-      goTo(getIndexFromScroll() + 1);
+
+      const currentVisualIndex = getClosestVisualIndex();
+      const targetVisualIndex =
+        currentVisualIndex === realSlideCount
+          ? slides.length - 1
+          : currentVisualIndex + 1;
+
+      track.scrollTo({
+        left: getCenteredScrollLeft(slides[targetVisualIndex]),
+        behavior: "smooth",
+      });
     };
 
     if (leftBtn) leftBtn.addEventListener("click", onLeftClick);
     if (rightBtn) rightBtn.addEventListener("click", onRightClick);
 
-    const portalLinks = Array.from(track.querySelectorAll('.hero-link[href^="pastlives"]'));
+    const portalLinks = Array.from(
+      track.querySelectorAll('.hero-link[href*="pastlives"]')
+    );
     const portalTimeouts = [];
 
     const canPortalNavigate = (event) => {
@@ -167,8 +245,6 @@ function goTo(index) {
       return { link, onPortalClick };
     });
 
-    setActive(0);
-
     return () => {
       dotCleanup.forEach((dispose) => dispose());
       dotsWrap.innerHTML = "";
@@ -186,6 +262,10 @@ function goTo(index) {
       portalTimeouts.forEach((id) => window.clearTimeout(id));
 
       if (raf) cancelAnimationFrame(raf);
+      if (settleTimer) window.clearTimeout(settleTimer);
+
+      if (firstClone.parentNode === track) track.removeChild(firstClone);
+      if (lastClone.parentNode === track) track.removeChild(lastClone);
     };
   }, []);
 
@@ -248,27 +328,68 @@ function goTo(index) {
             </div>
           </div>
 
+          {lang === "tr" ? (
+            <div className="hero-slide hero-slide--intro" data-type="intro">
+              <div className="hero-overlay" />
+              <div className="hero-card-wrap">
+                <div className="card">
+                  <h1>Türkçe kullanıcılar için</h1>
+                  <p>Daha iyi bir deneyim için</p>
+                  <p>otomatik çeviriyi kapatmanızı öneririm.</p>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="hero-slide hero-slide--intro" data-type="intro">
+              <div className="hero-overlay" />
+              <div className="hero-card-wrap">
+                <div className="card">
+                  <h1>{hero.nameTitle}</h1>
+                  <p>{hero.nameText1}</p>
+                  {hero.nameText2 && <p>{hero.nameText2}</p>}
+                  {hero.nameText3 && <p>{hero.nameText3}</p>}
+
+                  {hero.nameImages && (
+                    <div className="tona-gallery">
+                      {hero.nameImages.map((src, index) => (
+                        <img
+                          key={index}
+                          src={src}
+                          alt={`Tona cup ${index + 1}`}
+                          className="tona-gallery-image"
+                        />
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
+
           <div className="hero-slide hero-slide--intro" data-type="intro">
             <div className="hero-overlay" />
             <div className="hero-card-wrap">
               <div className="card">
-                <h1>{hero.nameTitle}</h1>
-                <p>{hero.nameText1}</p>
-                {hero.nameText2 && <p>{hero.nameText2}</p>}
-                {hero.nameText3 && <p>{hero.nameText3}</p>}
+                <h1>{hero.workTitle}</h1>
 
-                {hero.nameImages && (
-                  <div className="tona-gallery">
-                    {hero.nameImages.map((src, index) => (
-                      <img
-                        key={index}
-                        src={src}
-                        alt={`Tona cup ${index + 1}`}
-                        className="tona-gallery-image"
-                      />
-                    ))}
-                  </div>
-                )}
+                <div className="newwork-gallery">
+  <img
+    src="/newproject2.jpg"
+    alt="New project preview 2"
+    className="newwork-top"
+  />
+
+  <div className="newwork-bottom">
+    <img
+      src="/newproject1.jpg"
+      alt="New project preview 1"
+    />
+    <img
+      src="/veggiestew.jpg"
+      alt="Veggie stew"
+    />
+  </div>
+</div>
               </div>
             </div>
           </div>
