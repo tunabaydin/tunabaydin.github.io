@@ -1177,17 +1177,12 @@ html.home-portal-transition.is-navigating {
 /* ===== BACK BUTTON CARD (reusable) ===== */
 
 .back-card {
-  position: absolute;
-  top: 90px;        /* distance from top (tweak if needed) */
-  left: 16px;
-
-  padding: 8px 14px;
+  display: inline-block;
+  padding: 10px 16px;
   border-radius: 14px;
   background: rgba(255,255,255,0.92);
   box-shadow: 0 6px 20px rgba(0,0,0,0.12);
   backdrop-filter: blur(6px);
-
-  z-index: 10;
 }
 
 .back-card a {
@@ -1472,9 +1467,13 @@ html.home-portal-transition.is-navigating {
 }
 
 .back-card {
+  position: absolute;
+  top: 90px;
+  left: 16px;
   padding: 8px 12px;
   border-radius: 12px;
   width: 115px;
+  z-index: 10;
 }
 
 .back-card a {
@@ -1484,11 +1483,29 @@ html.home-portal-transition.is-navigating {
   text-align: left;
 }
 
+.photo-section,
+.dream-section {
+  padding-top: 10px;
+}
+
 .photo-section > h1,
 .dream-section > h1 {
-  margin: 18px 0 1rem;
+  margin: 0 0 1rem;
   text-align: center;
   font-size: 2.3rem;
+}
+
+.other-project-card h1 {
+  margin: 12px 0 1rem;
+  text-align: center;
+}
+
+.other-project-detail-title {
+  margin-top: 20px !important;
+}
+
+.other-project-card {
+  margin-top: 20px;
 }
 
 }
