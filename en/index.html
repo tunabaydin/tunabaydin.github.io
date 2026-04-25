@@ -39,6 +39,35 @@
   text-align: left; /* keep */
 }
 
+/* Home BOOKS box: quieter/smaller companion section */
+#home-books .books-card{
+  max-width: 680px;
+  margin: 0 auto 5rem;
+  padding: 28px 32px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.88);
+  box-shadow: 0 6px 30px rgba(10, 10, 20, 0.05);
+}
+
+#home-books h2{
+  margin: 0 0 0.9rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+#home-books ul{
+  margin: 0;
+  padding-left: 1.15rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+#home-books li{
+  color: #222;
+  line-height: 1.55;
+  font-size: 0.98rem;
+}
+
 /* Home ARTIST box (cloned from artist.html) should match contact.html box style */
 #home-artist .wrap{
   max-width: 800px;
@@ -80,6 +109,11 @@
   #home-artist .wrap{
     margin: 4rem 1.2rem;
     padding: 32px;
+  }
+
+  #home-books .books-card{
+    margin: 0 1.2rem 3.5rem;
+    padding: 24px;
   }
 
   #home-contact h1,
@@ -423,6 +457,19 @@ html.is-restoring-home body { visibility: hidden; }
 
   <!-- HOME CONTACT SECTION (filled from contact.html) -->
   <section id="home-contact"></section>
+
+  <section id="home-books" aria-labelledby="home-books-title">
+    <div class="books-card">
+      <h2 id="home-books-title">Books I like</h2>
+      <ul>
+        <li>Journey of Souls — Dr. Michael Newton</li>
+        <li>Between Death and Life — Dolores Cannon</li>
+        <li>The Holographic Universe — Michael Talbot</li>
+        <li>The Power of Now — Eckhart Tolle</li>
+        <li>Breaking the Habit of Being Yourself — Dr. Joe Dispenza</li>
+      </ul>
+    </div>
+  </section>
   
   <div data-partial="/partials/footer.html"></div>
 
