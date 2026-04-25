@@ -7,6 +7,7 @@ import ArtGallery from "../components/ArtGallery";
 import OtherProjects from "../components/OtherProjects";
 import ArtistSection from "../components/ArtistSection";
 import ContactSection from "../components/ContactSection";
+import BooksSection from "../components/BooksSection";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -424,6 +425,7 @@ export default function Home() {
       <OtherProjects />
       <ArtistSection />
       <ContactSection />
+      <BooksSection />
       <Footer />
     </>
   );
