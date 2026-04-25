@@ -195,7 +195,8 @@
 #home-art,
 #home-projects,
 #home-artist,
-#home-contact {
+#home-contact,
+#home-books {
   scroll-margin-top: 90px;
 }
 
@@ -223,6 +224,7 @@
 #home-projects,
 #home-artist,
 #home-contact,
+#home-books,
 .footer {
   position: relative;
   z-index: 1;
