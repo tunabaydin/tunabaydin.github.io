@@ -64,6 +64,16 @@ contact: {
   messagePlaceholder: "Write your message here...",
   send: "Send",
 },
+books: {
+  title: "Books I like",
+  items: [
+    "Journey of Souls — Dr. Michael Newton",
+    "Between Death and Life — Dolores Cannon",
+    "The Holographic Universe — Michael Talbot",
+    "The Power of Now — Eckhart Tolle",
+    "Breaking the Habit of Being Yourself — Dr. Joe Dispenza",
+  ],
+},
       sections: {
         art: "Art Gallery",
         projects: "Other Projects",
@@ -167,6 +177,16 @@ contact: {
   messagePlaceholder: "Mesajınızı buraya yazın...",
   send: "Gönder",
 },
+books: {
+  title: "Books I like",
+  items: [
+    "Journey of Souls — Dr. Michael Newton",
+    "Between Death and Life — Dolores Cannon",
+    "The Holographic Universe — Michael Talbot",
+    "The Power of Now — Eckhart Tolle",
+    "Breaking the Habit of Being Yourself — Dr. Joe Dispenza",
+  ],
+},
     sections: {
     art: "Sanat Galerisi",
     projects: "Diğer Projeler",
@@ -269,6 +289,16 @@ contact: {
   message: "Melding",
   messagePlaceholder: "Skriv meldingen din her...",
   send: "Send",
+},
+books: {
+  title: "Books I like",
+  items: [
+    "Journey of Souls — Dr. Michael Newton",
+    "Between Death and Life — Dolores Cannon",
+    "The Holographic Universe — Michael Talbot",
+    "The Power of Now — Eckhart Tolle",
+    "Breaking the Habit of Being Yourself — Dr. Joe Dispenza",
+  ],
 },
     sections: {
     art: "Kunstgalleri",

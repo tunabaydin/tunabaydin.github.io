@@ -127,6 +127,37 @@ body.contact-page .card {
   box-shadow: 0 6px 30px rgba(10, 10, 20, 0.06);
 }
 
+/* Home BOOKS box: calm, minimal companion section */
+#home-books .books-card{
+  max-width: 680px;
+  margin: 0 auto 5rem;
+  padding: 28px 32px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.88);
+  box-shadow: 0 6px 30px rgba(10, 10, 20, 0.05);
+  text-align: left;
+}
+
+#home-books h2{
+  margin: 0 0 0.9rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #111;
+}
+
+#home-books ul{
+  margin: 0;
+  padding-left: 1.15rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+#home-books li{
+  color: #222;
+  line-height: 1.55;
+  font-size: 0.98rem;
+}
+
 /* HOME: Make Artist text color match contact.html */
 #home-artist p { color: #111; }
 #home-artist a { color: #0077cc; text-decoration: none; }
@@ -163,6 +194,11 @@ body.contact-page .card {
   #home-contact h1,
   #home-artist h1{
     font-size: 32px;
+  }
+
+  #home-books .books-card{
+    margin: 0 1.2rem 3.5rem;
+    padding: 24px;
   }
 }  
 
