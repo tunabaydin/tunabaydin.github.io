@@ -178,7 +178,7 @@ contact: {
   send: "Gönder",
 },
 books: {
-  title: "Books I like",
+  title: "Sevdiğim kitaplar",
   items: [
     "Journey of Souls — Dr. Michael Newton",
     "Between Death and Life — Dolores Cannon",
@@ -291,7 +291,7 @@ contact: {
   send: "Send",
 },
 books: {
-  title: "Books I like",
+  title: "Bøker jeg liker",
   items: [
     "Journey of Souls — Dr. Michael Newton",
     "Between Death and Life — Dolores Cannon",
