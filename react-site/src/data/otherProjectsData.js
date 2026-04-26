@@ -60,6 +60,6 @@ export const otherProjectsData = [
       no: "Kollasj",
     },
     slug: "collage",
-    image: "/assets/otherprojects/cherryontop.jpg",
+    image: "/assets/art/snowflake.jpg",
   },
 ];

@@ -6,12 +6,6 @@ export const artData = [
     available: false,
   },
   {
-    title: "Snowflake",
-    slug: "snowflake",
-    image: "/assets/art/snowflake.jpg",
-    available: false,
-  },
-  {
     title: "Baby",
     slug: "baby",
     image: "/assets/art/baby.jpg",
