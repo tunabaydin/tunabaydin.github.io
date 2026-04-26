@@ -277,6 +277,7 @@ export const otherProjectDetailsData = {
         video: "/assets/art/snowflakeprocess2.mp4",
       },
       {
+        rowClass: "collage-cherry-row",
         title: {
           en: "Cherry on top",
           tr: "Cherry on top",
