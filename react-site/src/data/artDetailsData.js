@@ -57,50 +57,6 @@
     ],
   },
 
-  snowflake: {
-    meta: {
-      materials: "Chocolate bar wrappers and marker on paper",
-      year: "2024",
-      dimensions: "41.5 × 76.5 cm",
-      status: {
-        en: "Not available for purchase",
-        tr: "Mevcut değil",
-        no: "Ikke tilgjengelig for kjøp",
-      },
-    },
-
-    mediaColumn: [
-      {
-        type: "image",
-        src: "/assets/art/snowflake.jpg",
-        alt: "Snowflake artwork by Tuna Baydin",
-      },
-      {
-        type: "video",
-        src: "/assets/art/snowflakeprocess2.mp4",
-      },
-    ],
-
-    description: {
-      en: [
-        "The main inspiration for this piece was repurposing chocolate bar wrappers. The packaging consists of two layers: a hard colorful printed paper and a thinner shiny foil layer, both containing patterns. I cut out pieces, outlined some of them with black marker, and arranged them into the final composition.",
-        "There are five different patterns/colors which correspond to five different flavors of chocolate. They all form an individual \"family\" within the work. The content of every family is similar to our human family members. In the center of the piece is a human being (the child) which is also the source (but more about that later). On each side of the child, we have two sides of the family, stemming from our two parents. These individuals symbolize the genetic (and sometimes cultural) material we inherit. As we go further back in generations, our grandparents and then more distant relatives contribute less directly to this inheritance. As this hazy shift occurs, the materials go from distinct colorful ones to shiny (universal) ones. They become our \"ancestors\" whose stories we hear growing up.",
-        "I believe as human beings, we all carry a fragment of the source within us. In this piece, all of the components that make us who we are originate from the same source. All the pieces form a unique mandala style pattern. Just like a unique snowflake. What makes us unique is also universal. We all share a collective unconscious.",
-      ],
-      tr: [
-        "Bu işin ana ilhamı, çikolata ambalajlarını yeniden değerlendirmekti. Paketleme iki katmandan oluşuyor: desenler taşıyan sert, renkli, baskılı bir kâğıt ve daha ince, parlak bir folyo katmanı. Parçaları kesip çıkardım, bazılarını siyah kalemle belirginleştirdim ve son kompozisyonda bir araya getirdim.",
-        "Beş farklı desen/renk var ve bunlar beş farklı çikolata aromasına karşılık geliyor. Her biri işin içinde ayrı bir \"aile\" oluşturuyor. Her ailenin içeriği, bizim insan aile üyelerimize benziyor. Eserin merkezinde bir insan var (çocuk); aynı zamanda kaynak da o (ama buna birazdan geleceğim). Çocuğun iki yanında, iki ebeveynimizden köklenen ailenin iki tarafı yer alıyor. Bu figürler bize miras kalan genetik (ve bazen kültürel) malzemeyi simgeliyor. Kuşaklar geriye gittikçe, önce büyükanne ve büyükbabalarımız, sonra daha uzak akrabalar bu mirasa daha dolaylı biçimde katkıda bulunuyor. Bu puslu geçiş yaşanırken malzemeler, belirgin ve renkli olandan parlak (evrensel) olana dönüşüyor. Büyürken hikâyelerini duyduğumuz \"atalarımıza\" dönüşüyorlar.",
-        "İnsan olarak hepimizin içinde kaynaktan bir parça taşıdığına inanıyorum. Bu işte, bizi biz yapan tüm bileşenler aynı kaynaktan doğuyor. Tüm parçalar mandalayı andıran benzersiz bir desen kuruyor. Tıpkı eşsiz bir kar tanesi gibi. Bizi benzersiz kılan şey aynı zamanda evrensel. Hepimiz ortak bir bilinçdışını paylaşıyoruz.",
-      ],
-      no: [
-        "Hovedinspirasjonen for dette verket var å gi sjokoladepapir nytt liv. Innpakningen består av to lag: et hardt, fargerikt, trykket papir og et tynnere, skinnende folielag, begge med mønstre. Jeg klippet ut biter, markerte noen av dem med svart tusj og satte dem sammen til den endelige komposisjonen.",
-        "Det finnes fem ulike mønstre/farger som svarer til fem forskjellige sjokoladesmaker. Sammen danner de hver sin \"familie\" i verket. Innholdet i hver familie ligner våre menneskelige familiemedlemmer. I sentrum av verket er et menneske (barnet), som også er kilden (men mer om det senere). På hver side av barnet finner vi to sider av familien, som springer ut fra våre to foreldre. Disse skikkelsene symboliserer det genetiske (og noen ganger kulturelle) materialet vi arver. Jo lenger tilbake i generasjonene vi går, desto mindre direkte bidrar besteforeldrene våre og deretter fjernere slektninger til denne arven. I denne tåkete overgangen går materialene fra tydelige, fargerike former til skinnende (universelle) former. De blir våre \"forfedre\", hvis historier vi vokser opp med å høre.",
-        "Jeg tror at vi som mennesker alle bærer et fragment av kilden i oss. I dette verket springer alle bestanddelene som gjør oss til dem vi er, ut fra den samme kilden. Alle delene danner et unikt, mandalalignende mønster. Som et unikt snøfnugg. Det som gjør oss unike, er også universelt. Vi deler alle et kollektivt ubevisst.",
-      ]
-    },
-
-    extraMedia: [],
-  },
 
   baby: {
     meta: {
