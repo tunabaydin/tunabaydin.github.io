@@ -1,6 +1,16 @@
 export const otherProjectsData = [
   {
     title: {
+      en: "Color Analysis",
+      tr: "Renk Analizi",
+      no: "Fargeanalyse",
+    },
+    slug: "coloranalysis",
+    // TODO: Replace with a dedicated Color Analysis cover image.
+    image: "/assets/otherprojects/sculpture-cover.jpg",
+  },
+  {
+    title: {
       en: "Photography",
       tr: "Fotoğrafçılık",
       no: "Fotografi",
