@@ -10,18 +10,17 @@ export const otherProjectDetailsData = {
     rows: [
       {
         title: {
-          en: "Personal case study",
-          tr: "Kişisel vaka çalışması",
-          no: "Personlig case-studie",
+          en: "Color Analysis",
+          tr: "Renk Analizi",
+          no: "Fargeanalyse",
         },
         text: {
           en: "After being analyzed in person as a Cool Winter, I started rebuilding my wardrobe around contrast, cool undertones, and colors that feel visually aligned with me. This page follows that process as a personal case study in color, style, and self-presentation.",
           tr: "Yüz yüze yapılan analizde Cool Winter olarak değerlendirildikten sonra gardırobumu kontrast, soğuk alt tonlar ve bana görsel olarak daha uyumlu gelen renkler etrafında yeniden düzenlemeye başladım. Bu sayfa, renk, stil ve kendini ifade etme üzerine kişisel bir vaka çalışması olarak bu süreci takip ediyor.",
           no: "Etter at jeg ble analysert som Cool Winter i en fysisk fargeanalyse, begynte jeg å bygge garderoben min rundt kontrast, kalde undertoner og farger som føles visuelt riktige for meg. Denne siden følger prosessen som en personlig case-studie i farge, stil og selvpresentasjon.",
         },
-        // TODO: Replace with a dedicated Color Analysis image.
-        image: "/assets/otherprojects/sculpture-cover.jpg",
-        imageAlt: "Color analysis placeholder cover",
+        image: "/assets/otherprojects/colors.jpg",
+        imageAlt: "Color Analysis",
       },
     ],
   },

@@ -6,8 +6,7 @@ export const otherProjectsData = [
       no: "Fargeanalyse",
     },
     slug: "coloranalysis",
-    // TODO: Replace with a dedicated Color Analysis cover image.
-    image: "/assets/otherprojects/sculpture-cover.jpg",
+    image: "/assets/otherprojects/colors.jpg",
   },
   {
     title: {
@@ -31,7 +30,7 @@ export const otherProjectsData = [
     title: {
       en: "Dream Reconstruction",
       tr: "Rüya Rekonstrüksiyonu",
-      no: "Drømmerekonstruksjon",
+      no: "Drømmerekonstruksiyon",
     },
     slug: "dreamreconstruction",
     image: "/assets/otherprojects/dream2.png",
