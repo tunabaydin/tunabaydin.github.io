@@ -2,22 +2,48 @@ export const otherProjectDetailsData = {
   coloranalysis: {
     slug: "coloranalysis",
     title: {
-      en: "Color Analysis",
-      tr: "Renk Analizi",
-      no: "Fargeanalyse",
+      en: "Seasonal Color Analysis",
+      tr: "Mevsimsel Renk Analizi",
+      no: "Sesongbasert Fargeanalyse",
     },
     layout: "photography",
     rows: [
       {
         title: {
-          en: "Draping Examples",
-          tr: "Draping Örnekleri",
-          no: "Draperings-eksempler",
+          en: "What is seasonal color analysis?",
+          tr: "Mevsimsel renk analizi nedir?",
+          no: "Hva er sesongbasert fargeanalyse?",
         },
         text: {
-          en: "After being analyzed in person as a Cool Winter, I started rebuilding my wardrobe around contrast, cool undertones, and colors that feel visually aligned with me. This page follows that process as a personal case study in color, style, and self-presentation.",
-          tr: "Yüz yüze yapılan analizde Cool Winter olarak değerlendirildikten sonra gardırobumu kontrast, soğuk alt tonlar ve bana görsel olarak daha uyumlu gelen renkler etrafında yeniden düzenlemeye başladım. Bu sayfa, renk, stil ve kendini ifade etme üzerine kişisel bir vaka çalışması olarak bu süreci takip ediyor.",
-          no: "Etter at jeg ble analysert som Cool Winter i en fysisk fargeanalyse, begynte jeg å bygge garderoben min rundt kontrast, kalde undertoner og farger som føles visuelt riktige for meg. Denne siden følger prosessen som en personlig case-studie i farge, stil og selvpresentasjon.",
+          en: "Every one of us belongs to a season (and a subseason) depending on our coloration. Seasonal color analysis is based on color theory and uses the undertones of the skin, as well as hair and eye color, to classify a person. This information guides us in making fashion choices, including finding suitable hair and makeup colors that enhance our natural beauty.",
+          tr: "Her birimiz, renk özelliklerimize bağlı olarak bir mevsime (ve alt mevsime) aitiz. Mevsimsel renk analizi, renk teorisine dayanır ve bir kişiyi sınıflandırmak için cilt alt tonunu, saç ve göz rengini birlikte değerlendirir. Bu bilgi, doğal güzelliğimizi öne çıkaran saç ve makyaj renkleri dahil olmak üzere moda seçimlerimize yön verir.",
+          no: "Hver av oss tilhører en sesong (og en underkategori) basert på vår egen fargepalett. Sesongbasert fargeanalyse er basert på fargeteori og bruker hudens undertone, samt hår- og øyenfarge, for å klassifisere en person. Denne kunnskapen hjelper oss med å ta bedre stilvalg, inkludert hår- og sminkefarger som fremhever vår naturlige skjønnhet.",
+        },
+        image: "/assets/otherprojects/wheel3.png",
+        imageAlt: "Seasonal color analysis wheel",
+      },
+      {
+        title: {
+          en: "How does it work?",
+          tr: "Nasıl çalışır?",
+          no: "Hvordan fungerer det?",
+        },
+        text: {
+          en: "A person needs to drape color fabrics according to established guidelines to accurately determine their season. AI/apps have proven inaccurate for analysis so far.",
+          tr: "Bir kişinin mevsimini doğru şekilde belirleyebilmek için, belirli kurallara göre farklı renk kumaşlarla draping yapılması gerekir. Yapay zekâ/uygulamalar şu ana kadar bu analizde güvenilir sonuçlar vermemektedir.",
+          no: "For å finne riktig sesong må man drapere ulike farger etter etablerte retningslinjer. AI/applikasjoner har så langt vist seg å være unøyaktige for denne typen analyse.",
+        },
+      },
+      {
+        title: {
+          en: "My Journey",
+          tr: "Benim Yolculuğum",
+          no: "Min Reise",
+        },
+        text: {
+          en: "I've been fascinated by seasonal color analysis since 2023. I thought I was possibly a Dark Autumn or a Dark Winter. I draped according to the established guidelines and asked for advice in a seasonal color analysis Facebook group. Most people thought I was a Winter. Then I decided to get professionally analyzed and learned that I am a Cool Winter, a subseason characterized by coolness. Since then, I have made changes in my wardrobe, hair color, and jewelry choices.",
+          tr: "2023 yılından beri mevsimsel renk analizine ilgi duyuyorum. Başta Dark Autumn ya da Dark Winter olabileceğimi düşünüyordum. Belirlenen kurallara göre draping yaptım ve bir Facebook grubunda görüş aldım. Çoğu kişi Winter olduğumu düşündü. Daha sonra profesyonel bir analiz yaptırdım ve Cool Winter olduğumu öğrendim; bu alt mevsim, soğukluk özelliğiyle karakterizedir. O zamandan beri gardırobumda, saç rengimde ve takı seçimlerimde değişiklikler yaptım.",
+          no: "Jeg har vært fascinert av sesongbasert fargeanalyse siden 2023. Jeg trodde først at jeg kunne være en Dark Autumn eller Dark Winter. Jeg gjorde draping etter etablerte retningslinjer og ba om tilbakemelding i en Facebook-gruppe. De fleste mente at jeg var en Winter. Senere tok jeg en profesjonell analyse og lærte at jeg er en Cool Winter, en underkategori som kjennetegnes av kjølighet. Siden da har jeg gjort endringer i garderoben min, hårfargen min og smykkevalgene mine.",
         },
         images: [
           { src: "/assets/otherprojects/blues.png", alt: "Blue draping comparison" },

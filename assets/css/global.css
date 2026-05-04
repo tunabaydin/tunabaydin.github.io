@@ -1560,4 +1560,25 @@ html.home-portal-transition.is-navigating {
   background: rgba(0,0,0,0.5);
 }
 
+.card p {
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+}
+
+.card p strong {
+  display: block;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.card img {
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.02);
+}
+
 }

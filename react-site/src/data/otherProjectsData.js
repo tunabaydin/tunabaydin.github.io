@@ -1,12 +1,12 @@
 export const otherProjectsData = [
   {
     title: {
-      en: "Color Analysis",
-      tr: "Renk Analizi",
-      no: "Fargeanalyse",
-    },
+  en: "Seasonal Color Analysis",
+  tr: "Mevsimsel Renk Analizi",
+  no: "Sesongbasert Fargeanalyse",
+},
     slug: "coloranalysis",
-    image: "/assets/otherprojects/colors.jpg",
+    image: "/assets/otherprojects/wheel3.png",
   },
   {
     title: {
