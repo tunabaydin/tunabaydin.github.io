@@ -70,11 +70,33 @@ export default function ProjectDetail() {
           <div className="photo-section">
             {project.rows.map((row, index) => (
               <div className={`photo-row ${row.rowClass || ""}`} key={index}>
-                <img
-                  className="photo-img"
-                  src={row.image}
-                  alt={row.imageAlt}
-                />
+                <div
+                  className="photo-media"
+                  style={row.images ? {
+                    display: "grid",
+                    gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
+                    gap: "12px",
+                    alignItems: "stretch",
+                  } : undefined}
+                >
+                  {row.images ? (
+                    row.images.map((image, imageIndex) => (
+                      <img
+                        className="photo-img"
+                        key={imageIndex}
+                        src={image.src}
+                        alt={image.alt}
+                        style={{ height: "100%", objectFit: "cover" }}
+                      />
+                    ))
+                  ) : (
+                    <img
+                      className="photo-img"
+                      src={row.image}
+                      alt={row.imageAlt}
+                    />
+                  )}
+                </div>
 
                 <div className="photo-text">
                   <h2>{getLocalizedText(row.title)}</h2>
