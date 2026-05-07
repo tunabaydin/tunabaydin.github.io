@@ -9,8 +9,6 @@ export const otherProjectDetailsData = {
     layout: "photography",
     rows: [
       {
-        type: "carousel",
-        showDots: true,
         title: {
           en: "What is seasonal color analysis?",
           tr: "Mevsimsel renk analizi nedir?",
@@ -37,6 +35,8 @@ export const otherProjectDetailsData = {
         },
       },
       {
+        type: "carousel",
+        showDots: true,
         title: {
           en: "My Journey",
           tr: "Benim Yolculuğum",
