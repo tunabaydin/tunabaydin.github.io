@@ -9,6 +9,8 @@ export const otherProjectDetailsData = {
     layout: "photography",
     rows: [
       {
+        type: "carousel",
+        showDots: true,
         title: {
           en: "Draping Examples",
           tr: "Draping Örnekleri",
