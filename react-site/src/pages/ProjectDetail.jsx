@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { otherProjectDetailsData } from "../data/otherProjectDetailsData";
 import { siteContent } from "../content/siteContent";
+import ProjectImageCarousel from "../components/ProjectImageCarousel";
 
 export default function ProjectDetail() {
   const { lang, slug } = useParams();
@@ -72,14 +73,16 @@ export default function ProjectDetail() {
               <div className={`photo-row ${row.rowClass || ""}`} key={index}>
                 <div
                   className="photo-media"
-                  style={row.images ? {
+                  style={row.images && row.type !== "carousel" ? {
                     display: "grid",
                     gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
                     gap: "12px",
                     alignItems: "stretch",
                   } : undefined}
                 >
-                  {row.images ? (
+                  {row.type === "carousel" ? (
+                    <ProjectImageCarousel images={row.images} showDots={row.showDots} />
+                  ) : row.images ? (
                     row.images.map((image, imageIndex) => (
                       <img
                         className="photo-img"
