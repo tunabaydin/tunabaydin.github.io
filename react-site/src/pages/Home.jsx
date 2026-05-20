@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { siteContent } from "../content/siteContent";
 import pastLivesVideo from "../../../assets/pastlives/pastlivesnewsmall.mp4";
@@ -15,6 +15,8 @@ export default function Home() {
   const location = useLocation();
   const content = siteContent[lang] || siteContent.en;
   const hero = content.hero;
+  const [isAiBadgeOpen, setIsAiBadgeOpen] = useState(false);
+  const aiProjectsHref = `/${lang || "en"}/ai-assisted-projects/`;
 
     useEffect(() => {
     const track = document.getElementById("hero-track");
@@ -316,6 +318,22 @@ export default function Home() {
                 <p className="hero-pastlives-cta">{hero.pastLivesCta}</p>
               </div>
             </div>
+
+            <a
+              className={`hero-ai-badge ${isAiBadgeOpen ? "is-open" : ""}`}
+              href={aiProjectsHref}
+              aria-label={hero.aiBadgeMessage || "AI disclaimer"}
+              onClick={(event) => {
+                if (window.matchMedia("(hover: none)").matches && !isAiBadgeOpen) {
+                  event.preventDefault();
+                  setIsAiBadgeOpen(true);
+                }
+              }}
+              onBlur={() => setIsAiBadgeOpen(false)}
+            >
+              <span className="hero-ai-badge-label">{hero.aiBadgeLabel || "AI disclaimer"}</span>
+              <span className="hero-ai-badge-message">{hero.aiBadgeMessage}</span>
+            </a>
           </div>
 
           <div className="hero-slide hero-slide--intro" data-type="intro">
