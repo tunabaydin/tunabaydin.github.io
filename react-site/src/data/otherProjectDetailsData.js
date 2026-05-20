@@ -170,6 +170,65 @@ export const otherProjectDetailsData = {
     ],
   },
 
+  "ai-assisted-projects": {
+    slug: "ai-assisted-projects",
+    title: {
+      en: "AI-assisted projects",
+      tr: "Yapay zekâ destekli projeler",
+      no: "KI-assisterte prosjekter",
+    },
+    layout: "photography",
+    rows: [
+      {
+        title: {
+          en: "Dream Reconstruction",
+          tr: "Rüya Rekonstrüksiyonu",
+          no: "Drømmerekonstruksjon",
+        },
+        text: {
+          en: "This project began after a vivid dream of a dramatic coast with black sand and three majestic peaks. I described the dream scene to ChatGPT and generated cave-and-landscape images from that description. The resulting images became the first visual reconstruction of the place I saw in the dream.",
+          tr: "Bu proje, siyah kumlu bir kıyı ve üç görkemli zirveden oluşan çok canlı bir rüyanın ardından başladı. Rüyadaki sahneyi ChatGPT'ye anlattım ve bu tariften mağara ve manzara görüntüleri ürettim. Ortaya çıkan görseller, rüyada gördüğüm yerin ilk görsel rekonstrüksiyonu oldu.",
+          no: "Dette prosjektet startet etter en levende drøm om en dramatisk kyst med svart sand og tre majestetiske topper. Jeg beskrev drømmescenen til ChatGPT og genererte hule- og landskapsbilder fra beskrivelsen. Bildene som kom ut av dette ble den første visuelle rekonstruksjonen av stedet jeg så i drømmen.",
+        },
+        images: [
+          { src: "/assets/otherprojects/dream1.png", alt: "Dream reconstruction 1" },
+          { src: "/assets/otherprojects/dream2.png", alt: "Dream reconstruction 2" },
+          { src: "/assets/otherprojects/dream3.png", alt: "Dream reconstruction 3" },
+          { src: "/assets/otherprojects/dream4.png", alt: "Dream reconstruction 4" },
+        ],
+      },
+      {
+        title: {
+          en: "Past Lives cave image",
+          tr: "Past Lives mağara görseli",
+          no: "Past Lives-hulebildet",
+        },
+        text: {
+          en: "The cave image used in Past Lives came from a dream memory. I translated that atmosphere into words, described the scene to ChatGPT, and generated an image that matched the emotional tone of the dream.",
+          tr: "Past Lives'ta kullanılan mağara görseli bir rüya hatırasından geldi. O atmosferi kelimelere döktüm, sahneyi ChatGPT'ye anlattım ve rüyanın duygusal tonuna uyan bir görsel ürettim.",
+          no: "Hulebildet som brukes i Past Lives kom fra et drømmeminne. Jeg oversatte atmosfæren til ord, beskrev scenen til ChatGPT og genererte et bilde som matchet den emosjonelle tonen i drømmen.",
+        },
+        image: "/assets/pastlives/cave.png",
+        imageAlt: "Past Lives cave image",
+      },
+      {
+        title: {
+          en: "Future AI-assisted works",
+          tr: "Gelecekteki yapay zekâ destekli işler",
+          no: "Fremtidige KI-assisterte verk",
+        },
+        text: {
+          en: "This section is reserved for upcoming AI-assisted visual experiments and process notes.",
+          tr: "Bu bölüm, yakında eklenecek yapay zekâ destekli görsel deneyler ve süreç notları için ayrılmıştır.",
+          no: "Denne seksjonen er reservert for kommende KI-assisterte visuelle eksperimenter og prosessnotater.",
+        },
+        image: "/assets/otherprojects/dream8.png",
+        imageAlt: "Future AI-assisted projects placeholder",
+      },
+    ],
+  },
+
+
  music: {
   slug: "music",
   title: {
