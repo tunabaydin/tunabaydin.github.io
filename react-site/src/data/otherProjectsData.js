@@ -28,12 +28,12 @@ export const otherProjectsData = [
   },
   {
     title: {
-      en: "Dream Reconstruction",
-      tr: "Rüya Rekonstrüksiyonu",
-      no: "Drømmerekonstruksiyon",
+      en: "AI-assisted projects",
+      tr: "Yapay zekâ destekli projeler",
+      no: "KI-assisterte prosjekter",
     },
-    slug: "dreamreconstruction",
-    image: "/assets/otherprojects/dream2.png",
+    slug: "ai-assisted-projects",
+    image: "/assets/pastlives/cave.png",
   },
   {
     title: {
