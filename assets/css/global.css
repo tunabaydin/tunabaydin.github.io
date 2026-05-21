@@ -358,49 +358,6 @@ html.is-restoring-home body { visibility: hidden; }
   text-decoration: none;
 }
 
-.hero-ai-badge{
-  position: absolute;
-  left: clamp(12px, 2.8vw, 28px);
-  bottom: clamp(16px, 3.4vh, 34px);
-  z-index: 8;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 5px;
-  max-width: min(84vw, 420px);
-  padding: 9px 12px;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.5);
-  background: linear-gradient(135deg, rgba(255,255,255,0.38), rgba(255,255,255,0.16));
-  box-shadow: 0 10px 24px rgba(0,0,0,0.2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  text-decoration: none;
-  color: #fff;
-}
-
-.hero-ai-badge-label{
-  font-size: clamp(11px, 1.15vw, 13px);
-  letter-spacing: 0.03em;
-  font-weight: 600;
-}
-
-.hero-ai-badge-message{
-  font-size: clamp(10px, 1.05vw, 12px);
-  line-height: 1.3;
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 220ms ease, opacity 220ms ease;
-}
-
-.hero-ai-badge:hover .hero-ai-badge-message,
-.hero-ai-badge:focus-visible .hero-ai-badge-message,
-.hero-ai-badge.is-open .hero-ai-badge-message{
-  max-height: 72px;
-  opacity: 0.95;
-}
-
 /* Video or image fills the slide */
 .hero-media{
   position: relative;
@@ -1533,13 +1490,6 @@ html.home-portal-transition.is-navigating {
     bottom: 18px;
     padding: 9px 13px;
     font-size: 13px;
-  }
-
-  .hero-ai-badge {
-    left: 10px;
-    bottom: 18px;
-    padding: 8px 11px;
-    max-width: min(70vw, 280px);
   }
 
   .hero-slide--intro .card {
