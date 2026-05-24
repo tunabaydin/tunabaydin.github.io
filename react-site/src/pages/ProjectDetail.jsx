@@ -71,6 +71,10 @@ export default function ProjectDetail() {
       </div>
 
       <div className="other-project-card">
+        {project.intro && (
+          <p className="other-project-intro">{getLocalizedText(project.intro)}</p>
+        )}
+
         {project.layout === "photography" && (
           <div className="photo-section">
             {project.rows.map((row, index) => (
@@ -129,6 +133,15 @@ export default function ProjectDetail() {
 ) : (
   <p>{getLocalizedText(row.text)}</p>
 )}
+
+                  {row.link && (
+                    <a
+                      className="project-row-link"
+                      href={`/${currentLang}/${row.link.slug}/`}
+                    >
+                      {getLocalizedText(row.link.label)}
+                    </a>
+                  )}
 
                   {row.video && (
                     <video

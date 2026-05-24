@@ -304,6 +304,16 @@ export default function Home() {
         <div className="hero-track" id="hero-track">
           <div className="hero-slide" data-type="video">
             <a className="hero-link" href={`/${lang}/pastlives`} aria-label="Past Lives" />
+            <a
+              className="hero-ai-disclaimer"
+              href={`/${lang || "en"}/ai-assisted-projects/`}
+              aria-label="AI-assisted image. Unless you see this button, my art is not generated through AI."
+            >
+              <span>AI-assisted image</span>
+              <span className="hero-ai-disclaimer-note">
+                Unless you see this button, my art is not generated through AI.
+              </span>
+            </a>
             <video className="hero-media" autoPlay loop muted playsInline preload="auto">
               <source src={pastLivesVideo} type="video/mp4" />
             </video>

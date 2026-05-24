@@ -37,6 +37,15 @@ export const otherProjectsData = [
   },
   {
     title: {
+      en: "AI-assisted projects",
+      tr: "AI-assisted projects",
+      no: "AI-assisted projects",
+    },
+    slug: "ai-assisted-projects",
+    image: "/assets/pastlives/cave.png",
+  },
+  {
+    title: {
       en: "Music",
       tr: "Müzik",
       no: "Musikk",
