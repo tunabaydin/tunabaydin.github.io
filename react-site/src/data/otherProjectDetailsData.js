@@ -134,6 +134,7 @@ export const otherProjectDetailsData = {
       no: "Drømmerekonstruksjon",
     },
     layout: "dream",
+    useCarousel: true,
     leftImages: [
       {
         src: "/assets/otherprojects/dream1.png",

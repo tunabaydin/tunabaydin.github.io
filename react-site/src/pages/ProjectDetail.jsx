@@ -32,6 +32,10 @@ export default function ProjectDetail() {
   };
 
   const projectTitle = getLocalizedText(project.title);
+  const dreamCarouselImages =
+    project.layout === "dream" && project.useCarousel
+      ? [...(project.leftImages || []), ...(project.rightImages || [])]
+      : [];
 
   return (
     <>
@@ -156,9 +160,13 @@ export default function ProjectDetail() {
           <div className="dream-section">
             <div className="dream-grid">
               <div className="dream-left">
-                {project.leftImages.map((image, index) => (
-                  <img key={index} src={image.src} alt={image.alt} />
-                ))}
+                {project.useCarousel ? (
+                  <ProjectImageCarousel images={dreamCarouselImages} showDots />
+                ) : (
+                  project.leftImages.map((image, index) => (
+                    <img key={index} src={image.src} alt={image.alt} />
+                  ))
+                )}
               </div>
 
               <div className="dream-right">
@@ -170,11 +178,13 @@ export default function ProjectDetail() {
                   ))}
                 </div>
 
-                <div className="dream-stack">
-                  {project.rightImages.map((image, index) => (
-                    <img key={index} src={image.src} alt={image.alt} />
-                  ))}
-                </div>
+                {!project.useCarousel && (
+                  <div className="dream-stack">
+                    {project.rightImages.map((image, index) => (
+                      <img key={index} src={image.src} alt={image.alt} />
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </div>
