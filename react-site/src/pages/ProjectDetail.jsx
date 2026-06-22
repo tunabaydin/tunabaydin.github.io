@@ -169,7 +169,7 @@ export default function ProjectDetail() {
           </div>
         )}
 
-        {project.layout === "dream" && (
+                {project.layout === "dream" && (
           <div className="dream-section">
             <div className="dream-grid">
               <div className="dream-left">
@@ -200,8 +200,25 @@ export default function ProjectDetail() {
                 )}
               </div>
             </div>
+
+            {project.additionalSections && (
+              <div className="dream-additional-sections">
+                {project.additionalSections.map((section, index) => (
+                  <div className="dream-additional-section" key={index}>
+                    <div className="dream-additional-media">
+                      <img src={section.image} alt={section.imageAlt} />
+                    </div>
+
+                    <div className="dream-additional-text">
+                      <h2>{getLocalizedText(section.title)}</h2>
+                      <p>{getLocalizedText(section.text)}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
-        )}
+               )}
       </div>
 
       <Footer />

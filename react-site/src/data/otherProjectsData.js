@@ -35,15 +35,7 @@ export const otherProjectsData = [
     slug: "dreamreconstruction",
     image: "/assets/otherprojects/dream2.png",
   },
-  {
-    title: {
-      en: "AI-assisted projects",
-      tr: "AI-assisted projects",
-      no: "AI-assisted projects",
-    },
-    slug: "ai-assisted-projects",
-    image: "/assets/pastlives/cave.png",
-  },
+  
   {
     title: {
       en: "Music",

@@ -306,13 +306,18 @@ export default function Home() {
             <a className="hero-link" href={`/${lang}/pastlives`} aria-label="Past Lives" />
             <a
               className="hero-ai-disclaimer"
-              href={`/${lang || "en"}/ai-assisted-projects/`}
-              aria-label="AI-assisted image. Unless you see this button, my art is not generated through AI."
+              href={`/${lang}/dreamreconstruction/`}
+              aria-label="Disclaimer: AI-assisted image. Unless marked with this, my art is not generated through AI."
             >
-              <span>AI-assisted image</span>
-              <span className="hero-ai-disclaimer-note">
-                Unless you see this button, my art is not generated through AI.
-              </span>
+             <span className="hero-ai-disclaimer-main">Disclaimer</span>
+
+            <span className="hero-ai-disclaimer-hover">
+              AI-assisted art
+            </span>
+
+            <span className="hero-ai-disclaimer-note">
+              Unless marked with this, my art is not generated through AI.
+            </span>
             </a>
             <video className="hero-media" autoPlay loop muted playsInline preload="auto">
               <source src={pastLivesVideo} type="video/mp4" />

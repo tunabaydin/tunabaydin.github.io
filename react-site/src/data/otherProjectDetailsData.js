@@ -194,61 +194,25 @@ export const otherProjectDetailsData = {
         src: "/assets/otherprojects/dream8.png",
         alt: "Dream reconstruction 8",
       },
-    ],
-  },
-
-  "ai-assisted-projects": {
-    slug: "ai-assisted-projects",
-    title: {
-      en: "AI-assisted projects",
-      tr: "AI-assisted projects",
-      no: "AI-assisted projects",
-    },
-    layout: "photography",
-    intro: {
-      en: "Put a reminder note here for me to write later",
-      tr: "Put a reminder note here for me to write later",
-      no: "Put a reminder note here for me to write later",
-    },
-    rows: [
-      {
-        title: {
-          en: "Dream Reconstruction",
-          tr: "Rüya Rekonstrüksiyonu",
-          no: "Drømmerekonstruksjon",
-        },
-        text: {
-          en: "An AI-assisted dream-memory project. This page links to the existing Dream Reconstruction detail page without replacing it.",
-          tr: "An AI-assisted dream-memory project. This page links to the existing Dream Reconstruction detail page without replacing it.",
-          no: "An AI-assisted dream-memory project. This page links to the existing Dream Reconstruction detail page without replacing it.",
-        },
-        image: "/assets/otherprojects/dream2.png",
-        imageAlt: "Dream Reconstruction",
-        link: {
-          slug: "dreamreconstruction",
-          label: {
-            en: "View Dream Reconstruction",
-            tr: "View Dream Reconstruction",
-            no: "View Dream Reconstruction",
-          },
-        },
-      },
+        ],
+    additionalSections: [
       {
         title: {
           en: "Cave — 2026 — AI-assisted digital art",
           tr: "Cave — 2026 — AI-assisted digital art",
           no: "Cave — 2026 — AI-assisted digital art",
         },
+        image: "/assets/pastlives/cave.png",
+        imageAlt: "Past Lives cave image",
         text: {
           en: "The cave image used as the cover for the Past Lives project came from a dream memory. I first sketched what I remembered and uploaded a photo to ChatGPT, together with text where I translated the experience into words. ChatGPT generated an image that matched the emotional tone of the dream.",
           tr: "The cave image used as the cover for the Past Lives project came from a dream memory. I first sketched what I remembered and uploaded a photo to ChatGPT, together with text where I translated the experience into words. ChatGPT generated an image that matched the emotional tone of the dream.",
           no: "The cave image used as the cover for the Past Lives project came from a dream memory. I first sketched what I remembered and uploaded a photo to ChatGPT, together with text where I translated the experience into words. ChatGPT generated an image that matched the emotional tone of the dream.",
         },
-        image: "/assets/pastlives/cave.png",
-        imageAlt: "Past Lives cave image",
       },
     ],
   },
+
 
  music: {
   slug: "music",
