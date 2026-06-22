@@ -35,6 +35,7 @@ export const otherProjectsData = [
     slug: "dreamreconstruction",
     image: "/assets/otherprojects/dream2.png",
   },
+  
   {
     title: {
       en: "Music",

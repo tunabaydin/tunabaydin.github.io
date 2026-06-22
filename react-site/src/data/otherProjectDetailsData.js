@@ -194,8 +194,25 @@ export const otherProjectDetailsData = {
         src: "/assets/otherprojects/dream8.png",
         alt: "Dream reconstruction 8",
       },
+        ],
+    additionalSections: [
+      {
+        title: {
+          en: "Cave — 2026 — AI-assisted digital art",
+          tr: "Cave — 2026 — AI-assisted digital art",
+          no: "Cave — 2026 — AI-assisted digital art",
+        },
+        image: "/assets/pastlives/cave.png",
+        imageAlt: "Past Lives cave image",
+        text: {
+          en: "The cave image used as the cover for the Past Lives project came from a dream memory. I first sketched what I remembered and uploaded a photo to ChatGPT, together with text where I translated the experience into words. ChatGPT generated an image that matched the emotional tone of the dream.",
+          tr: "The cave image used as the cover for the Past Lives project came from a dream memory. I first sketched what I remembered and uploaded a photo to ChatGPT, together with text where I translated the experience into words. ChatGPT generated an image that matched the emotional tone of the dream.",
+          no: "The cave image used as the cover for the Past Lives project came from a dream memory. I first sketched what I remembered and uploaded a photo to ChatGPT, together with text where I translated the experience into words. ChatGPT generated an image that matched the emotional tone of the dream.",
+        },
+      },
     ],
   },
+
 
  music: {
   slug: "music",
