@@ -1,4 +1,40 @@
  export const artDetailsData = {
+    watchingtheocean: {
+    meta: {
+      materials: "Acrylic and marker on paper",
+      year: "2026",
+      dimensions: "30 x 42 cm (each piece)",
+      status: {
+        en: "Available",
+        tr: "Satın alınabilir",
+        no: "Tilgjengelig",
+      },
+    },
+
+    mediaColumn: [
+      {
+        type: "image",
+        src: "/assets/art/watchingtheocean.jpg",
+        alt: "Watching the Ocean artwork by Tuna Baydin",
+      },
+    ],
+
+    description: {
+  en: [
+    "Watching the Ocean consists of two parts: Watching the Ocean (Left) and Watching the Ocean (Right). The two pieces were created using the same technique, where paint is dragged across paper using a metal scraper. Special thanks to my good friend and fellow artist, Bendik Torp Hansen, for introducing me to this technique.",
+  ],
+
+  tr: [
+    "Watching the Ocean iki parçadan oluşur: Watching the Ocean (Left) ve Watching the Ocean (Right). Her iki eser de aynı teknik kullanılarak üretilmiştir; boya, metal bir spatula yardımıyla kâğıt üzerinde sürüklenmiştir. Beni bu teknikle tanıştırdığı için değerli dostum ve sanatçı Bendik Torp Hansen'e özel teşekkür ederim.",
+  ],
+
+  no: [
+    "Watching the Ocean består av to deler: Watching the Ocean (Left) og Watching the Ocean (Right). Begge verkene er laget med den samme teknikken, hvor maling dras over papiret med en metallskrape. En spesiell takk til min gode venn og kunstner Bendik Torp Hansen for å ha introdusert meg for denne teknikken.",
+  ],
+},
+
+    extraMedia: [],
+  },
   jupiter: {
     meta: {
       materials: "Acrylic on canvas",

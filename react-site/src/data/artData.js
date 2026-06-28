@@ -1,5 +1,11 @@
 export const artData = [
   {
+  title: "Watching the Ocean",
+  slug: "watchingtheocean",
+  image: "/assets/art/watchingtheoceancard.jpg",
+  available: true,
+},
+  {
   title: "Jupiter",
   slug: "jupiter",
   image: "/assets/art/jupiter.jpg",
