@@ -112,8 +112,12 @@ export default function ArtDetail() {
               ).map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
+            </div>
+          </div>
 
-              {artworkDetails?.extraMedia?.map((item, index) => {
+          {artworkDetails?.extraMedia && artworkDetails.extraMedia.length > 0 && (
+            <div className="art-extra-media">
+              {artworkDetails.extraMedia.map((item, index) => {
                 if (item.type === "video") {
                   return (
                     <video
@@ -138,10 +142,44 @@ export default function ArtDetail() {
                   );
                 }
 
+                if (item.type === "gallery-columns") {
+                  return (
+                    <div className="art-detail-columns" key={index}>
+                      <div>
+                        {item.left.map((image, imageIndex) => (
+                          <div className="art-image" key={imageIndex}>
+                            <img src={image.src} alt={image.alt || artwork.title} />
+                          </div>
+                        ))}
+                      </div>
+
+                      <div>
+                        {item.right.map((image, imageIndex) => (
+                          <div className="art-image" key={imageIndex}>
+                            <img src={image.src} alt={image.alt || artwork.title} />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                }
+
+                if (item.type === "gallery-row") {
+                  return (
+                    <div className="art-detail-row" key={index}>
+                      {item.images.map((image, imageIndex) => (
+                        <div className="art-image" key={imageIndex}>
+                          <img src={image.src} alt={image.alt || artwork.title} />
+                        </div>
+                      ))}
+                    </div>
+                  );
+                }
+
                 return null;
               })}
             </div>
-          </div>
+          )}
         </div>
       </section>
 

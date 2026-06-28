@@ -493,6 +493,47 @@
   color: #111;
 }
 
+.art-detail-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.art-detail-columns > div {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.art-detail-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+@media (max-width: 768px) {
+  .art-detail-columns,
+  .art-detail-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dream-intro-box {
+  margin-bottom: 28px;
+  padding: 28px 32px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+  line-height: 1.7;
+}
+
+.dream-intro-box h2 {
+  margin-top: 0;
+  color: #111;
+}
+
 @media (max-width: 768px) {
   .other-project-card {
     width: calc(100% - 20px);
@@ -547,4 +588,6 @@
   .dream-additional-media img {
     height: clamp(220px, 70vw, 380px);
   }
+
 }
+

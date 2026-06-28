@@ -169,9 +169,16 @@ export default function ProjectDetail() {
           </div>
         )}
 
-                {project.layout === "dream" && (
-          <div className="dream-section">
-            <div className="dream-grid">
+              {project.layout === "dream" && (
+  <div className="dream-section">
+    {project.introBox && (
+      <div className="dream-intro-box">
+        <h2>{getLocalizedText(project.introBox.heading)}</h2>
+        <p>{getLocalizedText(project.introBox.text)}</p>
+      </div>
+    )}
+
+    <div className="dream-grid">
               <div className="dream-left">
                 {project.useCarousel ? (
                   <ProjectImageCarousel images={dreamCarouselImages} showDots />

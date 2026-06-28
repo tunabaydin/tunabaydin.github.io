@@ -33,7 +33,48 @@
   ],
 },
 
-    extraMedia: [],
+    extraMedia: [
+  {
+    type: "gallery-columns",
+    left: [
+      {
+        src: "/assets/art/left2.jpg",
+        alt: "Watching the Ocean (Left)",
+      },
+      {
+        src: "/assets/art/left_zoom.jpg",
+        alt: "Watching the Ocean left detail",
+      },
+    ],
+    right: [
+      {
+        src: "/assets/art/right3.jpg",
+        alt: "Watching the Ocean (Right)",
+      },
+      {
+        src: "/assets/art/right_iris.jpg",
+        alt: "Watching the Ocean iris detail",
+      },
+      {
+        src: "/assets/art/right_wave.jpg",
+        alt: "Watching the Ocean wave detail",
+      },
+    ],
+  },
+  {
+    type: "gallery-row",
+    images: [
+      {
+        src: "/assets/art/watching_decoration1.jpg",
+        alt: "Watching the Ocean decoration detail",
+      },
+      {
+        src: "/assets/art/watching_decoration2.jpg",
+        alt: "Watching the Ocean decoration detail",
+      },
+    ],
+  },
+],
   },
   jupiter: {
     meta: {

@@ -135,11 +135,19 @@ export const otherProjectDetailsData = {
     },
     layout: "dream",
     useCarousel: true,
+    introBox: {
+  heading: {
+    en: "About this project",
+    tr: "Bu proje hakkında",
+    no: "Om dette prosjektet",
+  },
+  text: {
+    en: "Dream Reconstruction is an ongoing project where I recreate scenes from my dreams.",
+    tr: "Rüya Rekonstrüksiyonu, rüyalarımda gördüğüm sahneleri yeniden oluşturduğum devam eden bir projedir.",
+    no: "Drømmerekonstruksjon er et pågående prosjekt hvor jeg gjenskaper scener fra drømmene mine.",
+  },
+},
     leftImages: [
-      {
-        src: "/assets/otherprojects/dream1.png",
-        alt: "Dream reconstruction 1",
-      },
       {
         src: "/assets/otherprojects/dream2.png",
         alt: "Dream reconstruction 2",
@@ -155,9 +163,9 @@ export const otherProjectDetailsData = {
     ],
     textBox: {
       heading: {
-        en: "About the project",
-        tr: "Proje hakkında",
-        no: "Om prosjektet",
+        en: "Three Crystal Peaks, 2026",
+        tr: "Üç Kristal Zirve, 2026",
+        no: "Tre kristalltopper, 2026",
       },
       paragraphs: {
         en: [
@@ -198,9 +206,9 @@ export const otherProjectDetailsData = {
     additionalSections: [
       {
         title: {
-          en: "Cave — 2026 — AI-assisted digital art",
-          tr: "Cave — 2026 — AI-assisted digital art",
-          no: "Cave — 2026 — AI-assisted digital art",
+          en: "Cave, 2026",
+          tr: "Cave, 2026",
+          no: "Cave, 2026",
         },
         image: "/assets/pastlives/cave.png",
         imageAlt: "Past Lives cave image",
