@@ -212,10 +212,10 @@ export const otherProjectDetailsData = {
         },
         image: "/assets/pastlives/cave.png",
         imageAlt: "Past Lives cave image",
-        text: {
+       text: {
           en: "The cave image used as the cover for the Past Lives project came from a dream memory. I first sketched what I remembered and uploaded a photo to ChatGPT, together with text where I translated the experience into words. ChatGPT generated an image that matched the emotional tone of the dream.",
-          tr: "The cave image used as the cover for the Past Lives project came from a dream memory. I first sketched what I remembered and uploaded a photo to ChatGPT, together with text where I translated the experience into words. ChatGPT generated an image that matched the emotional tone of the dream.",
-          no: "The cave image used as the cover for the Past Lives project came from a dream memory. I first sketched what I remembered and uploaded a photo to ChatGPT, together with text where I translated the experience into words. ChatGPT generated an image that matched the emotional tone of the dream.",
+          tr: "Past Lives projesinin kapak görseli olarak kullandığım mağara görüntüsü bir rüya anısından geldi. Önce hatırladığım şeyi çizdim ve bu deneyimi kelimelere döktüğüm bir metinle birlikte çizimin fotoğrafını ChatGPT'ye yükledim. ChatGPT, rüyanın duygusal tonuna uyan bir görüntü oluşturdu.",
+          no: "Hulebildet som brukes som cover for Past Lives-prosjektet kom fra et drømmeminne. Først skisset jeg det jeg husket og lastet opp et bilde til ChatGPT, sammen med en tekst der jeg oversatte opplevelsen til ord. ChatGPT genererte et bilde som traff den emosjonelle tonen i drømmen.",
         },
       },
     ],
