@@ -164,8 +164,8 @@ export const otherProjectDetailsData = {
     textBox: {
       heading: {
         en: "Three Crystal Peaks, 2026",
-        tr: "Üç Kristal Zirve, 2026",
-        no: "Tre kristalltopper, 2026",
+        tr: "Three Crystal Peaks, 2026",
+        no: "Three Crystal Peaks, 2026",
       },
       paragraphs: {
         en: [
