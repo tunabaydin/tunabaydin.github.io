@@ -171,12 +171,31 @@ export default function ProjectDetail() {
 
               {project.layout === "dream" && (
   <div className="dream-section">
-    {project.introBox && (
-      <div className="dream-intro-box">
-        <h2>{getLocalizedText(project.introBox.heading)}</h2>
-        <p>{getLocalizedText(project.introBox.text)}</p>
+   {project.introBox && (
+  <div className="dream-intro-box">
+    <h2>{getLocalizedText(project.introBox.heading)}</h2>
+
+    <div className="dream-intro-content">
+      <button
+        className="hero-ai-disclaimer dream-intro-disclaimer"
+        type="button"
+        aria-label="Disclaimer: AI-assisted art. Unless marked with this, my art is not generated through AI."
+      >
+        <span className="hero-ai-disclaimer-main">Disclaimer</span>
+        <span className="hero-ai-disclaimer-hover">AI-assisted art</span>
+        <span className="hero-ai-disclaimer-note">
+          Unless marked with this, my art is not generated through AI.
+        </span>
+      </button>
+
+      <div className="dream-intro-text">
+        {getLocalizedArray(project.introBox.text).map((paragraph, index) => (
+          <p key={index}>{paragraph}</p>
+        ))}
       </div>
-    )}
+    </div>
+  </div>
+)}
 
     <div className="dream-grid">
               <div className="dream-left">

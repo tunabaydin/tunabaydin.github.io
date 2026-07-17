@@ -764,12 +764,6 @@ html.home-portal-transition.is-navigating {
 }    
 
 
-/* Artist section (same look as artist.html) */
-#home-artist {
-  /* no special layout, card will center itself with .wrap */
-}
-
-
 /* Portrait image inside the card */
 .portrait {
   text-align: center;
@@ -1136,8 +1130,9 @@ html.home-portal-transition.is-navigating {
 
 .dream-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 28px;
+  grid-template-columns: minmax(0, 58%) minmax(320px, 1fr);
+  gap: 32px;
+  align-items: center;
 }
 
 .dream-left {

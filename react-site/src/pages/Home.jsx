@@ -303,25 +303,25 @@ export default function Home() {
       <section id="top" className="hero-carousel" aria-label="Intro carousel">
         <div className="hero-track" id="hero-track">
           <div className="hero-slide" data-type="video">
-            <a className="hero-link" href={`/${lang}/pastlives`} aria-label="Past Lives" />
-            <a
-              className="hero-ai-disclaimer"
-              href={`/${lang}/dreamreconstruction/`}
-              aria-label="Disclaimer: AI-assisted image. Unless marked with this, my art is not generated through AI."
-            >
-             <span className="hero-ai-disclaimer-main">Disclaimer</span>
+          <a className="hero-link" href={`/${lang}/pastlives`} aria-label="Past Lives" />
 
-            <span className="hero-ai-disclaimer-hover">
-              AI-assisted art
-            </span>
+            <div className="hero-media-wrap">
+              <video className="hero-media" autoPlay loop muted playsInline preload="auto">
+                <source src={pastLivesVideo} type="video/mp4" />
+              </video>
 
-            <span className="hero-ai-disclaimer-note">
-              Unless marked with this, my art is not generated through AI.
-            </span>
-            </a>
-            <video className="hero-media" autoPlay loop muted playsInline preload="auto">
-              <source src={pastLivesVideo} type="video/mp4" />
-            </video>
+              <a
+                className="hero-ai-disclaimer"
+                href={`/${lang}/dreamreconstruction/`}
+                aria-label="Disclaimer: AI-assisted image. Unless marked with this, my art is not generated through AI."
+              >
+                <span className="hero-ai-disclaimer-main">Disclaimer</span>
+                <span className="hero-ai-disclaimer-hover">AI-assisted art</span>
+                <span className="hero-ai-disclaimer-note">
+                  Unless marked with this, my art is not generated through AI.
+                </span>
+              </a>
+            </div>
             <div className="hero-overlay" />
             <div className="hero-pastlives-copy" aria-hidden="true">
               <h2 className="hero-pastlives-title">{hero.pastLivesTitle}</h2>

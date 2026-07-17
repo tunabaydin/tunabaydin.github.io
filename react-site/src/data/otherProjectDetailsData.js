@@ -142,11 +142,21 @@ export const otherProjectDetailsData = {
     no: "Om dette prosjektet",
   },
   text: {
-    en: "Dream Reconstruction is an ongoing project where I recreate scenes from my dreams.",
-    tr: "Rüya Rekonstrüksiyonu, rüyalarımda gördüğüm sahneleri yeniden oluşturduğum devam eden bir projedir.",
-    no: "Drømmerekonstruksjon er et pågående prosjekt hvor jeg gjenskaper scener fra drømmene mine.",
-  },
-},
+    en: [
+  "As artificial intelligence (AI) improves, it is becoming increasingly difficult to distinguish traditional art from AI-assisted art, especially in digital form. I created this disclaimer to identify and group the artworks I have made with the help of AI. Unless marked with this, my art is not generated through AI.",
+  "Dream Reconstruction is an ongoing project where I recreate scenes from my dreams with the help of AI image-generation tools.",
+],
+
+tr: [
+  "Yapay zekâ (AI) geliştikçe, özellikle dijital ortamda geleneksel sanat ile yapay zekâ destekli sanatı birbirinden ayırt etmek giderek zorlaşıyor. Bu uyarıyı, yapay zekâ yardımıyla ürettiğim eserleri belirtmek ve gruplandırmak için oluşturdum. Bununla işaretlenmedikçe, eserlerim yapay zekâ tarafından üretilmemiştir.",
+  "Rüya Rekonstrüksiyonu, yapay zekâ görsel üretim araçlarının yardımıyla rüyalarımda gördüğüm sahneleri yeniden oluşturduğum devam eden bir projedir.",
+],
+
+no: [
+  "Etter hvert som kunstig intelligens (AI) blir stadig bedre, blir det også vanskeligere å skille tradisjonell kunst fra AI-assistert kunst, spesielt i digital form. Jeg har laget denne merkingen for å identifisere og samle verkene jeg har laget med hjelp av AI. Med mindre et verk er merket med dette, er det ikke generert ved hjelp av AI.",
+  "Drømmerekonstruksjon er et pågående prosjekt hvor jeg gjenskaper scener fra drømmene mine ved hjelp av AI-bildegenereringsverktøy.",
+],},
+    },
     leftImages: [
       {
         src: "/assets/otherprojects/dream2.png",

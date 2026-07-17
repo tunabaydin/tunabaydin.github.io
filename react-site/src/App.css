@@ -206,7 +206,7 @@
 
 .hero-ai-disclaimer {
   position: absolute;
-  left: 390px;
+  left: 24px;
   bottom: 50px;
   z-index: 8;
   display: inline-flex;
@@ -285,6 +285,13 @@
   color: #111;
   text-decoration: underline;
   text-underline-offset: 4px;
+}
+
+.hero-media-wrap {
+  position: relative;
+  width: fit-content;
+  height: 100%;
+  margin: 0 auto;
 }
 
 #top,
@@ -384,7 +391,7 @@
 .project-image-carousel-track {
   position: relative;
   width: 100%;
-  min-height: 420px;
+  height: 480px;
   border-radius: 18px;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.72);
@@ -395,7 +402,7 @@
 
 .project-image-carousel-image {
   width: 100%;
-  height: clamp(360px, 42vw, 620px) !important;
+  height: 100% !important;
   object-fit: contain !important;
 }
 
@@ -477,7 +484,7 @@
 
 .dream-additional-media img {
   width: 100%;
-  height: clamp(300px, 34vw, 480px);
+  height: 480px;
   object-fit: cover;
   border-radius: 18px;
   display: block;
@@ -532,6 +539,40 @@
 .dream-intro-box h2 {
   margin-top: 0;
   color: #111;
+}
+
+.dream-intro-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.dream-intro-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.dream-intro-disclaimer {
+  position: static;
+  flex-shrink: 0;
+  margin-top: 6px;
+  font-family: inherit;
+  cursor: default;
+}
+
+.dream-intro-text p:first-child {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .dream-intro-content {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .dream-intro-disclaimer {
+    align-self: flex-start;
+  }
 }
 
 @media (max-width: 768px) {

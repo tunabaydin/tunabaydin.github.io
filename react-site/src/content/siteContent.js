@@ -43,7 +43,7 @@ chapter3Text3:
   text1:
     "I am a Trondheim based artist, originally from Ankara, Turkey. I come from a science background, specializing in biotechnology. I hold a bachelor's degree in molecular biology and genetics, a master's and a PhD degree in biotechnology.",
   text2:
-    "My art is inspired by science, nature, energy, spiritual, mystical and mind-altering experiences.",
+    "My art is inspired by science, nature, energy, spirituality, mysticism, and consciousness-expanding experiences.",
   text3:
     "The mission of my work is to remind the beholder to remember that we are souls having a human experience.",
   text4:
@@ -67,11 +67,12 @@ contact: {
 books: {
   title: "Books I like",
   items: [
-    "Journey of Souls — Dr. Michael Newton",
-    "Between Death and Life — Dolores Cannon",
-    "The Holographic Universe — Michael Talbot",
-    "The Power of Now — Eckhart Tolle",
-    "Breaking the Habit of Being Yourself — Dr. Joe Dispenza",
+    "Journey of Souls - Dr. Michael Newton",
+    "Between Death and Life - Dolores Cannon",
+    "The Holographic Universe - Michael Talbot",
+    "The Power of Now - Eckhart Tolle",
+    "Breaking the Habit of Being Yourself - Dr. Joe Dispenza",
+    "The Alchemist - Paulo Coelho",
   ],
 },
       sections: {
@@ -156,7 +157,7 @@ chapter3Text3:
   text1:
     "Norveç'in Trondheim şehrinde yaşayan, aslen Ankara'lı bir sanatçıyım. Aynı zamanda bir bilim insanıyım ve biyoteknoloji alanında uzmanlaştım. Moleküler biyoloji ve genetik alanında lisans, biyoteknoloji alanında yüksek lisans ve doktora derecelerine sahibim.",
   text2:
-    "Sanatım bilimden, doğadan, enerjiden ve spiritüel, mistik ve bilinç genişletici deneyimlerden ilham alıyor.",
+    "Sanatım bilimden, doğadan, enerjiden, maneviyattan, mistisizmden ve bilinci genişleten deneyimlerden ilham alıyor.",
   text3:
     "Çalışmalarımın amacı, izleyiciye insan deneyimi yaşayan ruhlar olduğumuzu hatırlatmaktır.",
   text4:
@@ -180,11 +181,12 @@ contact: {
 books: {
   title: "Sevdiğim kitaplar",
   items: [
-    "Journey of Souls — Dr. Michael Newton",
-    "Between Death and Life — Dolores Cannon",
-    "The Holographic Universe — Michael Talbot",
-    "The Power of Now — Eckhart Tolle",
-    "Breaking the Habit of Being Yourself — Dr. Joe Dispenza",
+    "Journey of Souls - Dr. Michael Newton",
+    "Between Death and Life - Dolores Cannon",
+    "The Holographic Universe - Michael Talbot",
+    "The Power of Now - Eckhart Tolle",
+    "Breaking the Habit of Being Yourself - Dr. Joe Dispenza",
+    "The Alchemist - Paulo Coelho",
   ],
 },
     sections: {
@@ -269,7 +271,7 @@ chapter3Text3:
   text1:
     "Jeg er en kunstner basert i Trondheim, opprinnelig fra Ankara i Tyrkia. Jeg har bakgrunn fra naturvitenskap, med spesialisering i bioteknologi. Jeg har en bachelorgrad i molekylærbiologi og genetikk, samt mastergrad og doktorgrad i bioteknologi.",
   text2:
-    "Kunsten min er inspirert av vitenskap, natur, energi og spirituelle, mystiske og bevissthetsutvidende opplevelser.",
+    "Kunsten min er inspirert av vitenskap, natur, energi, spiritualitet, mystikk og bevissthetsutvidende opplevelser.",
   text3:
     "Målet med arbeidet mitt er å minne betrakteren om at vi er sjeler som har en menneskelig erfaring.",
   text4:
@@ -293,11 +295,12 @@ contact: {
 books: {
   title: "Bøker jeg liker",
   items: [
-    "Journey of Souls — Dr. Michael Newton",
-    "Between Death and Life — Dolores Cannon",
-    "The Holographic Universe — Michael Talbot",
-    "The Power of Now — Eckhart Tolle",
-    "Breaking the Habit of Being Yourself — Dr. Joe Dispenza",
+    "Journey of Souls - Dr. Michael Newton",
+    "Between Death and Life - Dolores Cannon",
+    "The Holographic Universe - Michael Talbot",
+    "The Power of Now - Eckhart Tolle",
+    "Breaking the Habit of Being Yourself - Dr. Joe Dispenza",
+    "The Alchemist - Paulo Coelho"
   ],
 },
     sections: {
