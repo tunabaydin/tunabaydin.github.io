@@ -13,6 +13,13 @@ export default function ContactSection() {
 
         <p>{content.contact.intro}</p>
 
+        <p style={{ marginTop: "1rem" }}>
+          <strong>E-mail:</strong>{" "}
+          <a href="mailto:contact@tunabaydin.com">
+            contact@tunabaydin.com
+          </a>
+        </p>
+
         <p style={{ marginTop: "2rem" }}>{content.contact.follow}</p>
 
         <p>
