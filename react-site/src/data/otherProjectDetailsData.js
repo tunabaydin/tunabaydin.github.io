@@ -344,6 +344,329 @@ no: [
         image: "/assets/otherprojects/saltychia.jpg",
         imageAlt: "Recipes",
         video: "/assets/otherprojects/saltychiaprocess.mp4",
+
+        
+      },
+
+      {
+        title: {
+          en: "Protein Pancakes",
+          tr: "Proteinli Pankek",
+          no: "Proteinpannekaker",
+        },
+        text: {
+          en: {
+            description:
+              "These chocolate-banana protein pancakes are one of my go-to filling breakfasts or snacks. I like serving them with raspberries and crushed cashews.",
+            ingredientsTitle: "Ingredients",
+            ingredients: [
+              "100 g rolled oats",
+              "20 g vanilla protein powder",
+              "1 banana",
+              "1 egg",
+              "2 tsp unsweetened cocoa powder",
+              "1 tsp olive oil",
+              "1/3 tsp baking powder",
+              "1/8 tsp baking soda",
+              "Small pinch of salt",
+              "A splash of milk, as needed",
+              "A little oil for cooking",
+              "Raspberries, for topping",
+              "Crushed cashews, for topping",
+            ],
+            methodTitle: "Preparation",
+            method:
+              "Blend the oats into a flour. Mash the banana and combine it with the egg, oat flour, protein powder, cocoa powder, olive oil, baking powder, baking soda, and salt. Add a splash of milk as needed to reach a thick pancake-batter consistency. Cook the pancakes in a lightly oiled pan over medium-low heat. Serve with raspberries and crushed cashews.",
+          },
+          tr: {
+            description:
+              "Bu çikolatalı ve muzlu protein pankekleri, doyurucu bir kahvaltı veya atıştırmalık istediğimde sık yaptığım tariflerden biri. Üzerine frambuaz ve dövülmüş kaju eklemeyi seviyorum.",
+            ingredientsTitle: "Malzemeler",
+            ingredients: [
+              "100 g yulaf ezmesi",
+              "20 g vanilyalı protein tozu",
+              "1 muz",
+              "1 yumurta",
+              "2 çay kaşığı şekersiz kakao",
+              "1 çay kaşığı zeytinyağı",
+              "1/3 çay kaşığı kabartma tozu",
+              "1/8 çay kaşığı karbonat",
+              "Küçük bir tutam tuz",
+              "Kıvama göre bir miktar süt",
+              "Pişirmek için az miktarda yağ",
+              "Üzeri için frambuaz",
+              "Üzeri için dövülmüş kaju",
+            ],
+            methodTitle: "Yapılışı",
+            method:
+              "Yulafı blenderdan geçirerek un haline getirin. Muzu ezin ve yumurta, yulaf unu, protein tozu, kakao, zeytinyağı, kabartma tozu, karbonat ve tuz ile karıştırın. Koyu ama kaşıkla alınabilecek bir pankek hamuru elde etmek için gerektiği kadar süt ekleyin. Hafifçe yağlanmış tavada orta-kısık ateşte pişirin. Frambuaz ve dövülmüş kaju ile servis edin.",
+          },
+          no: {
+            description:
+              "Disse proteinpannekakene med sjokolade og banan er en av mine favoritter når jeg vil ha en mettende frokost eller snack. Jeg liker å servere dem med bringebær og knuste cashewnøtter.",
+            ingredientsTitle: "Ingredienser",
+            ingredients: [
+              "100 g havregryn",
+              "20 g vaniljeproteinpulver",
+              "1 banan",
+              "1 egg",
+              "2 ts usøtet kakaopulver",
+              "1 ts olivenolje",
+              "1/3 ts bakepulver",
+              "1/8 ts natron",
+              "En liten klype salt",
+              "En skvett melk, etter behov",
+              "Litt olje til steking",
+              "Bringebær til topping",
+              "Knuste cashewnøtter til topping",
+            ],
+            methodTitle: "Fremgangsmåte",
+            method:
+              "Kjør havregrynene i blender til mel. Mos bananen og bland den med egg, havremel, proteinpulver, kakao, olivenolje, bakepulver, natron og salt. Tilsett litt melk etter behov til du får en tykk, men skjevennlig pannekakerøre. Stek pannekakene i en lett oljet panne på middels til lav varme. Server med bringebær og knuste cashewnøtter.",
+          },
+        },
+        image: "/assets/otherprojects/proteinpancakes.jpg",
+        imageAlt: "Chocolate banana protein pancakes with raspberries and cashews",
+      },
+
+      {
+        title: {
+          en: "Vegetable & Lentil Stew with Brown Rice and Mango Yogurt",
+          tr: "Sebzeli ve Mercimekli Güveç, Esmer Pirinç ve Mangolu Yoğurt",
+          no: "Grønnsaks- og linsegryte med fullkornsris og mangoyoghurt",
+        },
+        text: {
+          en: {
+            description:
+              "A hearty vegetable and legume stew served with brown rice and a fresh mango yogurt sauce. Ground beef can also be added for a non-vegetarian version.",
+            ingredientsTitle: "Ingredients",
+            ingredients: [
+              "3 tbsp olive oil",
+              "1 medium onion, finely diced",
+              "1 tbsp tomato paste",
+              "1/2 tbsp pepper paste",
+              "3 garlic cloves, finely chopped",
+              "1 can chopped tomatoes (about 400 g), or 3–4 fresh tomatoes",
+              "100 g cooked or partly cooked green lentils",
+              "1 can chickpeas, drained",
+              "50 g dry red lentils",
+              "About 1/2 medium broccoli, cut into small florets",
+              "300–500 ml vegetable stock, as needed",
+              "1 tsp cumin",
+              "1/2 tsp turmeric",
+              "Salt and black pepper",
+              "Brown rice",
+              "Olive oil, salt, and lemon juice for the rice",
+              "200 g Greek yogurt",
+              "1/2 mango, finely diced",
+              "1–2 tsp lemon juice",
+              "1 tsp olive oil",
+              "A pinch of salt",
+              "Optional: ground beef",
+            ],
+            methodTitle: "Preparation",
+            method:
+              "Heat the olive oil over medium-high heat and cook the onion until softened and beginning to brown. Add the tomato and pepper pastes and cook briefly. Reduce the heat, add the garlic, and cook for another minute. Add the tomatoes, green lentils, chickpeas, red lentils, stock, cumin, turmeric, salt, and pepper. Simmer until the red lentils are nearly cooked, adding more stock or water if needed. Add the broccoli toward the end and cook until tender. Cook the brown rice normally, then season it with a little olive oil, salt, and lemon juice. For the sauce, mix the Greek yogurt with diced mango, lemon juice, olive oil, and a pinch of salt. Serve everything together. For a non-vegetarian version, ground beef can be browned with the onion at the beginning.",
+          },
+          tr: {
+            description:
+              "Esmer pirinç ve ferah mangolu yoğurt sosuyla servis edilen, sebze ve bakliyat ağırlıklı doyurucu bir yemek. İstenirse kıyma eklenerek etli bir versiyonu da yapılabilir.",
+            ingredientsTitle: "Malzemeler",
+            ingredients: [
+              "3 yemek kaşığı zeytinyağı",
+              "1 orta boy soğan, küçük doğranmış",
+              "1 yemek kaşığı domates salçası",
+              "1/2 yemek kaşığı biber salçası",
+              "3 diş sarımsak, ince doğranmış",
+              "1 kutu doğranmış domates (yaklaşık 400 g) veya 3–4 taze domates",
+              "100 g haşlanmış veya yarı haşlanmış yeşil mercimek",
+              "1 kutu nohut, süzülmüş",
+              "50 g kuru kırmızı mercimek",
+              "Yaklaşık 1/2 orta boy brokoli, küçük parçalara ayrılmış",
+              "Gerektiği kadar 300–500 ml sebze suyu",
+              "1 çay kaşığı kimyon",
+              "1/2 çay kaşığı zerdeçal",
+              "Tuz ve karabiber",
+              "Esmer pirinç",
+              "Pirinç için zeytinyağı, tuz ve limon suyu",
+              "200 g süzme veya Yunan yoğurdu",
+              "1/2 mango, küçük doğranmış",
+              "1–2 çay kaşığı limon suyu",
+              "1 çay kaşığı zeytinyağı",
+              "Bir tutam tuz",
+              "İsteğe bağlı: kıyma",
+            ],
+            methodTitle: "Yapılışı",
+            method:
+              "Zeytinyağını orta-yüksek ateşte ısıtın ve soğanı yumuşayıp hafifçe renk alana kadar pişirin. Domates ve biber salçasını ekleyip kısa süre kavurun. Ateşi azaltın, sarımsağı ekleyin ve yaklaşık bir dakika daha pişirin. Domates, yeşil mercimek, nohut, kırmızı mercimek, sebze suyu, kimyon, zerdeçal, tuz ve karabiberi ekleyin. Kırmızı mercimek neredeyse tamamen pişene kadar kaynatın; gerekirse biraz daha su veya sebze suyu ekleyin. Brokoliyi sonlara doğru ekleyip yumuşayana kadar pişirin. Esmer pirinci normal şekilde pişirin ve ardından biraz zeytinyağı, tuz ve limon suyuyla tatlandırın. Sos için yoğurdu mango, limon suyu, zeytinyağı ve bir tutam tuzla karıştırın. Hepsini birlikte servis edin. Etli yapmak isterseniz kıymayı başlangıçta soğanla birlikte kavurabilirsiniz.",
+          },
+          no: {
+            description:
+              "En mettende grønnsaks- og belgfruktgryte servert med fullkornsris og en frisk mangoyoghurt. Kjøttdeig kan også tilsettes for en versjon med kjøtt.",
+            ingredientsTitle: "Ingredienser",
+            ingredients: [
+              "3 ss olivenolje",
+              "1 middels stor løk, finhakket",
+              "1 ss tomatpuré",
+              "1/2 ss paprikapuré",
+              "3 hvitløksfedd, finhakket",
+              "1 boks hakkede tomater (ca. 400 g), eller 3–4 ferske tomater",
+              "100 g kokte eller delvis kokte grønne linser",
+              "1 boks kikerter, avrent",
+              "50 g tørre røde linser",
+              "Ca. 1/2 middels stor brokkoli, i små buketter",
+              "300–500 ml grønnsakskraft, etter behov",
+              "1 ts spisskummen",
+              "1/2 ts gurkemeie",
+              "Salt og svart pepper",
+              "Fullkornsris",
+              "Olivenolje, salt og sitronsaft til risen",
+              "200 g gresk yoghurt",
+              "1/2 mango, finhakket",
+              "1–2 ts sitronsaft",
+              "1 ts olivenolje",
+              "En klype salt",
+              "Valgfritt: kjøttdeig",
+            ],
+            methodTitle: "Fremgangsmåte",
+            method:
+              "Varm olivenoljen på middels høy varme og stek løken til den er myk og begynner å få farge. Tilsett tomatpuré og paprikapuré og stek kort. Senk varmen, tilsett hvitløken og stek i omtrent ett minutt til. Tilsett tomater, grønne linser, kikerter, røde linser, kraft, spisskummen, gurkemeie, salt og pepper. La gryten småkoke til de røde linsene nesten er ferdige, og tilsett mer kraft eller vann ved behov. Ha i brokkolien mot slutten og kok til den er mør. Kok fullkornsrisen som vanlig og smak til med litt olivenolje, salt og sitronsaft. Bland gresk yoghurt med mango, sitronsaft, olivenolje og en klype salt. Server alt sammen. For en versjon med kjøtt kan kjøttdeigen brunes sammen med løken i begynnelsen.",
+          },
+        },
+        image: "/assets/otherprojects/veggiestew.jpg",
+        imageAlt: "Vegetable and lentil stew with brown rice and mango yogurt",
+      },
+
+      {
+        title: {
+          en: "Greek Yogurt Egg Salad",
+          tr: "Yunan Yoğurtlu Yumurta Salatası",
+          no: "Eggesalat med gresk yoghurt",
+        },
+        text: {
+          en: {
+            description:
+              "A simple, fresh egg salad made with Greek yogurt instead of mayonnaise, with lime and Tajín for extra flavor.",
+            ingredientsTitle: "Ingredients",
+            ingredients: [
+              "3 hard-boiled eggs, roughly chopped",
+              "2–3 tbsp Greek yogurt",
+              "1 green onion, thinly sliced",
+              "1 tsp olive oil",
+              "1–2 tsp lime juice",
+              "Tajín, to taste",
+              "Salt and black pepper, to taste",
+              "Optional: chili flakes",
+              "Optional: fresh coriander, parsley, or dill",
+            ],
+            methodTitle: "Preparation",
+            method:
+              "Roughly chop the boiled eggs and combine them with the Greek yogurt, green onion, olive oil, and lime juice. Season with Tajín, salt, and black pepper. Add chili flakes if you like it spicy, and finish with fresh coriander, parsley, or dill if desired.",
+          },
+          tr: {
+            description:
+              "Mayonez yerine Yunan yoğurdu kullandığım, lime ve Tajín ile lezzetlendirilmiş hafif ve taze bir yumurta salatası.",
+            ingredientsTitle: "Malzemeler",
+            ingredients: [
+              "3 haşlanmış yumurta, iri doğranmış",
+              "2–3 yemek kaşığı Yunan veya süzme yoğurt",
+              "1 taze soğan, ince dilimlenmiş",
+              "1 çay kaşığı zeytinyağı",
+              "1–2 çay kaşığı lime suyu",
+              "Damak tadına göre Tajín",
+              "Damak tadına göre tuz ve karabiber",
+              "İsteğe bağlı: pul biber",
+              "İsteğe bağlı: taze kişniş, maydanoz veya dereotu",
+            ],
+            methodTitle: "Yapılışı",
+            method:
+              "Haşlanmış yumurtaları iri şekilde doğrayın ve yoğurt, taze soğan, zeytinyağı ve lime suyuyla karıştırın. Tajín, tuz ve karabiberle tatlandırın. Acı seviyorsanız pul biber; isterseniz taze kişniş, maydanoz veya dereotu ekleyin.",
+          },
+          no: {
+            description:
+              "En enkel og frisk eggesalat med gresk yoghurt i stedet for majones, smaksatt med lime og Tajín.",
+            ingredientsTitle: "Ingredienser",
+            ingredients: [
+              "3 hardkokte egg, grovhakket",
+              "2–3 ss gresk yoghurt",
+              "1 vårløk, i tynne skiver",
+              "1 ts olivenolje",
+              "1–2 ts limesaft",
+              "Tajín etter smak",
+              "Salt og svart pepper etter smak",
+              "Valgfritt: chiliflak",
+              "Valgfritt: fersk koriander, persille eller dill",
+            ],
+            methodTitle: "Fremgangsmåte",
+            method:
+              "Grovhakk de kokte eggene og bland dem med gresk yoghurt, vårløk, olivenolje og limesaft. Smak til med Tajín, salt og svart pepper. Tilsett chiliflak hvis du liker det sterkt, og fersk koriander, persille eller dill hvis ønskelig.",
+          },
+        },
+        image: "/assets/otherprojects/eggsalad.jpg",
+        imageAlt: "Greek yogurt egg salad with green onion and Tajín",
+      },
+
+      {
+        title: {
+          en: "Cherry Tomato Starter with Pomegranate Molasses",
+          tr: "Nar Ekşili Cherry Domates Başlangıcı",
+          no: "Cherrytomater med granateplemelasse",
+        },
+        text: {
+          en: {
+            description:
+              "This is a very simple starter, so the tomatoes make all the difference. I like to use flavorful cherry tomatoes.",
+            ingredientsTitle: "Ingredients",
+            ingredients: [
+              "Good-quality, flavorful cherry tomatoes",
+              "Extra-virgin olive oil",
+              "Pomegranate molasses",
+              "Dried oregano",
+              "Salt",
+              "Freshly ground black pepper",
+              "Optional: mozzarella",
+            ],
+            methodTitle: "Preparation",
+            method:
+              "Halve the cherry tomatoes, or quarter larger ones. Drizzle with olive oil and a small amount of pomegranate molasses. Add oregano, salt, and black pepper and toss gently to combine. Serve as is, or add mozzarella for a more substantial version.",
+          },
+          tr: {
+            description:
+              "Bu çok basit bir başlangıç olduğu için domateslerin lezzeti büyük fark yaratıyor. Aromatik cherry domatesleri kullanın.",
+            ingredientsTitle: "Malzemeler",
+            ingredients: [
+              "Lezzetli, kaliteli cherry domates",
+              "Sızma zeytinyağı",
+              "Nar ekşisi",
+              "Kuru kekik",
+              "Tuz",
+              "Taze çekilmiş karabiber",
+              "İsteğe bağlı: mozzarella",
+            ],
+            methodTitle: "Yapılışı",
+            method:
+              "Cherry domatesleri ikiye, daha büyük olanları ise dörde kesin. Üzerlerine zeytinyağı ve az miktarda nar ekşisi gezdirin. Kekik, tuz ve karabiber ekleyip nazikçe karıştırın. Bu şekilde servis edebilir veya daha doyurucu bir versiyon için mozzarella ekleyebilirsiniz.",
+          },
+          no: {
+            description:
+              "Dette er en veldig enkel forrett, så smaken på tomatene gjør stor forskjell. Jeg liker å bruke smakfulle cherrytomater.",
+            ingredientsTitle: "Ingredienser",
+            ingredients: [
+              "Smakfulle cherrytomater av god kvalitet",
+              "Extra virgin olivenolje",
+              "Granateplemelasse",
+              "Tørket oregano",
+              "Salt",
+              "Nykvernet svart pepper",
+              "Valgfritt: mozzarella",
+            ],
+            methodTitle: "Fremgangsmåte",
+            method:
+              "Del cherrytomatene i to, eller i fire hvis de er store. Drypp over olivenolje og en liten mengde granateplemelasse. Tilsett oregano, salt og svart pepper og bland forsiktig. Server som den er, eller tilsett mozzarella for en mer mettende variant.",
+          },
+        },
+        image: "/assets/otherprojects/tomatostarter.jpg",
+        imageAlt: "Cherry tomato starter with pomegranate molasses",
       },
     ],
   },
@@ -357,6 +680,7 @@ no: [
     },
     layout: "photography",
     rows: [
+
       {
         title: {
           en: "Snowflake",
