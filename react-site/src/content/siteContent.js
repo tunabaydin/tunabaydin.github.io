@@ -109,7 +109,9 @@ books: {
       nameText1:
         "Yes, that is my given first name. In Turkish, Tuna means “Danube”. The Danube is a river in Europe. It is a unisex name in Turkey, though mostly given to boys.",
       nameText2: "And yes, it’s spelled like the fish.",
-      workTitle: "Working on new things",
+      workTitle: "My Etsy shop is live!",
+      workText: "Fine art prints of selected works are now available.",
+      workCta: "Visit my shop →",
     },
   },
 
@@ -223,7 +225,9 @@ books: {
       nameText1: "TODO (TR): Replace slide 3 text.",
       nameText2: "",
 
-      workTitle: "Yeni şeyler üzerinde çalışıyorum",
+      workTitle: "Etsy mağazam açıldı!",
+      workText: "Seçili eserlerimin fine art baskıları artık satışta.",
+      workCta: "Mağazamı ziyaret et →",
     },
   },
 
@@ -345,7 +349,9 @@ books: {
   "/tona3.jpg",
 ],
 
-workTitle: "Jobber med nye ting",
+workTitle: "Etsy-butikken min er åpen!",
+workText: "Fine art-trykk av utvalgte verk er nå tilgjengelige.",
+workCta: "Besøk butikken min →",
     },
   },
 };

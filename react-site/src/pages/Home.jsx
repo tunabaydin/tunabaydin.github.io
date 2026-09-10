@@ -383,33 +383,33 @@ export default function Home() {
           )}
 
           <div className="hero-slide hero-slide--intro" data-type="intro">
-            <div className="hero-overlay" />
-            <div className="hero-card-wrap">
-              <div className="card">
-                <h1>{hero.workTitle}</h1>
+  <div className="hero-overlay" />
 
-                <div className="newwork-gallery">
-  <img
-    src="/newproject2.jpg"
-    alt="New project preview 2"
-    className="newwork-top"
-  />
+  <div className="hero-card-wrap">
+    <div className="card etsy-card">
+      <h1>{hero.workTitle}</h1>
 
-  <div className="newwork-bottom">
-    <img
-      src="/newproject1.jpg"
-      alt="New project preview 1"
-    />
-    <img
-      src="/veggiestew.jpg"
-      alt="Veggie stew"
-    />
+      <img
+        src="/assets/art/emulsiondecoration.jpg"
+        alt="Emulsion fine art print"
+        className="etsy-feature-image"
+      />
+
+      <p>{hero.workText}</p>
+
+      <a
+        href="YOUR_ETSY_SHOP_URL"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="etsy-shop-link"
+      >
+        {hero.workCta}
+      </a>
+    </div>
   </div>
 </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
+</div>
 
         <div className="hero-dots" id="hero-dots" aria-label="Carousel pagination" />
 

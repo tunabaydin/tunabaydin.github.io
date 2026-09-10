@@ -349,6 +349,65 @@ html.is-restoring-home body { visibility: hidden; }
   justify-content: center;
 }
 
+/* Etsy shop announcement */
+.etsy-card {
+  gap: 14px;
+}
+
+.etsy-card h1 {
+  margin-bottom: 4px;
+}
+
+.etsy-feature-image {
+  display: block;
+  width: auto;
+  max-width: min(100%, 620px);
+  max-height: 390px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin: 4px auto;
+  box-shadow: 0 6px 20px #0000001f;
+}
+
+.etsy-card p {
+  margin: 2px auto;
+}
+
+.etsy-shop-link {
+  display: inline-block;
+  align-self: center;
+  margin-top: 2px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: #111;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s, background 0.15s;
+}
+
+.etsy-shop-link:hover {
+  background: #333;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+  .etsy-card {
+    gap: 10px;
+  }
+
+  .etsy-feature-image {
+    max-width: 100%;
+    max-height: 300px;
+  }
+
+  .etsy-shop-link {
+    padding: 9px 18px;
+    font-size: 0.9rem;
+  }
+}
+
 /* Each slide is a link (optional) */
 .hero-link{
   position: absolute;
@@ -524,7 +583,19 @@ html.is-restoring-home body { visibility: hidden; }
   .hero-slide--intro .hero-card-wrap {
     padding: 20px;
   }
+  .etsy-card {
+    gap: 10px;
+  }
 
+  .etsy-feature-image {
+    max-width: 100%;
+    max-height: 300px;
+  }
+
+  .etsy-shop-link {
+    padding: 9px 18px;
+    font-size: 0.9rem;
+  }
   .hero-slide--intro .card {
     width: min(90vw, 560px);
     min-height: auto;
@@ -1508,6 +1579,8 @@ html.home-portal-transition.is-navigating {
 .newwork-bottom img {
   height: 92px;
 }
+
+
 
 .back-card {
   position: absolute;
