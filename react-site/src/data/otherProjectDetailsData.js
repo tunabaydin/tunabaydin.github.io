@@ -1,63 +1,152 @@
 export const otherProjectDetailsData = {
   coloranalysis: {
-    slug: "coloranalysis",
-    title: {
-      en: "Seasonal Color Analysis",
-      tr: "Mevsimsel Renk Analizi",
-      no: "Sesongbasert Fargeanalyse",
-    },
-    layout: "photography",
-    rows: [
-      {
-        title: {
-          en: "What is seasonal color analysis?",
-          tr: "Mevsimsel renk analizi nedir?",
-          no: "Hva er sesongbasert fargeanalyse?",
-        },
-        text: {
-          en: "Every one of us belongs to a season (and a subseason) depending on our coloration. Seasonal color analysis is based on color theory and uses the undertones of the skin, as well as hair and eye color, to classify a person. This information guides us in making fashion choices, including finding suitable hair and makeup colors that enhance our natural beauty.",
-          tr: "Her birimiz, renk özelliklerimize bağlı olarak bir mevsime (ve alt mevsime) aitiz. Mevsimsel renk analizi, renk teorisine dayanır ve bir kişiyi sınıflandırmak için cilt alt tonunu, saç ve göz rengini birlikte değerlendirir. Bu bilgi, doğal güzelliğimizi öne çıkaran saç ve makyaj renkleri dahil olmak üzere moda seçimlerimize yön verir.",
-          no: "Hver av oss tilhører en sesong (og en underkategori) basert på vår egen fargepalett. Sesongbasert fargeanalyse er basert på fargeteori og bruker hudens undertone, samt hår- og øyenfarge, for å klassifisere en person. Denne kunnskapen hjelper oss med å ta bedre stilvalg, inkludert hår- og sminkefarger som fremhever vår naturlige skjønnhet.",
-        },
-        image: "/assets/otherprojects/wheel3.png",
-        imageAlt: "Seasonal color analysis wheel",
-      },
-      {
-        title: {
-          en: "How does it work?",
-          tr: "Nasıl çalışır?",
-          no: "Hvordan fungerer det?",
-        },
-        text: {
-          en: "A person needs to drape color fabrics according to established guidelines to accurately determine their season. AI/apps have proven inaccurate for analysis so far.",
-          tr: "Bir kişinin mevsimini doğru şekilde belirleyebilmek için, belirli kurallara göre farklı renk kumaşlarla draping yapılması gerekir. Yapay zekâ/uygulamalar şu ana kadar bu analizde güvenilir sonuçlar vermemektedir.",
-          no: "For å finne riktig sesong må man drapere ulike farger etter etablerte retningslinjer. AI/applikasjoner har så langt vist seg å være unøyaktige for denne typen analyse.",
-        },
-      },
-      {
-        type: "carousel",
-        showDots: true,
-        title: {
-          en: "My Journey",
-          tr: "Benim Yolculuğum",
-          no: "Min Reise",
-        },
-        text: {
-          en: "I've been fascinated by seasonal color analysis since 2023. I thought I was possibly a Dark Autumn or a Dark Winter. I draped according to the established guidelines and asked for advice in a seasonal color analysis Facebook group. Most people thought I was a Winter. Then I decided to get professionally analyzed and learned that I am a Cool Winter, a subseason characterized by coolness. Since then, I have made changes in my wardrobe, hair color, and jewelry choices.",
-          tr: "2023 yılından beri mevsimsel renk analizine ilgi duyuyorum. Başta Dark Autumn ya da Dark Winter olabileceğimi düşünüyordum. Belirlenen kurallara göre draping yaptım ve bir Facebook grubunda görüş aldım. Çoğu kişi Winter olduğumu düşündü. Daha sonra profesyonel bir analiz yaptırdım ve Cool Winter olduğumu öğrendim; bu alt mevsim, soğukluk özelliğiyle karakterizedir. O zamandan beri gardırobumda, saç rengimde ve takı seçimlerimde değişiklikler yaptım.",
-          no: "Jeg har vært fascinert av sesongbasert fargeanalyse siden 2023. Jeg trodde først at jeg kunne være en Dark Autumn eller Dark Winter. Jeg gjorde draping etter etablerte retningslinjer og ba om tilbakemelding i en Facebook-gruppe. De fleste mente at jeg var en Winter. Senere tok jeg en profesjonell analyse og lærte at jeg er en Cool Winter, en underkategori som kjennetegnes av kjølighet. Siden da har jeg gjort endringer i garderoben min, hårfargen min og smykkevalgene mine.",
-        },
-        images: [
-          { src: "/assets/otherprojects/blues.png", alt: "Blue draping comparison" },
-          { src: "/assets/otherprojects/reds.png", alt: "Red draping comparison" },
-          { src: "/assets/otherprojects/greens.png", alt: "Green draping comparison" },
-          { src: "/assets/otherprojects/oranges.png", alt: "Orange draping comparison" },
-          { src: "/assets/otherprojects/darkneutrals.png", alt: "Dark neutral draping comparison" },
-          { src: "/assets/otherprojects/lightneutrals.png", alt: "Light neutral draping comparison" },
-        ],
-      },
-    ],
+  slug: "coloranalysis",
+
+  title: {
+    en: "Seasonal Color Analysis",
+    tr: "Mevsimsel Renk Analizi",
+    no: "Sesongbasert Fargeanalyse",
   },
+
+  layout: "photography",
+
+  rows: [
+    {
+      title: {
+        en: "What is seasonal color analysis?",
+        tr: "Mevsimsel renk analizi nedir?",
+        no: "Hva er sesongbasert fargeanalyse?",
+      },
+
+      text: {
+        en: "Seasonal color analysis is a system for identifying colors that harmonize with a person's natural coloring. Colors are compared according to three main characteristics: temperature, value, and chroma. The traditional system contains four seasons: Winter, Summer, Autumn, and Spring. Expanded systems divide these seasons into subseasons to describe a wider range of color characteristics. This project uses the 12-season system, although other approaches, such as 16-season systems, use additional categories or define the boundaries between palettes differently.",
+
+        tr: "Mevsimsel renk analizi, kişinin doğal renk özellikleriyle uyum sağlayan renkleri belirlemeye yönelik bir sistemdir. Renkler üç temel özelliğe göre karşılaştırılır: sıcaklık, değer ve kroma. Geleneksel sistem dört mevsim içerir: Winter, Summer, Autumn ve Spring. Genişletilmiş sistemler, daha geniş bir renk özellikleri yelpazesini tanımlamak için bu mevsimleri alt mevsimlere ayırır. Bu projede 12 mevsim sistemi kullanılmaktadır. Bununla birlikte, 16 mevsim sistemi gibi diğer yaklaşımlar ek kategoriler kullanabilir veya paletler arasındaki sınırları farklı şekilde tanımlayabilir.",
+
+        no: "Sesongbasert fargeanalyse er et system for å identifisere farger som harmonerer med en persons naturlige farger. Farger sammenlignes ut fra tre hovedegenskaper: temperatur, verdi og kroma. Det tradisjonelle systemet består av fire sesonger: Winter, Summer, Autumn og Spring. Utvidede systemer deler disse sesongene inn i undersesonger for å beskrive et bredere spekter av fargeegenskaper. Dette prosjektet bruker 12-sesongsystemet, men andre tilnærminger, som 16-sesongsystemer, bruker flere kategorier eller definerer grensene mellom palettene på andre måter.",
+      },
+
+      image: "/assets/otherprojects/wheel3.png",
+      imageAlt: "12-season seasonal color analysis wheel",
+    },
+
+    {
+      title: {
+        en: "The three dimensions of color",
+        tr: "Rengin üç boyutu",
+        no: "Fargens tre dimensjoner",
+      },
+
+      text: {
+        en: "Temperature, value, and chroma describe different properties of a color. Temperature describes the cool-to-warm dimension, value describes how light or dark a color is, and chroma describes its intensity, from soft and muted to bright and vivid. In seasonal color analysis, the relationship between these three dimensions helps distinguish one palette from another.",
+
+        tr: "Sıcaklık, değer ve kroma bir rengin farklı özelliklerini tanımlar. Sıcaklık, rengin soğuktan sıcağa uzanan boyutunu; değer, rengin ne kadar açık veya koyu olduğunu; kroma ise yumuşak ve soluk tonlardan parlak ve canlı tonlara uzanan renk yoğunluğunu tanımlar. Mevsimsel renk analizinde bu üç boyut arasındaki ilişki, bir renk paletini diğerinden ayırmaya yardımcı olur.",
+
+        no: "Temperatur, verdi og kroma beskriver ulike egenskaper ved en farge. Temperatur beskriver dimensjonen fra kjølig til varm, verdi beskriver hvor lys eller mørk en farge er, og kroma beskriver intensiteten, fra myk og dempet til klar og sterk. I sesongbasert fargeanalyse bidrar forholdet mellom disse tre dimensjonene til å skille én fargepalett fra en annen.",
+      },
+
+      // A visual explaining temperature, value, and chroma
+      // can be added to this row later.
+    },
+
+    {
+      title: {
+        en: "The 12-season system",
+        tr: "12 mevsim sistemi",
+        no: "12-sesongsystemet",
+      },
+
+      text: {
+        en: "The 12-season system begins with the four seasonal families and divides each into three subseasons. Each subseason reflects the interaction of temperature, value, and chroma, with one characteristic often being particularly important. Winter includes Cool Winter, Dark Winter, and Bright Winter. Summer includes Cool Summer, Light Summer, and Soft Summer. Autumn includes Warm Autumn, Dark Autumn, and Soft Autumn. Spring includes Warm Spring, Light Spring, and Bright Spring. The system is continuous rather than a collection of completely isolated palettes. Neighboring subseasons share characteristics. For example, Cool Winter and Cool Summer are connected by cool temperature, while Dark Winter and Dark Autumn share depth. This is why colors can sometimes work across neighboring palettes rather than belonging exclusively to one season.",
+
+        tr: "12 mevsim sistemi, dört ana mevsim ailesiyle başlar ve her birini üç alt mevsime ayırır. Her alt mevsim sıcaklık, değer ve kroma arasındaki etkileşimi yansıtır ve bu özelliklerden biri genellikle daha belirleyicidir. Winter; Cool Winter, Dark Winter ve Bright Winter alt mevsimlerini içerir. Summer; Cool Summer, Light Summer ve Soft Summer alt mevsimlerini içerir. Autumn; Warm Autumn, Dark Autumn ve Soft Autumn alt mevsimlerini içerir. Spring ise Warm Spring, Light Spring ve Bright Spring alt mevsimlerini içerir. Sistem, birbirinden tamamen bağımsız paletlerden oluşmak yerine bir süreklilik gösterir. Komşu alt mevsimler ortak özellikler taşır. Örneğin Cool Winter ve Cool Summer soğuk sıcaklık özelliğiyle bağlantılıyken, Dark Winter ve Dark Autumn koyuluk özelliğini paylaşır. Bu nedenle renkler yalnızca tek bir mevsime ait olmak yerine bazen komşu paletlerde de kullanılabilir.",
+
+        no: "12-sesongsystemet tar utgangspunkt i de fire sesongfamiliene og deler hver av dem inn i tre undersesonger. Hver undersesong gjenspeiler samspillet mellom temperatur, verdi og kroma, der én egenskap ofte er spesielt viktig. Winter inkluderer Cool Winter, Dark Winter og Bright Winter. Summer inkluderer Cool Summer, Light Summer og Soft Summer. Autumn inkluderer Warm Autumn, Dark Autumn og Soft Autumn. Spring inkluderer Warm Spring, Light Spring og Bright Spring. Systemet er kontinuerlig snarere enn en samling helt adskilte paletter. Nærliggende undersesonger deler egenskaper. For eksempel er Cool Winter og Cool Summer forbundet gjennom kjølig temperatur, mens Dark Winter og Dark Autumn deler dybde. Derfor kan enkelte farger fungere på tvers av nærliggende paletter i stedet for å tilhøre bare én sesong.",
+      },
+    },
+
+    {
+      title: {
+        en: "How does it work?",
+        tr: "Nasıl çalışır?",
+        no: "Hvordan fungerer det?",
+      },
+
+      text: {
+        en: "Seasonal color analysis is commonly performed through color draping: different colors are placed close to the face and compared under consistent lighting. Rather than asking whether a color is attractive on its own, the aim is to observe how the face appears in response to changes in temperature, value, and chroma. Useful comparisons change one characteristic at a time where possible, for example, a warm red against a cool red, a muted blue against a clear blue, or a light color against a deeper version of a similar hue. The observer looks for apparent changes in the complexion and facial definition. A harmonious color may make the complexion appear more even and the features more defined, while another color may emphasize shadows, redness, sallowness, or unevenness. The goal is to determine which patterns remain consistent across many different colors rather than judging a single drape. Photographs and digital tools can provide clues, but they introduce additional variables. Lighting, camera processing, white balance, exposure, displays, and image compression can all change the appearance of both skin and fabric. For this reason, digital analysis should be interpreted cautiously, particularly when distinguishing subtle differences in undertone.",
+
+        tr: "Mevsimsel renk analizi genellikle renk drapingi yoluyla yapılır: farklı renkler yüze yakın bir konuma yerleştirilir ve tutarlı aydınlatma koşullarında karşılaştırılır. Amaç, bir rengin tek başına güzel olup olmadığını değerlendirmek yerine, sıcaklık, değer ve kromadaki değişimlere karşı yüzün nasıl göründüğünü gözlemlemektir. Yararlı karşılaştırmalarda mümkün olduğunca tek bir özellik değiştirilir. Örneğin sıcak bir kırmızı soğuk bir kırmızıyla, soluk bir mavi daha berrak bir maviyle veya açık bir renk benzer tonun daha koyu bir versiyonuyla karşılaştırılabilir. Gözlemci, cilt görünümünde ve yüz hatlarının belirginliğinde oluşan değişikliklere bakar. Uyumlu bir renk cildin daha eşit görünmesini ve yüz hatlarının daha belirgin olmasını sağlayabilirken, başka bir renk gölgeleri, kızarıklığı, sarımsı görünümü veya renk eşitsizliklerini daha belirgin hale getirebilir. Amaç, tek bir drapinge göre karar vermek yerine birçok farklı renkte tutarlı şekilde tekrarlanan örüntüleri belirlemektir. Fotoğraflar ve dijital araçlar bazı ipuçları sağlayabilir, ancak ek değişkenler oluştururlar. Aydınlatma, kamera işlemleri, beyaz dengesi, pozlama, ekranlar ve görüntü sıkıştırması hem cildin hem de kumaşın görünümünü değiştirebilir. Bu nedenle, özellikle alt tonlar arasındaki küçük farkları ayırt ederken dijital analiz dikkatli yorumlanmalıdır.",
+        
+        no: "Sesongbasert fargeanalyse utføres vanligvis ved hjelp av fargedrapering: ulike farger plasseres nær ansiktet og sammenlignes under konsistente lysforhold. I stedet for å vurdere om en farge er attraktiv i seg selv, er målet å observere hvordan ansiktet fremstår når temperatur, verdi og kroma endres. Nyttige sammenligninger endrer så langt det er mulig én egenskap om gangen, for eksempel en varm rød mot en kjølig rød, en dempet blå mot en klar blå eller en lys farge mot en mørkere variant av en lignende nyanse. Man ser etter synlige endringer i hudens utseende og definisjonen av ansiktstrekkene. En harmonisk farge kan få huden til å fremstå jevnere og ansiktstrekkene tydeligere, mens en annen farge kan fremheve skygger, rødhet, gulaktige toner eller ujevnheter. Målet er å finne mønstre som gjentar seg på tvers av mange forskjellige farger, i stedet for å trekke en konklusjon basert på én enkelt drapering. Fotografier og digitale verktøy kan gi enkelte indikasjoner, men de introduserer også flere variabler. Belysning, kamerabehandling, hvitbalanse, eksponering, skjermer og bildekomprimering kan alle endre hvordan både hud og tekstiler fremstår. Derfor bør digital analyse tolkes med forsiktighet, særlig når man forsøker å skille mellom små forskjeller i undertone.",
+      },
+    },
+
+    {
+      title: {
+        en: "Finding your own pattern",
+        tr: "Kendi renk örüntünüzü bulmak",
+        no: "Finn ditt eget fargemønster",
+      },
+
+      text: {
+        en: "You can begin by looking for patterns across the three dimensions rather than trying to identify a season immediately. Compare similar colors with different temperatures and observe whether your complexion appears more balanced beside cooler or warmer colors. Then compare different values. Do very dark colors create definition or overpower you? Do lighter colors harmonize with your coloring or make you appear washed out? Finally, compare clear, saturated colors with muted versions of similar hues. Do vivid colors bring clarity to your features, or does the color become the first thing you notice? Do softer colors create harmony, or make your complexion appear dull? No single comparison determines a season. The useful information comes from repeated patterns across many drapes.",
+
+        tr: "Doğrudan bir mevsim belirlemeye çalışmak yerine, üç renk boyutu boyunca tekrar eden örüntüleri gözlemleyerek başlayabilirsiniz. Farklı sıcaklıklara sahip benzer renkleri karşılaştırın ve cildinizin daha soğuk mu yoksa daha sıcak renklerin yanında mı daha dengeli göründüğünü gözlemleyin. Ardından farklı değerleri karşılaştırın. Çok koyu renkler yüz hatlarınızı daha belirgin mi gösteriyor, yoksa sizi bastırıyor mu? Daha açık renkler doğal renklerinizle uyum mu sağlıyor, yoksa sizi solgun mu gösteriyor? Son olarak, berrak ve doygun renkleri benzer tonların daha soluk versiyonlarıyla karşılaştırın. Canlı renkler yüz hatlarınıza netlik mi kazandırıyor, yoksa ilk fark edilen şey rengin kendisi mi oluyor? Daha yumuşak renkler uyum mu yaratıyor, yoksa cildinizi donuk mu gösteriyor? Tek bir karşılaştırma mevsiminizi belirlemez. Yararlı bilgi, birçok farklı draping boyunca tekrarlanan örüntülerden elde edilir.",
+
+        no: "Du kan begynne med å se etter mønstre på tvers av de tre dimensjonene i stedet for å prøve å identifisere en sesong med en gang. Sammenlign lignende farger med ulik temperatur, og observer om huden fremstår mer balansert ved siden av kjøligere eller varmere farger. Sammenlign deretter ulike verdier. Gir svært mørke farger mer definisjon, eller blir de dominerende? Harmoniserer lysere farger med dine naturlige farger, eller får de deg til å se utvasket ut? Til slutt kan du sammenligne klare, mettede farger med mer dempede varianter av lignende nyanser. Gir sterke farger ansiktstrekkene mer klarhet, eller blir selve fargen det første man legger merke til? Skaper mykere farger harmoni, eller får de huden til å fremstå gusten? Ingen enkelt sammenligning avgjør hvilken sesong du tilhører. Den nyttige informasjonen kommer fra mønstre som gjentar seg på tvers av mange draperinger.",
+      },
+
+      // A visual guide for comparing temperature, value, and chroma
+      // can be added to this row later.
+    },
+
+    {
+      type: "carousel",
+      showDots: true,
+
+      title: {
+        en: "My Journey",
+        tr: "Benim Yolculuğum",
+        no: "Min Reise",
+      },
+
+      text: {
+        en: "I've been interested in seasonal color analysis since 2023. Initially, I thought I might be a Dark Autumn or Dark Winter. I began experimenting with color draping and shared the results with a seasonal color analysis community, where most people identified my coloring with the Winter family. I later had a professional color analysis and was classified as a Cool Winter, a Winter subseason in which cool temperature is the dominant characteristic. Since then, I have experimented with how this palette translates into clothing, hair color, makeup, and jewelry. The photographs on this page document part of that process and allow the same face to be compared across colors with different temperatures, values, and chroma.",
+
+        tr: "2023 yılından beri mevsimsel renk analiziyle ilgileniyorum. Başlangıçta Dark Autumn veya Dark Winter olabileceğimi düşünüyordum. Renk drapingiyle denemeler yapmaya başladım ve sonuçları bir mevsimsel renk analizi topluluğuyla paylaştım. Buradaki çoğu kişi renk özelliklerimi Winter ailesiyle ilişkilendirdi. Daha sonra profesyonel bir renk analizi yaptırdım ve soğuk sıcaklığın baskın özellik olduğu bir Winter alt mevsimi olan Cool Winter olarak sınıflandırıldım. O zamandan beri bu paletin giyim, saç rengi, makyaj ve takı seçimlerime nasıl yansıdığını deneyimliyorum. Bu sayfadaki fotoğraflar bu sürecin bir bölümünü belgeliyor ve aynı yüzün farklı sıcaklık, değer ve kromaya sahip renklerle karşılaştırılmasını sağlıyor.",
+
+        no: "Jeg har vært interessert i sesongbasert fargeanalyse siden 2023. I begynnelsen trodde jeg at jeg kunne være Dark Autumn eller Dark Winter. Jeg begynte å eksperimentere med fargedrapering og delte resultatene med et miljø for sesongbasert fargeanalyse, der de fleste mente at fargene mine passet inn i Winter-familien. Senere tok jeg en profesjonell fargeanalyse og ble klassifisert som Cool Winter, en Winter-undersesong der kjølig temperatur er den dominerende egenskapen. Siden den gang har jeg eksperimentert med hvordan denne paletten kan brukes i klær, hårfarge, sminke og smykker. Fotografiene på denne siden dokumenterer en del av denne prosessen og gjør det mulig å sammenligne det samme ansiktet med farger som har ulik temperatur, verdi og kroma.",
+      },
+
+      images: [
+        {
+          src: "/assets/otherprojects/blues.png",
+          alt: "Blue draping comparison",
+        },
+        {
+          src: "/assets/otherprojects/reds.png",
+          alt: "Red draping comparison",
+        },
+        {
+          src: "/assets/otherprojects/greens.png",
+          alt: "Green draping comparison",
+        },
+        {
+          src: "/assets/otherprojects/oranges.png",
+          alt: "Orange draping comparison",
+        },
+        {
+          src: "/assets/otherprojects/darkneutrals.png",
+          alt: "Dark neutral draping comparison",
+        },
+        {
+          src: "/assets/otherprojects/lightneutrals.png",
+          alt: "Light neutral draping comparison",
+        },
+      ],
+    },
+  ],
+},
 
   photography: {
     slug: "photography",
@@ -608,9 +697,9 @@ no: [
 
       {
         title: {
-          en: "Cherry Tomato Starter with Pomegranate Molasses",
-          tr: "Nar Ekşili Cherry Domates Başlangıcı",
-          no: "Cherrytomater med granateplemelasse",
+          en: "Tomato Appetizer",
+          tr: "Domatesli başlangıç",
+          no: "Tomatforrett",
         },
         text: {
           en: {
