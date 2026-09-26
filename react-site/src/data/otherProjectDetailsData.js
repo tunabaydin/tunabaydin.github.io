@@ -518,6 +518,194 @@ no: [
         imageAlt: "Chocolate banana protein pancakes with raspberries and cashews",
       },
 
+     {
+  title: {
+    en: "Peanut Butter, Banana & Vanilla Protein Muffins",
+    tr: "Fıstık Ezmeli, Muzlu ve Vanilyalı Protein Muffin",
+    no: "Proteinmuffins med peanøttsmør, banan og vanilje",
+  },
+
+  text: {
+    en: {
+      description:
+        "Soft peanut butter and banana muffins with vanilla protein powder. A simple higher-protein version of a classic banana muffin.",
+
+      ingredientsTitle: "Ingredients",
+      ingredients: [
+        "1 large very ripe banana, mashed",
+        "1 egg",
+        "60 g peanut butter",
+        "20 g vanilla protein powder (1 scoop)",
+        "40 g oat flour",
+        "40 g all-purpose flour",
+        "2 heaping tbsp Greek yogurt",
+        "1 tbsp olive oil or neutral vegetable oil",
+        "20 g sugar",
+        "1/2 tsp vanilla extract",
+        "1 tsp baking powder",
+        "1/4 tsp salt",
+        "6 tbsp milk",
+        "30–40 g chopped dark chocolate (optional)",
+      ],
+
+      methodTitle: "Method",
+      method:
+        "Preheat the oven to 180°C (170°C fan) and prepare 8 muffin cups. In a large bowl, mash the banana. Add the egg, peanut butter, Greek yogurt, oil, sugar, vanilla extract, and milk, and mix until combined. Add the vanilla protein powder, oat flour, all-purpose flour, baking powder, and salt directly to the bowl. Mix gently until just combined. Fold in the dark chocolate if using. Divide the batter evenly between 8 muffin cups and bake for 25 minutes, or until a toothpick inserted into the center comes out clean or with a few moist crumbs. Allow to cool slightly before serving.",
+    },
+
+    tr: {
+      description:
+        "Vanilyalı protein tozu ile hazırlanan yumuşak fıstık ezmeli ve muzlu muffinler. Klasik muzlu muffinin pratik ve protein içeriği artırılmış bir versiyonu.",
+
+      ingredientsTitle: "Malzemeler",
+      ingredients: [
+        "1 büyük ve iyice olgunlaşmış muz, ezilmiş",
+        "1 yumurta",
+        "60 g fıstık ezmesi",
+        "20 g vanilyalı protein tozu (1 ölçek)",
+        "40 g yulaf unu",
+        "40 g normal un",
+        "2 dolu yemek kaşığı süzme yoğurt",
+        "1 yemek kaşığı zeytinyağı veya nötr bitkisel yağ",
+        "20 g şeker",
+        "1/2 çay kaşığı vanilya özütü",
+        "1 çay kaşığı kabartma tozu",
+        "1/4 çay kaşığı tuz",
+        "6 yemek kaşığı süt",
+        "30–40 g doğranmış bitter çikolata (isteğe bağlı)",
+      ],
+
+      methodTitle: "Hazırlanışı",
+      method:
+        "Fırını 180°C'ye (fanlı fırında 170°C) ısıtın ve 8 muffin kalıbını hazırlayın. Büyük bir kapta muzu ezin. Yumurta, fıstık ezmesi, süzme yoğurt, yağ, şeker, vanilya özütü ve sütü ekleyip karıştırın. Vanilyalı protein tozu, yulaf unu, normal un, kabartma tozu ve tuzu doğrudan aynı kaba ekleyin. Malzemeler birleşene kadar nazikçe karıştırın. Kullanıyorsanız bitter çikolatayı ekleyip hafifçe karıştırın. Hamuru 8 muffin kalıbına eşit şekilde paylaştırın ve 25 dakika, ortasına batırılan kürdan temiz veya birkaç nemli kırıntıyla çıkana kadar pişirin. Servis etmeden önce biraz soğumaya bırakın.",
+    },
+
+    no: {
+      description:
+        "Myke muffins med peanøttsmør, banan og vaniljeprotein. En enkel variant av klassiske bananmuffins med høyere proteininnhold.",
+
+      ingredientsTitle: "Ingredienser",
+      ingredients: [
+        "1 stor, godt moden banan, most",
+        "1 egg",
+        "60 g peanøttsmør",
+        "20 g vaniljeproteinpulver (1 måleskje)",
+        "40 g havremel",
+        "40 g hvetemel",
+        "2 toppede ss gresk yoghurt",
+        "1 ss olivenolje eller nøytral vegetabilsk olje",
+        "20 g sukker",
+        "1/2 ts vaniljeekstrakt",
+        "1 ts bakepulver",
+        "1/4 ts salt",
+        "6 ss melk",
+        "30–40 g hakket mørk sjokolade (valgfritt)",
+      ],
+
+      methodTitle: "Fremgangsmåte",
+      method:
+        "Forvarm ovnen til 180°C (170°C varmluft) og gjør klar 8 muffinsformer. Mos bananen i en stor bolle. Tilsett egg, peanøttsmør, gresk yoghurt, olje, sukker, vaniljeekstrakt og melk, og bland godt. Tilsett vaniljeproteinpulver, havremel, hvetemel, bakepulver og salt direkte i den samme bollen. Bland forsiktig til ingrediensene akkurat er kombinert. Vend inn mørk sjokolade hvis du bruker det. Fordel røren jevnt mellom 8 muffinsformer og stek i 25 minutter, eller til en tannpirker stukket inn i midten kommer ut ren eller med noen få fuktige smuler. La muffinsene avkjøles litt før servering.",
+    },
+  },
+
+  image: "/assets/otherprojects/proteinmuffins.jpg",
+  imageAlt: "Peanut butter banana vanilla protein muffins",
+},
+
+{
+  title: {
+    en: "Baked Leek & Vegetable Fritters",
+    tr: "Fırında Pırasalı Mücver",
+    no: "Ovnsbakt grønnsaksform med purre",
+  },
+
+  text: {
+    en: {
+      description:
+        "An easy oven-baked vegetable fritter with leeks, vegetables, yogurt, and cheese. Everything is mixed in one bowl and baked until golden.",
+
+      ingredientsTitle: "Ingredients",
+      ingredients: [
+        "2 leeks, finely sliced",
+        "2 small vegetables, such as zucchini, carrot, or potato, grated",
+        "2 eggs",
+        "3 heaping tbsp Greek yogurt",
+        "2 tbsp extra virgin olive oil",
+        "1 tbsp lemon juice",
+        "75–100 g feta cheese, crumbled",
+        "40–50 g grated cheese, plus extra for topping",
+        "60–70 g oat flour or regular flour",
+        "1/2 tsp baking soda",
+        "Salt and black pepper, to taste",
+        "Dried mint, to taste",
+        "Chili flakes, to taste (optional)",
+        "Sesame, pumpkin, and/or sunflower seeds, for topping",
+      ],
+
+      methodTitle: "Method",
+      method:
+        "Preheat the oven to 180°C (170°C fan). Add all ingredients except the topping cheese and seeds to a large bowl and mix well. The mixture should be thick and spoonable rather than runny; if it is very wet, add a little more flour. Transfer to a lightly oiled or parchment-lined baking dish and spread evenly. Top with grated cheese and your choice of seeds. Bake for 35–45 minutes, or until the center is set and the top is golden brown. Allow to cool slightly before slicing.",
+    },
+
+    tr: {
+      description:
+        "Pırasa, sebze, yoğurt ve peynirle hazırlanan pratik bir fırın mücveri. Tüm malzemeler tek bir kapta karıştırılır ve üzeri kızarana kadar fırında pişirilir.",
+
+      ingredientsTitle: "Malzemeler",
+      ingredients: [
+        "2 dal pırasa, ince doğranmış",
+        "2 küçük sebze; kabak, havuç veya patates, rendelenmiş",
+        "2 yumurta",
+        "3 dolu yemek kaşığı süzme yoğurt",
+        "2 yemek kaşığı sızma zeytinyağı",
+        "1 yemek kaşığı limon suyu",
+        "75–100 g beyaz peynir, ufalanmış",
+        "40–50 g rendelenmiş kaşar peyniri, ayrıca üzeri için biraz daha",
+        "60–70 g yulaf unu veya normal un",
+        "1/2 çay kaşığı karbonat",
+        "Damak tadına göre tuz ve karabiber",
+        "Damak tadına göre kuru nane",
+        "Damak tadına göre pul biber (isteğe bağlı)",
+        "Üzeri için susam, kabak çekirdeği ve/veya ay çekirdeği",
+      ],
+
+      methodTitle: "Hazırlanışı",
+      method:
+        "Fırını 180°C'ye (fanlı fırında 170°C) ısıtın. Üzeri için ayırdığınız peynir ve çekirdekler dışındaki tüm malzemeleri geniş bir kapta iyice karıştırın. Karışım akışkan değil, yoğun ve kaşıkla yayılabilecek kıvamda olmalıdır; çok suluysa biraz daha un ekleyin. Karışımı hafifçe yağlanmış veya pişirme kağıdı serilmiş bir fırın kabına aktarın ve eşit şekilde yayın. Üzerine rendelenmiş peynir ve tercih ettiğiniz çekirdekleri serpin. Ortası tamamen pişip üzeri kızarana kadar 35–45 dakika pişirin. Dilimlemeden önce biraz soğumaya bırakın.",
+    },
+
+    no: {
+      description:
+        "En enkel ovnsbakt grønnsaksrett med purre, grønnsaker, yoghurt og ost. Alt blandes i én bolle og stekes til overflaten er gyllen.",
+
+      ingredientsTitle: "Ingredienser",
+      ingredients: [
+        "2 purreløk, finsnittet",
+        "2 små grønnsaker, for eksempel squash, gulrot eller potet, revet",
+        "2 egg",
+        "3 toppede ss gresk yoghurt",
+        "2 ss extra virgin olivenolje",
+        "1 ss sitronsaft",
+        "75–100 g fetaost, smuldret",
+        "40–50 g revet gulost, pluss litt ekstra til toppen",
+        "60–70 g havremel eller vanlig hvetemel",
+        "1/2 ts natron",
+        "Salt og sort pepper etter smak",
+        "Tørket mynte etter smak",
+        "Chiliflak etter smak (valgfritt)",
+        "Sesamfrø, gresskarkjerner og/eller solsikkefrø til toppen",
+      ],
+
+      methodTitle: "Fremgangsmåte",
+      method:
+        "Forvarm ovnen til 180°C (170°C varmluft). Ha alle ingrediensene, bortsett fra osten og frøene som skal brukes på toppen, i en stor bolle og bland godt. Blandingen skal være tykk og kunne fordeles med en skje, ikke være rennende. Tilsett litt mer mel hvis den er veldig våt. Ha blandingen i en lett oljet eller bakepapirkledd ildfast form og fordel den jevnt. Topp med revet ost og ønskede frø. Stek i 35–45 minutter, til midten er gjennomstekt og toppen er gyllen. La retten avkjøles litt før den skjæres i stykker.",
+    },
+  },
+
+  image: "/assets/otherprojects/firindamucver.jpg",
+  imageAlt: "Baked leek and vegetable fritters",
+},
+
       {
         title: {
           en: "Vegetable & Lentil Stew with Brown Rice and Mango Yogurt",
