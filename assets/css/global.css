@@ -1135,6 +1135,84 @@ html.home-portal-transition.is-navigating {
   object-fit: contain;
 }
 
+/* Recipe filter and search */
+.recipe-filter {
+  max-width: 850px;
+  margin: 0 auto 42px;
+  padding: 24px;
+  text-align: center;
+}
+
+.recipe-filter h2 {
+  margin: 0 0 18px;
+  font-size: 1.4rem;
+}
+
+.recipe-filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.recipe-filter-buttons button {
+  padding: 8px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.recipe-filter-buttons button:hover {
+  border-color: #111;
+}
+
+.recipe-filter-buttons button.active {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+.recipe-search {
+  width: 100%;
+  max-width: 420px;
+  padding: 11px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 999px;
+  background: #fff;
+  color: #111;
+  font: inherit;
+  outline: none;
+}
+
+.recipe-search:focus {
+  border-color: #111;
+}
+
+@media (max-width: 600px) {
+  .recipe-filter {
+    padding: 16px 8px;
+    margin-bottom: 28px;
+  }
+
+  .recipe-filter h2 {
+    font-size: 1.2rem;
+  }
+
+  .recipe-filter-buttons {
+    gap: 6px;
+  }
+
+  .recipe-filter-buttons button {
+    padding: 7px 12px;
+    font-size: 0.9rem;
+  }
+}
+
 /* Responsive */
 @media (max-width: 800px) {
   .photo-row,

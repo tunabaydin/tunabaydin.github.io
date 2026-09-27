@@ -402,8 +402,10 @@ no: [
     layout: "photography",
     rows: [
       {
-        title: {
-          en: "Salty Chia Pudding (Tzatziki Chia)",
+  categories: ["savory", "snack"],
+
+  title: {
+    en: "Salty Chia Pudding (Tzatziki Chia)",
           tr: "Tuzlu Chia Puding (Cacık Chia)",
           no: "Saltet Chia Pudding (tzatziki-chia)",
         },
@@ -438,8 +440,10 @@ no: [
       },
 
       {
-        title: {
-          en: "Protein Pancakes",
+  categories: ["sweet", "breakfast", "snack"],
+
+  title: {
+    en: "Protein Pancakes",
           tr: "Proteinli Pankek",
           no: "Proteinpannekaker",
         },
@@ -518,11 +522,13 @@ no: [
         imageAlt: "Chocolate banana protein pancakes with raspberries and cashews",
       },
 
-     {
+  {
+  categories: ["sweet", "snack", "dessert"],
+
   title: {
-    en: "Peanut Butter, Banana & Vanilla Protein Muffins",
-    tr: "Fıstık Ezmeli, Muzlu ve Vanilyalı Protein Muffin",
-    no: "Proteinmuffins med peanøttsmør, banan og vanilje",
+    en: "Peanut Butter & Banana Muffins",
+    tr: "Fıstık Ezmeli ve Muzlu Muffin",
+    no: "Muffins med peanøttsmør og banan",
   },
 
   text: {
@@ -613,6 +619,8 @@ no: [
 },
 
 {
+  categories: ["savory", "lunch", "dinner"],
+
   title: {
     en: "Baked Leek & Vegetable Fritters",
     tr: "Fırında Pırasalı Mücver",
@@ -707,7 +715,9 @@ no: [
 },
 
       {
-        title: {
+  categories: ["savory", "dinner"],
+
+    title: {
           en: "Vegetable & Lentil Stew with Brown Rice and Mango Yogurt",
           tr: "Sebzeli ve Mercimekli Güveç, Esmer Pirinç ve Mangolu Yoğurt",
           no: "Grønnsaks- og linsegryte med fullkornsris og mangoyoghurt",
@@ -814,9 +824,11 @@ no: [
         imageAlt: "Vegetable and lentil stew with brown rice and mango yogurt",
       },
 
-      {
-        title: {
-          en: "Greek Yogurt Egg Salad",
+     {
+  categories: ["savory", "lunch", "snack"],
+
+  title: {
+    en: "Greek Yogurt Egg Salad",
           tr: "Yunan Yoğurtlu Yumurta Salatası",
           no: "Eggesalat med gresk yoghurt",
         },
@@ -884,8 +896,10 @@ no: [
       },
 
       {
-        title: {
-          en: "Tomato Appetizer",
+  categories: ["savory", "snack"],
+
+  title: {
+    en: "Tomato Appetizer",
           tr: "Domatesli başlangıç",
           no: "Tomatforrett",
         },

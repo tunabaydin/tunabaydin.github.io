@@ -12,9 +12,49 @@ export default function ProjectDetail() {
   const content = siteContent[currentLang] || siteContent.en;
   const project = otherProjectDetailsData[slug];
 
-  if (!project) {
+const [recipeFilter, setRecipeFilter] = useState(null);
+const [recipeSearch, setRecipeSearch] = useState("");
+
+if (!project) {
     return <Navigate to={`/${currentLang}`} replace />;
   }
+
+const filteredRows =
+  slug === "recipes"
+    ? project.rows.filter((row) => {
+        const matchesFilter =
+  recipeFilter === "all" ||
+  (recipeFilter && row.categories?.includes(recipeFilter));
+
+        const searchTerm = recipeSearch.trim().toLowerCase();
+
+        const searchableText = [
+          row.title?.[currentLang],
+          row.text?.[currentLang]?.description,
+          ...(row.text?.[currentLang]?.ingredients || []),
+        ]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase();
+
+        const matchesSearch =
+  searchTerm !== "" && searchableText.includes(searchTerm);
+
+if (!recipeFilter && searchTerm === "") {
+  return false;
+}
+
+if (!recipeFilter) {
+  return matchesSearch;
+}
+
+if (searchTerm === "") {
+  return matchesFilter;
+}
+
+return matchesFilter && matchesSearch;
+      })
+    : project.rows;
 
   const getLocalizedText = (value) => {
     if (typeof value === "string") {
@@ -72,13 +112,61 @@ export default function ProjectDetail() {
       </div>
 
       <div className="other-project-card">
-        {project.intro && (
-          <p className="other-project-intro">{getLocalizedText(project.intro)}</p>
-        )}
+  {project.intro && (
+    <p className="other-project-intro">{getLocalizedText(project.intro)}</p>
+  )}
 
-        {project.layout === "photography" && (
+  {slug === "recipes" && (
+    <div className="recipe-filter">
+      <h2>
+        {currentLang === "tr"
+          ? "Ne yemek istersiniz?"
+          : currentLang === "no"
+          ? "Hva har du lyst på?"
+          : "What are you in the mood for?"}
+      </h2>
+
+      <div className="recipe-filter-buttons">
+        {[
+          ["all", { en: "All recipes", tr: "Tüm tarifler", no: "Alle oppskrifter" }],
+          ["savory", { en: "Savory", tr: "Tuzlu", no: "Salt" }],
+          ["sweet", { en: "Sweet", tr: "Tatlı", no: "Søtt" }],
+          ["breakfast", { en: "Breakfast", tr: "Kahvaltı", no: "Frokost" }],
+          ["lunch", { en: "Lunch", tr: "Öğle yemeği", no: "Lunsj" }],
+          ["dinner", { en: "Dinner", tr: "Akşam yemeği", no: "Middag" }],
+          ["snack", { en: "Snack", tr: "Atıştırmalık", no: "Mellommåltid" }],
+          ["dessert", { en: "Dessert", tr: "Tatlı", no: "Dessert" }],
+        ].map(([value, label]) => (
+          <button
+            key={value}
+            type="button"
+            className={recipeFilter === value ? "active" : ""}
+            onClick={() => setRecipeFilter(value)}
+          >
+            {label[currentLang] || label.en}
+          </button>
+        ))}
+      </div>
+
+      <input
+        type="search"
+        className="recipe-search"
+        value={recipeSearch}
+        onChange={(e) => setRecipeSearch(e.target.value)}
+        placeholder={
+          currentLang === "tr"
+            ? "Tariflerde ara..."
+            : currentLang === "no"
+            ? "Søk i oppskrifter..."
+            : "Search recipes..."
+        }
+      />
+    </div>
+  )}
+
+  {project.layout === "photography" && (
           <div className="photo-section">
-            {project.rows.map((row, index) => (
+            {filteredRows.map((row, index) => (
               <div className={`photo-row ${row.rowClass || ""}`} key={index}>
                 <div
                   className="photo-media"
