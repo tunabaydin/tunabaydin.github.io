@@ -402,7 +402,7 @@ no: [
     layout: "photography",
     rows: [
       {
-  categories: ["savory", "snack"],
+  categories: ["savory", "snack", "vegetarian", "lunch"],
 
   title: {
     en: "Salty Chia Pudding (Tzatziki Chia)",
@@ -413,9 +413,9 @@ no: [
   en: {
     description: "We have all had or heard of sweet chia puddings before. As a person who loves savory snacks, I came up with a salty chia pudding, which is essentially a more nutritious tzatziki.",
     ingredientsTitle: "Ingredients",
-    ingredients: ["Greek/Turkish yogurt", "Chia seeds", "Cucumber", "Garlic", "Fresh mint leaves", "Olive oil", "Salt", "Dried mint"],
+    ingredients: ["Turkish/Greek yogurt", "Chia seeds", "Cucumber", "Garlic", "Fresh mint leaves", "Olive oil", "Salt", "Dried mint"],
     methodTitle: "Preparation",
-    method: "Hydrate the chia seeds for 5–10 minutes until you obtain a thick pudding. Then add Greek yogurt, grated or diced cucumber, chopped garlic, chopped fresh mint leaves, olive oil, salt, and dried mint to taste. There are no exact measurements for this recipe.",
+    method: "Hydrate the chia seeds for 5–10 minutes until you obtain a thick pudding. Then add Turkish/Greek yogurt, grated or diced cucumber, chopped garlic, chopped fresh mint leaves, olive oil, salt, and dried mint to taste. There are no exact measurements for this recipe.",
   },
   tr: {
     description: "Hepimiz daha önce tatlı chia pudingleri yemiş ya da duymuşuzdur. Tuzlu atıştırmalıkları seven biri olarak, aslında daha besleyici bir cacık olan bu tuzlu chia pudingi geliştirdim.",
@@ -427,7 +427,7 @@ no: [
   no: {
     description: "Vi har alle smakt eller hørt om søte chia puddinger før. Som en person som liker salte snacks, fant jeg på en salt chia pudding, som egentlig er en mer næringsrik tzatziki.",
     ingredientsTitle: "Ingredienser",
-    ingredients: ["Gresk/tyrkisk yoghurt", "Chiafrø", "Agurk", "Hvitløk", "Ferske mynteblader", "Olivenolje", "Salt", "Tørket mynte"],
+    ingredients: ["Gresk yoghurt", "Chiafrø", "Agurk", "Hvitløk", "Ferske mynteblader", "Olivenolje", "Salt", "Tørket mynte"],
     methodTitle: "Fremgangsmåte",
     method: "La chiafrøene hydrere i 5–10 minutter til du får en tykk pudding. Tilsett deretter gresk yoghurt, revet eller hakket agurk, hakket hvitløk, ferske mynteblader, olivenolje, salt og tørket mynte etter smak. Det finnes ingen eksakte mål i denne oppskriften.",
   },
@@ -440,7 +440,7 @@ no: [
       },
 
       {
-  categories: ["sweet", "breakfast", "snack"],
+  categories: ["sweet", "breakfast", "snack", "vegetarian"],
 
   title: {
     en: "Protein Pancakes",
@@ -523,7 +523,7 @@ no: [
       },
 
   {
-  categories: ["sweet", "snack", "dessert"],
+  categories: ["sweet", "snack", "dessert", "vegetarian"],
 
   title: {
     en: "Peanut Butter & Banana Muffins",
@@ -544,7 +544,7 @@ no: [
         "20 g vanilla protein powder (1 scoop)",
         "40 g oat flour",
         "40 g all-purpose flour",
-        "2 heaping tbsp Greek yogurt",
+        "2 heaping tbsp Turkish/Greek yogurt",
         "1 tbsp olive oil or neutral vegetable oil",
         "20 g sugar",
         "1/2 tsp vanilla extract",
@@ -556,7 +556,7 @@ no: [
 
       methodTitle: "Method",
       method:
-        "Preheat the oven to 180°C (170°C fan) and prepare 8 muffin cups. In a large bowl, mash the banana. Add the egg, peanut butter, Greek yogurt, oil, sugar, vanilla extract, and milk, and mix until combined. Add the vanilla protein powder, oat flour, all-purpose flour, baking powder, and salt directly to the bowl. Mix gently until just combined. Fold in the dark chocolate if using. Divide the batter evenly between 8 muffin cups and bake for 25 minutes, or until a toothpick inserted into the center comes out clean or with a few moist crumbs. Allow to cool slightly before serving.",
+        "Preheat the oven to 180°C (170°C fan) and prepare 8 muffin cups. In a large bowl, mash the banana. Add the egg, peanut butter, Turkish/Greek yogurt, oil, sugar, vanilla extract, and milk, and mix until combined. Add the vanilla protein powder, oat flour, all-purpose flour, baking powder, and salt directly to the bowl. Mix gently until just combined. Fold in the dark chocolate if using. Divide the batter evenly between 8 muffin cups and bake for 25 minutes, or until a toothpick inserted into the center comes out clean or with a few moist crumbs. Allow to cool slightly before serving.",
     },
 
     tr: {
@@ -571,7 +571,7 @@ no: [
         "20 g vanilyalı protein tozu (1 ölçek)",
         "40 g yulaf unu",
         "40 g normal un",
-        "2 dolu yemek kaşığı süzme yoğurt",
+        "2 dolu yemek kaşığı yoğurt",
         "1 yemek kaşığı zeytinyağı veya nötr bitkisel yağ",
         "20 g şeker",
         "1/2 çay kaşığı vanilya özütü",
@@ -583,7 +583,7 @@ no: [
 
       methodTitle: "Hazırlanışı",
       method:
-        "Fırını 180°C'ye (fanlı fırında 170°C) ısıtın ve 8 muffin kalıbını hazırlayın. Büyük bir kapta muzu ezin. Yumurta, fıstık ezmesi, süzme yoğurt, yağ, şeker, vanilya özütü ve sütü ekleyip karıştırın. Vanilyalı protein tozu, yulaf unu, normal un, kabartma tozu ve tuzu doğrudan aynı kaba ekleyin. Malzemeler birleşene kadar nazikçe karıştırın. Kullanıyorsanız bitter çikolatayı ekleyip hafifçe karıştırın. Hamuru 8 muffin kalıbına eşit şekilde paylaştırın ve 25 dakika, ortasına batırılan kürdan temiz veya birkaç nemli kırıntıyla çıkana kadar pişirin. Servis etmeden önce biraz soğumaya bırakın.",
+        "Fırını 180°C'ye (fanlı fırında 170°C) ısıtın ve 8 muffin kalıbını hazırlayın. Büyük bir kapta muzu ezin. Yumurta, fıstık ezmesi, yoğurt, yağ, şeker, vanilya özütü ve sütü ekleyip karıştırın. Vanilyalı protein tozu, yulaf unu, normal un, kabartma tozu ve tuzu doğrudan aynı kaba ekleyin. Malzemeler birleşene kadar nazikçe karıştırın. Kullanıyorsanız bitter çikolatayı ekleyip hafifçe karıştırın. Hamuru 8 muffin kalıbına eşit şekilde paylaştırın ve 25 dakika, ortasına batırılan kürdan temiz veya birkaç nemli kırıntıyla çıkana kadar pişirin. Servis etmeden önce biraz soğumaya bırakın.",
     },
 
     no: {
@@ -619,7 +619,7 @@ no: [
 },
 
 {
-  categories: ["savory", "lunch", "dinner"],
+  categories: ["savory", "lunch", "dinner", "vegetarian"],
 
   title: {
     en: "Baked Leek & Vegetable Fritters",
@@ -637,7 +637,7 @@ no: [
         "2 leeks, finely sliced",
         "2 small vegetables, such as zucchini, carrot, or potato, grated",
         "2 eggs",
-        "3 heaping tbsp Greek yogurt",
+        "3 heaping tbsp Turkish/Greek yogurt",
         "2 tbsp extra virgin olive oil",
         "1 tbsp lemon juice",
         "75–100 g feta cheese, crumbled",
@@ -664,7 +664,7 @@ no: [
         "2 dal pırasa, ince doğranmış",
         "2 küçük sebze; kabak, havuç veya patates, rendelenmiş",
         "2 yumurta",
-        "3 dolu yemek kaşığı süzme yoğurt",
+        "3 dolu yemek kaşığı yoğurt",
         "2 yemek kaşığı sızma zeytinyağı",
         "1 yemek kaşığı limon suyu",
         "75–100 g beyaz peynir, ufalanmış",
@@ -715,7 +715,7 @@ no: [
 },
 
       {
-  categories: ["savory", "dinner"],
+  categories: ["savory", "dinner", "lunch", "vegetarian", "vegan"],
 
     title: {
           en: "Vegetable & Lentil Stew with Brown Rice and Mango Yogurt",
@@ -728,6 +728,7 @@ no: [
               "A hearty vegetable and legume stew served with brown rice and a fresh mango yogurt sauce. Ground beef can also be added for a non-vegetarian version.",
             ingredientsTitle: "Ingredients",
             ingredients: [
+              "For the stew:",
               "3 tbsp olive oil",
               "1 medium onion, finely diced",
               "1 tbsp tomato paste",
@@ -742,9 +743,9 @@ no: [
               "1 tsp cumin",
               "1/2 tsp turmeric",
               "Salt and black pepper",
-              "Brown rice",
+              "For the brown rice:",
               "Olive oil, salt, and lemon juice for the rice",
-              "200 g Greek yogurt",
+              "200 g Turkish/Greek yogurt",
               "1/2 mango, finely diced",
               "1–2 tsp lemon juice",
               "1 tsp olive oil",
@@ -753,7 +754,7 @@ no: [
             ],
             methodTitle: "Preparation",
             method:
-              "Heat the olive oil over medium-high heat and cook the onion until softened and beginning to brown. Add the tomato and pepper pastes and cook briefly. Reduce the heat, add the garlic, and cook for another minute. Add the tomatoes, green lentils, chickpeas, red lentils, stock, cumin, turmeric, salt, and pepper. Simmer until the red lentils are nearly cooked, adding more stock or water if needed. Add the broccoli toward the end and cook until tender. Cook the brown rice normally, then season it with a little olive oil, salt, and lemon juice. For the sauce, mix the Greek yogurt with diced mango, lemon juice, olive oil, and a pinch of salt. Serve everything together. For a non-vegetarian version, ground beef can be browned with the onion at the beginning.",
+              "Heat the olive oil over medium-high heat and cook the onion until softened and beginning to brown. Add the tomato and pepper pastes and cook briefly. Reduce the heat, add the garlic, and cook for another minute. Add the tomatoes, green lentils, chickpeas, red lentils, stock, cumin, turmeric, salt, and pepper. Simmer until the red lentils are nearly cooked, adding more stock or water if needed. Add the broccoli toward the end and cook until tender. Cook the brown rice normally, then season it with a little olive oil, salt, and lemon juice. For the sauce, mix the Turkish/Greek yogurt with diced mango, lemon juice, olive oil, and a pinch of salt. Serve everything together. For a non-vegetarian version, ground beef can be browned with the onion at the beginning.",
           },
           tr: {
             description:
@@ -824,22 +825,87 @@ no: [
         imageAlt: "Vegetable and lentil stew with brown rice and mango yogurt",
       },
 
-     {
-  categories: ["savory", "lunch", "snack"],
+      
+{
+  categories: ["savory", "lunch", "dinner", "vegetarian", "vegan"],
 
   title: {
-    en: "Turkish/Greek Yogurt Egg Salad",
+    en: "Lemon-Dressed Raw Broccoli",
+    tr: "Limonlu Çiğ Brokoli Salatası",
+    no: "Rå brokkolisalat med sitron",
+  },
+
+  text: {
+    en: {
+      description:
+        "A simple, fresh broccoli salad that I like serving alongside dishes such as orange-glazed salmon.",
+      ingredientsTitle: "Ingredients",
+      ingredients: [
+        "1 head of broccoli",
+        "Freshly squeezed lemon juice, to taste",
+        "Extra-virgin olive oil",
+        "Salt",
+        "Freshly ground black pepper",
+      ],
+      methodTitle: "Preparation",
+      method:
+        "Wash the broccoli and separate the florets from the thick stems. Remove most of the stem portions and chop the florets into small pieces. Keep the broccoli raw. Add freshly squeezed lemon juice, olive oil, salt, and black pepper to taste. Toss thoroughly until the broccoli is evenly coated, then serve.",
+    },
+
+    tr: {
+      description:
+        "Portakal soslu somon gibi yemeklerin yanında servis etmeyi sevdiğim, basit ve ferahlatıcı bir brokoli salatası.",
+      ingredientsTitle: "Malzemeler",
+      ingredients: [
+        "1 adet brokoli",
+        "Damak tadına göre taze sıkılmış limon suyu",
+        "Sızma zeytinyağı",
+        "Tuz",
+        "Taze çekilmiş karabiber",
+      ],
+      methodTitle: "Hazırlanışı",
+      method:
+        "Brokoliyi yıkayın ve çiçeklerini kalın saplarından ayırın. Sap kısımlarının büyük bölümünü çıkararak çiçekleri küçük parçalara doğrayın. Brokoliyi pişirmeden çiğ olarak kullanın. Üzerine damak tadınıza göre taze sıkılmış limon suyu, zeytinyağı, tuz ve karabiber ekleyin. Sos her yere dağılana kadar iyice karıştırıp servis edin.",
+    },
+
+    no: {
+      description:
+        "En enkel og frisk brokkolisalat som jeg liker å servere ved siden av retter som appelsinglasert laks.",
+      ingredientsTitle: "Ingredienser",
+      ingredients: [
+        "1 brokkolihode",
+        "Ferskpresset sitronsaft, etter smak",
+        "Extra virgin olivenolje",
+        "Salt",
+        "Nykvernet svart pepper",
+      ],
+      methodTitle: "Fremgangsmåte",
+      method:
+        "Vask brokkolien og skill bukettene fra de tykke stilkene. Fjern mesteparten av stilkene og kutt bukettene i små biter. Bruk brokkolien rå, uten å koke den. Tilsett ferskpresset sitronsaft, olivenolje, salt og svart pepper etter smak. Bland godt slik at dressingen fordeles jevnt, og server.",
+    },
+  },
+
+  image: "/assets/otherprojects/broccolisalad.jpg",
+  imageAlt: "Finely chopped raw broccoli salad with lemon dressing",
+},
+
+
+     {
+  categories: ["savory", "lunch", "snack", "vegetarian", "dinner"],
+
+  title: {
+          en: "Turkish/Greek Yogurt Egg Salad",
           tr: "Yumurta Salatası",
           no: "Eggesalat med gresk yoghurt",
         },
         text: {
           en: {
             description:
-              "A simple, fresh egg salad made with Greek yogurt instead of mayonnaise, with lime and Tajín for extra flavor.",
+              "A simple, fresh egg salad made with Turkish/Greek yogurt instead of mayonnaise, with lime and Tajín for extra flavor.",
             ingredientsTitle: "Ingredients",
             ingredients: [
               "3 hard-boiled eggs, roughly chopped",
-              "2–3 tbsp Greek yogurt",
+              "2–3 tbsp Turkish/Greek yogurt",
               "1 green onion, thinly sliced",
               "1 tsp olive oil",
               "1–2 tsp lime juice",
@@ -850,7 +916,7 @@ no: [
             ],
             methodTitle: "Preparation",
             method:
-              "Roughly chop the boiled eggs and combine them with the Greek yogurt, green onion, olive oil, and lime juice. Season with Tajín, salt, and black pepper. Add chili flakes if you like it spicy, and finish with fresh coriander, parsley, or dill if desired.",
+              "Roughly chop the boiled eggs and combine them with the Turkish/Greek yogurt, green onion, olive oil, and lime juice. Season with Tajín, salt, and black pepper. Add chili flakes if you like it spicy, and finish with fresh coriander, parsley, or dill if desired.",
           },
           tr: {
             description:
@@ -892,11 +958,11 @@ no: [
           },
         },
         image: "/assets/otherprojects/eggsalad.jpg",
-        imageAlt: "Greek yogurt egg salad with green onion and Tajín",
+        imageAlt: "Turkish/Greek yogurt egg salad with green onion and Tajín",
       },
 
       {
-  categories: ["savory", "snack"],
+  categories: ["savory", "snack", "lunch", "vegan", "vegetarian", "dinner"],
 
   title: {
     en: "Tomato Appetizer",
@@ -960,21 +1026,23 @@ no: [
         imageAlt: "Cherry tomato starter with pomegranate molasses",
       },
       
+
 {
-  categories: ["savory", "dinner"],
+  categories: ["savory", "dinner", "lunch"],
 
   title: {
-    en: "Orange-Glazed Salmon",
-    tr: "Portakal Soslu Somon",
-    no: "Laks med appelsinglasur",
+    en: "Orange-Glazed Salmon with Potato Puree",
+    tr: "Portakal Soslu Somon ve Patates Püresi",
+    no: "Appelsinglasert laks med potetpuré",
   },
 
   text: {
     en: {
       description:
-        "Oven-baked salmon with a sweet and savory orange, soy sauce, and honey glaze. I like serving it with creamy potato purée and lemon-dressed raw broccoli.",
+        "Oven-baked salmon with a sweet and savory orange, soy sauce, and honey glaze, served with creamy, cheesy potato puree. I also like serving it with lemon-dressed raw broccoli.",
       ingredientsTitle: "Ingredients",
       ingredients: [
+        "For the salmon:",
         "500 g salmon, approximately 4 pieces",
         "120 mL orange juice (1/2 cup)",
         "60 mL soy sauce (1/4 cup)",
@@ -983,17 +1051,26 @@ no: [
         "1 tsp sesame seeds",
         "1/2 tsp cornstarch (optional, for thickening)",
         "Orange slices (optional)",
+        "For the potato puree:",
+        "300 g potatoes",
+        "15 g butter",
+        "45–75 mL milk, as needed",
+        "30–45 g grated kaşar cheese or another mild yellow cheese",
+        "Salt and black pepper, to taste",
+        "Nutmeg and cardamom (optional)",
+
       ],
       methodTitle: "Preparation",
       method:
-        "Preheat the oven to 200°C. Mix the orange juice, soy sauce, honey, black pepper, and sesame seeds. If using cornstarch, mix it with a little cold orange juice before adding it to the sauce. Arrange the salmon in an oven-safe dish and pour the sauce over it. The fish will be partially submerged in the sauce. Add orange slices if desired. Bake until cooked through, checking the center with a food thermometer. My salmon took approximately 25 minutes, but the cooking time depends on the thickness of the pieces. For standard food-safety guidance, cook the center to 63°C. The recipe makes plenty of sauce, so you can use less if you prefer. Serve with potato purée and lemon-dressed broccoli.",
+        "Preheat the oven to 200°C. Mix the orange juice, soy sauce, honey, black pepper, and sesame seeds. If using cornstarch, mix it with a little cold orange juice before adding it to the sauce. Arrange the salmon in an oven-safe dish and pour the sauce over it. The fish will be partially submerged in the sauce. Add orange slices if desired. Bake until cooked through, checking the center with a food thermometer. My salmon took approximately 25 minutes, but the cooking time depends on the thickness of the pieces. For standard food-safety guidance, cook the center to 63°C. The recipe makes plenty of sauce, so you can use less if you prefer. For the potato puree, peel and cut the potatoes into chunks. Boil until tender, then drain and mash while still warm. Mix in the butter and gradually add warm milk until creamy. Stir in the grated cheese, season with salt and black pepper, and optionally add a pinch of nutmeg or cardamom. Serve the salmon with the potato puree and lemon-dressed raw broccoli.",
     },
 
     tr: {
       description:
-        "Portakal suyu, soya sosu ve balla hazırlanan tatlı-tuzlu sosla fırında pişirilmiş somon. Yanında kremamsı patates püresi ve limonlu çiğ brokoli servis etmeyi seviyorum.",
+        "Portakal suyu, soya sosu ve balla hazırlanan tatlı-tuzlu sosla fırında pişirilmiş somon, kaşar peynirli kremamsı patates püresiyle servis edilir. Yanında limonlu çiğ brokoli de servis etmeyi seviyorum.",
       ingredientsTitle: "Malzemeler",
       ingredients: [
+        "Somon için:",
         "500 g somon, yaklaşık 4 parça",
         "120 mL portakal suyu (1/2 su bardağı)",
         "60 mL soya sosu (1/4 su bardağı)",
@@ -1002,17 +1079,26 @@ no: [
         "1 çay kaşığı susam",
         "1/2 çay kaşığı mısır nişastası (sosu koyulaştırmak için, isteğe bağlı)",
         "Portakal dilimleri (isteğe bağlı)",
+        "Patates püresi için:",
+        "300 g patates",
+        "15 g tereyağı",
+        "45–75 mL süt, kıvama göre",
+        "30–45 g rendelenmiş kaşar peyniri",
+        "Damak tadına göre tuz ve karabiber",
+        "Muskat ve kakule (isteğe bağlı)",
+
       ],
       methodTitle: "Hazırlanışı",
       method:
-        "Fırını 200°C'ye ısıtın. Portakal suyu, soya sosu, bal, karabiber ve susamı karıştırın. Nişasta kullanıyorsanız önce az miktarda soğuk portakal suyuyla açıp sosa ekleyin. Somonları fırın kabına yerleştirin ve sosu üzerlerine dökün. Balıklar kısmen sosun içinde kalacaktır. İsterseniz portakal dilimleri ekleyin. Somonların kalınlığına göre pişme süresi değişeceği için iç sıcaklığını bir gıda termometresiyle kontrol edin. Benim somonlarım yaklaşık 25 dakikada pişti. Standart gıda güvenliği önerisi, iç sıcaklığın 63°C'ye ulaşmasıdır. Bu tarif bol soslu olduğu için dilerseniz sosun bir kısmını kullanabilirsiniz. Patates püresi ve limonlu brokoliyle servis edin.",
+        "Fırını 200°C'ye ısıtın. Portakal suyu, soya sosu, bal, karabiber ve susamı karıştırın. Nişasta kullanıyorsanız önce az miktarda soğuk portakal suyuyla açıp sosa ekleyin. Somonları fırın kabına yerleştirin ve sosu üzerlerine dökün. Balıklar kısmen sosun içinde kalacaktır. İsterseniz portakal dilimleri ekleyin. Somonların kalınlığına göre pişme süresi değişeceği için iç sıcaklığını bir gıda termometresiyle kontrol edin. Benim somonlarım yaklaşık 25 dakikada pişti. Standart gıda güvenliği önerisi, iç sıcaklığın 63°C'ye ulaşmasıdır. Bu tarif bol soslu olduğu için dilerseniz sosun bir kısmını kullanabilirsiniz. Patates püresi için patatesleri soyup doğrayın ve yumuşayana kadar haşlayın. Suyunu süzüp sıcakken ezin. Tereyağını ekleyin ve ılık sütü azar azar ilave ederek kremamsı bir kıvam elde edin. Rendelenmiş kaşar peynirini karıştırın, tuz ve karabiberle tatlandırın. İsterseniz bir tutam muskat veya kakule ekleyin. Somonu patates püresi ve limonlu çiğ brokoliyle servis edin.",
     },
 
     no: {
       description:
-        "Ovnsbakt laks med en søt og salt glasur av appelsinjuice, soyasaus og honning. Jeg liker å servere den med kremet potetmos og rå brokkoli med sitron.",
+        "Ovnsbakt laks med en søt og salt glasur av appelsinjuice, soyasaus og honning, servert med kremet potetpuré med ost. Jeg liker også å servere den med rå brokkoli med sitron.",
       ingredientsTitle: "Ingredienser",
       ingredients: [
+        "Til laksen:",
         "500 g laks, omtrent 4 stykker",
         "120 mL appelsinjuice (1/2 kopp)",
         "60 mL soyasaus (1/4 kopp)",
@@ -1021,16 +1107,25 @@ no: [
         "1 ts sesamfrø",
         "1/2 ts maisstivelse (valgfritt, for jevning)",
         "Appelsinskiver (valgfritt)",
+          "Til potetpureen:",
+          "300 g poteter",
+          "15 g smør",
+          "45–75 mL melk, etter behov",
+          "30–45 g revet gulost",
+          "Salt og svart pepper etter smak",
+          "Muskat og kardemomme (valgfritt)",
+
       ],
       methodTitle: "Fremgangsmåte",
       method:
-        "Forvarm ovnen til 200°C. Bland appelsinjuice, soyasaus, honning, svart pepper og sesamfrø. Hvis du bruker maisstivelse, rør den først ut i litt kald appelsinjuice før du tilsetter den i sausen. Legg laksen i en ildfast form og hell sausen over. Fisken vil ligge delvis i sausen. Legg på appelsinskiver om ønskelig. Stek til laksen er gjennomstekt, og kontroller kjernetemperaturen med et steketermometer. Min laks brukte omtrent 25 minutter, men steketiden avhenger av tykkelsen på stykkene. Standard anbefaling for mattrygghet er en kjernetemperatur på 63°C. Oppskriften gir rikelig med saus, så du kan bruke mindre hvis du ønsker det. Server med potetmos og brokkoli med sitron.",
+        "Forvarm ovnen til 200°C. Bland appelsinjuice, soyasaus, honning, svart pepper og sesamfrø. Hvis du bruker maisstivelse, rør den først ut i litt kald appelsinjuice før du tilsetter den i sausen. Legg laksen i en ildfast form og hell sausen over. Fisken vil ligge delvis i sausen. Legg på appelsinskiver om ønskelig. Stek til laksen er gjennomstekt, og kontroller kjernetemperaturen med et steketermometer. Min laks brukte omtrent 25 minutter, men steketiden avhenger av tykkelsen på stykkene. Standard anbefaling for mattrygghet er en kjernetemperatur på 63°C. Oppskriften gir rikelig med saus, så du kan bruke mindre hvis du ønsker det. Til potetpureen skreller du potetene og skjærer dem i biter. Kok dem møre, hell av vannet og mos dem mens de fortsatt er varme. Bland inn smøret og tilsett gradvis varm melk til pureen blir kremet. Rør inn revet gulost og smak til med salt og svart pepper. Tilsett eventuelt en klype muskat eller kardemomme. Server laksen med potetpuré og rå brokkoli med sitron.",
     },
   },
 
   image: "/assets/otherprojects/orangesalmon.jpg",
   imageAlt: "Orange-glazed salmon with sesame seeds",
 },
+
 
     ],
   },

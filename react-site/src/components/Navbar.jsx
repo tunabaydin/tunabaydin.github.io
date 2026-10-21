@@ -7,6 +7,12 @@ export default function Navbar() {
   const currentLang = lang || "en";
   const location = useLocation();
   const pathAfterLang = location.pathname.replace(/^\/(en|tr|no)/, "") || "";
+  
+const recipeParams =
+  location.pathname.replace(/\/$/, "").endsWith("/recipes")
+    ? location.search
+    : "";
+
 
   return (
     <nav className="top-nav" aria-label="Primary">
@@ -20,9 +26,11 @@ export default function Navbar() {
         </div>
 
         <div className="nav-lang" aria-label="Language">
-         <a className="nav-item lang-item" href={`/en${pathAfterLang}`}>EN</a>
-<a className="nav-item lang-item" href={`/tr${pathAfterLang}`}>TR</a>
-<a className="nav-item lang-item" href={`/no${pathAfterLang}`}>NO</a>
+
+<a className="nav-item lang-item" href={`/en${pathAfterLang}${recipeParams}`}>EN</a>
+<a className="nav-item lang-item" href={`/tr${pathAfterLang}${recipeParams}`}>TR</a>
+<a className="nav-item lang-item" href={`/no${pathAfterLang}${recipeParams}`}>NO</a>
+
         </div>
       </div>
     </nav>

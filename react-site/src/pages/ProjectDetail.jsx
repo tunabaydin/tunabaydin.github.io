@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { useParams, Navigate } from "react-router-dom";
+import { useParams, Navigate, useSearchParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { otherProjectDetailsData } from "../data/otherProjectDetailsData";
@@ -12,8 +11,39 @@ export default function ProjectDetail() {
   const content = siteContent[currentLang] || siteContent.en;
   const project = otherProjectDetailsData[slug];
 
-const [recipeFilter, setRecipeFilter] = useState(null);
-const [recipeSearch, setRecipeSearch] = useState("");
+
+
+const [searchParams, setSearchParams] = useSearchParams();
+
+const recipeFilter = searchParams.get("category") || null;
+const recipeSearch = searchParams.get("search") || "";
+
+const setRecipeFilter = (value) => {
+  setSearchParams((previous) => {
+    const next = new URLSearchParams(previous);
+    if (value) {
+      next.set("category", value);
+    } else {
+      next.delete("category");
+    }
+    return next;
+  }, { replace: true });
+};
+
+const setRecipeSearch = (value) => {
+  setSearchParams((previous) => {
+    const next = new URLSearchParams(previous);
+    if (value) {
+      next.set("search", value);
+    } else {
+      next.delete("search");
+    }
+    return next;
+  }, { replace: true });
+};
+
+
+
 
 if (!project) {
     return <Navigate to={`/${currentLang}`} replace />;
@@ -130,7 +160,9 @@ return matchesFilter && matchesSearch;
         {[
           ["all", { en: "All recipes", tr: "Tüm tarifler", no: "Alle oppskrifter" }],
           ["savory", { en: "Savory", tr: "Tuzlu", no: "Salt" }],
-          ["sweet", { en: "Sweet", tr: "Tatlı", no: "Søtt" }],
+          ["sweet", { en: "Sweet", tr: "Tatlı", no: "Søtt" }],  
+          ["vegetarian", { en: "Vegetarian", tr: "Vejetaryen", no: "Vegetar" }],
+          ["vegan", { en: "Vegan", tr: "Vegan", no: "Vegansk" }],
           ["breakfast", { en: "Breakfast", tr: "Kahvaltı", no: "Frokost" }],
           ["lunch", { en: "Lunch", tr: "Öğle yemeği", no: "Lunsj" }],
           ["dinner", { en: "Dinner", tr: "Akşam yemeği", no: "Middag" }],
@@ -208,11 +240,27 @@ return matchesFilter && matchesSearch;
         <p className="recipe-description">{recipeText.description}</p>
 
         <h3>{recipeText.ingredientsTitle}</h3>
-        <ul>
-          {(recipeText.ingredients || []).map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
-        </ul>
+        
+          <ul>
+            {(recipeText.ingredients || []).map((item, i) =>
+              item.endsWith(":") ? (
+                <li
+                  key={i}
+                  style={{
+                    listStyleType: "none",
+                    marginLeft: "-1.5rem",
+                    marginTop: "12px",
+                    fontWeight: 600,
+                  }}
+                >
+                  {item}
+                </li>
+              ) : (
+                <li key={i}>{item}</li>
+              )
+            )}
+          </ul>
+
 
         <h3>{recipeText.methodTitle}</h3>
         <p>{recipeText.method}</p>
