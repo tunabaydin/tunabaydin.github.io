@@ -715,7 +715,7 @@ no: [
 },
 
       {
-  categories: ["savory", "dinner", "lunch", "vegetarian", "vegan"],
+  categories: ["savory", "dinner", "lunch", "vegetarian"],
 
     title: {
           en: "Vegetable & Lentil Stew with Brown Rice and Mango Yogurt",
