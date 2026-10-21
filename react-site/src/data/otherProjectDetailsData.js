@@ -776,7 +776,7 @@ no: [
               "Tuz ve karabiber",
               "Esmer pirinç",
               "Pirinç için zeytinyağı, tuz ve limon suyu",
-              "200 g süzme veya Yunan yoğurdu",
+              "200 g yoğurt",
               "1/2 mango, küçük doğranmış",
               "1–2 çay kaşığı limon suyu",
               "1 çay kaşığı zeytinyağı",
@@ -828,8 +828,8 @@ no: [
   categories: ["savory", "lunch", "snack"],
 
   title: {
-    en: "Greek Yogurt Egg Salad",
-          tr: "Yunan Yoğurtlu Yumurta Salatası",
+    en: "Turkish/Greek Yogurt Egg Salad",
+          tr: "Yumurta Salatası",
           no: "Eggesalat med gresk yoghurt",
         },
         text: {
@@ -854,11 +854,11 @@ no: [
           },
           tr: {
             description:
-              "Mayonez yerine Yunan yoğurdu kullandığım, lime ve Tajín ile lezzetlendirilmiş hafif ve taze bir yumurta salatası.",
+              "Mayonez yerine yoğurt kullandığım, lime ve Tajín ile lezzetlendirilmiş hafif ve taze bir yumurta salatası.",
             ingredientsTitle: "Malzemeler",
             ingredients: [
               "3 haşlanmış yumurta, iri doğranmış",
-              "2–3 yemek kaşığı Yunan veya süzme yoğurt",
+              "2–3 yemek kaşığı yoğurt",
               "1 taze soğan, ince dilimlenmiş",
               "1 çay kaşığı zeytinyağı",
               "1–2 çay kaşığı lime suyu",
@@ -959,8 +959,82 @@ no: [
         image: "/assets/otherprojects/tomatostarter.jpg",
         imageAlt: "Cherry tomato starter with pomegranate molasses",
       },
+      
+{
+  categories: ["savory", "dinner"],
+
+  title: {
+    en: "Orange-Glazed Salmon",
+    tr: "Portakal Soslu Somon",
+    no: "Laks med appelsinglasur",
+  },
+
+  text: {
+    en: {
+      description:
+        "Oven-baked salmon with a sweet and savory orange, soy sauce, and honey glaze. I like serving it with creamy potato purée and lemon-dressed raw broccoli.",
+      ingredientsTitle: "Ingredients",
+      ingredients: [
+        "500 g salmon, approximately 4 pieces",
+        "120 mL orange juice (1/2 cup)",
+        "60 mL soy sauce (1/4 cup)",
+        "30 mL honey (1/8 cup)",
+        "1/2 tsp black pepper",
+        "1 tsp sesame seeds",
+        "1/2 tsp cornstarch (optional, for thickening)",
+        "Orange slices (optional)",
+      ],
+      methodTitle: "Preparation",
+      method:
+        "Preheat the oven to 200°C. Mix the orange juice, soy sauce, honey, black pepper, and sesame seeds. If using cornstarch, mix it with a little cold orange juice before adding it to the sauce. Arrange the salmon in an oven-safe dish and pour the sauce over it. The fish will be partially submerged in the sauce. Add orange slices if desired. Bake until cooked through, checking the center with a food thermometer. My salmon took approximately 25 minutes, but the cooking time depends on the thickness of the pieces. For standard food-safety guidance, cook the center to 63°C. The recipe makes plenty of sauce, so you can use less if you prefer. Serve with potato purée and lemon-dressed broccoli.",
+    },
+
+    tr: {
+      description:
+        "Portakal suyu, soya sosu ve balla hazırlanan tatlı-tuzlu sosla fırında pişirilmiş somon. Yanında kremamsı patates püresi ve limonlu çiğ brokoli servis etmeyi seviyorum.",
+      ingredientsTitle: "Malzemeler",
+      ingredients: [
+        "500 g somon, yaklaşık 4 parça",
+        "120 mL portakal suyu (1/2 su bardağı)",
+        "60 mL soya sosu (1/4 su bardağı)",
+        "30 mL bal (1/8 su bardağı)",
+        "1/2 çay kaşığı karabiber",
+        "1 çay kaşığı susam",
+        "1/2 çay kaşığı mısır nişastası (sosu koyulaştırmak için, isteğe bağlı)",
+        "Portakal dilimleri (isteğe bağlı)",
+      ],
+      methodTitle: "Hazırlanışı",
+      method:
+        "Fırını 200°C'ye ısıtın. Portakal suyu, soya sosu, bal, karabiber ve susamı karıştırın. Nişasta kullanıyorsanız önce az miktarda soğuk portakal suyuyla açıp sosa ekleyin. Somonları fırın kabına yerleştirin ve sosu üzerlerine dökün. Balıklar kısmen sosun içinde kalacaktır. İsterseniz portakal dilimleri ekleyin. Somonların kalınlığına göre pişme süresi değişeceği için iç sıcaklığını bir gıda termometresiyle kontrol edin. Benim somonlarım yaklaşık 25 dakikada pişti. Standart gıda güvenliği önerisi, iç sıcaklığın 63°C'ye ulaşmasıdır. Bu tarif bol soslu olduğu için dilerseniz sosun bir kısmını kullanabilirsiniz. Patates püresi ve limonlu brokoliyle servis edin.",
+    },
+
+    no: {
+      description:
+        "Ovnsbakt laks med en søt og salt glasur av appelsinjuice, soyasaus og honning. Jeg liker å servere den med kremet potetmos og rå brokkoli med sitron.",
+      ingredientsTitle: "Ingredienser",
+      ingredients: [
+        "500 g laks, omtrent 4 stykker",
+        "120 mL appelsinjuice (1/2 kopp)",
+        "60 mL soyasaus (1/4 kopp)",
+        "30 mL honning (1/8 kopp)",
+        "1/2 ts svart pepper",
+        "1 ts sesamfrø",
+        "1/2 ts maisstivelse (valgfritt, for jevning)",
+        "Appelsinskiver (valgfritt)",
+      ],
+      methodTitle: "Fremgangsmåte",
+      method:
+        "Forvarm ovnen til 200°C. Bland appelsinjuice, soyasaus, honning, svart pepper og sesamfrø. Hvis du bruker maisstivelse, rør den først ut i litt kald appelsinjuice før du tilsetter den i sausen. Legg laksen i en ildfast form og hell sausen over. Fisken vil ligge delvis i sausen. Legg på appelsinskiver om ønskelig. Stek til laksen er gjennomstekt, og kontroller kjernetemperaturen med et steketermometer. Min laks brukte omtrent 25 minutter, men steketiden avhenger av tykkelsen på stykkene. Standard anbefaling for mattrygghet er en kjernetemperatur på 63°C. Oppskriften gir rikelig med saus, så du kan bruke mindre hvis du ønsker det. Server med potetmos og brokkoli med sitron.",
+    },
+  },
+
+  image: "/assets/otherprojects/orangesalmon.jpg",
+  imageAlt: "Orange-glazed salmon with sesame seeds",
+},
+
     ],
   },
+
 
   collage: {
     slug: "collage",
