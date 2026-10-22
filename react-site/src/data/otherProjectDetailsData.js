@@ -885,7 +885,7 @@ no: [
     },
   },
 
-  image: "/assets/otherprojects/broccolisalad.jpg",
+  image: "/assets/otherprojects/broccoli2.jpg",
   imageAlt: "Finely chopped raw broccoli salad with lemon dressing",
 },
 
