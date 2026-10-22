@@ -73,6 +73,8 @@ books: {
     "The Power of Now - Eckhart Tolle",
     "Breaking the Habit of Being Yourself - Dr. Joe Dispenza",
     "The Alchemist - Paulo Coelho",
+    "Dopamine Nation - Dr. Anna Lembke",
+    "In the Realm of Hungry Ghosts - Dr. Gabor Maté"
   ],
 },
       sections: {
