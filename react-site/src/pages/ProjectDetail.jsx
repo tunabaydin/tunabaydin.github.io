@@ -18,6 +18,29 @@ const [searchParams, setSearchParams] = useSearchParams();
 const recipeFilter = searchParams.get("category") || null;
 const recipeSearch = searchParams.get("search") || "";
 
+const selectedRecipeIndex = searchParams.get("recipe");
+const selectedRecipe =
+  slug === "recipes" &&
+  selectedRecipeIndex !== null &&
+  /^\d+$/.test(selectedRecipeIndex)
+    ? project?.rows?.[Number(selectedRecipeIndex)] || null
+    : null;
+
+const openRecipe = (row) => {
+  const next = new URLSearchParams(searchParams);
+  next.set("recipe", String(project.rows.indexOf(row)));
+  setSearchParams(next);
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+const closeRecipe = () => {
+  const next = new URLSearchParams(searchParams);
+  next.delete("recipe");
+  setSearchParams(next);
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+
 const setRecipeFilter = (value) => {
   setSearchParams((previous) => {
     const next = new URLSearchParams(previous);
@@ -146,7 +169,7 @@ return matchesFilter && matchesSearch;
     <p className="other-project-intro">{getLocalizedText(project.intro)}</p>
   )}
 
-  {slug === "recipes" && (
+    {slug === "recipes" && !selectedRecipe && (
     <div className="recipe-filter">
       <h2>
         {currentLang === "tr"
@@ -196,9 +219,49 @@ return matchesFilter && matchesSearch;
     </div>
   )}
 
-  {project.layout === "photography" && (
+{slug === "recipes" && !selectedRecipe && (
+  <div className="recipe-grid">
+    {filteredRows.map((row) => (
+      <button
+        key={project.rows.indexOf(row)}
+        type="button"
+        className="recipe-grid-card"
+        onClick={() => openRecipe(row)}
+      >
+        <img
+          src={row.image || row.images?.[0]?.src}
+          alt={getLocalizedText(row.title)}
+          loading="lazy"
+        />
+        <div className="recipe-grid-card-content">
+          <h3>{getLocalizedText(row.title)}</h3>
+          <p>
+            {row.text?.[currentLang]?.description ||
+              row.text?.en?.description ||
+              ""}
+          </p>
+        </div>
+      </button>
+    ))}
+  </div>
+)}
+
+{slug === "recipes" && selectedRecipe && (
+  <div className="recipe-back">
+    <button type="button" onClick={closeRecipe}>
+      ← {currentLang === "tr"
+        ? "Tariflere dön"
+        : currentLang === "no"
+        ? "Tilbake til oppskriftene"
+        : "Back to recipes"}
+    </button>
+  </div>
+)}
+
+  {project.layout === "photography" &&
+  (slug !== "recipes" || selectedRecipe) && (
           <div className="photo-section">
-            {filteredRows.map((row, index) => (
+            {(slug === "recipes" ? [selectedRecipe] : filteredRows).map((row, index) => (
               <div className={`photo-row ${row.rowClass || ""}`} key={index}>
                 <div
                   className="photo-media"
