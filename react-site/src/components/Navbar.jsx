@@ -1,8 +1,13 @@
+import { useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { siteContent } from "../content/siteContent";
 
 export default function Navbar() {
   const { lang } = useParams();
+  useEffect(() => {
+    document.documentElement.lang = ["en", "tr", "no"].includes(lang) ? lang : "en";
+  }, [lang]);
+
   const content = siteContent[lang] || siteContent.en;
   const currentLang = lang || "en";
   const location = useLocation();
