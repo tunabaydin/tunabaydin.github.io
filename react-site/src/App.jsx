@@ -2,7 +2,6 @@ import "./App.css";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import PastLives from "./pages/PastLives";
-import ArtDetail from "./pages/ArtDetail";
 import DetailRouter from "./pages/DetailRouter";
 
 function App() {
