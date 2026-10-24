@@ -398,7 +398,7 @@ export default function Home() {
       <p>{hero.workText}</p>
 
       <a
-        href="YOUR_ETSY_SHOP_URL"
+        href="https://www.etsy.com/shop/TunaBaydinArt"
         target="_blank"
         rel="noopener noreferrer"
         className="etsy-shop-link"
