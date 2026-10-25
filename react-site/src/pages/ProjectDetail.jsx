@@ -5,13 +5,49 @@ import { otherProjectDetailsData } from "../data/otherProjectDetailsData";
 import { siteContent } from "../content/siteContent";
 import ProjectImageCarousel from "../components/ProjectImageCarousel";
 
+
+const turkishBaseContent = {
+  en: {
+    title: "The Base · Temel Harç",
+    intro:
+      "This dish starts with a cooking base I use in several Turkish home-style recipes.",
+    paragraphs: [
+      "Many everyday Turkish dishes start with a similar combination of ingredients. I usually begin by cooking onion with tomato paste and sweet red pepper paste in olive oil. When using minced beef, I cook it with the onion and salça.",
+      "I then reduce the heat, add finely chopped garlic, and cook briefly before adding chopped or grated tomatoes. I season the mixture with salt, black pepper, and cumin.",
+      "From here, I add the main ingredients for the dish. The amount of liquid and cooking time depend on what I'm preparing.",
+      "For a meat-free version, I simply leave out the minced beef.",
+    ],
+  },
+  tr: {
+    title: "Temel Harç",
+    intro:
+      "Bu yemek, birçok ev yemeğinde kullandığım temel bir harçla hazırlanıyor.",
+    paragraphs: [
+      "Günlük Türk mutfağındaki birçok yemek benzer bir harçla başlar. Ben genellikle soğanı, domates salçasını ve tatlı biber salçasını zeytinyağında kavurarak başlıyorum. Kıyma kullanıyorsam onu da soğan ve salçayla birlikte pişiriyorum.",
+      "Ardından ateşi biraz kısıp ince doğranmış sarımsağı ekliyorum. Kısa bir süre pişirdikten sonra doğranmış veya rendelenmiş domatesi ilave ediyorum. Tuz, karabiber ve kimyonla tatlandırıyorum.",
+      "Bu aşamadan sonra yemeğin ana malzemelerini ekliyorum. Eklediğim su miktarı ve pişirme süresi yemeğe göre değişiyor.",
+      "Etsiz bir versiyon hazırlamak istediğimde kıymayı kullanmıyorum.",
+    ],
+  },
+  no: {
+    title: "Grunnbasen · Temel Harç",
+    intro:
+      "Denne retten starter med en base jeg bruker i flere tyrkiske hverdagsretter.",
+    paragraphs: [
+      "Mange tyrkiske hverdagsretter starter med en lignende base. Jeg begynner vanligvis med å steke løk, konsentrert tomatpuré og søt paprikapuré i olivenolje. Hvis jeg bruker kjøttdeig, steker jeg den sammen med løken og puréene.",
+      "Deretter senker jeg varmen litt, tilsetter finhakket hvitløk og lar den steke en kort stund før jeg har i hakkede eller revne tomater. Jeg smaker til med salt, svart pepper og spisskummen.",
+      "Herfra tilsetter jeg hovedingrediensene i retten. Mengden væske og koketiden varierer etter hva jeg lager.",
+      "Hvis jeg ønsker en kjøttfri variant, utelater jeg ganske enkelt kjøttdeigen.",
+    ],
+  },
+};
+
+
 export default function ProjectDetail() {
   const { lang, slug } = useParams();
   const currentLang = lang || "en";
   const content = siteContent[currentLang] || siteContent.en;
   const project = otherProjectDetailsData[slug];
-
-
 
 const [searchParams, setSearchParams] = useSearchParams();
 
@@ -190,7 +226,7 @@ return matchesFilter && matchesSearch;
           ["lunch", { en: "Lunch", tr: "Öğle yemeği", no: "Lunsj" }],
           ["dinner", { en: "Dinner", tr: "Akşam yemeği", no: "Middag" }],
           ["snack", { en: "Snack", tr: "Atıştırmalık", no: "Mellommåltid" }],
-          ["dessert", { en: "Dessert", tr: "Tatlı", no: "Dessert" }],
+          ["turkish", { en: "Turkish Food", tr: "Türk Yemekleri", no: "Tyrkisk mat" }],
         ].map(([value, label]) => (
           <button
             key={value}
@@ -300,6 +336,54 @@ return matchesFilter && matchesSearch;
     const recipeText = row.text?.[currentLang] || row.text?.en || {};
     return (
       <div className="recipe-text">
+        
+{row.usesTurkishBase && (
+  <details
+    style={{
+      border: "1px solid #ccc",
+      borderRadius: "10px",
+      padding: "14px 18px",
+      marginBottom: "24px",
+    }}
+  >
+  
+<summary
+  style={{
+    cursor: "pointer",
+    fontWeight: 600,
+  }}
+>
+  {(turkishBaseContent[currentLang] || turkishBaseContent.en).title}
+  <span
+    style={{
+      display: "block",
+      marginTop: "5px",
+      fontSize: "13px",
+      fontWeight: 400,
+      color: "#666",
+    }}
+  >
+    {currentLang === "tr"
+      ? "Daha fazlasını okumak için tıklayın."
+      : currentLang === "no"
+      ? "Klikk for å lese mer."
+      : "Click to learn more."}
+  </span>
+</summary>
+
+
+    <p style={{ marginTop: "12px" }}>
+      {(turkishBaseContent[currentLang] || turkishBaseContent.en).intro}
+    </p>
+
+    {(turkishBaseContent[currentLang] || turkishBaseContent.en).paragraphs.map(
+      (paragraph, index) => (
+        <p key={index}>{paragraph}</p>
+      )
+    )}
+  </details>
+)}
+
         <p className="recipe-description">{recipeText.description}</p>
 
         <h3>{recipeText.ingredientsTitle}</h3>
@@ -325,8 +409,32 @@ return matchesFilter && matchesSearch;
           </ul>
 
 
-        <h3>{recipeText.methodTitle}</h3>
-        <p>{recipeText.method}</p>
+        
+<h3>{recipeText.methodTitle}</h3>
+<p>{recipeText.method}</p>
+
+{row.foragingImage && (
+  <img
+    src={row.foragingImage}
+    alt="Wild mushrooms collected in Norway"
+    loading="lazy"
+    style={{
+      display: "block",
+      width: "100%",
+      maxWidth: "480px",
+      height: "auto",
+      marginTop: "28px",
+      borderRadius: "12px",
+    }}
+  />
+)}
+
+{recipeText.note && (
+  <p style={{ marginTop: "16px" }}>
+    {recipeText.note}
+  </p>
+)}
+
       </div>
     );
   })()

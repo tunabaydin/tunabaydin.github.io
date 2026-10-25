@@ -523,7 +523,7 @@ no: [
       },
 
   {
-  categories: ["sweet", "snack", "dessert", "vegetarian"],
+  categories: ["sweet", "snack", "vegetarian"],
 
   title: {
     en: "Peanut Butter & Banana Muffins",
@@ -619,7 +619,7 @@ no: [
 },
 
 {
-  categories: ["savory", "lunch", "dinner", "vegetarian"],
+  categories: ["savory", "lunch", "dinner", "vegetarian", "turkish"],
 
   title: {
     en: "Baked Leek & Vegetable Fritters",
@@ -1025,7 +1025,703 @@ no: [
         image: "/assets/otherprojects/tomatostarter.jpg",
         imageAlt: "Cherry tomato starter with pomegranate molasses",
       },
-      
+     
+
+{
+  categories: ["sweet", "breakfast", "vegetarian"],
+
+  title: {
+    en: "Mango Coconut Chia Protein Pudding",
+    tr: "Mangolu ve Hindistan Cevizli Proteinli Chia Puding",
+    no: "Mango- og kokoschiapudding med protein",
+  },
+
+  text: {
+    en: {
+      description:
+        "A creamy mango chia protein pudding with coconut cream, oats, almond butter, and cashew butter. Frozen mango gives it a thick, almost ice-cream-like texture without needing to leave it in the fridge overnight.",
+
+      ingredientsTitle: "Ingredients",
+      ingredients: [
+        "1/3 cup oats (approximately 30 g)",
+        "1 cup coconut cream (240 ml)",
+        "300 g frozen mango",
+        "1 1/2 heaped tsp almond butter",
+        "1 1/2 heaped tsp cashew butter",
+        "2 tbsp chia seeds",
+        "12 tbsp water (180 ml)",
+        "1 scoop Plantforce protein powder (20 g)",
+        "1 heaped tsp honey",
+        "Optional toppings: frozen raspberries and coconut flakes",
+      ],
+
+      methodTitle: "Preparation",
+      method:
+        "Mix the chia seeds with 180 ml water in a separate bowl. Stir and leave to hydrate for 5–10 minutes. Blend the oats into a fine flour. Add the coconut cream and blend again. Add the almond butter, cashew butter, and honey, and blend until combined. Scrape down the bottom and sides of the blender to prevent lumps. Add the hydrated chia seeds and blend until evenly distributed. Finally, add the frozen mango and protein powder, and blend until smooth and creamy. Divide into 4 servings and top with frozen raspberries and coconut flakes if desired. Serve immediately, or refrigerate for a while if you prefer a thicker consistency.",
+    },
+
+    tr: {
+      description:
+        "Hindistan cevizi kreması, yulaf, badem ezmesi ve kaju ezmesiyle hazırlanan kremsi bir mangolu chia puding. Dondurulmuş mango sayesinde bir gece buzdolabında bekletmeye gerek kalmadan dondurmayı andıran yoğun bir kıvam elde ediliyor.",
+
+      ingredientsTitle: "Malzemeler",
+      ingredients: [
+        "1/3 su bardağı yulaf ezmesi (yaklaşık 30 g)",
+        "1 su bardağı Hindistan cevizi kreması (240 ml)",
+        "300 g dondurulmuş mango",
+        "1,5 dolu çay kaşığı badem ezmesi",
+        "1,5 dolu çay kaşığı kaju ezmesi",
+        "2 yemek kaşığı chia tohumu",
+        "12 yemek kaşığı su (180 ml)",
+        "1 ölçek Plantforce protein tozu (20 g)",
+        "1 dolu çay kaşığı bal",
+        "İsteğe bağlı üzeri için: dondurulmuş frambuaz ve Hindistan cevizi parçaları",
+      ],
+
+      methodTitle: "Hazırlanışı",
+      method:
+        "Chia tohumlarını ayrı bir kapta 180 ml suyla karıştırın ve şişmeleri için 5–10 dakika bekletin. Yulafı blenderdan geçirerek ince bir un haline getirin. Hindistan cevizi kremasını ekleyip tekrar karıştırın. Badem ezmesini, kaju ezmesini ve balı ekleyip malzemeler birleşene kadar karıştırın. Topak kalmaması için blenderın kenarlarını ve tabanını sıyırın. Suda beklettiğiniz chia tohumlarını ekleyip eşit şekilde dağılana kadar karıştırın. Son olarak dondurulmuş mangoyu ve protein tozunu ekleyip pürüzsüz, kremsi bir kıvam elde edene kadar blenderdan geçirin. Karışımı 4 porsiyona bölün. İsterseniz üzerine dondurulmuş frambuaz ve Hindistan cevizi parçaları ekleyin. Hemen servis edin veya daha koyu bir kıvam için bir süre buzdolabında bekletin.",
+    },
+
+    no: {
+      description:
+        "En kremet chiapudding med mango, kokoskrem, havregryn, mandelsmør og cashewsmør. Frossen mango gir en tykk, nesten iskremaktig konsistens uten at puddingen trenger å stå i kjøleskapet over natten.",
+
+      ingredientsTitle: "Ingredienser",
+      ingredients: [
+        "1/3 kopp havregryn (ca. 30 g)",
+        "1 kopp kokoskrem (240 ml)",
+        "300 g frossen mango",
+        "1 1/2 toppet ts mandelsmør",
+        "1 1/2 toppet ts cashewsmør",
+        "2 ss chiafrø",
+        "12 ss vann (180 ml)",
+        "1 måleskje Plantforce proteinpulver (20 g)",
+        "1 toppet ts honning",
+        "Valgfri topping: frosne bringebær og kokosflak",
+      ],
+
+      methodTitle: "Fremgangsmåte",
+      method:
+        "Bland chiafrøene med 180 ml vann i en egen bolle. Rør godt og la dem svelle i 5–10 minutter. Kjør havregrynene i en blender til fint mel. Tilsett kokoskremen og kjør blenderen igjen. Ha i mandelsmør, cashewsmør og honning, og bland til alt er godt kombinert. Skrap ned langs sidene og bunnen av blenderen for å unngå klumper. Tilsett de bløtlagte chiafrøene og bland til de er jevnt fordelt. Ha til slutt i frossen mango og proteinpulver, og kjør til blandingen er glatt og kremet. Fordel i 4 porsjoner og topp gjerne med frosne bringebær og kokosflak. Server med en gang, eller sett puddingen litt i kjøleskapet hvis du ønsker en tykkere konsistens.",
+    },
+  },
+
+  image: "/assets/otherprojects/sweetchia.jpg",
+  imageAlt: "Mango coconut chia protein pudding",
+},
+
+
+{
+  categories: ["savory", "lunch", "dinner", "vegan", "vegetarian", "turkish"],
+
+  title: {
+    en: "Kısır (Turkish Bulgur Salad)",
+    tr: "Kısır",
+    no: "Kısır (tyrkisk bulgursalat)",
+  },
+
+  text: {
+    en: {
+      description:
+        "Kısır is a Turkish bulgur salad made with tomato and sweet red pepper paste, fresh herbs, lemon juice, and pomegranate molasses. I like serving it with crisp lettuce leaves.",
+
+      ingredientsTitle: "Ingredients",
+      ingredients: [
+        "2 cups fine bulgur",
+        "1 1/2 cups boiling water",
+        "1 onion, finely chopped",
+        "1/4 cup olive oil",
+        "3 tbsp tomato paste",
+        "2 tbsp sweet red pepper paste",
+        "1 1/2 tbsp pomegranate molasses",
+        "Juice of 2 lemons",
+        "1 tsp salt",
+        "2 tsp cumin",
+        "1/2 tsp black pepper",
+        "1/2 tsp hot red pepper flakes",
+        "1 medium bunch flat-leaf parsley (approximately 30 g), finely chopped",
+        "5 spring onions, finely chopped",
+        "1 green pepper, finely diced",
+        "Lettuce leaves, for serving",
+      ],
+
+      methodTitle: "Preparation",
+      method:
+        "Place the bulgur in a pot, pour over the boiling water, cover with a lid, and leave to steam for 20 minutes. In a separate large bowl, combine the finely chopped onion with the hot red pepper flakes and mix by hand. Add the olive oil, lemon juice, pomegranate molasses, tomato paste, and sweet red pepper paste, and mix well. Add the hydrated bulgur, followed by the salt, cumin, and black pepper. Mix thoroughly by hand for approximately 18 minutes, until everything is well combined. Finally, add the chopped parsley, spring onions, and green pepper, and mix again. Serve with fresh lettuce leaves.",
+    },
+
+    tr: {
+      description:
+        "Kısır; ince bulgur, domates ve tatlı biber salçası, taze yeşillikler, limon suyu ve nar ekşisiyle hazırlanan geleneksel bir Türk yemeği. Ben yanında taze marul yapraklarıyla servis etmeyi seviyorum.",
+
+      ingredientsTitle: "Malzemeler",
+      ingredients: [
+        "2 su bardağı ince bulgur",
+        "1,5 su bardağı kaynar su",
+        "1 adet kuru soğan, ince doğranmış",
+        "1/4 su bardağı zeytinyağı",
+        "3 yemek kaşığı domates salçası",
+        "2 yemek kaşığı tatlı biber salçası",
+        "1,5 yemek kaşığı nar ekşisi",
+        "2 limonun suyu",
+        "1 çay kaşığı tuz",
+        "2 çay kaşığı kimyon",
+        "1/2 çay kaşığı karabiber",
+        "1/2 çay kaşığı acı pul biber",
+        "1 orta boy demet maydanoz (yaklaşık 30 g), ince doğranmış",
+        "5 dal taze soğan, ince doğranmış",
+        "1 adet yeşil biber, küçük doğranmış",
+        "Servis için marul yaprakları",
+      ],
+
+      methodTitle: "Hazırlanışı",
+      method:
+        "İnce bulguru bir tencereye alın, üzerine kaynar suyu dökün, kapağını kapatıp 20 dakika şişmeye bırakın. Ayrı bir geniş kapta ince doğranmış kuru soğanı acı pul biberle birlikte elinizle karıştırın. Zeytinyağı, limon suyu, nar ekşisi, domates salçası ve tatlı biber salçasını ekleyip iyice karıştırın. Şişen bulguru ekleyin. Ardından tuz, kimyon ve karabiberi ilave edin. Tüm malzemeler iyice karışana kadar yaklaşık 18 dakika elinizle yoğurun. Son olarak ince doğranmış maydanoz, taze soğan ve yeşil biberi ekleyip tekrar karıştırın. Taze marul yapraklarıyla servis edin.",
+    },
+
+    no: {
+      description:
+        "Kısır er en tradisjonell tyrkisk bulgursalat med tomatpuré, søt paprikapuré, friske urter, sitronsaft og granateplesirup. Jeg liker å servere den med sprø salatblader.",
+
+      ingredientsTitle: "Ingredienser",
+      ingredients: [
+        "2 kopper fin bulgur",
+        "1 1/2 kopp kokende vann",
+        "1 løk, finhakket",
+        "1/4 kopp olivenolje",
+        "3 ss konsentrert tomatpuré",
+        "2 ss søt paprikapuré",
+        "1 1/2 ss granateplesirup",
+        "Saften av 2 sitroner",
+        "1 ts salt",
+        "2 ts spisskummen",
+        "1/2 ts svart pepper",
+        "1/2 ts sterke chiliflak",
+        "1 middels bunt bladpersille (ca. 30 g), finhakket",
+        "5 vårløk, finhakket",
+        "1 grønn paprika, finhakket",
+        "Salatblader til servering",
+      ],
+
+      methodTitle: "Fremgangsmåte",
+      method:
+        "Ha bulguren i en kjele, hell over det kokende vannet, sett på lokket og la den svelle i 20 minutter. Bland den finhakkede løken med chiliflakene i en annen stor bolle, og kna lett med hendene. Tilsett olivenolje, sitronsaft, granateplesirup, tomatpuré og søt paprikapuré, og bland godt. Ha i den ferdig svellede bulguren, etterfulgt av salt, spisskummen og svart pepper. Kna blandingen grundig med hendene i omtrent 18 minutter, til alt er godt blandet. Tilsett til slutt finhakket persille, vårløk og grønn paprika, og bland igjen. Server med friske salatblader.",
+    },
+  },
+
+  image: "/assets/otherprojects/kisir.jpg",
+  imageAlt: "Kısır Turkish bulgur salad with fresh herbs",
+},
+
+
+{
+  categories: ["savory", "lunch", "dinner", "vegetarian"],
+
+  title: {
+    en: "Wild Mushroom Risotto",
+    tr: "Yabani Mantarlı Risotto",
+    no: "Risotto med skogsopp",
+  },
+
+  text: {
+    en: {
+      description:
+        "A creamy risotto with a mixture of wild forest mushrooms and store-bought champignons, zucchini, toasted nuts, and plenty of Parmesan. I like combining different mushrooms for their flavors and textures.",
+
+      ingredientsTitle: "Ingredients",
+      ingredients: [
+        "500 g risotto rice (Arborio or Carnaroli)",
+        "1 large onion, finely chopped",
+        "40 g pine nuts",
+        "60 g cashews, roughly chopped",
+        "1 medium zucchini, cut into thin half-moon slices (5–7 mm)",
+        "500–600 g mixed mushrooms (wild forest mushrooms and white or brown champignons), sliced",
+        "4–5 garlic cloves, finely chopped",
+        "Approximately 1.5–2 litres vegetable stock, kept warm (chicken stock for a non-vegetarian version)",
+        "150 g Parmesan, grated, plus extra for serving",
+        "25 g butter",
+        "2–3 tbsp olive oil",
+        "1 tsp salt, initially, then to taste",
+        "1/2 tsp freshly ground black pepper, or to taste",
+      ],
+
+      methodTitle: "Preparation",
+      method:
+        "Toast the pine nuts and cashews in a large, dry pot over medium heat until lightly golden, stirring frequently to prevent burning. Add the olive oil and finely chopped onion, and cook until the onion becomes soft and translucent. Add the zucchini and sliced mushrooms. Cook for approximately 15 minutes, stirring regularly, until the mushrooms are thoroughly cooked and much of their released moisture has evaporated. Reduce the heat slightly, add the garlic, and cook for another 1–2 minutes without letting it burn. Add the risotto rice and stir it through the vegetables for 1–2 minutes. Gradually add the warm stock, a ladleful at a time, stirring regularly and allowing most of the liquid to be absorbed before adding more. Continue until the rice is tender but still has a slight bite, approximately 18–25 minutes. Add more stock as needed to maintain a creamy consistency. Turn off the heat, add the butter and grated Parmesan, and stir thoroughly until both are evenly incorporated. Season with salt and black pepper to taste. Serve warm with extra Parmesan.",
+
+      note:
+        "I've attended several mushroom identification courses in Norway, where I've learned about local edible species. I sometimes use mushrooms I've collected myself in this risotto, alongside store-bought champignons. If you forage for mushrooms, only eat species you can identify with complete confidence. When in doubt, consult a qualified mushroom expert.",
+    },
+
+    tr: {
+      description:
+        "Yabani orman mantarları ve kültür mantarları, kabak, kavrulmuş kuruyemişler ve bol Parmesan ile hazırlanan kremamsı bir risotto. Farklı mantarları bir arada kullanmayı seviyorum; her biri yemeğe farklı bir lezzet ve doku katıyor.",
+
+      ingredientsTitle: "Malzemeler",
+      ingredients: [
+        "500 g risotto pirinci (Arborio veya Carnaroli)",
+        "1 büyük kuru soğan, ince doğranmış",
+        "40 g çam fıstığı",
+        "60 g kaju, iri doğranmış",
+        "1 orta boy kabak, 5–7 mm kalınlığında yarım ay şeklinde dilimlenmiş",
+        "500–600 g karışık mantar (yabani orman mantarları ve beyaz veya kahverengi kültür mantarları), dilimlenmiş",
+        "4–5 diş sarımsak, ince doğranmış",
+        "Yaklaşık 1,5–2 litre sıcak sebze suyu (vejetaryen olmayan versiyon için tavuk suyu kullanılabilir)",
+        "150 g rendelenmiş Parmesan, ayrıca servis için biraz daha",
+        "25 g tereyağı",
+        "2–3 yemek kaşığı zeytinyağı",
+        "Başlangıç için 1 çay kaşığı tuz, ardından damak tadına göre",
+        "1/2 çay kaşığı taze çekilmiş karabiber veya damak tadına göre",
+      ],
+
+      methodTitle: "Hazırlanışı",
+      method:
+        "Çam fıstıklarını ve kajuları geniş, kuru bir tencerede orta ateşte hafifçe altın rengini alana kadar kavurun. Yanmamaları için sık sık karıştırın. Zeytinyağını ve ince doğranmış soğanı ekleyip soğan yumuşayana ve şeffaflaşana kadar pişirin. Kabak ve dilimlenmiş mantarları ekleyin. Mantarlar iyice pişene ve bıraktıkları suyun büyük kısmı buharlaşana kadar yaklaşık 15 dakika, düzenli olarak karıştırarak pişirin. Ateşi biraz kısın, sarımsağı ekleyin ve yakmadan 1–2 dakika daha pişirin. Risotto pirincini ekleyip sebzelerle birlikte 1–2 dakika karıştırın. Sıcak sebze suyunu her seferinde bir kepçe olacak şekilde yavaş yavaş ekleyin. Düzenli olarak karıştırın ve yeni su eklemeden önce bir önceki suyun büyük kısmının çekilmesini bekleyin. Pirinç yumuşayana ancak hafif diri kalana kadar yaklaşık 18–25 dakika pişirmeye devam edin. Kremamsı kıvamı korumak için gerektiğinde biraz daha sebze suyu ekleyin. Ocağı kapatın, tereyağını ve rendelenmiş Parmesan'ı ekleyip iyice karışana kadar karıştırın. Tuz ve karabiberini damak tadınıza göre ayarlayın. Üzerine biraz daha Parmesan ekleyerek sıcak servis edin.",
+
+      note:
+        "Norveç'te birkaç mantar tanıma eğitimine katıldım ve burada yetişen yenilebilir mantar türleri hakkında bilgi edindim. Bu risottoda bazen kendi topladığım mantarları kültür mantarlarıyla birlikte kullanıyorum. Doğadan mantar topluyorsanız yalnızca türünden tamamen emin olduğunuz mantarları tüketin. Emin olmadığınız mantarları mutlaka yetkin bir mantar uzmanına kontrol ettirin.",
+    },
+
+    no: {
+      description:
+        "En kremet risotto med en blanding av selvplukket skogsopp og sjampinjong, squash, ristede nøtter og rikelig med parmesan. Jeg liker å kombinere ulike sopptyper fordi de gir forskjellige smaker og teksturer.",
+
+      ingredientsTitle: "Ingredienser",
+      ingredients: [
+        "500 g risottoris (Arborio eller Carnaroli)",
+        "1 stor løk, finhakket",
+        "40 g pinjekjerner",
+        "60 g cashewnøtter, grovhakket",
+        "1 middels stor squash, skåret i tynne halvmåner (5–7 mm)",
+        "500–600 g blandet sopp (skogsopp og hvit eller brun sjampinjong), i skiver",
+        "4–5 hvitløksfedd, finhakket",
+        "Ca. 1,5–2 liter varm grønnsakskraft (kyllingkraft kan brukes i en ikke-vegetarisk versjon)",
+        "150 g revet parmesan, pluss ekstra til servering",
+        "25 g smør",
+        "2–3 ss olivenolje",
+        "1 ts salt til å begynne med, deretter etter smak",
+        "1/2 ts nykvernet svart pepper, eller etter smak",
+      ],
+
+      methodTitle: "Fremgangsmåte",
+      method:
+        "Rist pinjekjernene og cashewnøttene i en stor, tørr kjele på middels varme til de er lett gylne. Rør ofte slik at de ikke brenner seg. Tilsett olivenolje og finhakket løk, og stek til løken er myk og blank. Ha i squash og sopp i skiver. Stek i omtrent 15 minutter under jevnlig omrøring, til soppen er gjennomstekt og mesteparten av væsken har fordampet. Senk varmen litt, tilsett hvitløken og stek videre i 1–2 minutter uten at den blir brent. Tilsett risottorisen og rør den sammen med grønnsakene i 1–2 minutter. Spe gradvis med den varme kraften, én øse om gangen. Rør jevnlig og la mesteparten av væsken trekke inn før du tilsetter mer. Fortsett til risen er mør, men fortsatt har litt tyggemotstand, omtrent 18–25 minutter. Tilsett mer kraft etter behov for å bevare den kremete konsistensen. Skru av varmen, tilsett smør og revet parmesan, og rør godt til alt er jevnt blandet. Smak til med salt og svart pepper. Server varm med ekstra parmesan.",
+
+      note:
+        "Jeg har deltatt på flere soppkurs i Norge, der jeg har lært mer om lokale matsopper. Noen ganger bruker jeg sopp jeg har plukket selv i denne risottoen, sammen med sjampinjong fra butikken. Hvis du plukker sopp selv, bør du bare spise arter du er helt sikker på. Er du i tvil, bør soppen kontrolleres av en kvalifisert soppkontrollør.",
+    },
+  },
+
+  image: "/assets/otherprojects/mushroomrisotto.jpg",
+imageAlt: "Creamy wild mushroom risotto with zucchini",
+foragingImage: "/assets/otherprojects/wildmushrooms.jpg",
+},
+
+
+{
+  categories: ["sweet", "vegetarian"],
+
+  title: {
+    en: "Chocolate Banana Cheesecake",
+    tr: "Çikolatalı Muzlu Cheesecake",
+    no: "Sjokolade- og bananostekake",
+  },
+
+  text: {
+    en: {
+      description:
+        "A creamy banana cheesecake with a chocolate biscuit base and a layer of dark chocolate on top. I use less sugar than the original recipe, as the bananas already add sweetness.",
+
+      ingredientsTitle: "Ingredients",
+      ingredients: [
+        "For the base:",
+        "200 g chocolate biscuits, crushed",
+        "50 g butter, melted",
+        "2 tbsp cocoa powder",
+        "For the filling:",
+        "400 g full-fat cream cheese",
+        "250 g mascarpone",
+        "2 bananas, finely chopped",
+        "70 g sugar",
+        "2 tsp vanilla sugar",
+        "2 eggs",
+        "For the chocolate topping:",
+        "100 g dark chocolate",
+        "50 g butter",
+      ],
+
+      methodTitle: "Preparation",
+      method:
+        "Preheat the oven to 180°C. Grease a springform cake tin. Combine the crushed chocolate biscuits, melted butter, and cocoa powder. Press the mixture evenly into the bottom of the tin and bake for 10 minutes. Reduce the oven temperature to 150°C. Using an electric mixer, combine the cream cheese and mascarpone. Add the finely chopped bananas, sugar, and vanilla sugar, and mix well. Add the eggs and mix until combined. Pour the filling over the prepared biscuit base and bake for approximately 40 minutes. Allow the cheesecake to cool at room temperature for 2–3 hours. Melt the dark chocolate with the butter and stir until smooth. Remove the cheesecake from the springform tin and spread the chocolate mixture evenly over the top. Refrigerate overnight before serving.",
+    },
+
+    tr: {
+      description:
+        "Çikolatalı bisküvi tabanı ve üzerindeki bitter çikolata katmanıyla hazırlanan kremamsı bir muzlu cheesecake. Muzlar zaten tatlılık verdiği için orijinal tarife göre daha az şeker kullanıyorum.",
+
+      ingredientsTitle: "Malzemeler",
+      ingredients: [
+        "Tabanı için:",
+        "200 g çikolatalı bisküvi, ufalanmış",
+        "50 g tereyağı, eritilmiş",
+        "2 yemek kaşığı kakao",
+        "Dolgusu için:",
+        "400 g tam yağlı krem peynir",
+        "250 g mascarpone",
+        "2 muz, küçük doğranmış",
+        "70 g şeker",
+        "2 çay kaşığı vanilyalı şeker",
+        "2 yumurta",
+        "Çikolata katmanı için:",
+        "100 g bitter çikolata",
+        "50 g tereyağı",
+      ],
+
+      methodTitle: "Hazırlanışı",
+      method:
+        "Fırını 180°C'ye ısıtın. Kelepçeli kek kalıbını yağlayın. Ufalanmış çikolatalı bisküvileri eritilmiş tereyağı ve kakaoyla karıştırın. Karışımı kalıbın tabanına eşit şekilde bastırarak yayın ve 10 dakika pişirin. Fırın sıcaklığını 150°C'ye düşürün. Krem peynir ve mascarpone'yi mikserle karıştırın. Küçük doğranmış muzları, şekeri ve vanilyalı şekeri ekleyip iyice karıştırın. Yumurtaları ekleyip karışana kadar çırpın. Dolguyu hazırladığınız bisküvi tabanının üzerine dökün ve yaklaşık 40 dakika pişirin. Cheesecake'i oda sıcaklığında 2–3 saat soğumaya bırakın. Bitter çikolatayı tereyağıyla birlikte eritip pürüzsüz olana kadar karıştırın. Cheesecake'i kelepçeli kalıptan çıkarın ve çikolata karışımını üzerine eşit şekilde yayın. Servis etmeden önce bir gece buzdolabında bekletin.",
+    },
+
+    no: {
+      description:
+        "En kremet ostekake med banan, sjokoladekjeksbunn og et lag mørk sjokolade på toppen. Jeg bruker mindre sukker enn i originaloppskriften, siden bananene allerede gir sødme.",
+
+      ingredientsTitle: "Ingredienser",
+      ingredients: [
+        "Til bunnen:",
+        "200 g sjokoladekjeks, knust",
+        "50 g smør, smeltet",
+        "2 ss kakaopulver",
+        "Til fyllet:",
+        "400 g kremost, naturell",
+        "250 g mascarpone",
+        "2 bananer, finhakket",
+        "70 g sukker",
+        "2 ts vaniljesukker",
+        "2 egg",
+        "Til sjokoladetoppingen:",
+        "100 g mørk sjokolade",
+        "50 g smør",
+      ],
+
+      methodTitle: "Fremgangsmåte",
+      method:
+        "Forvarm ovnen til 180°C. Smør en springform. Bland knuste sjokoladekjeks med smeltet smør og kakaopulver. Press blandingen jevnt utover bunnen av formen og stek i 10 minutter. Senk ovnstemperaturen til 150°C. Bland kremost og mascarpone med en elektrisk mikser. Tilsett finhakkede bananer, sukker og vaniljesukker, og bland godt. Tilsett eggene og visp til alt er blandet. Hell fyllet over kjeksbunnen og stek i omtrent 40 minutter. La ostekaken avkjøles i romtemperatur i 2–3 timer. Smelt den mørke sjokoladen sammen med smøret og rør til blandingen er glatt. Ta ostekaken ut av springformen og fordel sjokoladen jevnt over toppen. Sett kaken i kjøleskapet over natten før servering.",
+    },
+  },
+
+  image: "/assets/otherprojects/chocolatebananacheesecake.jpg",
+  imageAlt: "Chocolate banana cheesecake with dark chocolate topping",
+},
+
+{
+  categories: ["savory", "lunch", "dinner"],
+
+  title: {
+    en: "Thai-Style Peanut & Massaman Chicken Curry",
+    tr: "Tayland Usulü Fıstık Ezmeli ve Massaman Körili Tavuk",
+    no: "Thai-inspirert kyllingcurry med peanøttsmør og massaman",
+  },
+
+  text: {
+    en: {
+      description:
+        "I usually make this curry with Massaman curry paste because I prefer non-spicy flavors, but you can use a spicier Thai curry paste if you prefer more heat. The peanut butter and coconut milk make the sauce rich and creamy, so I like serving it with plain rice cooked in lightly salted water.",
+
+      ingredientsTitle: "Ingredients",
+      ingredients: [
+        "For the curry:",
+        "600–750 g chicken breast, diced",
+        "1 large onion, finely chopped",
+        "4 garlic cloves, finely chopped",
+        "20–25 g fresh ginger, grated or finely chopped",
+        "3 tbsp Massaman curry paste, adjusted to taste",
+        "3 tbsp smooth peanut butter",
+        "600 ml coconut milk or pourable coconut cream",
+        "2 tbsp soy sauce",
+        "Juice of 1 lime",
+        "1 tbsp tomato paste",
+        "1 tbsp neutral oil",
+        "1 tsp brown sugar or honey (optional)",
+        "Salt, to taste",
+        "For the rice:",
+        "300–400 g uncooked jasmine or basmati rice",
+        "Water, according to the package instructions",
+        "A little salt",
+      ],
+
+      methodTitle: "Preparation",
+      method:
+        "Heat the oil in a large pot over medium heat. Add the finely chopped onion and diced chicken breast. Cook together, stirring regularly, until the onion softens and the chicken starts to brown. Reduce the heat slightly. Add the garlic and ginger, and stir for 1–2 minutes without letting them burn. Add the Massaman curry paste and tomato paste, stirring well to coat the chicken. Pour in the coconut milk or coconut cream. Add the peanut butter and soy sauce, and stir until everything is well combined. Simmer gently for approximately 15–20 minutes, stirring occasionally, until the chicken is fully cooked and the sauce has thickened slightly. Add the lime juice towards the end. Taste and adjust the seasoning, adding a little brown sugar or honey if you prefer a sweeter balance. Meanwhile, cook the rice in lightly salted water according to the package instructions. Serve the curry warm with the plain rice.",
+    },
+
+    tr: {
+      description:
+        "Acısız lezzetleri tercih ettiğim için bu köriyi genellikle Massaman köri ezmesiyle hazırlıyorum, ama daha acı sevenler farklı bir Tayland köri ezmesi de kullanabilir. Fıstık ezmesi ve Hindistan cevizi sütü sosu yoğun ve kremamsı hale getiriyor. Bu yüzden yanında hafif tuzlu suda pişirilmiş sade pilav servis etmeyi seviyorum.",
+
+      ingredientsTitle: "Malzemeler",
+      ingredients: [
+        "Köri için:",
+        "600–750 g tavuk göğsü, kuşbaşı doğranmış",
+        "1 büyük kuru soğan, ince doğranmış",
+        "4 diş sarımsak, ince doğranmış",
+        "20–25 g taze zencefil, rendelenmiş veya ince doğranmış",
+        "3 yemek kaşığı Massaman köri ezmesi, damak tadına göre",
+        "3 yemek kaşığı pürüzsüz yer fıstığı ezmesi",
+        "600 ml Hindistan cevizi sütü veya akışkan Hindistan cevizi kreması",
+        "2 yemek kaşığı soya sosu",
+        "1 limonun (lime) suyu",
+        "1 yemek kaşığı domates salçası",
+        "1 yemek kaşığı nötr sıvı yağ",
+        "1 çay kaşığı esmer şeker veya bal (isteğe bağlı)",
+        "Damak tadına göre tuz",
+        "Pilav için:",
+        "300–400 g pişmemiş yasemin veya basmati pirinci",
+        "Paket talimatına göre su",
+        "Biraz tuz",
+      ],
+
+      methodTitle: "Hazırlanışı",
+      method:
+        "Geniş bir tencerede sıvı yağı orta ateşte ısıtın. İnce doğranmış soğanı ve kuşbaşı tavuk göğsünü ekleyin. Düzenli olarak karıştırarak soğan yumuşayana ve tavuk hafifçe kızarmaya başlayana kadar pişirin. Ateşi biraz kısın. Sarımsak ve zencefili ekleyip yakmadan 1–2 dakika karıştırın. Massaman köri ezmesini ve domates salçasını ekleyip tavuğun her tarafına yayılacak şekilde karıştırın. Hindistan cevizi sütünü veya kremasını dökün. Fıstık ezmesini ve soya sosunu ekleyip tüm malzemeler iyice karışana kadar karıştırın. Tavuk tamamen pişene ve sos hafifçe koyulaşana kadar yaklaşık 15–20 dakika, ara sıra karıştırarak kısık ateşte pişirin. Pişirmenin sonuna doğru lime suyunu ekleyin. Tadına bakıp tuzunu ayarlayın. Biraz daha tatlı bir lezzet isterseniz esmer şeker veya bal ekleyin. Bu sırada pirinci paket talimatına göre hafif tuzlu suda pişirin. Köriyi sade pilavla birlikte sıcak servis edin.",
+    },
+
+    no: {
+      description:
+        "Jeg lager vanligvis denne curryretten med massaman currypasta fordi jeg foretrekker milde smaker uten særlig sterk chili. Du kan bruke en sterkere thailandsk currypasta hvis du liker mer chili. Peanøttsmør og kokosmelk gjør sausen fyldig og kremet, så jeg liker å servere den med enkel ris kokt i lettsaltet vann.",
+
+      ingredientsTitle: "Ingredienser",
+      ingredients: [
+        "Til curryen:",
+        "600–750 g kyllingbryst, skåret i terninger",
+        "1 stor løk, finhakket",
+        "4 hvitløksfedd, finhakket",
+        "20–25 g fersk ingefær, revet eller finhakket",
+        "3 ss massaman currypasta, justert etter smak",
+        "3 ss kremet peanøttsmør",
+        "600 ml kokosmelk eller flytende kokoskrem",
+        "2 ss soyasaus",
+        "Saften av 1 lime",
+        "1 ss konsentrert tomatpuré",
+        "1 ss nøytral matolje",
+        "1 ts brunt sukker eller honning (valgfritt)",
+        "Salt etter smak",
+        "Til risen:",
+        "300–400 g ukokt jasminris eller basmatiris",
+        "Vann etter anvisningen på pakken",
+        "Litt salt",
+      ],
+
+      methodTitle: "Fremgangsmåte",
+      method:
+        "Varm oljen i en stor kjele på middels varme. Tilsett finhakket løk og kyllingbryst i terninger. Stek sammen under jevnlig omrøring til løken er myk og kyllingen begynner å få litt farge. Senk varmen litt. Tilsett hvitløk og ingefær, og rør i 1–2 minutter uten at det brenner seg. Ha i massaman currypasta og tomatpuré, og rør godt slik at kyllingen dekkes av blandingen. Hell i kokosmelk eller kokoskrem. Tilsett peanøttsmør og soyasaus, og rør til alt er godt blandet. La det småkoke i omtrent 15–20 minutter under jevnlig omrøring, til kyllingen er gjennomstekt og sausen har tyknet litt. Tilsett limesaften mot slutten. Smak til med salt, og tilsett litt brunt sukker eller honning hvis du ønsker en søtere smak. Kok risen i lettsaltet vann etter anvisningen på pakken mens curryen småkoker. Server curryen varm med den enkle risen.",
+    },
+  },
+
+  image: "/assets/otherprojects/thaichickencurry.jpg",
+  imageAlt: "Thai-style peanut and Massaman chicken curry with rice",
+},
+
+
+{
+  categories: ["turkish", "savory", "lunch", "dinner"],
+  usesTurkishBase: true,
+
+  title: {
+    en: "Turkish Spinach Stew",
+    tr: "Ispanak Yemeği",
+    no: "Tyrkisk spinatgryte",
+  },
+
+  text: {
+    en: {
+      description:
+        "A comforting Turkish home-style spinach stew with minced beef, rice, tomatoes, and garlic. It starts with a simple base of onion, tomato and pepper paste, and spices that I also use in other Turkish dishes. I like serving it warm with Turkish yogurt.",
+
+      ingredientsTitle: "Ingredients",
+      ingredients: [
+        "2 tbsp olive oil",
+        "1 medium onion, finely diced",
+        "400 g minced beef",
+        "1 tsp tomato paste",
+        "1 tsp sweet red pepper paste",
+        "3–4 garlic cloves, finely chopped",
+        "1 carton chopped tomatoes (approximately 400 g)",
+        "40–50 g uncooked rice",
+        "600 g fresh spinach (approximately 3 packs)",
+        "150–250 ml water or vegetable stock, as needed",
+        "1 tsp salt, initially, then to taste",
+        "1/2 tsp black pepper",
+        "1/2 tsp cumin",
+        "1/2 tsp hot red pepper flakes (optional)",
+        "Turkish yogurt, for serving",
+      ],
+
+      methodTitle: "Preparation",
+      method:
+        "Heat the olive oil in a large pot over medium-high heat. Add the finely diced onion and minced beef. Cook together, stirring regularly and breaking up the meat, until the onion softens and the beef is browned. Add the tomato paste and sweet red pepper paste, and stir well for another minute. Reduce the heat to medium, add the garlic, and cook for 1–2 minutes without letting it burn. Add the chopped tomatoes, salt, black pepper, cumin, and optional red pepper flakes. Stir and cook for a few minutes. Add the uncooked rice and stir it through the mixture for 1–2 minutes. Gradually add the spinach in 3–4 batches, stirring between additions and allowing each batch to wilt slightly before adding more. Pour in approximately 150 ml water or stock, cover, and simmer gently for around 20 minutes, stirring occasionally, until the rice is tender and the spinach is fully cooked. Add a little more liquid if needed to prevent sticking. Taste and adjust the seasoning. Serve warm with Turkish yogurt.",
+    },
+
+    tr: {
+      description:
+        "Kıyma, pirinç, domates ve sarımsakla hazırlanan, ev usulü bir ıspanak yemeği. Birçok Türk yemeğinde kullandığım soğan, domates ve biber salçası ile baharatlardan oluşan temel bir harçla hazırlanıyor. Yanında yoğurtla sıcak servis etmeyi seviyorum.",
+
+      ingredientsTitle: "Malzemeler",
+      ingredients: [
+        "2 yemek kaşığı zeytinyağı",
+        "1 orta boy kuru soğan, küçük doğranmış",
+        "400 g dana kıyma",
+        "1 çay kaşığı domates salçası",
+        "1 çay kaşığı tatlı biber salçası",
+        "3–4 diş sarımsak, ince doğranmış",
+        "1 paket doğranmış domates (yaklaşık 400 g)",
+        "Yarım çay bardağı pirinç (40–50 g)",
+        "600 g taze ıspanak (yaklaşık 3 paket)",
+        "150–250 ml su veya sebze suyu, gerektiği kadar",
+        "Başlangıç için 1 çay kaşığı tuz, ardından damak tadına göre",
+        "1/2 çay kaşığı karabiber",
+        "1/2 çay kaşığı kimyon",
+        "1/2 çay kaşığı acı pul biber (isteğe bağlı)",
+        "Servis için yoğurt",
+      ],
+
+      methodTitle: "Hazırlanışı",
+      method:
+        "Geniş bir tencerede zeytinyağını orta-yüksek ateşte ısıtın. Küçük doğranmış soğanı ve kıymayı ekleyin. Kıymayı kaşıkla parçalayarak ve düzenli olarak karıştırarak soğan yumuşayana ve kıyma kavrulana kadar pişirin. Domates ve tatlı biber salçasını ekleyip bir dakika daha karıştırın. Ateşi orta seviyeye düşürün, sarımsağı ekleyin ve yakmadan 1–2 dakika pişirin. Doğranmış domatesi, tuzu, karabiberi, kimyonu ve isteğe bağlı pul biberi ekleyin. Karıştırıp birkaç dakika pişirin. Yıkanmış pirinci ekleyin ve 1–2 dakika karıştırın. Ispanağı 3–4 seferde, her eklemeden sonra biraz sönmesini bekleyerek ve karıştırarak tencereye ilave edin. Yaklaşık 150 ml su veya sebze suyu ekleyin, kapağını kapatın ve ara sıra karıştırarak yaklaşık 20 dakika kısık ateşte pişirin. Pirinç yumuşamış ve ıspanak tamamen pişmiş olmalıdır. Dibine yapışmaması için gerektiğinde biraz daha su ekleyin. Tadına bakıp baharatlarını ayarlayın. Yanında yoğurtla sıcak servis edin.",
+    },
+
+    no: {
+      description:
+        "En varmende tyrkisk spinatgryte med kjøttdeig, ris, tomater og hvitløk. Den begynner med en enkel base av løk, tomat- og paprikapuré og krydder, som jeg også bruker i andre tyrkiske retter. Jeg liker å servere den varm med tyrkisk yoghurt.",
+
+      ingredientsTitle: "Ingredienser",
+      ingredients: [
+        "2 ss olivenolje",
+        "1 middels stor løk, finhakket",
+        "400 g kjøttdeig av storfe",
+        "1 ts konsentrert tomatpuré",
+        "1 ts søt paprikapuré",
+        "3–4 hvitløksfedd, finhakket",
+        "1 kartong hakkede tomater (ca. 400 g)",
+        "40–50 g ukokt ris",
+        "600 g fersk spinat (ca. 3 pakker)",
+        "150–250 ml vann eller grønnsakskraft, etter behov",
+        "1 ts salt til å begynne med, deretter etter smak",
+        "1/2 ts svart pepper",
+        "1/2 ts spisskummen",
+        "1/2 ts chiliflak (valgfritt)",
+        "Tyrkisk yoghurt til servering",
+      ],
+
+      methodTitle: "Fremgangsmåte",
+      method:
+        "Varm olivenoljen i en stor kjele på middels høy varme. Tilsett finhakket løk og kjøttdeig. Stek sammen under jevnlig omrøring, og del opp kjøttdeigen med en skje, til løken er myk og kjøttet er brunet. Tilsett tomatpuré og søt paprikapuré, og rør godt i omtrent ett minutt. Senk varmen til middels, tilsett hvitløken og stek videre i 1–2 minutter uten at den brenner seg. Ha i hakkede tomater, salt, svart pepper, spisskummen og eventuelt chiliflak. Rør sammen og la det koke i noen minutter. Tilsett den ukokte risen og rør den inn i blandingen i 1–2 minutter. Ha i spinaten gradvis i 3–4 omganger. Rør mellom hver omgang og la spinaten falle litt sammen før du tilsetter mer. Hell i omtrent 150 ml vann eller grønnsakskraft, legg på lokk og la det småkoke i rundt 20 minutter. Rør av og til, til risen er mør og spinaten er ferdig kokt. Tilsett litt mer væske om nødvendig for å unngå at det setter seg fast i bunnen. Smak til med krydder og server varm med tyrkisk yoghurt.",
+    },
+  },
+
+  image: "/assets/otherprojects/ispanak.jpg",
+  imageAlt: "Turkish spinach stew with minced beef and rice",
+},
+
+
+{
+  categories: ["turkish", "savory", "lunch", "dinner"],
+  usesTurkishBase: true,
+
+  title: {
+    en: "Turkish Green Lentil Stew",
+    tr: "Yeşil Mercimek Yemeği",
+    no: "Tyrkisk grønn linsegryte)",
+  },
+
+  text: {
+    en: {
+      description:
+        "A comforting Turkish home-style green lentil stew with minced beef, tomatoes, garlic, and dried mint. It starts with the same onion, tomato and pepper paste base that I use for Ispanak Yemeği, showing how a few different ingredients can turn one base into another dish.",
+
+      ingredientsTitle: "Ingredients",
+      ingredients: [
+        "1 cup dried green lentils (approximately 180–200 g)",
+        "2 tbsp olive oil",
+        "1 medium onion, finely diced",
+        "400 g minced beef",
+        "1 tsp tomato paste",
+        "1 tsp sweet red pepper paste",
+        "3–4 garlic cloves, finely chopped",
+        "1 carton chopped tomatoes (approximately 400 g)",
+        "300–500 ml water or vegetable stock, as needed",
+        "1 tsp salt, initially, then to taste",
+        "1/2 tsp black pepper",
+        "1/2 tsp cumin",
+        "1 1/2 tsp dried mint",
+        "1/2 tsp hot red pepper flakes (optional)",
+      ],
+
+      methodTitle: "Preparation",
+      method:
+        "Rinse the green lentils and place them in a saucepan with enough water to cover them generously. Bring to a boil and cook for approximately 10–15 minutes, until they begin to soften but are not fully cooked. Drain the lentils, discarding the dark cooking water, and set them aside. Meanwhile, heat the olive oil in a separate large pot over medium-high heat. Add the finely diced onion and minced beef. Cook together, stirring regularly and breaking up the meat, until the onion softens and the beef is browned. Add the tomato paste and sweet red pepper paste, and stir for another minute. Reduce the heat to medium, add the garlic, and cook for 1–2 minutes without letting it burn. Add the chopped tomatoes, salt, black pepper, cumin, dried mint, and optional red pepper flakes. Stir and cook for a few minutes. Add the partially cooked lentils and approximately 300 ml fresh water or vegetable stock. Cover and simmer gently for 15–20 minutes, stirring occasionally, until the lentils are tender but still hold their shape. Add more liquid if needed. Taste and adjust the seasoning. Serve warm.",
+    },
+
+    tr: {
+      description:
+        "Kıyma, domates, sarımsak ve kuru naneyle hazırlanan ev usulü yeşil mercimek yemeği. Ispanak yemeğinde de kullandığım soğan, domates ve biber salçasından oluşan aynı temel harçla hazırlanıyor. Birkaç malzemeyi değiştirerek aynı harçtan farklı yemekler yapmak mümkün.",
+
+      ingredientsTitle: "Malzemeler",
+      ingredients: [
+        "1 su bardağı kuru yeşil mercimek (yaklaşık 180–200 g)",
+        "2 yemek kaşığı zeytinyağı",
+        "1 orta boy kuru soğan, küçük doğranmış",
+        "400 g dana kıyma",
+        "1 çay kaşığı domates salçası",
+        "1 çay kaşığı tatlı biber salçası",
+        "3–4 diş sarımsak, ince doğranmış",
+        "1 paket doğranmış domates (yaklaşık 400 g)",
+        "300–500 ml su veya sebze suyu, gerektiği kadar",
+        "Başlangıç için 1 çay kaşığı tuz, ardından damak tadına göre",
+        "1/2 çay kaşığı karabiber",
+        "1/2 çay kaşığı kimyon",
+        "1,5 çay kaşığı kuru nane",
+        "1/2 çay kaşığı acı pul biber (isteğe bağlı)",
+      ],
+
+      methodTitle: "Hazırlanışı",
+      method:
+        "Yeşil mercimekleri yıkayıp üzerini bolca geçecek kadar suyla bir tencereye alın. Kaynamaya başladıktan sonra yaklaşık 10–15 dakika, mercimekler hafifçe yumuşayana ancak tamamen pişmeyene kadar haşlayın. Koyu renkli haşlama suyunu süzüp mercimekleri kenara alın. Bu sırada ayrı bir geniş tencerede zeytinyağını orta-yüksek ateşte ısıtın. Küçük doğranmış soğanı ve kıymayı ekleyin. Kıymayı kaşıkla parçalayarak ve düzenli olarak karıştırarak soğan yumuşayana ve kıyma kavrulana kadar pişirin. Domates ve tatlı biber salçasını ekleyip bir dakika daha karıştırın. Ateşi orta seviyeye düşürün, sarımsağı ekleyin ve yakmadan 1–2 dakika pişirin. Doğranmış domatesi, tuzu, karabiberi, kimyonu, kuru naneyi ve isteğe bağlı pul biberi ekleyin. Karıştırıp birkaç dakika pişirin. Önceden hafifçe haşladığınız mercimekleri ve yaklaşık 300 ml taze su veya sebze suyunu ekleyin. Kapağını kapatıp ara sıra karıştırarak 15–20 dakika kısık ateşte pişirin. Mercimekler yumuşamış ancak dağılmamış olmalıdır. Gerektiğinde biraz daha su ekleyin. Tadına bakıp baharatlarını ayarlayın. Sıcak servis edin.",
+    },
+
+    no: {
+      description:
+        "En varmende tyrkisk linsegryte med kjøttdeig, tomater, hvitløk og tørket mynte. Den starter med den samme basen av løk, tomat- og paprikapuré som jeg bruker i Ispanak Yemeği. Ved å bytte ut noen få ingredienser kan den samme basen bli til forskjellige retter.",
+
+      ingredientsTitle: "Ingredienser",
+      ingredients: [
+        "1 kopp tørre grønne linser (ca. 180–200 g)",
+        "2 ss olivenolje",
+        "1 middels stor løk, finhakket",
+        "400 g kjøttdeig av storfe",
+        "1 ts konsentrert tomatpuré",
+        "1 ts søt paprikapuré",
+        "3–4 hvitløksfedd, finhakket",
+        "1 kartong hakkede tomater (ca. 400 g)",
+        "300–500 ml vann eller grønnsakskraft, etter behov",
+        "1 ts salt til å begynne med, deretter etter smak",
+        "1/2 ts svart pepper",
+        "1/2 ts spisskummen",
+        "1 1/2 ts tørket mynte",
+        "1/2 ts chiliflak (valgfritt)",
+      ],
+
+      methodTitle: "Fremgangsmåte",
+      method:
+        "Skyll de grønne linsene og ha dem i en kjele med rikelig vann. Kok opp og la dem koke i omtrent 10–15 minutter, til de begynner å bli myke, men fortsatt ikke er ferdigkokte. Hell av det mørke kokevannet og sett linsene til side. Varm samtidig olivenoljen i en annen stor kjele på middels høy varme. Tilsett finhakket løk og kjøttdeig. Stek sammen under jevnlig omrøring, og del opp kjøttdeigen med en skje, til løken er myk og kjøttet er brunet. Tilsett tomatpuré og søt paprikapuré, og rør godt i omtrent ett minutt. Senk varmen til middels, tilsett hvitløken og stek videre i 1–2 minutter uten at den brenner seg. Ha i hakkede tomater, salt, svart pepper, spisskummen, tørket mynte og eventuelt chiliflak. Rør sammen og la det koke i noen minutter. Tilsett de delvis kokte linsene og omtrent 300 ml friskt vann eller grønnsakskraft. Legg på lokk og la det småkoke i 15–20 minutter under jevnlig omrøring, til linsene er møre, men fortsatt holder formen. Tilsett mer væske ved behov. Smak til med krydder og server varm.",
+    },
+  },
+
+  image: "/assets/otherprojects/yesilmercimek.jpg",
+  imageAlt: "Turkish green lentil stew with minced beef and dried mint",
+},
+
 
 {
   categories: ["savory", "dinner", "lunch"],
@@ -1044,9 +1740,9 @@ no: [
       ingredients: [
         "For the salmon:",
         "500 g salmon, approximately 4 pieces",
-        "120 mL orange juice (1/2 cup)",
-        "60 mL soy sauce (1/4 cup)",
-        "30 mL honey (1/8 cup)",
+        "120 ml orange juice (1/2 cup)",
+        "60 ml soy sauce (1/4 cup)",
+        "30 ml honey (1/8 cup)",
         "1/2 tsp black pepper",
         "1 tsp sesame seeds",
         "1/2 tsp cornstarch (optional, for thickening)",
@@ -1054,8 +1750,8 @@ no: [
         "For the potato puree:",
         "300 g potatoes",
         "15 g butter",
-        "45–75 mL milk, as needed",
-        "30–45 g grated kaşar cheese or another mild yellow cheese",
+        "45–75 ml milk, as needed",
+        "30–45 g grated mild yellow cheese",
         "Salt and black pepper, to taste",
         "Nutmeg and cardamom (optional)",
 
@@ -1072,9 +1768,9 @@ no: [
       ingredients: [
         "Somon için:",
         "500 g somon, yaklaşık 4 parça",
-        "120 mL portakal suyu (1/2 su bardağı)",
-        "60 mL soya sosu (1/4 su bardağı)",
-        "30 mL bal (1/8 su bardağı)",
+        "120 ml portakal suyu (1/2 su bardağı)",
+        "60 ml soya sosu (1/4 su bardağı)",
+        "30 ml bal (1/8 su bardağı)",
         "1/2 çay kaşığı karabiber",
         "1 çay kaşığı susam",
         "1/2 çay kaşığı mısır nişastası (sosu koyulaştırmak için, isteğe bağlı)",
@@ -1082,7 +1778,7 @@ no: [
         "Patates püresi için:",
         "300 g patates",
         "15 g tereyağı",
-        "45–75 mL süt, kıvama göre",
+        "45–75 ml süt, kıvama göre",
         "30–45 g rendelenmiş kaşar peyniri",
         "Damak tadına göre tuz ve karabiber",
         "Muskat ve kakule (isteğe bağlı)",
@@ -1100,9 +1796,9 @@ no: [
       ingredients: [
         "Til laksen:",
         "500 g laks, omtrent 4 stykker",
-        "120 mL appelsinjuice (1/2 kopp)",
-        "60 mL soyasaus (1/4 kopp)",
-        "30 mL honning (1/8 kopp)",
+        "120 ml appelsinjuice (1/2 kopp)",
+        "60 ml soyasaus (1/4 kopp)",
+        "30 ml honning (1/8 kopp)",
         "1/2 ts svart pepper",
         "1 ts sesamfrø",
         "1/2 ts maisstivelse (valgfritt, for jevning)",
@@ -1110,7 +1806,7 @@ no: [
           "Til potetpureen:",
           "300 g poteter",
           "15 g smør",
-          "45–75 mL melk, etter behov",
+          "45–75 ml melk, etter behov",
           "30–45 g revet gulost",
           "Salt og svart pepper etter smak",
           "Muskat og kardemomme (valgfritt)",
