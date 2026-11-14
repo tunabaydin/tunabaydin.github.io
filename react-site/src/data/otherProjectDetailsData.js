@@ -1148,7 +1148,7 @@ no: [
 
       methodTitle: "Preparation",
       method:
-        "Place the bulgur in a pot, pour over the boiling water, cover with a lid, and leave to steam for 20 minutes. In a separate large bowl, combine the finely chopped onion with the hot red pepper flakes and mix by hand. Add the olive oil, lemon juice, pomegranate molasses, tomato paste, and sweet red pepper paste, and mix well. Add the hydrated bulgur, followed by the salt, cumin, and black pepper. Mix thoroughly by hand for approximately 18 minutes, until everything is well combined. Finally, add the chopped parsley, spring onions, and green pepper, and mix again. Serve with fresh lettuce leaves.",
+        "Place the bulgur in a pot, pour over the boiling water, cover with a lid, and leave to steam for 20 minutes. In a separate large bowl, combine the finely chopped onion with the hot red pepper flakes and mix by hand. Add the olive oil, lemon juice, pomegranate molasses, tomato paste, and sweet red pepper paste, and mix well. Add the hydrated bulgur, followed by the salt, cumin, and black pepper. Mix thoroughly by hand for approximately 10 minutes, until everything is well combined. Finally, add the chopped parsley, spring onions, and green pepper, and mix again. Serve with fresh lettuce leaves.",
     },
 
     tr: {
@@ -1177,7 +1177,7 @@ no: [
 
       methodTitle: "Hazırlanışı",
       method:
-        "İnce bulguru bir tencereye alın, üzerine kaynar suyu dökün, kapağını kapatıp 20 dakika şişmeye bırakın. Ayrı bir geniş kapta ince doğranmış kuru soğanı acı pul biberle birlikte elinizle karıştırın. Zeytinyağı, limon suyu, nar ekşisi, domates salçası ve tatlı biber salçasını ekleyip iyice karıştırın. Şişen bulguru ekleyin. Ardından tuz, kimyon ve karabiberi ilave edin. Tüm malzemeler iyice karışana kadar yaklaşık 18 dakika elinizle yoğurun. Son olarak ince doğranmış maydanoz, taze soğan ve yeşil biberi ekleyip tekrar karıştırın. Taze marul yapraklarıyla servis edin.",
+        "İnce bulguru bir tencereye alın, üzerine kaynar suyu dökün, kapağını kapatıp 20 dakika şişmeye bırakın. Ayrı bir geniş kapta ince doğranmış kuru soğanı acı pul biberle birlikte elinizle karıştırın. Zeytinyağı, limon suyu, nar ekşisi, domates salçası ve tatlı biber salçasını ekleyip iyice karıştırın. Şişen bulguru ekleyin. Ardından tuz, kimyon ve karabiberi ilave edin. Tüm malzemeler iyice karışana kadar yaklaşık 10 dakika elinizle yoğurun. Son olarak ince doğranmış maydanoz, taze soğan ve yeşil biberi ekleyip tekrar karıştırın. Taze marul yapraklarıyla servis edin.",
     },
 
     no: {
@@ -1206,7 +1206,7 @@ no: [
 
       methodTitle: "Fremgangsmåte",
       method:
-        "Ha bulguren i en kjele, hell over det kokende vannet, sett på lokket og la den svelle i 20 minutter. Bland den finhakkede løken med chiliflakene i en annen stor bolle, og kna lett med hendene. Tilsett olivenolje, sitronsaft, granateplesirup, tomatpuré og søt paprikapuré, og bland godt. Ha i den ferdig svellede bulguren, etterfulgt av salt, spisskummen og svart pepper. Kna blandingen grundig med hendene i omtrent 18 minutter, til alt er godt blandet. Tilsett til slutt finhakket persille, vårløk og grønn paprika, og bland igjen. Server med friske salatblader.",
+        "Ha bulguren i en kjele, hell over det kokende vannet, sett på lokket og la den svelle i 20 minutter. Bland den finhakkede løken med chiliflakene i en annen stor bolle, og kna lett med hendene. Tilsett olivenolje, sitronsaft, granateplesirup, tomatpuré og søt paprikapuré, og bland godt. Ha i den ferdig svellede bulguren, etterfulgt av salt, spisskummen og svart pepper. Kna blandingen grundig med hendene i omtrent 10 minutter, til alt er godt blandet. Tilsett til slutt finhakket persille, vårløk og grønn paprika, og bland igjen. Server med friske salatblader.",
     },
   },
 
