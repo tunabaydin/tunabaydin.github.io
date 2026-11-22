@@ -287,12 +287,16 @@
     },
 
     mediaColumn: [
-      {
-        type: "image",
-        src: "/assets/art/abduction.jpg",
-        alt: "Abduction artwork by Tuna Baydin",
-      },
-    ],
+  {
+    type: "image",
+    src: "/assets/art/abduction.jpg",
+    alt: "Abduction artwork by Tuna Baydin",
+  },
+  {
+    type: "video",
+    src: "/assets/art/abductionframevideo.mp4",
+  },
+],
 
     description: {
       en: [
@@ -308,6 +312,23 @@
         "Dette verket er absurd. Scenen er inspirert av spansktalende Latin-Amerika.",
       ]
     },
+
+
+frameDescription: {
+  en: [
+    "I built this floating frame for Abduction. It was my first woodworking project.",
+    "I started by cutting pine planks into individual pieces and gluing them together to create L-shaped profiles. I then cut the ends at 45-degree angles and joined the corners with wood glue. After the glue had dried, I sanded the frame and used wood filler to correct any imperfections. Finally, I finished it with a mahogany-colored wood stain."
+  ],
+  tr: [
+    "Abduction için bu yüzer çerçeveyi kendim yaptım. Bu, ilk ahşap işçiliği projemdi.",
+    "Önce çam tahtalarını kesip parçaları birbirine yapıştırarak L şeklinde profiller oluşturdum. Ardından profillerin uçlarını 45 derecelik açıyla kesip köşeleri ahşap tutkalıyla birleştirdim. Tutkal kuruduktan sonra çerçeveyi zımparaladım ve pürüzleri düzeltmek için ahşap macunu kullandım. Son olarak çerçeveye maun renginde ahşap renklendirici uyguladım."
+  ],
+  no: [
+    "Jeg bygde denne sveverammen til Abduction. Det var mitt første prosjekt med trearbeid.",
+    "Jeg startet med å kappe furuplanker i mindre deler og lime dem sammen til L-formede profiler. Deretter kappet jeg endene i 45 graders vinkel og limte hjørnene sammen med trelim. Etter at limet hadde tørket, pusset jeg rammen med sandpapir og brukte tresparkel for å rette opp ujevnheter. Til slutt behandlet jeg rammen med trebeis i mahognifarge."
+  ]
+},
+
 
     extraMedia: [
       {

@@ -104,18 +104,43 @@ export default function ArtDetail() {
             </div>
 
             <div className="art-description">
-              {(
-                (artworkDetails?.description?.[currentLang] &&
-                artworkDetails.description[currentLang].length > 0
-                  ? artworkDetails.description[currentLang]
-                  : artworkDetails?.description?.en) || []
-              ).map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
-            </div>
+  {(
+    (artworkDetails?.description?.[currentLang] &&
+    artworkDetails.description[currentLang].length > 0
+      ? artworkDetails.description[currentLang]
+      : artworkDetails?.description?.en) || []
+  ).map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+  ))}
+
+  {slug === "abduction" &&
+    artworkDetails?.extraMedia?.map((item, index) =>
+      item.type === "image" ? (
+        <div
+          className="art-image abduction-decoration"
+          key={index}
+        >
+          <img src={item.src} alt={item.alt || artwork.title} />
+        </div>
+      ) : null
+    )}
+
+
+{slug === "abduction" &&
+  (
+    artworkDetails?.frameDescription?.[currentLang] ||
+    artworkDetails?.frameDescription?.en ||
+    []
+  ).map((paragraph, index) => (
+    <p key={`frame-${index}`}>{paragraph}</p>
+  ))}
+
+</div>
           </div>
 
-          {artworkDetails?.extraMedia && artworkDetails.extraMedia.length > 0 && (
+          {slug !== "abduction" &&
+  artworkDetails?.extraMedia &&
+  artworkDetails.extraMedia.length > 0 && (
             <div className="art-extra-media">
               {artworkDetails.extraMedia.map((item, index) => {
                 if (item.type === "video") {

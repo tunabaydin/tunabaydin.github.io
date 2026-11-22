@@ -1755,3 +1755,27 @@ html.home-portal-transition.is-navigating {
     grid-template-columns: 1fr;
   }
 }
+
+.abduction-decoration {
+  margin-top: 24px;
+  max-width: 420px;
+  width: 100%;
+}
+
+.abduction-decoration img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Abduction video only */
+.art-media-column:has(img[src*="abduction.jpg"]) .art-video {
+  display: block;
+  width: 100%;
+  height: 600px;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+  margin: 16px auto 0;
+}
