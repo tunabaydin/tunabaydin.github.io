@@ -58,10 +58,12 @@ export default function ArtDetail() {
             <br />
             <strong>{content.detail.dimensions}:</strong> {artworkDetails?.meta?.dimensions || "—"}
             <br />
-            <strong>{content.detail.status}:</strong>{" "}
-            {artworkDetails?.meta?.status?.[currentLang] ||
-              artworkDetails?.meta?.status?.en ||
-              (artwork.available ? content.detail.available : content.detail.notAvailable)}
+                    
+          <strong>{content.detail.status}:</strong>{" "}
+          {artwork.available
+            ? content.detail.available
+            : content.detail.notAvailable}
+
           </div>
 
           <div className="art-layout">
@@ -109,9 +111,17 @@ export default function ArtDetail() {
     artworkDetails.description[currentLang].length > 0
       ? artworkDetails.description[currentLang]
       : artworkDetails?.description?.en) || []
-  ).map((paragraph, index) => (
-    <p key={index}>{paragraph}</p>
-  ))}
+  
+).map((paragraph, index) => (
+  <p key={index}>
+    {slug === "thewaterplanet" && index === 4 ? (
+      <em>{paragraph}</em>
+    ) : (
+      paragraph
+    )}
+  </p>
+))}
+
 
   {slug === "abduction" &&
     artworkDetails?.extraMedia?.map((item, index) =>
@@ -135,12 +145,26 @@ export default function ArtDetail() {
     <p key={`frame-${index}`}>{paragraph}</p>
   ))}
 
+
+{slug === "thewaterplanet" &&
+  artworkDetails?.extraMedia?.map((item, index) =>
+    item.type === "image" ? (
+      <div className="art-image waterplanet-decoration" key={index}>
+        <img src={item.src} alt={item.alt || artwork.title} />
+      </div>
+    ) : null
+  )}
+
+
 </div>
           </div>
 
-          {slug !== "abduction" &&
+          
+{slug !== "abduction" &&
+  slug !== "thewaterplanet" &&
   artworkDetails?.extraMedia &&
   artworkDetails.extraMedia.length > 0 && (
+
             <div className="art-extra-media">
               {artworkDetails.extraMedia.map((item, index) => {
                 if (item.type === "video") {

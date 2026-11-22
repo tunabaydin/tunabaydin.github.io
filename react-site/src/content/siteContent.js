@@ -88,16 +88,18 @@ books: {
         artist: "Artist",
         contact: "Contact",
       },
-            detail: {
-        backToProjects: "Back to projects",
-        backToGallery: "Back to gallery",
-        materials: "Materials",
-        year: "Year",
-        dimensions: "Dimensions",
-        status: "Status",
-        available: "Available",
-        notAvailable: "Not available",
-      },
+            
+detail: {
+  backToProjects: "Back to projects",
+  backToGallery: "Back to gallery",
+  materials: "Materials",
+  year: "Year",
+  dimensions: "Dimensions",
+  status: "Status",
+  available: "Available for purchase",
+  notAvailable: "Not available for purchase",
+},
+
       hero: {
         pastLivesTitle: "PAST LIVES",
         pastLivesSubtitle: "Chapters from lives we don't remember",
@@ -204,16 +206,18 @@ books: {
     artist: "Sanatçı",
     contact: "İletişim",
     },
-        detail: {
-      backToProjects: "Projelere geri dön",
-      backToGallery: "Galeriye geri dön",
-      materials: "Materyaller",
-      year: "Yıl",
-      dimensions: "Boyutlar",
-      status: "Durum",
-      available: "Mevcut",
-      notAvailable: "Mevcut değil",
-    },
+        
+detail: {
+  backToProjects: "Projelere geri dön",
+  backToGallery: "Galeriye geri dön",
+  materials: "Materyaller",
+  year: "Yıl",
+  dimensions: "Boyutlar",
+  status: "Durum",
+  available: "Satın alınabilir",
+  notAvailable: "Satın alınamaz",
+},
+
     hero: {
     pastLivesTitle: "PAST LIVES",
     pastLivesSubtitle: "UNUTTUĞUMUZ HAYATLARDAN BÖLÜMLER",
@@ -320,16 +324,18 @@ books: {
     artist: "Kunstner",
     contact: "Kontakt",
     },
-        detail: {
-      backToProjects: "Tilbake til prosjekter",
-      backToGallery: "Tilbake til galleriet",
-      materials: "Materialer",
-      year: "År",
-      dimensions: "Mål",
-      status: "Status",
-      available: "Tilgjengelig",
-      notAvailable: "Ikke tilgjengelig",
-    },
+        
+detail: {
+  backToProjects: "Tilbake til prosjekter",
+  backToGallery: "Tilbake til galleriet",
+  materials: "Materialer",
+  year: "År",
+  dimensions: "Mål",
+  status: "Status",
+  available: "Tilgjengelig for kjøp",
+  notAvailable: "Ikke tilgjengelig for kjøp",
+},
+
     hero: {
       pastLivesTitle: "PAST LIVES",
     pastLivesSubtitle: "KAPITLER FRA LIV VI IKKE HUSKER",

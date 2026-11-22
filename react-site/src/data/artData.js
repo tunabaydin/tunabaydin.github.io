@@ -1,5 +1,11 @@
 export const artData = [
   {
+  title: "The Water Planet",
+ slug: "thewaterplanet",
+  image: "/assets/art/thewaterplanetcard.jpg",
+available: true,
+},
+  {
   title: "Watching the Ocean",
   slug: "watchingtheocean",
   image: "/assets/art/watchingtheoceancard.jpg",
@@ -15,13 +21,13 @@ export const artData = [
   title: "Emulsion",
   slug: "emulsion",
   image: "/assets/art/emulsion.jpg",
-  available: false,
+  available: true,
 },
 {
   title: "Abduction",
   slug: "abduction",
   image: "/assets/art/abduction.jpg",
-  available: false,
+  available: true,
 },
 {
   title: "Baby",

@@ -1,5 +1,67 @@
  export const artDetailsData = {
-    watchingtheocean: {
+  
+  thewaterplanet: {
+    meta: {
+      materials: "Acrylic and finger paint on canvas",
+      year: "2026",
+      dimensions: "90 × 90 cm",
+    },
+
+    mediaColumn: [
+      {
+        type: "image",
+        src: "/assets/art/thewaterplanet.jpg",
+        alt: "The Water Planet painting by Tuna Baydin",
+      },
+      {
+        type: "image",
+        src: "/assets/art/thewaterplanetzoom.jpg",
+        alt: "Close-up detail of The Water Planet",
+      },
+    ],
+
+    
+description: {
+  en: [
+    "I started this painting by applying finger paint to different parts of my body and using them as stamps to create shapes on the canvas. I then used a brush to outline the shapes I saw and gradually added details through many layers of acrylic paint.",
+    "The idea was to let my body guide the composition instead of making conscious decisions about what to paint. I did not have a specific image in mind when I started. I wanted to see what would emerge from the shapes my body created.",
+    "Later in the painting process, I realized that the shapes were developing into an underwater scene. I found this fitting for my Past Lives project because I have had recurring dreams about diving deep into the ocean, swimming underwater, and being able to breathe there without any difficulty. In these dreams, I often dive all the way to the seafloor. Being underwater feels completely natural to me.",
+    "During a hypnotherapy session, I asked about these recurring dreams. My \"superconscious\" responded:",
+    "\"She remembers the water planet. They are pleasant memories.\"",
+    "Unlike Early Human (Chapter 1), which depicts a specific experience from a first-person perspective, The Water Planet does not represent one particular scene or past life. Different sea creatures emerged through the painting process without me consciously deciding to include them. I could be experiencing the underwater world as a fish, a mermaid, an octopus, or another sea creature. I don't know. The painting leaves that possibility open."
+  ],
+
+  tr: [
+    "Bu resme, vücudumun farklı bölgelerine parmak boyası sürüp onları damga gibi kullanarak tuval üzerinde şekiller oluşturarak başladım. Ardından gördüğüm şekillerin dış hatlarını fırçayla belirledim ve birçok kat akrilik boya uygulayarak yavaş yavaş detaylar ekledim.",
+    "Amacım, ne çizeceğime bilinçli olarak karar vermek yerine kompozisyonu bedenimin yönlendirmesiydi. Başladığımda aklımda belirli bir görüntü yoktu. Bedenimin oluşturduğu şekillerden neler ortaya çıkacağını görmek istedim.",
+    "Resmin ilerleyen aşamalarında şekillerin bir su altı sahnesine dönüştüğünü fark ettim. Bunu Past Lives projem için uygun buldum çünkü sık sık okyanusun derinliklerine daldığım, su altında yüzdüğüm ve hiç zorlanmadan nefes alabildiğim rüyalar görüyorum. Bu rüyalarda çoğu zaman denizin dibine kadar dalıyorum. Su altında olmak bana tamamen doğal geliyor.",
+    "Bir hipnoterapi seansında bu tekrarlayan rüyalarımı sordum. \"Süperbilincim\" şöyle yanıt verdi:",
+    "\"Su gezegenini hatırlıyor. Bunlar güzel anılar.\"",
+    "Belirli bir deneyimi birinci şahıs bakış açısından gösteren Early Human (Bölüm 1) eserinden farklı olarak The Water Planet, tek bir sahneyi veya geçmiş yaşamı temsil etmiyor. Resim sürecinde, onları bilinçli olarak dahil etmeye karar vermediğim halde farklı deniz canlıları ortaya çıktı. Su altı dünyasını bir balık, deniz kızı, ahtapot veya başka bir deniz canlısı olarak deneyimliyor olabilirim. Bilmiyorum. Resim bu olasılığı açık bırakıyor."
+  ],
+
+  no: [
+    "Jeg begynte på dette maleriet ved å påføre fingermaling på ulike deler av kroppen og bruke dem som stempler for å lage former på lerretet. Deretter brukte jeg en pensel til å tegne opp konturene av formene jeg så, og la gradvis til flere detaljer gjennom mange lag med akrylmaling.",
+    "Ideen var å la kroppen min styre komposisjonen i stedet for å ta bevisste avgjørelser om hva jeg skulle male. Jeg hadde ikke noe bestemt motiv i tankene da jeg begynte. Jeg ville se hva som kunne oppstå fra formene kroppen min skapte.",
+    "Senere i maleprosessen innså jeg at formene var i ferd med å utvikle seg til en undervannsscene. Jeg syntes dette passet godt inn i Past Lives-prosjektet mitt, fordi jeg gjentatte ganger har drømt om å dykke dypt ned i havet, svømme under vann og kunne puste der uten problemer. I disse drømmene dykker jeg ofte helt ned til havbunnen. Det føles helt naturlig for meg å være under vann.",
+    "Under en hypnoterapitime spurte jeg om disse tilbakevendende drømmene. Min \"superbevissthet\" svarte:",
+    "\"Hun husker vannplaneten. Det er gode minner.\"",
+    "I motsetning til Early Human (kapittel 1), som skildrer en bestemt opplevelse fra et førstepersonsperspektiv, representerer ikke The Water Planet én bestemt scene eller ett bestemt tidligere liv. Ulike sjødyr dukket opp under maleprosessen uten at jeg bevisst bestemte meg for å inkludere dem. Jeg kan oppleve undervannsverdenen som en fisk, en havfrue, en blekksprut eller et annet sjødyr. Jeg vet ikke. Maleriet lar den muligheten stå åpen."
+  ]
+},
+
+
+    extraMedia: [
+      {
+        type: "image",
+        src: "/assets/art/thewaterplanetdecoration.jpg",
+        alt: "The Water Planet displayed in an interior",
+      },
+    ],
+  },
+
+  
+  watchingtheocean: {
     meta: {
       materials: "Acrylic and marker on paper",
       year: "2026",
@@ -179,9 +241,9 @@
       year: "2021",
       dimensions: "24.5 × 35 cm",
       status: {
-        en: "Not available for purchase",
-        tr: "Mevcut değil",
-        no: "Ikke tilgjengelig for kjøp",
+         en: "Available for purchase",
+        tr: "Satın alınabilir",
+        no: "Tilgjengelig for kjøp",
       },
     },
 
