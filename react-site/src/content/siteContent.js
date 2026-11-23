@@ -15,7 +15,8 @@ export const siteContent = {
   conceptText3:
     "Through image, sound, and story, the project explores fragments of other lives and asks a simple question:",
   conceptQuestion: "How many forms can one consciousness take?",
-  chaptersTitle: "First Chapters (in progress)",
+  chaptersTitle: "Chapters",
+chaptersIntro: "Select a chapter to explore a past life.",
   chapter1Title: "Chapter 1: Early Human",
   chapter1Text1:
     "During a past life regression hypnosis session, I experienced a vivid scene: I was an early human living tens of thousands of years ago. I remember looking down and seeing that I had a tall and strong male body.",
@@ -135,7 +136,8 @@ detail: {
   conceptText3:
     "Görüntü, ses ve hikâye aracılığıyla proje, başka yaşamların parçalarını keşfeder ve basit bir soru sorar:",
   conceptQuestion: "Bir bilinç kaç farklı biçim alabilir?",
-  chaptersTitle: "İlk Bölümler (devam ediyor)",
+  chaptersTitle: "Bölümler",
+chaptersIntro: "Geçmiş bir yaşamı keşfetmek için bir bölüm seçin.",
   chapter1Title: "Bölüm 1: İlk İnsan",
   chapter1Text1:
     "Bir geçmiş yaşam regresyonu hipnoz seansı sırasında canlı bir sahne deneyimledim: On binlerce yıl önce yaşayan bir ilk insandım. Aşağı baktığımda uzun ve güçlü bir erkek bedenine sahip olduğumu gördüğümü hatırlıyorum.",
@@ -253,7 +255,8 @@ detail: {
   conceptText3:
     "Gjennom bilde, lyd og fortelling utforsker prosjektet fragmenter av andre liv og stiller et enkelt spørsmål:",
   conceptQuestion: "Hvor mange former kan én bevissthet ta?",
-  chaptersTitle: "Første Kapitler (under utvikling)",
+  chaptersTitle: "Kapitler",
+chaptersIntro: "Velg et kapittel for å utforske et tidligere liv.",
   chapter1Title: "Kapittel 1: Tidlig menneske",
   chapter1Text1:
     "Under en regresjonshypnose for tidligere liv opplevde jeg en levende scene: Jeg var et tidlig menneske som levde for titusenvis av år siden. Jeg husker at jeg så ned og la merke til at jeg hadde en høy og sterk mannskropp.",

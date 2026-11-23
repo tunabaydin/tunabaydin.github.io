@@ -434,3 +434,46 @@
 
 }
 
+
+/* ===== PAST LIVES PROJECT ===== */
+
+.past-lives-project .card {
+  margin-top: 50px;
+}
+
+.page.past-lives-project .card h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 36px 0 18px;
+}
+
+.past-lives-project .card h2::before,
+.past-lives-project .card h2::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.past-lives-project .concept-question {
+  font-style: italic;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .past-lives-project .card {
+    margin-top: 24px;
+  }
+
+  .past-lives-project .card h2 {
+    gap: 12px;
+    letter-spacing: 0.1em;
+  }
+}
+

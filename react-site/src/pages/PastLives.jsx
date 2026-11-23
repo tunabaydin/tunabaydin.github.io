@@ -1,3 +1,4 @@
+
 import Navbar from "../components/Navbar";
 import { useParams, useSearchParams } from "react-router-dom";
 import { artData } from "../data/artData";
@@ -6,19 +7,91 @@ import Footer from "../components/Footer";
 
 export default function PastLives() {
   const { lang } = useParams();
-  const content = siteContent[lang] || siteContent.en;
+  const currentLang = lang || "en";
+  const content = siteContent[currentLang] || siteContent.en;
   const pastLives = content.pastLives || siteContent.en.pastLives;
 
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const from = searchParams.get("from");
   const previousArtwork = artData.find((item) => item.slug === from);
 
-  const backLabel = {
-    en: "Back to artwork",
-    tr: "Sanat eserine geri dön",
-    no: "Tilbake til kunstverket",
+  const labels = {
+    en: {
+      back: "Back to artwork",
+      chapters: "Back to chapters",
+      progress: "Work in progress",
+      completed: "Completed",
+    },
+    tr: {
+      back: "Sanat eserine geri dön",
+      chapters: "Bölümlere geri dön",
+      progress: "Yapım aşamasında",
+      completed: "Tamamlandı",
+    },
+    no: {
+      back: "Tilbake til kunstverket",
+      chapters: "Tilbake til kapitlene",
+      progress: "Under arbeid",
+      completed: "Fullført",
+    },
   };
 
+  const label = labels[currentLang] || labels.en;
+
+  const chapters = [
+    {
+      id: "earlyhuman",
+      title: pastLives.chapter1Title,
+      video: "/assets/pastlives/earlyhumanprocess.mp4",
+      status: label.progress,
+      paragraphs: [
+        pastLives.chapter1Text1,
+        pastLives.chapter1Text2,
+        pastLives.chapter1Text3,
+      ],
+    },
+    {
+      id: "thewaterplanet",
+      title: pastLives.chapter2Title,
+      image: "/assets/art/thewaterplanetcard.jpg",
+      status: label.completed,
+      artworkSlug: "thewaterplanet",
+    },
+    {
+      id: "energybeing",
+      title: pastLives.chapter3Title,
+      status: label.progress,
+      paragraphs: [
+        pastLives.chapter3Text1,
+        pastLives.chapter3Text2,
+        pastLives.chapter3Text3,
+      ],
+      quoteIndex: 1,
+    },
+  ];
+
+  const selectedChapter = chapters.find(
+    (chapter) => chapter.id === searchParams.get("chapter")
+  );
+
+  const openChapter = (chapter) => {
+    if (chapter.artworkSlug) {
+      window.location.href = `/${currentLang}/${chapter.artworkSlug}/`;
+      return;
+    }
+
+    const next = new URLSearchParams(searchParams);
+    next.set("chapter", chapter.id);
+    setSearchParams(next);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const closeChapter = () => {
+    const next = new URLSearchParams(searchParams);
+    next.delete("chapter");
+    setSearchParams(next);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <>
@@ -31,92 +104,136 @@ export default function PastLives() {
         }}
       />
 
-      
-<section className="page">
-  {previousArtwork && (
-    <div style={{ maxWidth: "960px", margin: "20px auto 0" }}>
-      <div className="back-card">
-        <a href={`/${lang || "en"}/${previousArtwork.slug}/`}>
-          ← {backLabel[lang] || backLabel.en}
-        </a>
-      </div>
-    </div>
-  )}
+      <section className="page past-lives-project">
+        {previousArtwork && !selectedChapter && (
+          <div style={{ maxWidth: "960px", margin: "20px auto 0" }}>
+            <div className="back-card">
+              <a href={`/${currentLang}/${previousArtwork.slug}/`}>
+                ← {label.back}
+              </a>
+            </div>
+          </div>
+        )}
 
-  <div
-  className="card"
-  style={previousArtwork ? { marginTop: "20px" } : {}}
->
+        <div
+          className="card"
+          style={previousArtwork ? { marginTop: "20px" } : {}}
+        >
+          <h1 style={{ fontWeight: 300, letterSpacing: "0.12em" }}>
+            {pastLives.title}
+            {currentLang === "tr" && " (Geçmiş Hayatlar)"}
+          </h1>
 
-  <h1 style={{
-  fontWeight: 300,
-  letterSpacing: "0.12em"
-}}>
-  {pastLives.title}
-  {lang === "tr" && " (Geçmiş Hayatlar)"}
-</h1>
+          {!selectedChapter ? (
+            <>
+              <p>{pastLives.intro}</p>
 
-          <p>{pastLives.intro}</p>
+              <h2>{pastLives.purposeTitle}</h2>
+              <p>{pastLives.purposeText}</p>
 
-          <h2>{pastLives.purposeTitle}</h2>
-          <p>{pastLives.purposeText}</p>
+              <h2>{pastLives.conceptTitle}</h2>
 
+              <div className="concept-text">
+                <p>{pastLives.conceptText1}</p>
+                <p>{pastLives.conceptText2}</p>
+                <p>{pastLives.conceptText3}</p>
+                <p className="concept-question">{pastLives.conceptQuestion}</p>
+              </div>
 
+              <h2>{pastLives.chaptersTitle}</h2>
 
-          <h2>{pastLives.chaptersTitle}</h2>
+<p style={{ textAlign: "center", marginBottom: "24px" }}>
+  {pastLives.chaptersIntro}
+</p>
 
-          <ul>
-            <li>
-              <strong>{pastLives.chapter1Title}</strong>
-              <video
-                className="chapter-video"
-                src="/assets/pastlives/earlyhumanprocess.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-                controls
-              />
-              <p>{pastLives.chapter1Text1}</p>
-              <p>{pastLives.chapter1Text2}</p>
-              <p>{pastLives.chapter1Text3}</p>
-            </li>
+              <div className="recipe-grid">
+                {chapters.map((chapter) => (
+                  <button
+                    key={chapter.id}
+                    type="button"
+                    className="recipe-grid-card"
+                    onClick={() => openChapter(chapter)}
+                  >
+                    {chapter.image ? (
+                      <img
+                        src={chapter.image}
+                        alt={chapter.title}
+                        loading="lazy"
+                      />
+                    ) : chapter.video ? (
+                      <video
+                        src={chapter.video}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        style={{
+                          display: "block",
+                          width: "100%",
+                          aspectRatio: "4 / 3",
+                          objectFit: "cover",
+                        }}
+                      />
+                    ) : (
+                      <div
+                        style={{
+                          width: "100%",
+                          aspectRatio: "4 / 3",
+                          background: "#e8e8e8",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          color: "#777",
+                        }}
+                      >
+                        {chapter.status}
+                      </div>
+                    )}
 
-            <li>
-              <strong>{pastLives.chapter2Title}</strong>
-              <video
+                    <div className="recipe-grid-card-content">
+                      <h3>{chapter.title}</h3>
+                      <p>{chapter.status}</p>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="recipe-back">
+                <button type="button" onClick={closeChapter}>
+                  ← {label.chapters}
+                </button>
+              </div>
+
+              <h2>{selectedChapter.title}</h2>
+
+              {selectedChapter.video && (
+                <video
                   className="chapter-video"
-                  src="/assets/pastlives/waterplanetprocess.mp4"
+                  src={selectedChapter.video}
                   autoPlay
                   loop
                   muted
                   playsInline
                   controls
                 />
-              <p>{pastLives.chapter2Text1}</p>
-              <p>{pastLives.chapter2Text2}</p>
-              <p>{pastLives.chapter2Text3}</p>
-            </li>
+              )}
 
-           {/* Chapter 3 */}
-{pastLives.chapter3Title && (
-  <li>
-    <strong>{pastLives.chapter3Title}</strong>
-
-    <p>{pastLives.chapter3Text1}</p>
-    <p className="chapter-quote">{pastLives.chapter3Text2}</p>
-    <p>{pastLives.chapter3Text3}</p>
-  </li>
-)}
-          </ul>
-          <h2>{pastLives.conceptTitle}</h2>
-
-<div className="concept-text">
-  <p>{pastLives.conceptText1}</p>
-  <p>{pastLives.conceptText2}</p>
-  <p>{pastLives.conceptText3}</p>
-  <p>{pastLives.conceptQuestion}</p>
-</div>
+              {selectedChapter.paragraphs?.map((paragraph, index) => (
+                <p
+                  key={index}
+                  className={
+                    index === selectedChapter.quoteIndex
+                      ? "chapter-quote"
+                      : undefined
+                  }
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </>
+          )}
         </div>
       </section>
 
