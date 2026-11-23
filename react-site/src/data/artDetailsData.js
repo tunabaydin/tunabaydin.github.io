@@ -1,7 +1,16 @@
  export const artDetailsData = {
   
   thewaterplanet: {
-    meta: {
+    
+    series: {
+      slug: "pastlives",
+      label: {
+        en: "Past Lives · Chapter 2",
+        tr: "Past Lives · Bölüm 2",
+        no: "Past Lives · Kapittel 2",
+      },
+    },
+meta: {
       materials: "Acrylic and finger paint on canvas",
       year: "2026",
       dimensions: "90 × 90 cm",

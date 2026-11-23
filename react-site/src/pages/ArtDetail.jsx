@@ -51,6 +51,15 @@ export default function ArtDetail() {
         <div className="art-card">
           <h1>{artwork.title}</h1>
 
+{artworkDetails?.series && (
+  <p>
+    <a href={`/${currentLang}/${artworkDetails.series.slug}/?from=${artwork.slug}`}>
+      {artworkDetails.series.label[currentLang] ||
+        artworkDetails.series.label.en}
+    </a>
+  </p>
+)}
+
           <div className="art-meta">
             <strong>{content.detail.materials}:</strong> {artworkDetails?.meta?.materials || "—"}
             <br />

@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
+import { artData } from "../data/artData";
 import { siteContent } from "../content/siteContent";
 import Footer from "../components/Footer";
 
@@ -7,6 +8,17 @@ export default function PastLives() {
   const { lang } = useParams();
   const content = siteContent[lang] || siteContent.en;
   const pastLives = content.pastLives || siteContent.en.pastLives;
+
+  const [searchParams] = useSearchParams();
+  const from = searchParams.get("from");
+  const previousArtwork = artData.find((item) => item.slug === from);
+
+  const backLabel = {
+    en: "Back to artwork",
+    tr: "Sanat eserine geri dön",
+    no: "Tilbake til kunstverket",
+  };
+
 
   return (
     <>
@@ -19,9 +31,30 @@ export default function PastLives() {
         }}
       />
 
-      <section className="page">
-        <div className="card">
-          <h1>{pastLives.title}</h1>
+      
+<section className="page">
+  {previousArtwork && (
+    <div style={{ maxWidth: "960px", margin: "20px auto 0" }}>
+      <div className="back-card">
+        <a href={`/${lang || "en"}/${previousArtwork.slug}/`}>
+          ← {backLabel[lang] || backLabel.en}
+        </a>
+      </div>
+    </div>
+  )}
+
+  <div
+  className="card"
+  style={previousArtwork ? { marginTop: "20px" } : {}}
+>
+
+  <h1 style={{
+  fontWeight: 300,
+  letterSpacing: "0.12em"
+}}>
+  {pastLives.title}
+  {lang === "tr" && " (Geçmiş Hayatlar)"}
+</h1>
 
           <p>{pastLives.intro}</p>
 
