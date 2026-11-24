@@ -46,6 +46,7 @@ export default function PastLives() {
       id: "earlyhuman",
       number: 1,
       title: `${currentLang === "tr" ? "Bölüm" : currentLang === "no" ? "Kapittel" : "Chapter"} 1: Early Human`,
+      image: "/assets/pastlives/earlyhuman.jpg",
       video: "/assets/pastlives/earlyhumanprocess.mp4",
       status: label.progress,
       paragraphs: [
@@ -58,7 +59,7 @@ export default function PastLives() {
       id: "thewaterplanet",
       number: 2,
       title: `${currentLang === "tr" ? "Bölüm" : currentLang === "no" ? "Kapittel" : "Chapter"} 2: The Water Planet`,
-      image: "/assets/art/thewaterplanetcard.jpg",
+      image: "/assets/art/thewaterplanet.jpg",
       status: label.completed,
       artworkSlug: "thewaterplanet",
     },
