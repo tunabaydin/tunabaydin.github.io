@@ -438,7 +438,15 @@
 /* ===== PAST LIVES PROJECT ===== */
 
 .past-lives-project .card {
+  max-width: 1100px;
+  padding: 40px 48px 48px;
   margin-top: 50px;
+}
+
+@media (max-width: 600px) {
+  .past-lives-project .card {
+    padding: 24px;
+  }
 }
 
 .page.past-lives-project .card h2 {

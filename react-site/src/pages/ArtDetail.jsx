@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import { artData } from "../data/artData";
 import { artDetailsData } from "../data/artDetailsData";
 import { siteContent } from "../content/siteContent";
@@ -12,6 +12,17 @@ export default function ArtDetail() {
 
   const artwork = artData.find((item) => item.slug === slug);
   const artworkDetails = artDetailsData[slug];
+  const [searchParams] = useSearchParams();
+
+const fromPastLives =
+  searchParams.get("from") === "pastlives" &&
+  artworkDetails?.series?.slug === "pastlives";
+
+const backToChapters = {
+  en: "Back to chapters",
+  tr: "Bölümlere geri dön",
+  no: "Tilbake til kapitlene",
+};
 
   if (!artwork) {
     return (
@@ -44,7 +55,17 @@ export default function ArtDetail() {
       <section className="page">
         <div style={{ maxWidth: "1196px", margin: "20px auto 0" }}>
           <div className="back-card">
-            <a href={`/${currentLang}#home-art`}>← {content.detail.backToGallery}</a>
+            <a
+  href={
+    fromPastLives
+      ? `/${currentLang}/pastlives/`
+      : `/${currentLang}#home-art`
+  }
+>
+  ← {fromPastLives
+    ? backToChapters[currentLang] || backToChapters.en
+    : content.detail.backToGallery}
+</a>
           </div>
         </div>
 

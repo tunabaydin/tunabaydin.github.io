@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="footer">
-      © 2025 Tuna Baydin — All rights reserved.{" "}
+      © {new Date().getFullYear()} Tuna Baydin — All rights reserved.{" "}
       <span className="tag">@ttunartt</span>
     </footer>
   );

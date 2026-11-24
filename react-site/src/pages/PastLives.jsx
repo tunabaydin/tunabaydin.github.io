@@ -16,32 +16,36 @@ export default function PastLives() {
   const previousArtwork = artData.find((item) => item.slug === from);
 
   const labels = {
-    en: {
-      back: "Back to artwork",
-      chapters: "Back to chapters",
-      progress: "Work in progress",
-      completed: "Completed",
-    },
-    tr: {
-      back: "Sanat eserine geri dön",
-      chapters: "Bölümlere geri dön",
-      progress: "Yapım aşamasında",
-      completed: "Tamamlandı",
-    },
-    no: {
-      back: "Tilbake til kunstverket",
-      chapters: "Tilbake til kapitlene",
-      progress: "Under arbeid",
-      completed: "Fullført",
-    },
-  };
+  en: {
+    back: "Back to artwork",
+    home: "Back to home page",
+    chapters: "Back to chapters",
+    progress: "Work in progress",
+    completed: "Completed",
+  },
+  tr: {
+    back: "Sanat eserine geri dön",
+    home: "Ana sayfaya geri dön",
+    chapters: "Bölümlere geri dön",
+    progress: "Yapım aşamasında",
+    completed: "Tamamlandı",
+  },
+  no: {
+    back: "Tilbake til kunstverket",
+    home: "Tilbake til forsiden",
+    chapters: "Tilbake til kapitlene",
+    progress: "Under arbeid",
+    completed: "Fullført",
+  },
+};
 
   const label = labels[currentLang] || labels.en;
 
   const chapters = [
     {
       id: "earlyhuman",
-      title: pastLives.chapter1Title,
+      number: 1,
+      title: `${currentLang === "tr" ? "Bölüm" : currentLang === "no" ? "Kapittel" : "Chapter"} 1: Early Human`,
       video: "/assets/pastlives/earlyhumanprocess.mp4",
       status: label.progress,
       paragraphs: [
@@ -52,14 +56,16 @@ export default function PastLives() {
     },
     {
       id: "thewaterplanet",
-      title: pastLives.chapter2Title,
+      number: 2,
+      title: `${currentLang === "tr" ? "Bölüm" : currentLang === "no" ? "Kapittel" : "Chapter"} 2: The Water Planet`,
       image: "/assets/art/thewaterplanetcard.jpg",
       status: label.completed,
       artworkSlug: "thewaterplanet",
     },
     {
       id: "energybeing",
-      title: pastLives.chapter3Title,
+      number: 3,
+      title: `${currentLang === "tr" ? "Bölüm" : currentLang === "no" ? "Kapittel" : "Chapter"} 3: The Energy Being`,
       status: label.progress,
       paragraphs: [
         pastLives.chapter3Text1,
@@ -76,7 +82,7 @@ export default function PastLives() {
 
   const openChapter = (chapter) => {
     if (chapter.artworkSlug) {
-      window.location.href = `/${currentLang}/${chapter.artworkSlug}/`;
+      window.location.href = `/${currentLang}/${chapter.artworkSlug}/?from=pastlives`;
       return;
     }
 
@@ -86,12 +92,98 @@ export default function PastLives() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const closeChapter = () => {
-    const next = new URLSearchParams(searchParams);
-    next.delete("chapter");
-    setSearchParams(next);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+ const closeChapter = () => {
+  const next = new URLSearchParams(searchParams);
+  next.delete("chapter");
+  setSearchParams(next);
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+
+if (selectedChapter && !selectedChapter.artworkSlug) {
+  const chapterLabel = {
+    en: "Chapter",
+    tr: "Bölüm",
+    no: "Kapittel",
   };
+
+  const chapterTitle = selectedChapter.title
+    .replace(/^[^:]+:\s*/, "");
+
+  const overviewParams = new URLSearchParams(searchParams);
+  overviewParams.delete("chapter");
+
+  return (
+    <>
+      <Navbar />
+
+      <div
+        className="bg-image"
+        style={{
+          backgroundImage: "url('/assets/pastlives/cave.png')",
+        }}
+      />
+
+      <section className="page">
+        <div style={{ maxWidth: "1196px", margin: "20px auto 0" }}>
+          <div className="back-card">
+            <a href={`/${currentLang}/pastlives/${overviewParams.toString() ? `?${overviewParams.toString()}` : ""}`}>
+              ← {label.chapters}
+            </a>
+          </div>
+        </div>
+
+        <div className="art-card">
+          <h1>{chapterTitle}</h1>
+
+          <p>
+            <a href={`/${currentLang}/pastlives/`}>
+              Past Lives · {chapterLabel[currentLang] || chapterLabel.en}{" "}
+              {selectedChapter.number}
+            </a>
+          </p>
+
+          <div className="art-meta">
+            <strong>{content.detail.status}:</strong>{" "}
+            {selectedChapter.status}
+          </div>
+
+          <div className="art-layout">
+            {selectedChapter.video && (
+              <div className="art-media-column">
+                <video
+                  className="art-video"
+                  src={selectedChapter.video}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  controls
+                  style={{ marginTop: 0 }}
+                />
+              </div>
+            )}
+
+            <div className="art-description">
+              {selectedChapter.paragraphs?.map((paragraph, index) => (
+                <p key={index}>
+                  {index === selectedChapter.quoteIndex ? (
+                    <em>{paragraph}</em>
+                  ) : (
+                    paragraph
+                  )}
+                </p>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </>
+  );
+}
+
 
   return (
     <>
@@ -105,19 +197,25 @@ export default function PastLives() {
       />
 
       <section className="page past-lives-project">
-        {previousArtwork && !selectedChapter && (
-          <div style={{ maxWidth: "960px", margin: "20px auto 0" }}>
-            <div className="back-card">
-              <a href={`/${currentLang}/${previousArtwork.slug}/`}>
-                ← {label.back}
-              </a>
-            </div>
-          </div>
-        )}
+        {!selectedChapter && (
+  <div style={{ maxWidth: "1196px", margin: "20px auto 0" }}>
+    <div className="back-card">
+      <a
+        href={
+          previousArtwork
+            ? `/${currentLang}/${previousArtwork.slug}/`
+            : `/${currentLang}/`
+        }
+      >
+        ← {previousArtwork ? label.back : label.home}
+      </a>
+    </div>
+  </div>
+)}
 
         <div
           className="card"
-          style={previousArtwork ? { marginTop: "20px" } : {}}
+          style={{ marginTop: "20px" }}
         >
           <h1 style={{ fontWeight: 300, letterSpacing: "0.12em" }}>
             {pastLives.title}
