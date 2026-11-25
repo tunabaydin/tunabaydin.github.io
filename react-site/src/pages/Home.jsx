@@ -183,7 +183,10 @@ export default function Home() {
 
     soundBtn.addEventListener("click", onSoundClick);
 
-    const onLeftClick = (e) => {
+    let autoDirection = 1;
+
+const onLeftClick = (e) => {
+  autoDirection = -1;
       e.preventDefault();
       e.stopPropagation();
 
@@ -198,6 +201,7 @@ export default function Home() {
     };
 
     const onRightClick = (e) => {
+  autoDirection = 1;
       e.preventDefault();
       e.stopPropagation();
 
@@ -215,6 +219,22 @@ export default function Home() {
 
     if (leftBtn) leftBtn.addEventListener("click", onLeftClick);
     if (rightBtn) rightBtn.addEventListener("click", onRightClick);
+
+const autoSlideTimer = window.setInterval(() => {
+  if (document.hidden) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  const event = {
+    preventDefault: () => {},
+    stopPropagation: () => {},
+  };
+
+  if (autoDirection === 1) {
+    onRightClick(event);
+  } else {
+    onLeftClick(event);
+  }
+}, 3000);
 
     const portalLinks = Array.from(
       track.querySelectorAll('.hero-link[href*="pastlives"]')
@@ -247,7 +267,8 @@ export default function Home() {
     });
 
     return () => {
-      dotCleanup.forEach((dispose) => dispose());
+  window.clearInterval(autoSlideTimer);
+  dotCleanup.forEach((dispose) => dispose());
       dotsWrap.innerHTML = "";
 
       track.removeEventListener("scroll", onTrackScroll);

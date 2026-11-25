@@ -1,0 +1,167 @@
+.welcome-page {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  isolation: isolate;
+}
+
+.welcome-background {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  animation: cosmic-drift 20s linear infinite alternate;
+  z-index: -2;
+}
+
+@keyframes cosmic-drift {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.20);
+  }
+}
+
+.welcome-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: -1;
+}
+
+.welcome-content {
+  width: min(90%, 600px);
+  text-align: center;
+}
+
+.welcome-content h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  margin: 0 0 20px;
+  color: white;
+}
+
+.welcome-content p {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  margin-bottom: 36px;
+  color: white;
+}
+
+.welcome-options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 340px;
+  margin: auto;
+}
+
+.welcome-options a {
+  display: block;
+  padding: 18px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.welcome-options a:hover,
+.welcome-options a:focus-visible {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: white;
+}
+
+.welcome-languages {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  display: flex;
+  gap: 20px;
+}
+
+.welcome-languages a {
+  color: white;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.welcome-languages a.active,
+.welcome-languages a:hover {
+  opacity: 1;
+}
+
+.welcome-credit {
+  position: absolute;
+  bottom: 20px;
+  left: 24px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcome-background {
+    animation: none;
+  }
+}
+
+/* ===== WELCOME NAVIGATION ===== */
+
+.welcome-languages {
+  font-size: 1.15rem;
+  gap: 28px;
+  top: 30px;
+  right: 36px;
+}
+
+.welcome-options {
+  max-width: 440px;
+  gap: 18px;
+}
+
+.welcome-options a,
+.welcome-options button {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px 24px;
+  font-family: inherit;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.welcome-options button:hover,
+.welcome-options button:focus-visible {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: white;
+}
+
+.welcome-credit {
+  font-size: 0.95rem;
+}
+
+
+.welcome-name {
+  font-size: clamp(1rem, 1.5vw, 1.4rem);
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 24px;
+}

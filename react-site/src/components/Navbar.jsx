@@ -10,6 +10,11 @@ export default function Navbar() {
 
   const content = siteContent[lang] || siteContent.en;
   const currentLang = lang || "en";
+  const beginningLabels = {
+  en: "Back to the beginning",
+  tr: "Başlangıca dön",
+  no: "Tilbake til begynnelsen",
+};
   const location = useLocation();
   const pathAfterLang = location.pathname.replace(/^\/(en|tr|no)/, "") || "";
   
@@ -23,6 +28,9 @@ const recipeParams =
     <nav className="top-nav" aria-label="Primary">
       <div className="nav-inner">
         <div className="nav-main">
+          <a className="nav-item" href={`/${currentLang}/welcome`}>
+  {beginningLabels[currentLang] || beginningLabels.en}
+</a>
          <a className="nav-item" href={`/${currentLang}/#top`}>{content.nav.home}</a>
 <a className="nav-item" href={`/${currentLang}/#home-art`}>{content.nav.art}</a>
 <a className="nav-item" href={`/${currentLang}/#home-projects`}>{content.nav.projects}</a>
