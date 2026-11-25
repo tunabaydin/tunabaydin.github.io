@@ -27,6 +27,10 @@ meta: {
         src: "/assets/art/thewaterplanetzoom.jpg",
         alt: "Close-up detail of The Water Planet",
       },
+      {
+        type: "video",
+        src: "/assets/art/waterplanetsome.mp4",
+      },
     ],
 
     
