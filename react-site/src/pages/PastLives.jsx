@@ -214,10 +214,7 @@ if (selectedChapter && !selectedChapter.artworkSlug) {
   </div>
 )}
 
-        <div
-          className="card"
-          style={{ marginTop: "20px" }}
-        >
+        <div className="card">
           <h1 style={{ fontWeight: 300, letterSpacing: "0.12em" }}>
             {pastLives.title}
             {currentLang === "tr" && " (Geçmiş Hayatlar)"}

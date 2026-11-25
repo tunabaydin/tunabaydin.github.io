@@ -491,3 +491,93 @@
   }
 }
 
+/* ===== MOBILE NAVIGATION ===== */
+
+@media (max-width: 768px) {
+  .top-nav .nav-inner {
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 10px;
+  }
+
+  .top-nav .nav-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 5px;
+  }
+
+  .top-nav .nav-item {
+    font-size: 0.75rem;
+    padding: 6px 8px;
+    white-space: nowrap;
+  }
+
+  .top-nav .nav-main > a:first-child {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .top-nav .nav-lang {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+}
+
+/* ===== PAST LIVES MOBILE LAYOUT ===== */
+
+@media (max-width: 768px) {
+  .page.past-lives-project {
+    box-sizing: border-box;
+    padding: 40px 30px 80px;
+    width: 100%;
+  }
+
+  .page.past-lives-project .card {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 16px auto 24px;
+    padding: 24px 20px 28px;
+    background: rgba(255, 255, 255, 0.85);
+  }
+
+ .past-lives-project .back-card {
+  position: static;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0;
+  padding: 4px 8px;
+  border-radius: 10px;
+}
+
+  .past-lives-project .back-card a {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 400;
+    padding: 8px 12px;
+    white-space: normal;
+  }
+
+  .page.past-lives-project .card h1 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+    margin: 0 0 20px;
+  }
+
+  .page.past-lives-project .card h2 {
+    font-size: 0.85rem;
+    margin: 24px 0 12px;
+    gap: 12px;
+  }
+
+  .page.past-lives-project .card p {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+}

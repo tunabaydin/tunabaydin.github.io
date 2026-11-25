@@ -1779,3 +1779,52 @@ html.home-portal-transition.is-navigating {
   object-position: center;
   margin: 16px auto 0;
 }
+
+/* ===== GLOBAL TYPOGRAPHY ===== */
+
+body {
+  font-weight: 400;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+/* Navigation */
+.top-nav .nav-item {
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+/* Main headings */
+h1,
+.section-title,
+.page .card h1,
+.other-project-card h1,
+.photo-section > h1,
+.dream-section > h1,
+.pastlives-page .pastlives-wrap h1 {
+  font-weight: 300;
+  letter-spacing: 0.06em;
+}
+
+/* Secondary headings */
+h2,
+h3,
+.page .card h2 {
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+/* Gallery titles */
+.gallery-title {
+  font-weight: 400;
+}
+
+/* Back buttons */
+.back-card a {
+  font-weight: 400;
+}
