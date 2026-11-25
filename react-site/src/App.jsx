@@ -8,7 +8,7 @@ import DetailRouter from "./pages/DetailRouter";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/en" replace />} />
+      <Route path="/" element={<Navigate to="/en/welcome" replace />} />
       <Route path="/:lang" element={<Home />} />
       <Route path="/:lang/welcome" element={<Welcome />} />
       <Route path="/:lang/pastlives" element={<PastLives />} />
