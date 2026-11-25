@@ -95,8 +95,35 @@ export default function Welcome() {
       </div>
 
       <div className="welcome-credit">
-        {space.title}
-      </div>
+  <div className="welcome-image-title">
+    {space.title}
+  </div>
+
+  <a
+    href={space.source}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    {space.credit}
+  </a>
+
+  {space.acknowledgement && (
+    <div>
+      Acknowledgement: {space.acknowledgement}
+    </div>
+  )}
+
+  <div className="welcome-license">
+    <a
+      href="https://creativecommons.org/licenses/by/4.0/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      CC BY 4.0
+    </a>
+    {" · Animated and darkened for display"}
+  </div>
+</div>
     </main>
   );
 }
