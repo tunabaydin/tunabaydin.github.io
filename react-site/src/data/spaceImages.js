@@ -9,7 +9,7 @@ export const spaceImages = [
     src: "/assets/space/9.jpg",
     title: "Antennae Galaxies",
     credit: "ESA/Hubble & NASA",
-    source: "https://www.esa.int/ESA_Multimedia/Images/2013/11/Antennae_Galaxies_reloaded",
+    source: "https://esahubble.org/images/potw1345a/",
   },
   {
     src: "/assets/space/12.jpg",
