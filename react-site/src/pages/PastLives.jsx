@@ -125,7 +125,7 @@ if (selectedChapter && !selectedChapter.artworkSlug) {
         }}
       />
 
-      <section className="page">
+      <section className="page chapter-detail">
         <div className="page-back">
           <div className="back-card">
             <a href={`/${currentLang}/pastlives/${overviewParams.toString() ? `?${overviewParams.toString()}` : ""}`}>
@@ -160,7 +160,6 @@ if (selectedChapter && !selectedChapter.artworkSlug) {
                   muted
                   playsInline
                   controls
-                  style={{ marginTop: 0 }}
                 />
               </div>
             )}
@@ -215,7 +214,7 @@ if (selectedChapter && !selectedChapter.artworkSlug) {
 )}
 
         <div className="card">
-          <h1 style={{ fontWeight: 300, letterSpacing: "0.12em" }}>
+          <h1>
             {pastLives.title}
             {currentLang === "tr" && " (Geçmiş Hayatlar)"}
           </h1>
@@ -238,7 +237,7 @@ if (selectedChapter && !selectedChapter.artworkSlug) {
 
               <h2>{pastLives.chaptersTitle}</h2>
 
-<p style={{ textAlign: "center", marginBottom: "24px" }}>
+<p className="chapter-list-intro">
   {pastLives.chaptersIntro}
 </p>
 
@@ -263,25 +262,10 @@ if (selectedChapter && !selectedChapter.artworkSlug) {
                         loop
                         muted
                         playsInline
-                        style={{
-                          display: "block",
-                          width: "100%",
-                          aspectRatio: "4 / 3",
-                          objectFit: "cover",
-                        }}
+                        className="chapter-preview"
                       />
                     ) : (
-                      <div
-                        style={{
-                          width: "100%",
-                          aspectRatio: "4 / 3",
-                          background: "#e8e8e8",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          color: "#777",
-                        }}
-                      >
+                      <div className="chapter-preview chapter-preview-placeholder">
                         {chapter.status}
                       </div>
                     )}
