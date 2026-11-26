@@ -110,7 +110,7 @@ const backToChapters = {
                 if (item.type === "video") {
                   return (
                     <video
-                      className="art-video"
+                      className={slug === "abduction" ? "art-video art-video--desktop-frame" : "art-video"}
                       autoPlay
                       loop
                       muted

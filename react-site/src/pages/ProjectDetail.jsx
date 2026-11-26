@@ -177,17 +177,13 @@ return matchesFilter && matchesSearch;
       />
 
       <div className="project-detail-header">
-        <div style={{ justifySelf: "start" }}>
-          <div className="back-card">
-            <a href={`/${currentLang}#home-projects`}>
-              ← {content.detail.backToProjects}
-            </a>
-          </div>
+        <div className="back-card">
+          <a href={`/${currentLang}#home-projects`}>
+            ← {content.detail.backToProjects}
+          </a>
         </div>
 
-        <div style={{ textAlign: "center" }}>
-          <h1 style={{ margin: 0 }}>{projectTitle}</h1>
-        </div>
+        <h1>{projectTitle}</h1>
       </div>
 
       <div className="other-project-card">
@@ -290,13 +286,9 @@ return matchesFilter && matchesSearch;
             {(slug === "recipes" ? [selectedRecipe] : filteredRows).map((row, index) => (
               <div className={`photo-row ${row.rowClass || ""}`} key={index}>
                 <div
-                  className="photo-media"
-                  style={row.images && row.type !== "carousel" ? {
-                    display: "grid",
-                    gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
-                    gap: "12px",
-                    alignItems: "stretch",
-                  } : undefined}
+                  className={row.images && row.type !== "carousel"
+                    ? "photo-media photo-media-grid"
+                    : "photo-media"}
                 >
                   {row.type === "carousel" ? (
                     <ProjectImageCarousel images={row.images} showDots={row.showDots} />
@@ -307,7 +299,6 @@ return matchesFilter && matchesSearch;
                         key={imageIndex}
                         src={image.src}
                         alt={image.alt}
-                        style={{ height: "100%", objectFit: "cover" }}
                       />
                     ))
                   ) : (
@@ -383,12 +374,7 @@ return matchesFilter && matchesSearch;
               item.endsWith(":") ? (
                 <li
                   key={i}
-                  style={{
-                    listStyleType: "none",
-                    marginLeft: "-1.5rem",
-                    marginTop: "12px",
-                    fontWeight: 600,
-                  }}
+                  className="recipe-ingredient-group"
                 >
                   {item}
                 </li>
@@ -408,14 +394,7 @@ return matchesFilter && matchesSearch;
     src={row.foragingImage}
     alt="Wild mushrooms collected in Norway"
     loading="lazy"
-    style={{
-      display: "block",
-      width: "100%",
-      maxWidth: "480px",
-      height: "auto",
-      marginTop: "28px",
-      borderRadius: "12px",
-    }}
+    className="recipe-foraging-image"
   />
 )}
 

@@ -1127,7 +1127,7 @@ html.home-portal-transition.is-navigating {
   width: 100%;
   height: auto;
   max-height: 530px;
-  margin-top: 12px;
+  margin-top: 16px;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.18);
   display: block;
@@ -1456,12 +1456,6 @@ html.home-portal-transition.is-navigating {
   opacity: 0.9;
 }
 
-.photo-video {
-  width: 100%;
-  margin-top: 16px;
-  border-radius: 12px;
-}
-
 .photo-audio {
   width: 100%;
   margin-top: 16px;
@@ -1471,7 +1465,6 @@ html.home-portal-transition.is-navigating {
 @media (max-width: 800px) {
   .recipe-text ul {
     text-align: left;
-    margin-left: 1.2rem;
   }
 
   .recipe-text li {
@@ -1757,17 +1750,6 @@ html.home-portal-transition.is-navigating {
   height: auto;
   display: block;
   object-fit: contain;
-}
-
-/* Abduction video only */
-.art-media-column:has(img[src*="abduction.jpg"]) .art-video {
-  display: block;
-  width: 100%;
-  height: 600px;
-  max-width: 100%;
-  object-fit: cover;
-  object-position: center;
-  margin: 16px auto 0;
 }
 
 /* ===== GLOBAL TYPOGRAPHY ===== */

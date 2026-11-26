@@ -1,0 +1,573 @@
+/* React detail layouts. Legacy pages use the shared defaults in global.css. */
+
+.page-back {
+  max-width: 1196px;
+  margin: 20px auto 0;
+}
+
+.project-detail-header {
+  max-width: 1148px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.other-project-intro {
+  max-width: 720px;
+  margin: 0 auto 24px;
+  text-align: center;
+  color: #333;
+}
+
+.project-row-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #111;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.other-project-card {
+  box-sizing: border-box;
+  width: calc(100% - 32px);
+  max-width: 1148px;
+  margin: 24px auto 0;
+  position: relative;
+  z-index: 1;
+}
+
+.photo-section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.other-project-card .photo-row,
+.dream-additional-section {
+  display: grid;
+  grid-template-columns: minmax(0, 58%) minmax(0, 1fr);
+  gap: 32px;
+  align-items: center;
+}
+
+.photo-media,
+.photo-text,
+.dream-left,
+.dream-right {
+  min-width: 0;
+}
+
+.photo-media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(140px, 100%), 1fr));
+  gap: 12px;
+  align-items: start;
+}
+
+.photo-section .photo-text {
+  max-width: 460px;
+  text-align: left;
+  line-height: 1.7;
+}
+
+.photo-section .photo-text > h2 {
+  margin-top: 0;
+}
+
+.project-detail-header > .back-card {
+  justify-self: start;
+}
+
+.project-detail-header h1 {
+  margin: 0;
+  text-align: center;
+}
+
+.recipe-search {
+  box-sizing: border-box;
+}
+
+.recipe-ingredient-group {
+  list-style: none;
+  margin: 12px 0 0.35rem -1.5rem;
+  font-weight: 600;
+}
+
+.recipe-foraging-image {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  margin-top: 28px;
+  border-radius: 12px;
+}
+
+.photo-section .photo-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+}
+
+.project-image-carousel-track {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-image-carousel .project-image-carousel-image {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: min(480px, 75svh);
+  border-radius: 18px;
+}
+
+.project-image-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 5;
+  transition: background 0.2s ease;
+}
+
+.project-image-carousel-arrow:hover {
+  background: rgba(255, 255, 255, 0.98);
+}
+
+.project-image-carousel-arrow-prev {
+  left: 14px;
+}
+
+.project-image-carousel-arrow-next {
+  right: 14px;
+}
+
+.project-image-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.project-image-carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.project-image-carousel-dot.is-active {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.dream-additional-sections {
+  margin-top: 36px;
+}
+
+.dream-additional-section {
+  padding: 24px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+}
+
+.dream-additional-media img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  display: block;
+}
+
+.dream-additional-text {
+  line-height: 1.7;
+  color: #333;
+}
+
+.dream-additional-text h2 {
+  margin-top: 0;
+  color: #111;
+}
+
+.art-video--desktop-frame {
+  display: block;
+  width: 100%;
+  height: 600px;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+  margin: 16px auto 0;
+}
+
+.art-detail-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.art-detail-columns > div {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.art-detail-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.dream-intro-box {
+  margin-bottom: 28px;
+  padding: 28px 32px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+  line-height: 1.7;
+}
+
+.dream-intro-box h2 {
+  margin-top: 0;
+  color: #111;
+}
+
+.dream-intro-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.dream-intro-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.dream-intro-disclaimer {
+  position: static;
+  flex-shrink: 0;
+  margin-top: 6px;
+  font-family: inherit;
+  cursor: default;
+}
+
+.dream-intro-text p:first-child {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .page > .page-back {
+    margin: 0 auto;
+    padding-inline: 16px;
+  }
+
+  #root > .project-detail-header {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    margin: 0 16px;
+  }
+
+  .art-detail-columns,
+  .art-detail-row {
+    grid-template-columns: 1fr;
+  }
+
+  .dream-intro-content {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .dream-intro-disclaimer {
+    align-self: flex-start;
+  }
+}
+
+/* ===== PAST LIVES PROJECT ===== */
+
+.past-lives-project .recipe-grid-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: #ffffff;
+}
+.past-lives-project .card {
+  max-width: 1100px;
+  padding: 40px 48px 48px;
+  margin-top: 50px;
+}
+
+.page.past-lives-project .card h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 36px 0 18px;
+}
+
+.past-lives-project .card h2::before,
+.past-lives-project .card h2::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.past-lives-project .card h1 {
+  font-weight: 300;
+  letter-spacing: 0.12em;
+}
+
+.chapter-list-intro {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.chapter-preview {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.chapter-preview-placeholder {
+  display: grid;
+  place-items: center;
+  background: #e8e8e8;
+  color: #777;
+}
+
+.chapter-detail .art-media-column > .art-video {
+  margin-top: 0;
+}
+
+.past-lives-project .concept-question {
+  font-style: italic;
+  margin-top: 20px;
+}
+
+/* Detail grids stack at 800px. Dream uses 900px to accommodate its wider text column. */
+@media (max-width: 900px) {
+  .dream-additional-section {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+}
+
+@media (max-width: 800px) {
+  :is(.page:has(> .art-card), .past-lives-project, .other-project-card, .project-detail-header) {
+    --detail-gutter: clamp(10px, 2.5vw, 20px);
+    --detail-padding: clamp(12px, 3vw, 20px);
+    --detail-gap: clamp(14px, 3vw, 20px);
+    --detail-title-size: clamp(1.375rem, 4.5vw, 1.75rem);
+  }
+
+  .page.past-lives-project {
+    box-sizing: border-box;
+    padding: 0 var(--detail-gutter) 80px;
+    width: 100%;
+  }
+
+  .page.past-lives-project .card {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 16px auto 24px;
+    padding: 20px var(--detail-padding) 24px;
+    background: rgba(255, 255, 255, 0.85);
+  }
+
+  .page.past-lives-project > .page-back {
+    padding-inline: 0;
+  }
+
+  .past-lives-project .back-card {
+    padding: 4px 8px;
+    border-radius: 10px;
+  }
+
+  .past-lives-project .back-card a {
+    display: inline-block;
+    font-size: 0.8rem;
+    padding: 8px 12px;
+    white-space: normal;
+  }
+
+  .page.past-lives-project .card h1 {
+    margin: 0 0 16px;
+  }
+
+  .page.past-lives-project .card h2 {
+    font-size: 1rem;
+    margin: 24px 0 12px;
+    gap: 12px;
+  }
+
+  .page.past-lives-project .card p {
+    margin: 10px 0;
+  }
+
+  .page.past-lives-project .card p,
+  .art-description p,
+  .other-project-intro,
+  .dream-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .page.past-lives-project .card .chapter-list-intro {
+    margin-bottom: 18px;
+  }
+
+  .other-project-card {
+    width: calc(100% - 2 * var(--detail-gutter));
+    padding: var(--detail-padding);
+  }
+
+  .project-detail-header {
+    padding-inline: var(--detail-gutter);
+  }
+
+  .project-detail-header h1,
+  .art-card h1,
+  .page.past-lives-project .card h1 {
+    font-size: var(--detail-title-size);
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+  }
+
+  .page > .art-card {
+    margin: 16px var(--detail-gutter) 2.5rem;
+    padding: 24px var(--detail-padding);
+  }
+
+  .art-card h1 {
+    margin-top: 0;
+  }
+
+  .art-meta {
+    margin-bottom: var(--detail-gap);
+  }
+
+  .art-layout {
+    /* Grid removes the desktop flex bases from the vertical axis. */
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--detail-gap);
+  }
+
+  .art-description > p:first-child,
+  .art-media-column > .art-video:first-child {
+    margin-top: 0;
+  }
+
+  .art-image img {
+    display: block;
+    height: auto;
+  }
+
+  .art-video--desktop-frame {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .photo-section,
+  .dream-left,
+  .dream-right,
+  .dream-stack,
+  .dream-grid,
+  .dream-additional-section {
+    gap: var(--detail-gap);
+  }
+
+  .other-project-card .photo-row {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+    gap: var(--detail-gap);
+    margin-bottom: 0;
+    padding: var(--detail-padding);
+  }
+
+  .photo-section .photo-text {
+    max-width: none;
+  }
+
+  .photo-text > h2,
+  .dream-section h2,
+  .recipe-filter h2 {
+    font-size: clamp(1.125rem, 3vw, 1.375rem);
+    line-height: 1.3;
+  }
+
+  .dream-intro-box,
+  .dream-text,
+  .dream-additional-section {
+    padding: var(--detail-padding);
+  }
+
+  .dream-intro-box {
+    margin-bottom: var(--detail-gap);
+  }
+
+  .dream-additional-sections {
+    margin-top: var(--detail-gap);
+  }
+
+  .recipe-filter {
+    margin-bottom: var(--detail-gap);
+    padding: var(--detail-padding) 0;
+  }
+
+  .recipe-text ul {
+    margin-inline-start: 0;
+    padding-inline-start: 1.25rem;
+  }
+
+  .recipe-text .recipe-ingredient-group {
+    margin-inline-start: 0;
+  }
+
+  .recipe-grid-card-content {
+    padding: 12px var(--detail-padding);
+  }
+
+  .other-project-card .recipe-grid-card img {
+    object-fit: contain;
+  }
+
+  .project-image-carousel-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .other-project-card {
+    margin-top: 20px;
+  }
+}
