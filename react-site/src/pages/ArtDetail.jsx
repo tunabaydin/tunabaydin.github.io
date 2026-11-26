@@ -53,7 +53,7 @@ const backToChapters = {
       />
 
       <section className="page">
-        <div style={{ maxWidth: "1196px", margin: "20px auto 0" }}>
+        <div className="page-back">
           <div className="back-card">
             <a
   href={

@@ -1,9 +1,12 @@
 import { useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { siteContent } from "../content/siteContent";
+import useFixedElementHeight from "../hooks/useFixedElementHeight";
 
 export default function Navbar() {
   const { lang } = useParams();
+  const navRef = useFixedElementHeight("--nav-height");
+
   useEffect(() => {
     document.documentElement.lang = ["en", "tr", "no"].includes(lang) ? lang : "en";
   }, [lang]);
@@ -25,7 +28,7 @@ const recipeParams =
 
 
   return (
-    <nav className="top-nav" aria-label="Primary">
+    <nav ref={navRef} className="top-nav" aria-label="Primary">
       <div className="nav-inner">
         <div className="nav-main">
           <a className="nav-item" href={`/${currentLang}/welcome`}>

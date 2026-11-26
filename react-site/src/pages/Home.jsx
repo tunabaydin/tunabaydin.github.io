@@ -145,10 +145,11 @@ export default function Home() {
       });
     }
 
+    // Jump past the leading clone before scroll events can activate the wrong slide.
     const initialVisualIndex = 1;
     track.scrollTo({
       left: getCenteredScrollLeft(slides[initialVisualIndex]),
-      behavior: "auto",
+      behavior: "instant",
     });
     setActiveFromVisualIndex(initialVisualIndex);
 
@@ -432,29 +433,31 @@ const autoSlideTimer = window.setInterval(() => {
 
 </div>
 
-        <div className="hero-dots" id="hero-dots" aria-label="Carousel pagination" />
+        <div className="hero-controls">
+          <div className="hero-dots" id="hero-dots" aria-label="Carousel pagination" />
 
-        <button
-          className="hero-arrow hero-arrow--left"
-          id="hero-left"
-          type="button"
-          aria-label="Previous slide"
-        >
-          ‹
-        </button>
+          <button
+            className="hero-arrow hero-arrow--left"
+            id="hero-left"
+            type="button"
+            aria-label="Previous slide"
+          >
+            ‹
+          </button>
 
-        <button
-          className="hero-arrow hero-arrow--right"
-          id="hero-right"
-          type="button"
-          aria-label="Next slide"
-        >
-          ›
-        </button>
+          <button
+            className="hero-arrow hero-arrow--right"
+            id="hero-right"
+            type="button"
+            aria-label="Next slide"
+          >
+            ›
+          </button>
 
-        <button className="hero-sound" id="hero-sound" type="button">
-          Sound
-        </button>
+          <button className="hero-sound" id="hero-sound" type="button">
+            Sound
+          </button>
+        </div>
       </section>
 
       <ArtGallery />

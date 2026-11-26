@@ -295,9 +295,8 @@ html.is-restoring-home body { visibility: hidden; }
 /* ===== HERO CAROUSEL (swipeable intro) ===== */
 .hero-carousel{
   position: relative;
-  height: calc(100svh - 70px);
-  min-height: 520px;
-  max-height: 820px;
+  --hero-height: clamp(520px, calc(100svh - var(--content-top, 70px)), 820px);
+  height: var(--hero-height);
   width: 100%;
   overflow: hidden;
   z-index: 0;
@@ -1590,13 +1589,8 @@ html.home-portal-transition.is-navigating {
 }
 
 .back-card {
-  position: absolute;
-  top: 90px;
-  left: 16px;
   padding: 8px 12px;
   border-radius: 12px;
-  width: 115px;
-  z-index: 10;
 }
 
 .back-card a {
@@ -1621,10 +1615,6 @@ html.home-portal-transition.is-navigating {
 .other-project-card h1 {
   margin: 12px 0 1rem;
   text-align: center;
-}
-
-.other-project-detail-title {
-  margin-top: 20px !important;
 }
 
 .other-project-card {
