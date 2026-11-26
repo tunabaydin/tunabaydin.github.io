@@ -269,6 +269,13 @@
   margin-top: 48px;
 }
 
+@media (max-width: 600px) {
+  #root > .footer {
+    padding-top: 8px;
+    padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
 .dream-additional-sections {
   margin-top: 36px;
 }
