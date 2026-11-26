@@ -176,15 +176,7 @@ return matchesFilter && matchesSearch;
         style={{ backgroundImage: "url('/assets/backgroundphoto_1920x1080.jpg')" }}
       />
 
-      <div
-        style={{
-          maxWidth: "1148px",
-          margin: "40px auto 0",
-          display: "grid",
-          gridTemplateColumns: "1fr auto 1fr",
-          alignItems: "center",
-        }}
-      >
+      <div className="project-detail-header">
         <div style={{ justifySelf: "start" }}>
           <div className="back-card">
             <a href={`/${currentLang}#home-projects`}>
@@ -194,10 +186,8 @@ return matchesFilter && matchesSearch;
         </div>
 
         <div style={{ textAlign: "center" }}>
-          <h1 className="other-project-detail-title" style={{ margin: 0 }}>{projectTitle}</h1>
+          <h1 style={{ margin: 0 }}>{projectTitle}</h1>
         </div>
-
-        <div />
       </div>
 
       <div className="other-project-card">

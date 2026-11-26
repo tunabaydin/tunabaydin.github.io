@@ -83,7 +83,7 @@ export default function PastLives() {
 
   const openChapter = (chapter) => {
     if (chapter.artworkSlug) {
-      window.location.href = `/${currentLang}/${chapter.artworkSlug}/?from=pastlives`;
+      window.location.assign(`/${currentLang}/${chapter.artworkSlug}/?from=pastlives`);
       return;
     }
 
@@ -126,7 +126,7 @@ if (selectedChapter && !selectedChapter.artworkSlug) {
       />
 
       <section className="page">
-        <div style={{ maxWidth: "1196px", margin: "20px auto 0" }}>
+        <div className="page-back">
           <div className="back-card">
             <a href={`/${currentLang}/pastlives/${overviewParams.toString() ? `?${overviewParams.toString()}` : ""}`}>
               ← {label.chapters}
@@ -199,7 +199,7 @@ if (selectedChapter && !selectedChapter.artworkSlug) {
 
       <section className="page past-lives-project">
         {!selectedChapter && (
-  <div style={{ maxWidth: "1196px", margin: "20px auto 0" }}>
+  <div className="page-back">
     <div className="back-card">
       <a
         href={
