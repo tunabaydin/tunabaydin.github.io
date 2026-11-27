@@ -1,15 +1,11 @@
-import { useEffect } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
+import { languageTags, localizedLocation } from "../locales";
 import { siteContent } from "../content/siteContent";
 import useFixedElementHeight from "../hooks/useFixedElementHeight";
 
 export default function Navbar() {
   const { lang } = useParams();
   const navRef = useFixedElementHeight("--nav-height");
-
-  useEffect(() => {
-    document.documentElement.lang = ["en", "tr", "no"].includes(lang) ? lang : "en";
-  }, [lang]);
 
   const content = siteContent[lang] || siteContent.en;
   const currentLang = lang || "en";
@@ -19,13 +15,6 @@ export default function Navbar() {
   no: "Tilbake til begynnelsen",
 };
   const location = useLocation();
-  const pathAfterLang = location.pathname.replace(/^\/(en|tr|no)/, "") || "";
-  
-const recipeParams =
-  location.pathname.replace(/\/$/, "").endsWith("/recipes")
-    ? location.search
-    : "";
-
 
   return (
     <nav ref={navRef} className="top-nav" aria-label="Primary">
@@ -42,11 +31,15 @@ const recipeParams =
         </div>
 
         <div className="nav-lang" aria-label="Language">
-
-<a className="nav-item lang-item" href={`/en${pathAfterLang}${recipeParams}`}>EN</a>
-<a className="nav-item lang-item" href={`/tr${pathAfterLang}${recipeParams}`}>TR</a>
-<a className="nav-item lang-item" href={`/no${pathAfterLang}${recipeParams}`}>NO</a>
-
+          {Object.keys(languageTags).map((language) => (
+            <Link
+              key={language}
+              className="nav-item lang-item"
+              to={localizedLocation(location, language)}
+            >
+              {language.toUpperCase()}
+            </Link>
+          ))}
         </div>
       </div>
     </nav>

@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
+import { languageTags, localizedLocation } from "../locales";
 import { spaceImages } from "../data/spaceImages";
 import "./Welcome.css";
 
@@ -32,6 +33,7 @@ const labels = {
 
 export default function Welcome() {
   const { lang } = useParams();
+  const location = useLocation();
   const currentLang = labels[lang] ? lang : "en";
   const text = labels[currentLang];
 
@@ -58,10 +60,10 @@ export default function Welcome() {
       <div className="welcome-overlay" />
 
       <nav className="welcome-languages">
-        {["en", "tr", "no"].map((language) => (
+        {Object.keys(languageTags).map((language) => (
           <Link
             key={language}
-            to={`/${language}/welcome`}
+            to={localizedLocation(location, language)}
             className={currentLang === language ? "active" : ""}
           >
             {language.toUpperCase()}
