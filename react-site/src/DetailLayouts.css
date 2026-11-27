@@ -151,19 +151,9 @@
   inset: auto;
   align-self: end;
   justify-self: start;
-  box-sizing: border-box;
-  min-height: 44px;
   max-width: calc(100% - 16px);
   margin: 8px;
-  padding: 4px 10px;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.58);
   z-index: 1;
-}
-
-.image-ai-disclosure:focus-visible {
-  outline: 2px solid white;
-  outline-offset: -4px;
 }
 
 #ai-disclosure,

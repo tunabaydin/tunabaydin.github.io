@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { siteContent } from "../content/siteContent";
 import pastLivesVideo from "../../../assets/pastlives/pastlivesnewsmall.mp4";
+import AiDisclosureBadge from "../components/AiDisclosureBadge";
 import Navbar from "../components/Navbar";
 import ArtGallery from "../components/ArtGallery";
 import OtherProjects from "../components/OtherProjects";
@@ -65,17 +66,11 @@ export default function Home() {
                 <source src={pastLivesVideo} type="video/mp4" />
               </video>
 
-              <a
-                className="hero-ai-disclaimer"
+              <AiDisclosureBadge
+                kind="assisted"
+                className="hero-image-ai-disclosure"
                 href={`/${lang}/dreamreconstruction/`}
-                aria-label="Disclaimer: AI-assisted image. Unless marked with this, my art is not generated through AI."
-              >
-                <span className="hero-ai-disclaimer-main">Disclaimer</span>
-                <span className="hero-ai-disclaimer-hover">AI-assisted art</span>
-                <span className="hero-ai-disclaimer-note">
-                  Unless marked with this, my art is not generated through AI.
-                </span>
-              </a>
+              />
             </div>
             <div className="hero-overlay" />
             <div className="hero-pastlives-copy" aria-hidden="true">
