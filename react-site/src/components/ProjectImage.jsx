@@ -15,7 +15,7 @@ export default function ProjectImage({
   return (
     <div className="project-image-disclosure">
       {image}
-      <AiDisclosureBadge kind="generated" className="image-ai-disclosure" href={disclosureHref} />
+      <AiDisclosureBadge className="image-ai-disclosure" href={disclosureHref} />
     </div>
   );
 }
