@@ -96,7 +96,63 @@ const backToChapters = {
 
           </div>
 
-          <div className="art-layout">
+          {slug === "jupiter" ? (
+  <div className="art-layout">
+    <div className="art-media-column">
+      <div className="art-image">
+        <img
+          src={artworkDetails.mediaColumn[0].src}
+          alt={artworkDetails.mediaColumn[0].alt}
+        />
+      </div>
+
+      <div className="art-description">
+        {(artworkDetails.description[currentLang] ||
+          artworkDetails.description.en)
+          .slice(1)
+          .map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+      </div>
+    </div>
+
+    <div className="art-media-column">
+      <div className="art-description">
+        <p>
+          {(artworkDetails.description[currentLang] ||
+            artworkDetails.description.en)[0]}
+        </p>
+      </div>
+
+      <div className="art-image">
+        <img
+          src={artworkDetails.mediaColumn[1].src}
+          alt={artworkDetails.mediaColumn[1].alt}
+        />
+      </div>
+
+      <p className="inspo-credit">
+        {artworkDetails.mediaColumn[2].text}
+      </p>
+
+      <video
+        className="art-video art-video--jupiter"
+        autoPlay
+        loop
+        muted
+        playsInline
+        controls
+      >
+        <source
+          src={artworkDetails.mediaColumn[3].src}
+          type="video/mp4"
+        />
+      </video>
+    </div>
+  </div>
+) : (
+  
+  <div className="art-layout">
             <div className="art-media-column">
               {artworkDetails?.mediaColumn?.map((item, index) => {
                 if (item.type === "image") {
@@ -194,8 +250,8 @@ const backToChapters = {
 
 </div>
           </div>
+)}
 
-          
 {slug !== "abduction" &&
   slug !== "thewaterplanet" &&
   artworkDetails?.extraMedia &&
