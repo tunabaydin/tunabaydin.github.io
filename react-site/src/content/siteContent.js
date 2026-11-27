@@ -17,21 +17,12 @@ export const siteContent = {
   conceptQuestion: "How many forms can one consciousness take?",
   chaptersTitle: "Chapters",
 chaptersIntro: "Select a chapter to explore a past life.",
-  chapter1Title: "Chapter 1: Early Human",
   chapter1Text1:
     "During a past life regression hypnosis session, I experienced a vivid scene: I was an early human living tens of thousands of years ago. I remember looking down and seeing that I had a tall and strong male body.",
   chapter1Text2:
     "In the vision, I lived in a cave in a dry, rocky landscape where earthquakes happened often. Life was simple: moving through nature, searching for food, reading the land and the animals around me.",
   chapter1Text3:
     "I was running fast and chasing a large animal (likely an ancient antelope). I hunted it down using a spear. As it was dying, I put my hand on the animal, closed my eyes, and shed a tear. I was respectful and grateful that I had found food to survive.",
-  chapter2Title: "Chapter 2: The Water Planet",
-  chapter2Text1:
-    "A recurring experience has appeared in my dreams.",
-  chapter2Text2:
-    "In these dreams, I dive deep underwater and move through the ocean as if it were my natural environment. I can breathe there without effort.",
-  chapter2Text3:
-    "I am not afraid. Only calm and curious, as if the underwater world is familiar.",
-    chapter3Title: "Chapter 3: The Energy Being",
     chapter3Text1:
   "I experienced this scene in a past life regression hypnosis session. I was looking at a temple wall carved into the land. The color of the soil and stone reminded me of Petra, Jordan. However, there was no apparent entrance to the temple. I soon realized that I was an energy being and did not have a physical body, so I could go through the wall and enter the temple. There was sunlight entering the temple through a window in the ceiling of this very tall structure.",
 chapter3Text2:
@@ -138,21 +129,12 @@ detail: {
   conceptQuestion: "Bir bilinç kaç farklı biçim alabilir?",
   chaptersTitle: "Bölümler",
 chaptersIntro: "Geçmiş bir yaşamı keşfetmek için bir bölüm seçin.",
-  chapter1Title: "Bölüm 1: İlk İnsan",
   chapter1Text1:
     "Bir geçmiş yaşam regresyonu hipnoz seansı sırasında canlı bir sahne deneyimledim: On binlerce yıl önce yaşayan bir ilk insandım. Aşağı baktığımda uzun ve güçlü bir erkek bedenine sahip olduğumu gördüğümü hatırlıyorum.",
   chapter1Text2:
     "Bu görüntüde, sık sık depremlerin olduğu kuru ve kayalık bir manzarada bir mağarada yaşıyordum. Hayat basitti: doğanın içinde hareket etmek, yiyecek aramak, toprağı ve etrafımdaki hayvanları okumak.",
   chapter1Text3:
     "Hızlı koşuyor ve büyük bir hayvanı (muhtemelen antik bir antilop) kovalıyordum. Onu bir mızrakla avladım. Ölürken elimi hayvanın üzerine koydum, gözlerimi kapattım ve bir damla gözyaşı döktüm. Hayatta kalmak için yiyecek bulduğum için saygılı ve minnettardım.",
-  chapter2Title: "Bölüm 2: Su Gezegeni",
-  chapter2Text1:
-    "Tekrarlayan bir deneyim rüyalarımda ortaya çıkıyor.",
-  chapter2Text2:
-    "Bu rüyalarda suyun derinliklerine dalıyor ve sanki doğal ortamım orasıymış gibi okyanusun içinde hareket ediyorum. Hiç zorlanmadan nefes alabiliyorum.",
-  chapter2Text3:
-    "Korku yok. Sadece sakinlik ve merak var, sanki sualtı dünyası bana tanıdık.",
-  chapter3Title: "Bölüm 3: Enerji Varlığı",
 chapter3Text1:
   "Bu sahneyi bir geçmiş yaşam regresyonu hipnoz seansında deneyimledim. Kayalara oyulmuş bir tapınağın duvarına bakıyordum. Toprağın ve kayaların rengi bana Ürdün'deki Petra'yı hatırlattı. Ancak tapınağın girişini göremiyordum. Kısa süre sonra bir enerji varlığı olduğumu ve fiziksel bir bedenim olmadığını fark ettim. Böylece duvarın içinden geçip tapınağa girebildim. Tapınağın oldukça yüksek olan tavanındaki bir açıklıktan içeri güneş ışığı süzülüyordu.",
 chapter3Text2:
@@ -257,21 +239,12 @@ detail: {
   conceptQuestion: "Hvor mange former kan én bevissthet ta?",
   chaptersTitle: "Kapitler",
 chaptersIntro: "Velg et kapittel for å utforske et tidligere liv.",
-  chapter1Title: "Kapittel 1: Tidlig menneske",
   chapter1Text1:
     "Under en regresjonshypnose for tidligere liv opplevde jeg en levende scene: Jeg var et tidlig menneske som levde for titusenvis av år siden. Jeg husker at jeg så ned og la merke til at jeg hadde en høy og sterk mannskropp.",
   chapter1Text2:
     "I denne visjonen levde jeg i en hule i et tørt og steinete landskap der jordskjelv skjedde ofte. Livet var enkelt: å bevege seg gjennom naturen, lete etter mat og lese landskapet og dyrene rundt meg.",
   chapter1Text3:
     "Jeg løp raskt og jaget et stort dyr (trolig en forhistorisk antilope). Jeg jaktet det ned med et spyd. Mens det døde, la jeg hånden min på dyret, lukket øynene og felte en tåre. Jeg følte respekt og takknemlighet for at jeg hadde funnet mat for å overleve.",
-  chapter2Title: "Kapittel 2: Vannplaneten",
-  chapter2Text1:
-    "En tilbakevendende opplevelse har dukket opp i drømmene mine.",
-  chapter2Text2:
-    "I disse drømmene dykker jeg dypt under vann og beveger meg gjennom havet som om det var mitt naturlige miljø. Jeg kan puste der uten anstrengelse.",
-  chapter2Text3:
-    "Jeg er ikke redd. Bare rolig og nysgjerrig, som om undervannsverdenen er kjent for meg.",
-  chapter3Title: "Kapittel 3: Energivesen",
   chapter3Text1:
   "Jeg opplevde denne scenen under en regresjonshypnose for tidligere liv. Jeg så på en tempelvegg som var hugget inn i landskapet. Fargen på jorden og steinen minnet meg om Petra i Jordan. Det var imidlertid ingen synlig inngang til tempelet. Jeg innså snart at jeg var et energivesen og ikke hadde en fysisk kropp, så jeg kunne gå gjennom veggen og inn i tempelet. Sollys kom inn i dette svært høye tempelet gjennom en åpning i taket.",
 chapter3Text2:

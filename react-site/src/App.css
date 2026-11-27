@@ -95,13 +95,13 @@ body:has(> #root > .top-nav) {
 #home-projects,
 #home-artist,
 #home-contact,
-#home-books,
-.footer {
+#home-books {
   position: relative;
   z-index: 1;
 }
 
 .footer {
+  z-index: 1;
   margin-top: 48px;
 }
 

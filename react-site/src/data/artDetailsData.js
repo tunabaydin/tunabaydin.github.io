@@ -79,11 +79,6 @@ description: {
       materials: "Acrylic and marker on paper",
       year: "2026",
       dimensions: "30 x 42 cm (each piece)",
-      status: {
-        en: "Available",
-        tr: "Satın alınabilir",
-        no: "Tilgjengelig",
-      },
     },
 
     mediaColumn: [
@@ -156,11 +151,6 @@ description: {
       materials: "Acrylic on canvas",
       year: "2025",
       dimensions: "50 × 50 cm",
-      status: {
-        en: "Not available for purchase",
-        tr: "Mevcut değil",
-        no: "Ikke tilgjengelig for kjøp",
-      },
     },
 
  mediaColumn: [
@@ -213,11 +203,6 @@ description: {
       materials: "Watercolor and marker on paper",
       year: "2023",
       dimensions: "29.7 × 42 cm",
-      status: {
-        en: "Not available for purchase",
-        tr: "Mevcut değil",
-        no: "Ikke tilgjengelig for kjøp",
-      },
     },
 
     mediaColumn: [
@@ -251,11 +236,6 @@ description: {
       materials: "Acrylic, marker, wrapping paper, herbs and chili flakes on paper",
       year: "2021",
       dimensions: "24.5 × 35 cm",
-      status: {
-         en: "Available for purchase",
-        tr: "Satın alınabilir",
-        no: "Tilgjengelig for kjøp",
-      },
     },
 
     mediaColumn: [
@@ -307,11 +287,6 @@ description: {
       materials: "Marker on paper",
       year: "2023",
       dimensions: "5.4 × 8.6 cm",
-      status: {
-        en: "Not available for purchase",
-        tr: "Mevcut değil",
-        no: "Ikke tilgjengelig for kjøp",
-      },
     },
 
     mediaColumn: [
@@ -352,11 +327,6 @@ description: {
       materials: "Oil on canvas",
       year: "2022",
       dimensions: "50 × 100 cm",
-      status: {
-        en: "Not available for purchase",
-        tr: "Mevcut değil",
-        no: "Ikke tilgjengelig for kjøp",
-      },
     },
 
     mediaColumn: [
@@ -417,11 +387,6 @@ frameDescription: {
       materials: "Oil on canvas",
       year: "2023",
       dimensions: "50 × 70 cm",
-      status: {
-        en: "Not available for purchase",
-        tr: "Mevcut değil",
-        no: "Ikke tilgjengelig for kjøp",
-      },
     },
 
     mediaColumn: [
@@ -458,11 +423,6 @@ frameDescription: {
       materials: "Marker and watercolor on paper",
       year: "2023",
       dimensions: "21 × 30 cm",
-      status: {
-        en: "Not available for purchase",
-        tr: "Mevcut değil",
-        no: "Ikke tilgjengelig for kjøp",
-      },
     },
 
     mediaColumn: [
@@ -512,11 +472,6 @@ frameDescription: {
       materials: "Water color and marker",
       year: "2024",
       dimensions: "30 × 42 cm",
-      status: {
-        en: "Available for purchase",
-        tr: "Satın alınabilir",
-        no: "Tilgjengelig for kjøp",
-      },
     },
 
     mediaColumn: [
@@ -552,11 +507,6 @@ frameDescription: {
       materials: "Icing and chocolate on cookie",
       year: "2023",
       dimensions: "4 × 4 cm",
-      status: {
-         en: "Not available for purchase",
-        tr: "Mevcut değil",
-        no: "Ikke tilgjengelig for kjøp",
-      },
     },
 
     mediaColumn: [
@@ -593,11 +543,6 @@ frameDescription: {
       materials: "Marker on paper",
       year: "2023",
       dimensions: "21 × 30 cm",
-      status: {
-        en: "Available for purchase",
-        tr: "Satın alınabilir",
-        no: "Tilgjengelig for kjøp",
-      },
     },
 
     mediaColumn: [
@@ -640,11 +585,6 @@ frameDescription: {
       materials: "Oil on canvas",
       year: "2023",
       dimensions: "80 × 80 cm",
-      status: {
-        en: "Not available for purchase",
-        tr: "Mevcut değil",
-        no: "Ikke tilgjengelig for kjøp",
-      },
     },
 
     mediaColumn: [
