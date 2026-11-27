@@ -57,11 +57,31 @@ export default function ProjectDetail() {
       : slug === "dreamreconstruction" ? "#ai-disclosure" : null;
     if (!anchor || hash !== anchor) return;
 
-    const frame = requestAnimationFrame(() => {
-      document.getElementById(anchor.slice(1))?.scrollIntoView({ block: "start", behavior: "instant" });
-    });
+    const heading = document.getElementById(anchor.slice(1));
+    if (!heading) return;
 
-    return () => cancelAnimationFrame(frame);
+    let alignedY;
+    const align = () => {
+      heading.scrollIntoView({ block: "start", behavior: "instant" });
+      alignedY = window.scrollY;
+    };
+    let frame = requestAnimationFrame(align);
+
+    const nav = slug === "dreamreconstruction" && document.querySelector(".top-nav");
+    const observer = nav ? new ResizeObserver(() => {
+      // Keep the anchor clear when the fixed bar reflows, until the visitor scrolls away.
+      if (alignedY === undefined || Math.abs(window.scrollY - alignedY) > 1) return;
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        if (Math.abs(window.scrollY - alignedY) <= 1) align();
+      });
+    }) : null;
+    if (observer) observer.observe(nav, { box: "border-box" });
+
+    return () => {
+      cancelAnimationFrame(frame);
+      observer?.disconnect();
+    };
   }, [hash, lang, slug]);
 
 const [searchParams, setSearchParams] = useSearchParams();
