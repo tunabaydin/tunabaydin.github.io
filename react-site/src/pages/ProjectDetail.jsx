@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { otherProjectDetailsData } from "../data/otherProjectDetailsData";
 import { siteContent } from "../content/siteContent";
+import AiDisclosureBadge from "../components/AiDisclosureBadge";
 import ProjectImage from "../components/ProjectImage";
 import ProjectImageCarousel from "../components/ProjectImageCarousel";
 
@@ -489,17 +490,7 @@ return matchesFilter && matchesSearch;
     <h2 id="ai-disclosure" tabIndex={-1}>{getLocalizedText(project.introBox.heading)}</h2>
 
     <div className="dream-intro-content">
-      <button
-        className="hero-ai-disclaimer dream-intro-disclaimer"
-        type="button"
-        aria-label="Disclaimer: AI-assisted art. Unless marked with this, my art is not generated through AI."
-      >
-        <span className="hero-ai-disclaimer-main">Disclaimer</span>
-        <span className="hero-ai-disclaimer-hover">AI-assisted art</span>
-        <span className="hero-ai-disclaimer-note">
-          Unless marked with this, my art is not generated through AI.
-        </span>
-      </button>
+      <AiDisclosureBadge className="dream-intro-disclaimer" />
 
       <div className="dream-intro-text">
         {getLocalizedArray(project.introBox.text).map((paragraph, index) => (

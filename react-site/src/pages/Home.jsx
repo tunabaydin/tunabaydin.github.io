@@ -67,7 +67,6 @@ export default function Home() {
               </video>
 
               <AiDisclosureBadge
-                kind="assisted"
                 className="hero-image-ai-disclosure"
                 href={`/${lang}/dreamreconstruction/`}
               />

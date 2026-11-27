@@ -1,5 +1,9 @@
 /* React detail layouts. Legacy pages use the shared defaults in global.css. */
 
+#root:has(> :is(.page, .other-project-card) + .footer) {
+  padding-bottom: calc(var(--footer-height, 0px) + 16px);
+}
+
 .page-back {
   max-width: 1196px;
   margin: 20px auto 0;
@@ -148,10 +152,8 @@
 
 .project-image-disclosure > .image-ai-disclosure {
   position: relative;
-  inset: auto;
   align-self: end;
   justify-self: start;
-  max-width: calc(100% - 16px);
   margin: 8px;
   z-index: 1;
 }
@@ -296,11 +298,8 @@
 }
 
 .dream-intro-disclaimer {
-  position: static;
   flex-shrink: 0;
   margin-top: 6px;
-  font-family: inherit;
-  cursor: default;
 }
 
 .dream-intro-text p:first-child {
@@ -327,10 +326,6 @@
   .dream-intro-content {
     flex-direction: column;
     gap: 14px;
-  }
-
-  .dream-intro-disclaimer {
-    align-self: flex-start;
   }
 }
 
