@@ -103,7 +103,11 @@ export default function Home() {
 
     const dots = Array.from(dotsWrap.querySelectorAll(".hero-dot"));
 
+    let activeVisualIndex = null;
+
     function setActiveFromVisualIndex(visualIndex) {
+      if (visualIndex === activeVisualIndex) return;
+      activeVisualIndex = visualIndex;
       const realIndex = getRealIndexFromVisualIndex(visualIndex);
 
       dots.forEach((d, i) => d.classList.toggle("is-active", i === realIndex));
