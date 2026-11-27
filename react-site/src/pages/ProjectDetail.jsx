@@ -1,4 +1,5 @@
-import { useParams, Navigate, useSearchParams } from "react-router-dom";
+import { useEffect } from "react";
+import { useLocation, useParams, Navigate, useSearchParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { otherProjectDetailsData } from "../data/otherProjectDetailsData";
@@ -49,6 +50,19 @@ export default function ProjectDetail() {
   const currentLang = lang || "en";
   const content = siteContent[currentLang] || siteContent.en;
   const project = otherProjectDetailsData[slug];
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    const anchor = slug === "collage" ? "#snowflake"
+      : slug === "dreamreconstruction" ? "#ai-disclosure" : null;
+    if (!anchor || hash !== anchor) return;
+
+    const frame = requestAnimationFrame(() => {
+      document.getElementById(anchor.slice(1))?.scrollIntoView({ block: "start", behavior: "instant" });
+    });
+
+    return () => cancelAnimationFrame(frame);
+  }, [hash, lang, slug]);
 
 const [searchParams, setSearchParams] = useSearchParams();
 
@@ -286,7 +300,7 @@ return matchesFilter && matchesSearch;
   (slug !== "recipes" || selectedRecipe) && (
           <div className="photo-section">
             {(slug === "recipes" ? [selectedRecipe] : filteredRows).map((row, index) => (
-              <div className={`photo-row ${row.rowClass || ""}`} key={index}>
+              <div className={`photo-row ${row.rowClass || ""}`} id={row.anchor} key={index}>
                 <div
                   className={row.images && row.type !== "carousel"
                     ? "photo-media photo-media-grid"

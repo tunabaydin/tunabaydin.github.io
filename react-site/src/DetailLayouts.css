@@ -166,7 +166,8 @@
   outline-offset: -4px;
 }
 
-#ai-disclosure {
+#ai-disclosure,
+#snowflake {
   scroll-margin-top: var(--anchor-offset);
 }
 
