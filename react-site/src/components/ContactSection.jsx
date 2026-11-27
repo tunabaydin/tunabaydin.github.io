@@ -13,23 +13,23 @@ export default function ContactSection() {
 
         <p>{content.contact.intro}</p>
 
-        <p style={{ marginTop: "1rem" }}>
+        <p className="contact-email">
           <strong>E-mail:</strong>{" "}
           <a href="mailto:contact@tunabaydin.com">
             contact@tunabaydin.com
           </a>
         </p>
 
-        <p style={{ marginTop: "2rem" }}>{content.contact.follow}</p>
+        <p className="contact-follow">{content.contact.follow}</p>
 
-        <p>
+        <p className="contact-social">
           <strong>Instagram:</strong>{" "}
           <a href="https://www.instagram.com/ttunartt/" target="_blank" rel="noreferrer">
             @ttunartt
           </a>
         </p>
 
-        <p>
+        <p className="contact-social">
           <strong>TikTok:</strong>{" "}
           <a href="https://www.tiktok.com/@ttunartt" target="_blank" rel="noreferrer">
             @ttunartt

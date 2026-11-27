@@ -137,21 +137,6 @@ body:has(> #root > .top-nav) {
 }
 
 @media (max-width: 768px) {
-  .hero-ai-disclaimer {
-    left: 14px;
-    bottom: 54px;
-    max-width: calc(100% - 28px);
-    padding: 7px 10px;
-    font-size: 11px;
-  }
-
-  .hero-ai-disclaimer-note {
-    display: none;
-  }
-
-}
-
-@media (max-width: 768px) {
   body:has(> #root > .top-nav) {
     --content-top: calc(var(--nav-height, 0px) + 12px);
     --anchor-offset: var(--content-top);
@@ -209,26 +194,79 @@ body:has(> #root > .top-nav) {
 
 @media (max-width: 800px), (max-width: 1024px) and (max-height: 500px) {
   #root > .hero-carousel {
+    --hero-arrow-size: 44px;
+    --hero-dot-size: 32px;
+    --hero-control-inset: 8px;
+    /* Use the viewport with browser toolbars expanded. Content can still grow. */
+    --hero-room: calc(100svh - var(--content-top) - var(--footer-height, 0px));
     display: grid;
-    grid-template-rows: 1fr auto;
+    grid-template:
+      "previous track next" minmax(auto, 1fr)
+      "dots dots dots" auto
+      / var(--hero-arrow-size) minmax(0, 1fr) var(--hero-arrow-size);
+    box-sizing: border-box;
+    padding-bottom: 4px;
     height: auto;
-    min-height: max(0px, calc(100svh - var(--content-top) - var(--footer-height, 0px)));
+    min-height: max(0px, var(--hero-room));
     max-height: none;
   }
 
-  #root .hero-track,
-  #root .hero-slide {
+  #root .hero-track {
+    grid-area: track;
+    position: relative;
     height: auto;
+    padding: 0;
+    gap: 12px;
   }
 
   #root .hero-slide {
+    flex-basis: 100%;
     min-width: 0;
+    height: auto;
+  }
+
+  #root .hero-card-wrap {
+    padding: 4px 0;
   }
 
   #root .hero-slide--intro .card {
-    min-width: 0;
+    box-sizing: border-box;
+    width: min(100%, 600px);
+    min-height: 0;
     max-height: none;
+    padding: clamp(12px, 2.4vw, 24px);
     overflow: visible;
+  }
+
+  #root .hero-slide--intro .card h1 {
+    font-size: clamp(1.2rem, 4.1vw, 1.75rem);
+    line-height: 1.15;
+    margin: 0 auto 0.35rem;
+    max-width: none;
+  }
+
+  #root .hero-slide--intro .card p {
+    font-size: clamp(0.875rem, 2.3vw, 1rem);
+    line-height: 1.42;
+    margin: 0.4rem auto 0;
+    max-width: 44ch;
+  }
+
+  #root .etsy-card {
+    gap: 6px;
+  }
+
+  #root .etsy-feature-image {
+    max-height: clamp(64px, calc((var(--hero-room) - 120px) * 0.5), 300px);
+  }
+
+  #root .tona-gallery {
+    margin-top: 8px;
+  }
+
+  #root .tona-gallery-image {
+    width: min(27%, clamp(44px, calc(var(--hero-room) * 0.14), 110px));
+    height: auto;
   }
 
   #root .hero-slide[data-type="video"] {
@@ -243,15 +281,26 @@ body:has(> #root > .top-nav) {
   #root .hero-media {
     position: absolute;
     inset: 0;
-    width: auto;
-    max-width: 100%;
-    margin: auto;
   }
 
   #root .hero-slide[data-type="video"] .hero-pastlives-copy {
     position: relative;
     flex: 1;
-    padding: 24px 18px 0;
+    justify-content: flex-start;
+    gap: clamp(12px, calc((var(--hero-room) - 225px) * 0.34), 145px);
+    padding: clamp(12px, calc(var(--hero-room) * 0.13), 58px)
+      10px calc(44px + 2 * var(--hero-control-inset));
+  }
+
+  #root .hero-slide[data-type="video"] .hero-pastlives-title {
+    font-size: clamp(1.65rem, 8.6vw, 3.2rem);
+    margin: 0;
+  }
+
+  #root .hero-slide[data-type="video"] .hero-pastlives-bottom {
+    position: static;
+    width: min(100%, 440px);
+    margin: 0 auto;
   }
 
   #root .hero-pastlives-title,
@@ -263,53 +312,174 @@ body:has(> #root > .top-nav) {
   }
 
   #root .hero-ai-disclaimer {
+    left: var(--hero-control-inset);
+    bottom: var(--hero-control-inset);
+    box-sizing: border-box;
+    justify-content: center;
+    min-height: 44px;
+    max-width: calc(100% - 96px);
+    padding: 4px 9px;
+    font-size: 11px;
+  }
+
+  #root .hero-ai-disclaimer-note {
+    display: none;
+  }
+
+  #root .hero-arrow {
     position: relative;
-    order: 1;
-    align-self: flex-start;
     inset: auto;
-    margin: 12px 14px;
-  }
-
-  .hero-controls {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr) auto minmax(0, 1fr);
-    align-items: center;
-    gap: 8px;
-    padding: 8px 10px;
-  }
-
-  #root .hero-controls > * {
-    position: static;
     transform: none;
-    justify-self: center;
+    align-self: center;
+    width: var(--hero-arrow-size);
+    height: var(--hero-arrow-size);
   }
 
-  #root .hero-dot {
-    width: 24px;
-    height: 24px;
-    padding: 0;
-    border: 7px solid transparent;
-    background-clip: padding-box;
-  }
-
-  #root .hero-dots {
-    grid-area: 1 / 2;
-    gap: 0;
+  #root .hero-arrow:focus-visible {
+    outline-offset: -3px;
   }
 
   #root .hero-arrow--left {
-    grid-area: 1 / 1;
+    grid-area: previous;
+  }
+
+  #root .hero-arrow--right {
+    grid-area: next;
+  }
+
+  #root .hero-dots {
+    grid-area: dots;
+    position: static;
+    transform: none;
+    justify-self: center;
+    gap: 0;
+  }
+
+  #root .hero-dot {
+    box-sizing: border-box;
+    width: var(--hero-dot-size);
+    height: var(--hero-dot-size);
+    padding: 0;
+    border: calc((var(--hero-dot-size) - 10px) / 2) solid transparent;
+    background-clip: padding-box;
+  }
+
+  #root > .hero-carousel .hero-sound {
+    grid-area: track;
+    position: relative;
+    inset: auto;
+    place-self: end;
+    margin: var(--hero-control-inset);
+    min-height: 44px;
   }
 }
 
-@media (max-width: 600px) {
-  #root .hero-slide[data-type="video"] .hero-pastlives-copy {
-    padding-top: max(24px, calc(13svh + 70px - var(--content-top)));
-  }
+#home-contact .contact-email {
+  margin-top: 1rem;
 }
 
-@media (min-width: 601px) and (max-width: 1024px) and (max-height: 500px) {
-  #root .hero-slide[data-type="video"] .hero-pastlives-copy {
-    justify-content: flex-start;
+#home-contact .contact-follow {
+  margin-top: 2rem;
+}
+
+/* Homepage cards share the mobile gutters and readable line lengths of detail pages. */
+@media (max-width: 800px) {
+  #root > #home-artist,
+  #root > #home-contact,
+  #root > #home-art,
+  #root > #home-projects {
+    --home-gutter: clamp(12px, 4vw, 24px);
+    --home-card-padding: clamp(16px, 5vw, 36px);
+    --home-heading-size: clamp(1.5rem, 5vw, 2rem);
+    --home-body-size: clamp(0.975rem, 2.3vw, 1.075rem);
+  }
+
+  #root #home-artist .wrap,
+  #root #home-contact .card {
+    box-sizing: border-box;
+    width: calc(100% - 2 * var(--home-gutter));
+    max-width: 680px;
+    margin: clamp(32px, 7vw, 60px) auto;
+    padding: var(--home-card-padding);
+    border-radius: 18px;
+  }
+
+  #root #home-artist h1,
+  #root #home-contact h1,
+  #root #home-art .section-title,
+  #root #home-projects .section-title {
+    font-size: var(--home-heading-size);
+    line-height: 1.18;
+  }
+
+  #root #home-artist p,
+  #root #home-contact p {
+    font-size: var(--home-body-size);
+    line-height: 1.55;
+    margin: 0 0 0.75rem;
+  }
+
+  #root #home-artist p:last-child {
+    margin-bottom: 0;
+  }
+
+  #root #home-artist .portrait {
+    margin: 0 0 16px;
+  }
+
+  #root #home-artist .portrait img {
+    display: block;
+    width: clamp(148px, 48vw, 248px);
+    max-width: 100%;
+    margin: auto;
+  }
+
+  #root #home-contact p strong {
+    display: inline;
+    margin: 0;
+    font-size: inherit;
+  }
+
+  #root #home-contact p a {
+    overflow-wrap: anywhere;
+  }
+
+  #root #home-contact .contact-follow {
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  #root #home-contact .contact-social {
+    margin-bottom: 0.3rem;
+  }
+
+  #root #home-contact .contact-form {
+    margin-top: 1.25rem;
+    gap: 12px;
+  }
+
+  #root #home-contact .form-group label {
+    margin-bottom: 4px;
+  }
+
+  #root #home-contact .form-group :is(input, textarea) {
+    font-size: 1rem;
+  }
+
+  #root #home-contact .form-status:empty {
+    display: none;
+  }
+
+  #root #home-art .section-title,
+  #root #home-projects .section-title {
+    margin: clamp(24px, 5vw, 40px) var(--home-gutter) 14px;
+  }
+
+  #root #home-art .gallery,
+  #root #home-projects .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(min(140px, 100%), 1fr));
+    gap: clamp(10px, 2.5vw, 18px);
+    margin: 0 auto clamp(32px, 7vw, 60px);
+    padding: 0 var(--home-gutter);
   }
 }
