@@ -110,7 +110,13 @@ const backToChapters = {
                 if (item.type === "video") {
                   return (
                     <video
-                      className={slug === "abduction" ? "art-video art-video--desktop-frame" : "art-video"}
+                      className={
+                        slug === "abduction"
+                          ? "art-video art-video--desktop-frame"
+                          : slug === "jupiter"
+                            ? "art-video art-video--jupiter"
+                            : "art-video"
+                      }
                       autoPlay
                       loop
                       muted
@@ -200,7 +206,7 @@ const backToChapters = {
                 if (item.type === "video") {
                   return (
                     <video
-                      className="art-video"
+                      className={slug === "jupiter" ? "art-video art-video--jupiter" : "art-video"}
                       autoPlay
                       loop
                       muted

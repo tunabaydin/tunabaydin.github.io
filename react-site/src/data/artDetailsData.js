@@ -164,21 +164,25 @@ description: {
     },
 
  mediaColumn: [
-      {
-        type: "image",
-        src: "/assets/art/jupiter2.jpg",
-        alt: "Jupiter artwork by Tuna Baydin",
-      },
-      {
-        type: "image",
-        src: "/assets/art/jupiterinspiration.jpg",
-        alt: "Jupiter inspiration image",
-      },
-      {
-        type: "credit",
-        text: "Image data: NASA/JPL-Caltech/SwRI/MSSS / Image processing by Prateek Sarpal, © CC NC SA",
-      },
-    ],
+  {
+    type: "image",
+    src: "/assets/art/jupiter2.jpg",
+    alt: "Jupiter artwork by Tuna Baydin",
+  },
+  {
+    type: "image",
+    src: "/assets/art/jupiterinspiration.jpg",
+    alt: "Jupiter inspiration image",
+  },
+  {
+    type: "credit",
+    text: "Image data: NASA/JPL-Caltech/SwRI/MSSS / Image processing by Prateek Sarpal, © CC NC SA",
+  },
+  {
+    type: "video",
+    src: "/assets/art/jupitervideo.mp4",
+  },
+],
 
     description: {
       en: [
@@ -201,12 +205,6 @@ description: {
       ]
     },
 
-    extraMedia: [
-      {
-        type: "video",
-        src: "/assets/art/jupitervideo.mp4",
-      },
-    ],
   },
 
 
