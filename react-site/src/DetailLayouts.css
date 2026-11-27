@@ -131,6 +131,45 @@
   border-radius: 18px;
 }
 
+.project-image-carousel-track:has(> .project-image-disclosure) {
+  touch-action: pan-y pinch-zoom;
+}
+
+.project-image-disclosure {
+  display: grid;
+  grid-template-areas: "image";
+  max-width: 100%;
+}
+
+.project-image-disclosure > img,
+.project-image-disclosure > .image-ai-disclosure {
+  grid-area: image;
+}
+
+.project-image-disclosure > .image-ai-disclosure {
+  position: relative;
+  inset: auto;
+  align-self: end;
+  justify-self: start;
+  box-sizing: border-box;
+  min-height: 44px;
+  max-width: calc(100% - 16px);
+  margin: 8px;
+  padding: 4px 10px;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.58);
+  z-index: 1;
+}
+
+.image-ai-disclosure:focus-visible {
+  outline: 2px solid white;
+  outline-offset: -4px;
+}
+
+#ai-disclosure {
+  scroll-margin-top: var(--anchor-offset);
+}
+
 .project-image-carousel-arrow {
   position: absolute;
   top: 50%;

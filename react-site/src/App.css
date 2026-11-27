@@ -12,7 +12,8 @@ body:has(> #root > .top-nav) {
   color: #111;
 }
 
-.hero-ai-disclaimer {
+.hero-ai-disclaimer,
+.image-ai-disclosure {
   position: absolute;
   left: 24px;
   bottom: 50px;
@@ -60,7 +61,9 @@ body:has(> #root > .top-nav) {
 }
 
 .hero-ai-disclaimer:hover,
-.hero-ai-disclaimer:focus-visible {
+.hero-ai-disclaimer:focus-visible,
+.image-ai-disclosure:hover,
+.image-ai-disclosure:focus-visible {
   max-width: 360px;
   padding: 10px 14px;
   border-radius: 18px;

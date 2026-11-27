@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import ProjectImage from "./ProjectImage";
 
 const labels = {
   en: { region: "Image carousel", previous: "Previous image", next: "Next image", goTo: "Go to image" },
@@ -7,7 +8,7 @@ const labels = {
   no: { region: "Bildekarusell", previous: "Forrige bilde", next: "Neste bilde", goTo: "Gå til bilde" },
 };
 
-export default function ProjectImageCarousel({ images = [], showDots = false }) {
+export default function ProjectImageCarousel({ images = [], showDots = false, disclosureHref }) {
   const { lang } = useParams();
   const text = labels[lang] || labels.en;
   const [activeIndex, setActiveIndex] = useState(0);
@@ -67,10 +68,10 @@ export default function ProjectImageCarousel({ images = [], showDots = false }) 
         onTouchEnd={onTouchEnd}
         onTouchCancel={() => setTouchStartX(null)}
       >
-        <img
+        <ProjectImage
+          {...images[activeIndex]}
           className="photo-img project-image-carousel-image"
-          src={images[activeIndex].src}
-          alt={images[activeIndex].alt}
+          disclosureHref={disclosureHref}
         />
 
         {images.length > 1 && (
