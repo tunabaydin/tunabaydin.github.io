@@ -113,6 +113,8 @@ if (selectedChapter && !selectedChapter.artworkSlug) {
 
   const overviewParams = new URLSearchParams(searchParams);
   overviewParams.delete("chapter");
+  const overviewSearch = overviewParams.toString();
+  const overviewUrl = `/${currentLang}/pastlives/${overviewSearch ? `?${overviewSearch}` : ""}`;
 
   return (
     <>
@@ -128,7 +130,7 @@ if (selectedChapter && !selectedChapter.artworkSlug) {
       <section className="page chapter-detail">
         <div className="page-back">
           <div className="back-card">
-            <a href={`/${currentLang}/pastlives/${overviewParams.toString() ? `?${overviewParams.toString()}` : ""}`}>
+            <a href={overviewUrl}>
               ← {label.chapters}
             </a>
           </div>
@@ -138,7 +140,7 @@ if (selectedChapter && !selectedChapter.artworkSlug) {
           <h1>{chapterTitle}</h1>
 
           <p>
-            <a href={`/${currentLang}/pastlives/`}>
+            <a href={overviewUrl}>
               Past Lives · {chapterLabel[currentLang] || chapterLabel.en}{" "}
               {selectedChapter.number}
             </a>

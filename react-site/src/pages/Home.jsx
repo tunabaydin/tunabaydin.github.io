@@ -28,6 +28,7 @@ export default function Home() {
     const originalSlides = Array.from(track.querySelectorAll(".hero-slide"));
     if (originalSlides.length < 2) return;
 
+    // Refresh the copies when an in-app language switch updates the real slides.
     const firstClone = originalSlides[0].cloneNode(true);
     const lastClone = originalSlides[originalSlides.length - 1].cloneNode(true);
 
@@ -294,13 +295,16 @@ const autoSlideTimer = window.setInterval(() => {
       if (firstClone.parentNode === track) track.removeChild(firstClone);
       if (lastClone.parentNode === track) track.removeChild(lastClone);
     };
-  }, []);
+  }, [lang]);
 
   useEffect(() => {
     if (!location.hash) {
       window.scrollTo({ top: 0, behavior: "auto" });
-      return;
     }
+  }, [location.hash]);
+
+  useEffect(() => {
+    if (!location.hash) return;
 
     const id = location.hash.slice(1);
 
@@ -314,7 +318,7 @@ const autoSlideTimer = window.setInterval(() => {
     const timeoutId = window.setTimeout(scrollToSection, 50);
 
     return () => window.clearTimeout(timeoutId);
-  }, [location.hash]);
+  }, [location.hash, lang]);
 
   return (
     <>
