@@ -1846,6 +1846,7 @@ foragingImage: "/assets/otherprojects/wildmushrooms.jpg",
     rows: [
 
       {
+        anchor: "snowflake",
         title: {
           en: "Snowflake",
           tr: "Snowflake",
