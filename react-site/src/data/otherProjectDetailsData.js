@@ -250,14 +250,17 @@ no: [
       {
         src: "/assets/otherprojects/dream2.png",
         alt: "Dream reconstruction 2",
+        aiGenerated: true,
       },
       {
         src: "/assets/otherprojects/dream3.png",
         alt: "Dream reconstruction 3",
+        aiGenerated: true,
       },
       {
         src: "/assets/otherprojects/dream4.png",
         alt: "Dream reconstruction 4",
+        aiGenerated: true,
       },
     ],
     textBox: {
@@ -288,18 +291,22 @@ no: [
       {
         src: "/assets/otherprojects/dream5.png",
         alt: "Dream reconstruction 5",
+        aiGenerated: true,
       },
       {
         src: "/assets/otherprojects/dream6.png",
         alt: "Dream reconstruction 6",
+        aiGenerated: true,
       },
       {
         src: "/assets/otherprojects/dream7.png",
         alt: "Dream reconstruction 7",
+        aiGenerated: true,
       },
       {
         src: "/assets/otherprojects/dream8.png",
         alt: "Dream reconstruction 8",
+        aiGenerated: true,
       },
         ],
     additionalSections: [
@@ -311,6 +318,7 @@ no: [
         },
         image: "/assets/pastlives/cave.png",
         imageAlt: "Past Lives cave image",
+        aiGenerated: true,
        text: {
           en: "The cave image used as the cover for the Past Lives project came from a dream memory. I first sketched what I remembered and uploaded a photo to ChatGPT, together with text where I translated the experience into words. ChatGPT generated an image that matched the emotional tone of the dream.",
           tr: "Past Lives projesinin kapak görseli olarak kullandığım mağara görüntüsü bir rüya anısından geldi. Önce hatırladığım şeyi çizdim ve bu deneyimi kelimelere döktüğüm bir metinle birlikte çizimin fotoğrafını ChatGPT'ye yükledim. ChatGPT, rüyanın duygusal tonuna uyan bir görüntü oluşturdu.",

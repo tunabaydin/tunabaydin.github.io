@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { otherProjectDetailsData } from "../data/otherProjectDetailsData";
 import { siteContent } from "../content/siteContent";
+import ProjectImage from "../components/ProjectImage";
 import ProjectImageCarousel from "../components/ProjectImageCarousel";
 
 
@@ -162,6 +163,7 @@ return matchesFilter && matchesSearch;
   };
 
   const projectTitle = getLocalizedText(project.title);
+  const dreamDisclosureHref = project.introBox ? "#ai-disclosure" : undefined;
   const dreamCarouselImages =
     project.layout === "dream" && project.useCarousel
       ? [...(project.leftImages || []), ...(project.rightImages || [])]
@@ -450,7 +452,7 @@ return matchesFilter && matchesSearch;
   <div className="dream-section">
    {project.introBox && (
   <div className="dream-intro-box">
-    <h2>{getLocalizedText(project.introBox.heading)}</h2>
+    <h2 id="ai-disclosure" tabIndex={-1}>{getLocalizedText(project.introBox.heading)}</h2>
 
     <div className="dream-intro-content">
       <button
@@ -477,10 +479,14 @@ return matchesFilter && matchesSearch;
     <div className="dream-grid">
               <div className="dream-left">
                 {project.useCarousel ? (
-                  <ProjectImageCarousel images={dreamCarouselImages} showDots />
+                  <ProjectImageCarousel
+                    images={dreamCarouselImages}
+                    showDots
+                    disclosureHref={dreamDisclosureHref}
+                  />
                 ) : (
                   project.leftImages.map((image, index) => (
-                    <img key={index} src={image.src} alt={image.alt} />
+                    <ProjectImage key={index} {...image} disclosureHref={dreamDisclosureHref} />
                   ))
                 )}
               </div>
@@ -497,7 +503,7 @@ return matchesFilter && matchesSearch;
                 {!project.useCarousel && (
                   <div className="dream-stack">
                     {project.rightImages.map((image, index) => (
-                      <img key={index} src={image.src} alt={image.alt} />
+                      <ProjectImage key={index} {...image} disclosureHref={dreamDisclosureHref} />
                     ))}
                   </div>
                 )}
@@ -509,7 +515,13 @@ return matchesFilter && matchesSearch;
                 {project.additionalSections.map((section, index) => (
                   <div className="dream-additional-section" key={index}>
                     <div className="dream-additional-media">
-                      <img src={section.image} alt={section.imageAlt} />
+                      <ProjectImage
+                        src={section.image}
+                        alt={section.imageAlt}
+                        aiGenerated={section.aiGenerated}
+                        hasEmbeddedAiStamp={section.hasEmbeddedAiStamp}
+                        disclosureHref={dreamDisclosureHref}
+                      />
                     </div>
 
                     <div className="dream-additional-text">
