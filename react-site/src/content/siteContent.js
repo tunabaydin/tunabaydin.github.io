@@ -153,12 +153,12 @@ chaptersIntro: "Geçmiş bir yaşamı keşfetmek için bir bölüm seçin.",
   chapter2Text3:
     "Korku yok. Sadece sakinlik ve merak var, sanki sualtı dünyası bana tanıdık.",
   chapter3Title: "Bölüm 3: Enerji Varlığı",
-  chapter3Text1:
-  "Bu sahneyi bir geçmiş yaşam regresyonu hipnoz seansında deneyimledim. Toprağa oyulmuş bir tapınak duvarına bakıyordum. Toprağın ve taşın rengi bana Petra, Ürdün’ü hatırlattı. Ancak tapınağın görünür bir girişi yoktu. Kısa süre sonra bir enerji varlığı olduğumu ve fiziksel bir bedenim olmadığını fark ettim, bu yüzden duvarın içinden geçerek tapınağa girebildim. Bu çok yüksek tapınağın tavanındaki bir açıklıktan içeri güneş ışığı giriyordu.",
+chapter3Text1:
+  "Bu sahneyi bir geçmiş yaşam regresyonu hipnoz seansında deneyimledim. Kayalara oyulmuş bir tapınağın duvarına bakıyordum. Toprağın ve kayaların rengi bana Ürdün'deki Petra'yı hatırlattı. Ancak tapınağın girişini göremiyordum. Kısa süre sonra bir enerji varlığı olduğumu ve fiziksel bir bedenim olmadığını fark ettim. Böylece duvarın içinden geçip tapınağa girebildim. Tapınağın oldukça yüksek olan tavanındaki bir açıklıktan içeri güneş ışığı süzülüyordu.",
 chapter3Text2:
-  "\"Burası çok huzurlu, kuşları duyabiliyorum. Bir bedenim olup olmadığından emin değilim. İnsanlar buraya geliyor ve adaklar bırakıyor, burası bir ibadet yeri gibi. Etrafında kristaller var.\"",
+  "\"Burası çok huzurlu, kuş seslerini duyabiliyorum. Bir bedenim var mı, emin değilim. İnsanlar buraya gelip adaklar sunuyor. Burası bir ibadet yeri gibi. Etrafta kristaller görüyorum.\"",
 chapter3Text3:
-  "Bu, seans sırasında yaptığım ses kaydında deneyimimin bir kısmını böyle ifade ettiğim şekildir.",
+  "Seans sırasında yaşadıklarımın bir kısmını ses kaydında bu sözlerle anlatmışım.",
 },
     artist: {
   title: "Sanatçı",
@@ -275,9 +275,9 @@ chaptersIntro: "Velg et kapittel for å utforske et tidligere liv.",
   chapter3Text1:
   "Jeg opplevde denne scenen under en regresjonshypnose for tidligere liv. Jeg så på en tempelvegg som var hugget inn i landskapet. Fargen på jorden og steinen minnet meg om Petra i Jordan. Det var imidlertid ingen synlig inngang til tempelet. Jeg innså snart at jeg var et energivesen og ikke hadde en fysisk kropp, så jeg kunne gå gjennom veggen og inn i tempelet. Sollys kom inn i dette svært høye tempelet gjennom en åpning i taket.",
 chapter3Text2:
-  "\"Det er veldig fredelig her, jeg kan høre fuglene. Jeg er ikke sikker på om jeg har en kropp. Folk kommer hit og gir offergaver, det er som et tilbedelsessted. Det er krystaller rundt.\"",
+  "\"Det er veldig fredelig her, jeg kan høre fuglene. Jeg vet ikke helt om jeg har en kropp. Folk kommer hit for å gi offergaver. Det er som et sted for tilbedelse. Jeg ser krystaller rundt meg.\"",
 chapter3Text3:
-  "Slik beskrev jeg deler av opplevelsen min i lydopptaket fra seansen.",
+  "I lydopptaket fra seansen beskrev jeg deler av opplevelsen min med disse ordene.",
 },
     artist: {
   title: "Kunstner",
