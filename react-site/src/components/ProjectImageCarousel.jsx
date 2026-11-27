@@ -1,6 +1,15 @@
 import { useState } from "react";
+import { useParams } from "react-router-dom";
+
+const labels = {
+  en: { region: "Image carousel", previous: "Previous image", next: "Next image", goTo: "Go to image" },
+  tr: { region: "Görsel galerisi", previous: "Önceki görsel", next: "Sonraki görsel", goTo: "Görsele git" },
+  no: { region: "Bildekarusell", previous: "Forrige bilde", next: "Neste bilde", goTo: "Gå til bilde" },
+};
 
 export default function ProjectImageCarousel({ images = [], showDots = false }) {
+  const { lang } = useParams();
+  const text = labels[lang] || labels.en;
   const [activeIndex, setActiveIndex] = useState(0);
   const [touchStartX, setTouchStartX] = useState(null);
 
@@ -40,11 +49,23 @@ export default function ProjectImageCarousel({ images = [], showDots = false }) 
   };
 
   return (
-    <div className="project-image-carousel">
+    <div
+      className="project-image-carousel"
+      role="group"
+      aria-label={text.region}
+      onKeyDown={(event) => {
+        if (images.length < 2 || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+        if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+        event.preventDefault();
+        if (event.key === "ArrowLeft") goToPrevious();
+        else goToNext();
+      }}
+    >
       <div
         className="project-image-carousel-track"
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
+        onTouchCancel={() => setTouchStartX(null)}
       >
         <img
           className="photo-img project-image-carousel-image"
@@ -57,7 +78,7 @@ export default function ProjectImageCarousel({ images = [], showDots = false }) 
             <button
               type="button"
               className="project-image-carousel-arrow project-image-carousel-arrow-prev"
-              aria-label="Previous image"
+              aria-label={text.previous}
               onClick={goToPrevious}
             >
               ‹
@@ -65,7 +86,7 @@ export default function ProjectImageCarousel({ images = [], showDots = false }) 
             <button
               type="button"
               className="project-image-carousel-arrow project-image-carousel-arrow-next"
-              aria-label="Next image"
+              aria-label={text.next}
               onClick={goToNext}
             >
               ›
@@ -82,7 +103,8 @@ export default function ProjectImageCarousel({ images = [], showDots = false }) 
               type="button"
               className={`project-image-carousel-dot ${index === activeIndex ? "is-active" : ""}`}
               onClick={() => setActiveIndex(index)}
-              aria-label={`Go to image ${index + 1}`}
+              aria-label={`${text.goTo} ${index + 1}`}
+              aria-current={index === activeIndex ? "true" : undefined}
             />
           ))}
         </div>

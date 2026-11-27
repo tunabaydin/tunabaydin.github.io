@@ -24,6 +24,8 @@ export default function ArtGallery() {
             <div className="gallery-title">
               <span className="title-text">{artwork.title}</span>
               <span
+                role="img"
+                aria-label={artwork.available ? content.detail.available : content.detail.notAvailable}
                 className={`status-dot ${
                   artwork.available ? "available" : "unavailable"
                 }`}

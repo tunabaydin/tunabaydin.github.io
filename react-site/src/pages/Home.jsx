@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import { siteContent } from "../content/siteContent";
 import pastLivesVideo from "../../../assets/pastlives/pastlivesnewsmall.mp4";
@@ -9,6 +9,7 @@ import ArtistSection from "../components/ArtistSection";
 import ContactSection from "../components/ContactSection";
 import BooksSection from "../components/BooksSection";
 import Footer from "../components/Footer";
+import setupHeroCarousel from "../components/setupHeroCarousel";
 
 export default function Home() {
   const { lang } = useParams();
@@ -16,286 +17,10 @@ export default function Home() {
   const content = siteContent[lang] || siteContent.en;
   const hero = content.hero;
 
-    useEffect(() => {
-    const track = document.getElementById("hero-track");
-    const dotsWrap = document.getElementById("hero-dots");
-    const soundBtn = document.getElementById("hero-sound");
-    const leftBtn = document.getElementById("hero-left");
-    const rightBtn = document.getElementById("hero-right");
+  const carouselRef = useRef(null);
+  const backgroundRef = useRef(null);
 
-    if (!track || !dotsWrap || !soundBtn) return;
-
-    const originalSlides = Array.from(track.querySelectorAll(".hero-slide"));
-    if (originalSlides.length < 2) return;
-
-    // Refresh the copies when an in-app language switch updates the real slides.
-    const firstClone = originalSlides[0].cloneNode(true);
-    const lastClone = originalSlides[originalSlides.length - 1].cloneNode(true);
-
-    firstClone.setAttribute("data-clone", "true");
-    lastClone.setAttribute("data-clone", "true");
-
-    track.insertBefore(lastClone, originalSlides[0]);
-    track.appendChild(firstClone);
-
-    const slides = Array.from(track.querySelectorAll(".hero-slide"));
-    const realSlideCount = originalSlides.length;
-
-    const getCenteredScrollLeft = (slide) => {
-      const trackCenter = track.clientWidth / 2;
-      const slideCenter = slide.offsetLeft + slide.clientWidth / 2;
-      return slideCenter - trackCenter;
-    };
-
-    const getClosestVisualIndex = () => {
-      let closestIndex = 0;
-      let closestDistance = Number.POSITIVE_INFINITY;
-
-      slides.forEach((slide, i) => {
-        const distance = Math.abs(track.scrollLeft - getCenteredScrollLeft(slide));
-        if (distance < closestDistance) {
-          closestDistance = distance;
-          closestIndex = i;
-        }
-      });
-
-      return closestIndex;
-    };
-
-    const getRealIndexFromVisualIndex = (visualIndex) => {
-      if (visualIndex === 0) return realSlideCount - 1;
-      if (visualIndex === slides.length - 1) return 0;
-      return visualIndex - 1;
-    };
-
-    const getCurrentVideo = () => {
-      const visualIndex = getClosestVisualIndex();
-      return slides[visualIndex]?.querySelector("video") || null;
-    };
-
-    const allVideos = slides.map((s) => s.querySelector("video")).filter(Boolean);
-
-    allVideos.forEach((v) => {
-      v.muted = true;
-      v.volume = 0.9;
-      v.play().catch(() => {});
-    });
-
-    const dotCleanup = [];
-
-    originalSlides.forEach((_, i) => {
-      const b = document.createElement("button");
-      b.className = "hero-dot";
-      b.type = "button";
-      b.setAttribute("aria-label", `Go to slide ${i + 1}`);
-
-      const onDotClick = () => {
-        const targetVisualIndex = i + 1;
-        track.scrollTo({
-          left: getCenteredScrollLeft(slides[targetVisualIndex]),
-          behavior: "smooth",
-        });
-      };
-
-      b.addEventListener("click", onDotClick);
-      dotCleanup.push(() => b.removeEventListener("click", onDotClick));
-      dotsWrap.appendChild(b);
-    });
-
-    const dots = Array.from(dotsWrap.querySelectorAll(".hero-dot"));
-
-    let activeVisualIndex = null;
-
-    function setActiveFromVisualIndex(visualIndex) {
-      if (visualIndex === activeVisualIndex) return;
-      activeVisualIndex = visualIndex;
-      const realIndex = getRealIndexFromVisualIndex(visualIndex);
-
-      dots.forEach((d, i) => d.classList.toggle("is-active", i === realIndex));
-
-      allVideos.forEach((v) => {
-        v.muted = true;
-        v.pause();
-      });
-
-      const activeVideo = slides[visualIndex]?.querySelector("video");
-      if (activeVideo) {
-        activeVideo.play().catch(() => {});
-        soundBtn.style.display = "block";
-        soundBtn.textContent = activeVideo.muted ? "Sound" : "Mute";
-      } else {
-        soundBtn.style.display = "none";
-      }
-    }
-
-        function jumpIfOnClone() {
-      const visualIndex = getClosestVisualIndex();
-
-      let targetIndex = null;
-
-      if (visualIndex === 0) {
-        targetIndex = realSlideCount;
-      } else if (visualIndex === slides.length - 1) {
-        targetIndex = 1;
-      }
-
-      if (targetIndex === null) return;
-
-      track.classList.add("is-loop-resetting");
-      track.scrollLeft = getCenteredScrollLeft(slides[targetIndex]);
-      setActiveFromVisualIndex(targetIndex);
-
-      requestAnimationFrame(() => {
-        track.classList.remove("is-loop-resetting");
-      });
-    }
-
-    // Jump past the leading clone before scroll events can activate the wrong slide.
-    const initialVisualIndex = 1;
-    track.scrollTo({
-      left: getCenteredScrollLeft(slides[initialVisualIndex]),
-      behavior: "instant",
-    });
-    setActiveFromVisualIndex(initialVisualIndex);
-
-    let raf = null;
-    let settleTimer = null;
-
-    const onTrackScroll = () => {
-      if (raf) cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => {
-        setActiveFromVisualIndex(getClosestVisualIndex());
-      });
-
-      if (settleTimer) window.clearTimeout(settleTimer);
-      settleTimer = window.setTimeout(() => {
-        jumpIfOnClone();
-      }, 140);
-    };
-
-    track.addEventListener("scroll", onTrackScroll, { passive: true });
-
-    const onSoundClick = (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-
-      const v = getCurrentVideo();
-      if (!v) return;
-
-      v.muted = !v.muted;
-      v.play().catch(() => {});
-      soundBtn.textContent = v.muted ? "Sound" : "Mute";
-    };
-
-    soundBtn.addEventListener("click", onSoundClick);
-
-    let autoDirection = 1;
-
-const onLeftClick = (e) => {
-  autoDirection = -1;
-      e.preventDefault();
-      e.stopPropagation();
-
-      const currentVisualIndex = getClosestVisualIndex();
-      const targetVisualIndex =
-        currentVisualIndex === 1 ? 0 : currentVisualIndex - 1;
-
-      track.scrollTo({
-        left: getCenteredScrollLeft(slides[targetVisualIndex]),
-        behavior: "smooth",
-      });
-    };
-
-    const onRightClick = (e) => {
-  autoDirection = 1;
-      e.preventDefault();
-      e.stopPropagation();
-
-      const currentVisualIndex = getClosestVisualIndex();
-      const targetVisualIndex =
-        currentVisualIndex === realSlideCount
-          ? slides.length - 1
-          : currentVisualIndex + 1;
-
-      track.scrollTo({
-        left: getCenteredScrollLeft(slides[targetVisualIndex]),
-        behavior: "smooth",
-      });
-    };
-
-    if (leftBtn) leftBtn.addEventListener("click", onLeftClick);
-    if (rightBtn) rightBtn.addEventListener("click", onRightClick);
-
-const autoSlideTimer = window.setInterval(() => {
-  if (document.hidden) return;
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
-  const event = {
-    preventDefault: () => {},
-    stopPropagation: () => {},
-  };
-
-  if (autoDirection === 1) {
-    onRightClick(event);
-  } else {
-    onLeftClick(event);
-  }
-}, 3000);
-
-    const portalLinks = Array.from(
-      track.querySelectorAll('.hero-link[href*="pastlives"]')
-    );
-    const portalTimeouts = [];
-
-    const canPortalNavigate = (event) => {
-      if (event.defaultPrevented) return false;
-      if (event.button !== 0) return false;
-      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return false;
-      return true;
-    };
-
-    const portalHandlers = portalLinks.map((link) => {
-      const onPortalClick = (event) => {
-        if (!canPortalNavigate(event)) return;
-
-        event.preventDefault();
-        document.documentElement.classList.add("home-portal-transition", "is-navigating");
-
-        const timeoutId = window.setTimeout(() => {
-          window.location.href = link.href;
-        }, 220);
-
-        portalTimeouts.push(timeoutId);
-      };
-
-      link.addEventListener("click", onPortalClick);
-      return { link, onPortalClick };
-    });
-
-    return () => {
-  window.clearInterval(autoSlideTimer);
-  dotCleanup.forEach((dispose) => dispose());
-      dotsWrap.innerHTML = "";
-
-      track.removeEventListener("scroll", onTrackScroll);
-      soundBtn.removeEventListener("click", onSoundClick);
-
-      if (leftBtn) leftBtn.removeEventListener("click", onLeftClick);
-      if (rightBtn) rightBtn.removeEventListener("click", onRightClick);
-
-      portalHandlers.forEach(({ link, onPortalClick }) => {
-        link.removeEventListener("click", onPortalClick);
-      });
-
-      portalTimeouts.forEach((id) => window.clearTimeout(id));
-
-      if (raf) cancelAnimationFrame(raf);
-      if (settleTimer) window.clearTimeout(settleTimer);
-
-      if (firstClone.parentNode === track) track.removeChild(firstClone);
-      if (lastClone.parentNode === track) track.removeChild(lastClone);
-    };
-  }, [lang]);
+  useEffect(() => setupHeroCarousel(carouselRef.current, lang, backgroundRef.current), [lang]);
 
   useEffect(() => {
     if (!location.hash) {
@@ -312,7 +37,7 @@ const autoSlideTimer = window.setInterval(() => {
       const element = document.getElementById(id);
       if (!element) return;
 
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      element.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "start" });
     };
 
     const timeoutId = window.setTimeout(scrollToSection, 50);
@@ -323,20 +48,20 @@ const autoSlideTimer = window.setInterval(() => {
   return (
     <>
       <div className="bg-video">
-        <video autoPlay loop muted playsInline>
+        <video ref={backgroundRef} loop muted playsInline>
           <source src="/assets/background.mp4" type="video/mp4" />
         </video>
       </div>
 
       <Navbar />
 
-      <section id="top" className="hero-carousel" aria-label="Intro carousel">
+      <section ref={carouselRef} id="top" className="hero-carousel" aria-label="Intro carousel">
         <div className="hero-track" id="hero-track">
           <div className="hero-slide" data-type="video">
           <a className="hero-link" href={`/${lang}/pastlives`} aria-label="Past Lives" />
 
             <div className="hero-media-wrap">
-              <video className="hero-media" autoPlay loop muted playsInline preload="auto">
+              <video className="hero-media" loop muted playsInline preload="auto">
                 <source src={pastLivesVideo} type="video/mp4" />
               </video>
 
@@ -442,7 +167,9 @@ const autoSlideTimer = window.setInterval(() => {
 </div>
 
         <div className="hero-controls">
-          <div className="hero-dots" id="hero-dots" aria-label="Carousel pagination" />
+          <div className="hero-dots" id="hero-dots" role="group" aria-label="Carousel pagination">
+            <button className="hero-pause" type="button" aria-label="Pause automatic advancement" />
+          </div>
 
           <button
             className="hero-arrow hero-arrow--left"
